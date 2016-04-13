@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ITCat", "ITCat\ITCat.csproj", "{155FD6EB-A3B8-489B-92FF-4C3C170E203F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "..\..\..\..\Desktop\ITCat\BLL\BLL.csproj", "{C891099F-D277-400F-95E2-70EDAAA66358}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{C891099F-D277-400F-95E2-70EDAAA66358}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "..\..\..\..\Desktop\ITCat\Model\Model.csproj", "{9E70420B-9222-4580-B12E-EA8E0A2EC17E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{9E70420B-9222-4580-B12E-EA8E0A2EC17E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQLDAL", "..\..\..\..\Desktop\ITCat\MSSQLDAL\MSSQLDAL.csproj", "{838CD31B-355A-46E2-99E9-A167670BB85F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSSQLDAL", "MSSQLDAL\MSSQLDAL.csproj", "{838CD31B-355A-46E2-99E9-A167670BB85F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
