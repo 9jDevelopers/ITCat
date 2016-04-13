@@ -1,0 +1,75 @@
+﻿.wz 
+{
+    font-size:1.5rem;
+    font-weight:600;
+    text-align:center;
+    margin-top:20px;
+}
+.easyui-accordion 
+{
+    margin-left:220px;
+}
+.ge 
+{
+    
+   
+    width:900px;
+}
+.gf
+ {
+    margin-top:25px;
+    margin-left:150px;
+}
+
+.gg 
+{
+    margin-top:25px;
+    margin-left:103px;
+}
+.gh
+ {
+     margin-top:25px;
+    margin-left:126px;
+}
+.gi 
+{
+    display:block;
+    margin-left:300px;
+    margin-top:20px;
+    height:20px;
+    width:40px;
+   
+}
+
+  
+    .ft h5
+     {
+        color:#1C86EE;
+     }
+.imgs 
+{
+    border-color:blue;
+    border-width:0.5px;
+    margin-top:5px;
+    margin-left:100px;
+    width:294px;
+    height:318px;
+    border-style:dashed;
+    border-bottom-color:#CDCDB4;
+    background-image:url(../IMG/102.png);
+}
+.imgss 
+{
+  background-image:url(../IMG/101.png);
+  margin-left:450px;
+  margin-top:-260px;
+    width:192px;
+    height:192px;
+}
+.kj 
+{
+    margin-left:220px;
+    margin-top:95px;
+    
+   
+}

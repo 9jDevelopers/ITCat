@@ -1,0 +1,153 @@
+﻿.heard
+{
+    width:100%;
+    height:1000px;
+    border-style:solid;
+    border-width: 1px;
+    border-color:#F2F2F2;
+
+}
+.Aa
+{
+    background-image: url(../IMG/00.png);
+    width: 80px;
+    height: 80px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+.Ab 
+{
+   position: absolute;
+  left: 160px;
+  top: 20px; 
+}
+    .Ab p1 
+    {
+        font-size:3rem;
+        color:#1C86EE;
+    }
+    .Ab p2 
+    {
+        color:#8B8B83;
+    }
+.Ac 
+{
+  position: absolute;
+  left: 260px;
+  top: 20px; 
+}
+.Ad
+{
+  color:#8B8B83;
+  position:absolute;
+  left: 300px;
+  top: 20px; 
+}
+.Ae 
+{
+  background-image:url(../IMG/01.png);
+  width:273px;
+  height:106px;
+   position: absolute;
+   left: 360px;
+   top: 20px; 
+}
+.Af 
+{
+  position:absolute;
+  left: 160px;
+  top: 160px; 
+  width:1000px;
+  color:#1C86EE;
+}
+.Ag
+{
+  position:absolute;
+  top: 180px; 
+  left:120px;
+  border-top-style:solid;
+  border-top-width: 4px;
+  border-color:#F2F2F2;
+  width:1100px;
+  height:200px;
+}
+.Ai 
+{
+   width:1100px;
+   height:150px;
+   position:absolute;
+   top: 184px; 
+   left:120px;
+   border-bottom-style:solid;
+   border-bottom-width: 2px;
+   border-color:#F2F2F2;
+}
+    .img 
+    {
+        position:absolute;
+        top:10px;
+        background-image:url(../IMG/02.png);
+        width:92px;
+        height:15px;
+    }
+    .bb 
+    {
+        position:absolute;
+        top:10px;
+        left:120px;
+    }
+    .bc 
+    {
+        position:absolute;
+         top:60px;
+         left:15px;
+   
+    }
+    .ba
+     {
+         position:absolute;
+         top:90px;
+         left:15px;
+         width:66px;
+         height:20px;
+         border-style:solid;
+         border-width: 2px;
+         border-color:#1C86EE;
+    }
+.be 
+{
+         position:absolute;
+         top:70px;
+         left:330px;
+         width:700px;
+         height:80px;
+}
+.bd 
+{
+     width:75px;
+     height:75px;
+     position:absolute;
+     top:70px;
+     left:660px;
+    background-image:url(../IMG/03.png);
+
+}
+.bf 
+{
+     width:75px;
+     height:75px;
+     position:absolute;
+     top:70px;
+     left:760px;
+    background-image:url(../IMG/04.png);
+}
+.bg 
+{
+    width:75px;
+     height:75px;
+     position:absolute;
+     top:70px;
+     left:860px;
+    background-image:url(../IMG/05.png);
+}
+

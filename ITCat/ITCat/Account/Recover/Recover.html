@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>密码寻回</title>
+</head>
+<body>
+
+    <table width="1500" height="500" border="0">
+        <tr>
+            <td colspan="2" height="10" width="800" style="background-color:#ffffff;">
+                <h1 align="center">密码设置</h1>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" height="5" width="800" style="background-color:#cabdbd;">
+            </td>
+
+        </tr>
+
+        <tr valign="top">
+            <td style="background-color:#ffff99;width:400px;text-align:top;">
+              
+                <form>
+                    确认账号
+                    <br />
+                    <input type="text" name="user">
+                </form>
+
+           
+         
+                <div class="content">
+                    <form action="#" method="post" id="J_MobileForm">
+                        <div class="form-list form-main-list">
+                            <div class="form-group">
+
+                                <div class="form-item">
+                                    <span class="form-label tsl" data-phase-id="r_p_mobileNum">手机号</span>
+                                    <div class="mobile-text">
+                                        <input autocomplete="off" class="form-text mobile-input" name="mobile" id="J_Mobile" type="text" value="" placeholder="请输入你的手机号码"
+                                               data-inner_placeholder="r_p_input_inner_enterMobile" data-outer_placeholder="r_p_input_enterMobile" />
+                                        <div class="msg" data-type="info" data-show="0" id="J_MsgMobile"></div>
+                                    </div> 
+                                </div>
+                                <div class="form-item">
+                                    <span class="form-label tsl" data-phase-id="r_p_noCaptcha">
+                                        验证
+                                    </span>
+                                    <div class="mobile-text">
+                                        <input autocomplete="off" class="form-text mobile-input" name="mobile" id="J_Mobile" type="text" value="" placeholder="请输入验证码"
+                                               data-inner_placeholder="r_p_input_inner_enterMobile" data-outer_placeholder="r_p_input_enterMobile" />
+                                        <div class="msg" data-type="info" data-show="0" id="J_MsgMobile"></div>
+                                    </div>
+                                    <div id="_umfp" style="width:1px;height:1px;overflow:hidden">
+                                        <img src="//ynuf.alipay.com/service/clear.png?xt=e5eafcab633fa5223d02d690ef515642&amp;xa=CF_APP_REGISTER" />
+                                    </div>
+                                    <div id="register_no_captcha"></div>
+                                    <input id="J_NcoSig" name="ncoSig" type="hidden" />
+                                    <input id="J_NcoSessionid" name="ncoSessionid" type="hidden" />
+                                    <input id="J_NcoToken" type="hidden" name="ncoToken" value="e5eafcab633fa5223d02d690ef515642" />
+                                    <input id="J_NcoUa" type="hidden" name="ua" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="form-item form-item-short">
+                                    <button type="submit" class="btn btn-large tsl btn-disabled" data-phase-id="r_p_next" id="J_BtnMobileForm" disabled>下一步</button>
+                                    <div class="msg" data-type="error" data-show="0" id="J_MsgMobileForm"></div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </td>
+            
+           
+        </tr>
+
+        
+    </table>
+
+</body>
+</html>
