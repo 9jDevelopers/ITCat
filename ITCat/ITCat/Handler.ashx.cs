@@ -14,7 +14,10 @@ namespace iTCat
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
-            context.Response.Write("Hello World");
+
+            //登陆
+            string username = context.Request["UserName"];
+            string password = context.Request["UserPassword"];
         }
 
         public bool IsReusable
