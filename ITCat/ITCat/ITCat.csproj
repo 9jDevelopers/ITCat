@@ -522,6 +522,20 @@
     <Folder Include="Account\PersonalCenter\js\" />
     <Folder Include="Management\NewTicketClass\js\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{c891099f-d277-400f-95e2-70edaaa66358}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{9e70420b-9222-4580-b12e-ea8e0a2ec17e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSSQLDAL\MSSQLDAL.csproj">
+      <Project>{838cd31b-355a-46e2-99e9-a167670bb85f}</Project>
+      <Name>MSSQLDAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

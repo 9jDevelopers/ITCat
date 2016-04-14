@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using BLL;
+using System.Data;
 
 namespace iTCat
 {
@@ -16,8 +18,17 @@ namespace iTCat
             context.Response.ContentType = "text/plain";
 
             //登陆
+            BTourist bt = new BTourist();
             string username = context.Request["UserName"];
             string password = context.Request["UserPassword"];
+            if (bt.Login(username, password))
+            {
+                context.Response.Write(1);
+            }
+            else
+            {
+                context.Response.Write(0);
+            }
         }
 
         public bool IsReusable
