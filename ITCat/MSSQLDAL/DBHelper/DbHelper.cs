@@ -16,7 +16,7 @@ namespace MSSQLDAL
         private static string dbProviderName = ConfigurationManager.AppSettings["DbHelperProvider"];
 
         //数据库连接字符串
-        private static string dbConnectionString = HttpContext.Current.Application["DefaultConnStr"].ToString();//ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
+        private static string dbConnectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ToString();
 
         //数据库连接对象
         private DbConnection connection;
