@@ -110,7 +110,6 @@
     <Content Include="Index\js\bootstrap.min.js" />
     <Content Include="Index\js\jquery-1.11.2.min.js" />
     <Content Include="Management\NewAttractions\css\StyleSheet1.css" />
-    <Content Include="Management\NewAttractions\js\JavaScript3.js" />
     <Content Include="packages.config" />
     <Content Include="Handler.ashx" />
     <None Include="Web.Debug.config">
