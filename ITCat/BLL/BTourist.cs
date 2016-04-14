@@ -19,16 +19,16 @@ namespace BLL
         }
 
         public bool ToString(string attractionsID,
-    string attractions_name,
-    string attractions_title,
-    string level_RadioButton,
-    string address,
-    string openTime,
-    string introduce,
-    string attractionsTraffic,
-    string contact,
-    string attractionsAnnotation,
-    string administratorName)
+                            string attractions_name,
+                            string attractions_title,
+                            string level_RadioButton,
+                            string address,
+                            string openTime,
+                            string introduce,
+                            string attractionsTraffic,
+                            string contact,
+                            string attractionsAnnotation,
+                            string administratorName)
         {
             return td.ToString
                 (attractionsID, attractions_name,
@@ -37,7 +37,13 @@ namespace BLL
                 attractionsTraffic, contact,
                 attractionsAnnotation, administratorName);
         }
-    }
 
+
+        public bool TM(string Tel, string Email, string Pname, string Name, string Gender, string Birthday, string Pone, string City)
+        {
+            return td.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City);
+        }
+
+    }
 }
 

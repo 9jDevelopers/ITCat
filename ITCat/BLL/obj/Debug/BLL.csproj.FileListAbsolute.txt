@@ -7,3 +7,12 @@ E:\GIT\ITCat\ITCat\BLL\bin\Debug\Model.pdb
 E:\GIT\ITCat\ITCat\BLL\bin\Debug\MSSQLDAL.pdb
 E:\GIT\ITCat\ITCat\BLL\obj\Debug\BLL.dll
 E:\GIT\ITCat\ITCat\BLL\obj\Debug\BLL.pdb
+C:\Users\CAT\Source\Repos\ITCat\ITCat\BLL\bin\Debug\BLL.dll
+C:\Users\CAT\Source\Repos\ITCat\ITCat\BLL\bin\Debug\BLL.pdb
+C:\Users\CAT\Source\Repos\ITCat\ITCat\BLL\bin\Debug\Model.dll
+C:\Users\CAT\Source\Repos\ITCat\ITCat\BLL\bin\Debug\MSSQLDAL.dll
+C:\Users\CAT\Source\Repos\ITCat\ITCat\BLL\bin\Debug\Model.pdb
+C:\Users\CAT\Source\Repos\ITCat\ITCat\BLL\bin\Debug\MSSQLDAL.pdb
+C:\Users\CAT\Source\Repos\ITCat\ITCat\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\CAT\Source\Repos\ITCat\ITCat\BLL\obj\Debug\BLL.dll
+C:\Users\CAT\Source\Repos\ITCat\ITCat\BLL\obj\Debug\BLL.pdb
