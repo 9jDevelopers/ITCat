@@ -1,0 +1,7 @@
+E:\GIT\ITCat\ITCat\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+E:\GIT\ITCat\ITCat\Model\bin\Debug\Model.dll
+E:\GIT\ITCat\ITCat\Model\bin\Debug\Model.pdb
+E:\GIT\ITCat\ITCat\Model\bin\Debug\MSSQLDAL.dll
+E:\GIT\ITCat\ITCat\Model\bin\Debug\MSSQLDAL.pdb
+E:\GIT\ITCat\ITCat\Model\obj\Debug\Model.dll
+E:\GIT\ITCat\ITCat\Model\obj\Debug\Model.pdb

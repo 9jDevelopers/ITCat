@@ -88,14 +88,14 @@
                         <div style="margin:20px 0;">
                             <a href="javascript:void(0)" class="easyui-linkbutton" onclick="$('#w').window('open')">编辑</a>
                         </div>
-                        <div id="w" class="easyui-window" title="Modal Window" data-options="modal:true,closed:true,iconCls:'icon-save'" style="width:700px;height:500px;padding:10px;">
+                         <div id="w" class="easyui-window" title="Modal Window"  data-options="modal:true,closed:true,iconCls:'icon-save'" style="width:700px;height:500px;padding:10px;">
                             <div class="gf">
                                 <tr>
                                     <td>
                                         手机:
                                     </td>
                                     <td>
-                                        <input class="easyui-textbox"   data-options="prompt:'请输入11位数字',validType:'email'" style="width:200px;height:25px" >
+                                        <input class="easyui-textbox" id="txtTel"  data-options="prompt:'请输入11位数字',validType:'email'" style="width:200px;height:25px" runat="server">
                                     </td>
                                    
                                 </tr>
@@ -104,7 +104,7 @@
                                 <tr>
                                     <td>邮箱:</td>
                                     <td>
-                                        <input class="easyui-textbox" data-options="prompt:'请输入邮箱',missingMessage:'',invalidMessage:'请输入正确的邮箱格式',required:true, validType:'email'" style="width:200px;height:25px">
+                                        <input class="easyui-textbox" id="txtEmail" data-options="prompt:'请输入邮箱',missingMessage:'',invalidMessage:'请输入正确的邮箱格式',required:true, validType:'email'" style="width:200px;height:25px" runat="server">
                                       
                                     </td>
                                     <td></td>
@@ -113,39 +113,39 @@
                             <div class="gf">
                                 <tr>
                                     <td>昵称:</td>
-                                    <td><input class="easyui-textbox" style="width:200px;height:25px"></td></td>
+                                    <td><input class="easyui-textbox" id="txtPname" style="width:200px;height:25px" runat="server"></td>
                                 </tr>
                             </div>
                             <div class="gf">
                                 <tr>
                                     <td>姓名:</td>
-                                    <td><input class="easyui-textbox" style="width:200px;height:25px"></td></td>
+                                    <td><input class="easyui-textbox" id="txtName" style="width:200px;height:25px" runat="server"></td>
                                 </tr>
                             </div>
                             <div class="gf">
                                 <tr>
                                     <td>性别:</td>
-                                    <td><input class="easyui-textbox" style="width:200px;height:25px"></td></td>
+                                    <td><input class="easyui-textbox" id="txtGender" style="width:200px;height:25px" runat="server"></td>
                                 </tr>
                             </div>
                             <div class="gf">
                                 <tr>
                                     <td>生日:</td>
-                                    <td><input class="easyui-datebox" data-options="sharedCalendar:'#cc'" style="width:200px;height:25px"></td>
+                                    <td><input class="easyui-datebox" id="txtBirthday" data-options="sharedCalendar:'#cc'" style="width:200px;height:25px" runat="server"></td>
                                     <div id="cc" class="easyui-calendar"></div>
                                 </tr>
                             </div>
                             <div class="gh">
                                 <tr>
                                     <td>联系电话:</td>
-                                    <td><input class="easyui-textbox" style="width:200px;height:25px"></td></td>
+                                    <td><input class="easyui-textbox" id="txtPone" style="width:200px;height:25px" runat="server"></td>
                                 </tr>
                             </div>
                             <div class="gg">
                                 <tr>
                                     <td>常用出发城市:</td>
-                                    <td><input class="easyui-textbox" style="width:200px;height:25px"></td>
-                                        &nbsp;&nbsp;&nbsp;&nbsp; <input type="button" value="提交" class="btn2" onclick = "" />
+                                    <td><input class="easyui-textbox" id="txtCity" style="width:200px;height:25px" runat="server"></td>
+                                        &nbsp;&nbsp;&nbsp;&nbsp; <input type="button" id="TM" value="提交"  onclick = "" />
                                     </tr>
                                 </tr>
                             </div>
@@ -161,7 +161,7 @@
                     </div>
                     <div class="imgs"></div>
                     <div class="imgss"></div>
-                    <div class="kj"><input type="button" value="提交" class="btn3" onclick = "" /></div>
+                    <div class="kj"><input type="button" value="提交"  onclick = "" /></div>
                 </div>
             </div>
         </div>

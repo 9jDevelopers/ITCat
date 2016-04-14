@@ -17,6 +17,8 @@ namespace BLL
         {
             return td.Login(LoginName, Password);
         }
+        //函数
+        public
 
     }
 }

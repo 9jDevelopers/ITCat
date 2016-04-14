@@ -18,3 +18,9 @@ E:\GIT\ITCat\ITCat\ITCat\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.
 E:\GIT\ITCat\ITCat\ITCat\obj\Debug\ITCat.csprojResolveAssemblyReference.cache
 E:\GIT\ITCat\ITCat\ITCat\obj\Debug\iTCat.dll
 E:\GIT\ITCat\ITCat\ITCat\obj\Debug\iTCat.pdb
+E:\GIT\ITCat\ITCat\ITCat\bin\BLL.dll
+E:\GIT\ITCat\ITCat\ITCat\bin\Model.dll
+E:\GIT\ITCat\ITCat\ITCat\bin\MSSQLDAL.dll
+E:\GIT\ITCat\ITCat\ITCat\bin\BLL.pdb
+E:\GIT\ITCat\ITCat\ITCat\bin\Model.pdb
+E:\GIT\ITCat\ITCat\ITCat\bin\MSSQLDAL.pdb
