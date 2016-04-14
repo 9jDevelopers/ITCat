@@ -3,3 +3,12 @@ E:\GIT\ITCat\ITCat\MSSQLDAL\bin\Debug\MSSQLDAL.pdb
 E:\GIT\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.dll
 E:\GIT\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.pdb
 E:\GIT\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.csprojResolveAssemblyReference.cache
+C:\Users\CAT\Source\Repos\ITCat\ITCat\MSSQLDAL\bin\Debug\MSSQLDAL.dll
+C:\Users\CAT\Source\Repos\ITCat\ITCat\MSSQLDAL\bin\Debug\MSSQLDAL.pdb
+C:\Users\CAT\Source\Repos\ITCat\ITCat\MSSQLDAL\bin\Debug\Model.dll
+C:\Users\CAT\Source\Repos\ITCat\ITCat\MSSQLDAL\bin\Debug\IDAL.pdb
+C:\Users\CAT\Source\Repos\ITCat\ITCat\MSSQLDAL\bin\Debug\Utility.pdb
+C:\Users\CAT\Source\Repos\ITCat\ITCat\MSSQLDAL\bin\Debug\Model.pdb
+C:\Users\CAT\Source\Repos\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.csprojResolveAssemblyReference.cache
+C:\Users\CAT\Source\Repos\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.dll
+C:\Users\CAT\Source\Repos\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.pdb
