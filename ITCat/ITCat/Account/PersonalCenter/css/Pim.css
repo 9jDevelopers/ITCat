@@ -2,12 +2,12 @@
 {
     font-size:1.5rem;
     font-weight:600;
-    text-align:center;
+    margin-left:580px;
     margin-top:20px;
 }
 .easyui-accordion 
 {
-    margin-left:220px;
+    margin-left:15%;
 }
 .ge 
 {

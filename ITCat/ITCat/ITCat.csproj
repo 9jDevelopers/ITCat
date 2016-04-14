@@ -73,6 +73,7 @@
     <Content Include="Account\PersonalCenter\css\Pim.css" />
     <Content Include="Account\PersonalCenter\IMG\101.png" />
     <Content Include="Account\PersonalCenter\IMG\102.png" />
+    <Content Include="Account\PersonalCenter\Pim.aspx" />
     <Content Include="Account\PersonalCenter\Pim.html" />
     <Content Include="Account\Rated\css\Rated.css" />
     <Content Include="Account\Rated\IMG\00.png" />
@@ -488,6 +489,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\PersonalCenter\Pim.aspx.cs">
+      <DependentUpon>Pim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\PersonalCenter\Pim.aspx.designer.cs">
+      <DependentUpon>Pim.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Handler.ashx.cs">
       <DependentUpon>Handler.ashx</DependentUpon>
     </Compile>
