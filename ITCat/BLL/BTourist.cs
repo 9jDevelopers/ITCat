@@ -18,5 +18,24 @@ namespace BLL
             return td.Login(LoginName, Password);
         }
 
+        public bool ToString(string attractionsID,
+            string attractions_name,
+            string attractions_title, 
+            string level_RadioButton,
+            string address, 
+            string openTime, 
+            string introduce,
+            string attractionsTraffic,
+            string contact, 
+            string attractionsAnnotation, 
+            string administratorName)
+        {
+            return td.ToString
+                (attractionsID, attractions_name,
+                attractions_title, level_RadioButton,
+                address, openTime, introduce, 
+                attractionsTraffic,contact,
+                attractionsAnnotation, administratorName);
+        }
     }
 }
