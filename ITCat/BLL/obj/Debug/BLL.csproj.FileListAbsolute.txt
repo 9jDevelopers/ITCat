@@ -1,0 +1,9 @@
+E:\安装应用\项目\ITCat\ITCat\BLL\bin\Debug\BLL.dll
+E:\安装应用\项目\ITCat\ITCat\BLL\bin\Debug\BLL.pdb
+E:\安装应用\项目\ITCat\ITCat\BLL\bin\Debug\Model.dll
+E:\安装应用\项目\ITCat\ITCat\BLL\bin\Debug\MSSQLDAL.dll
+E:\安装应用\项目\ITCat\ITCat\BLL\bin\Debug\Model.pdb
+E:\安装应用\项目\ITCat\ITCat\BLL\bin\Debug\MSSQLDAL.pdb
+E:\安装应用\项目\ITCat\ITCat\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+E:\安装应用\项目\ITCat\ITCat\BLL\obj\Debug\BLL.dll
+E:\安装应用\项目\ITCat\ITCat\BLL\obj\Debug\BLL.pdb

@@ -1,0 +1,4 @@
+E:\安装应用\项目\ITCat\ITCat\MSSQLDAL\bin\Debug\MSSQLDAL.dll
+E:\安装应用\项目\ITCat\ITCat\MSSQLDAL\bin\Debug\MSSQLDAL.pdb
+E:\安装应用\项目\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.dll
+E:\安装应用\项目\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.pdb
