@@ -17,6 +17,10 @@ namespace BLL
         {
             return td.Login(LoginName, Password);
         }
+        public bool TM(string Tel, string Email,  string Pname, string Name, string Gender, string Birthday, string Pone, string City)
+        { 
+            return td.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City);
+        }
 
     }
 }
