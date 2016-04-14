@@ -110,7 +110,6 @@
     <Content Include="Index\js\bootstrap.min.js" />
     <Content Include="Index\js\jquery-1.11.2.min.js" />
     <Content Include="Management\NewAttractions\css\StyleSheet1.css" />
-    <Content Include="Management\NewAttractions\js\JavaScript3.js" />
     <Content Include="packages.config" />
     <Content Include="Handler.ashx" />
     <None Include="Web.Debug.config">
@@ -472,7 +471,7 @@
     <Content Include="Public\js\jquery.easyui.min.js" />
     <Content Include="Public\js\jquery.easyui.mobile.js" />
     <Content Include="Public\js\jquery.min.js" />
-    <Content Include="Scenic\css\StyleSheet1.css" />
+    <Content Include="Scenic\css\Scenic.css" />
     <Content Include="Scenic\images\1.jpg" />
     <Content Include="Scenic\images\2.jpg" />
     <Content Include="Scenic\images\3.jpg" />
