@@ -32,5 +32,34 @@ namespace Model
             else
                 return false;
         }
+
+        public bool ToString(string attractionsID, string attractions_name, string attractions_title, string level_RadioButton, string address, string openTime, string introduce, string attractionsTraffic, string contact, string attractionsAnnotation, string administratorName)
+        {
+            DbHelper db = new DbHelper();
+            DbCommand cmd = db.GetStoredProcCommond("sp_Login");
+            db.AddInParameter(cmd, "@spotID", DbType.String, attractionsID);
+            db.AddInParameter(cmd, "@name", DbType.String, attractions_name);
+            db.AddInParameter(cmd, "@title", DbType.String, attractions_title);
+            db.AddInParameter(cmd, "@level", DbType.String, level_RadioButton);
+            db.AddInParameter(cmd, "@address", DbType.String, address);
+            db.AddInParameter(cmd, "@openTime", DbType.String, openTime);
+            db.AddInParameter(cmd, "@introduce", DbType.String, introduce);
+            db.AddInParameter(cmd, "@contact", DbType.String, contact);
+            db.AddInParameter(cmd, "@attractionsAnnotation", DbType.String, attractionsAnnotation);
+            db.AddInParameter(cmd, "@attractionsTraffic", DbType.String, attractionsTraffic);
+            db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
+
+            db.ExecuteNonQuery(cmd);
+
+
+            string result = cmd.Parameters["@retValue"].Value.ToString();
+
+            if (result == "1")
+                //登陆成功
+                return true;
+            else
+                return false;
+        }
+     
     }
 }

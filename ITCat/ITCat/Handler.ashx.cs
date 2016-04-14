@@ -29,19 +29,6 @@ namespace iTCat
             {
                 context.Response.Write(0);
             }
-
-            //个人信息
-            string Tel = context.Request["Tel"];
-            string password = context.Request["UserPassword"];
-            if (bt.Login(username, password))
-            {
-                context.Response.Write(1);
-            }
-            else
-            {
-                context.Response.Write(0);
-            }
-
         }
 
         public bool IsReusable
@@ -51,5 +38,6 @@ namespace iTCat
                 return false;
             }
         }
+
     }
 }
