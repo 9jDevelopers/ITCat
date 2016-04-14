@@ -115,17 +115,6 @@
             </tr>
             </table>
         </div>
-        <div>
-            <table>
-            <tr>
-                <td class ="The_title">*周边交通:</td>
-                <td class="Textbox_one">
-                    <input class="easyui-textbox" id="attractions_traffic" 
-                     data-options="prompt:'请填写景点的周边交通情况',validType:'Lenght[20,30]'" runat="server" />
-                    </td>
-            </tr>
-            </table>
-        </div>
          <div>
              <table>
             <tr>
@@ -152,7 +141,7 @@
                 <td class="Textbox_one">&nbsp;
                     <input class="easyui-validatebox textbox"
                      data-options=" missingMessage:'请输入该景点的管理员姓名' , prompt:'验证完成.',invalidMessage:'请输入3个以上中文字',required:true,validType:'ChineseLength[3]'"
-                        id="AdministratorName-TextBox"   /></td>
+                        id="AdministratorName-TextBox"/></td>
                 </tr>              
             </table>
         </div>
@@ -160,7 +149,7 @@
             <table>
            <tr>
                 <td>
-                    <a href="javascript:NewAttractions" class="easyui-linkbutton" onclick="submitForm()">提交</a>                    
+                    <a href="javascript:NewAttractions" class="easyui-linkbutton" id="submitForm" onclick="submitForm()">提交</a>                    
                     <input  runat="server" height="36px" style="margin-top: 0px"  value="重置" type="submit"  width="72px" />
                 </td>
              </tr> 
@@ -176,30 +165,6 @@
 			box-sizing:content-box;
 		}
         </style>
-    <script src="js/JavaScript3.js"></script>
-    <script>
-        $.extend($.fn.validatebox.defaults.rules, {
-            ChineseLength: {
-                validator: function (value, param) {
-                    
-                    var reg = /^[\u4e00-\u9fa5]{0,}$/;
-                    if (reg.exec(value)) {
-                        return value.length >= param[0];
-                    }
-
-                    else {
-
-                        return false;
-                    }
-                   
-                },
-                message: 'Please enter at least {0} characters.'
-            }
-        });
-        function submitForm() {
-            $('#ff').form('submit');
-        }
-       
-    </script>
+    <script src="js/JavaScript3.js"></script>  
 </body>
 </html>

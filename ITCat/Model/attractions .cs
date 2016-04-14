@@ -76,7 +76,15 @@ namespace Model
         /// <summary>
         /// 景点等级
         /// </summary>
-        public String leave { get; set; }
+        public String level { get; set; }
 
+        /// <summary>
+        /// 景点标题
+        /// </summary>
+        public String title { get; set; }
+        /// <summary>
+        /// 景点联系方式
+        /// </summary>
+        public String contact { get; set; }
     }
 }
