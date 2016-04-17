@@ -7,3 +7,12 @@ E:\安装应用\项目\ITCat\ITCat\BLL\bin\Debug\MSSQLDAL.pdb
 E:\安装应用\项目\ITCat\ITCat\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 E:\安装应用\项目\ITCat\ITCat\BLL\obj\Debug\BLL.dll
 E:\安装应用\项目\ITCat\ITCat\BLL\obj\Debug\BLL.pdb
+F:\GitHub\ITCat\ITCat\BLL\bin\Debug\BLL.dll
+F:\GitHub\ITCat\ITCat\BLL\bin\Debug\BLL.pdb
+F:\GitHub\ITCat\ITCat\BLL\bin\Debug\Model.dll
+F:\GitHub\ITCat\ITCat\BLL\bin\Debug\MSSQLDAL.dll
+F:\GitHub\ITCat\ITCat\BLL\bin\Debug\Model.pdb
+F:\GitHub\ITCat\ITCat\BLL\bin\Debug\MSSQLDAL.pdb
+F:\GitHub\ITCat\ITCat\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\GitHub\ITCat\ITCat\BLL\obj\Debug\BLL.dll
+F:\GitHub\ITCat\ITCat\BLL\obj\Debug\BLL.pdb

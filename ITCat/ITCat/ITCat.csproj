@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Login\css\login.css" />
+    <Content Include="Account\Register\css\Register.css" />
     <Content Include="Account\Login\js\login.js" />
     <Content Include="Account\Login\login.html" />
     <Content Include="Account\PersonalCenter\css\Pim.css" />
@@ -83,6 +84,7 @@
     <Content Include="Account\Recover\Recover.css" />
     <Content Include="Account\Recover\Recover.html" />
     <Content Include="Account\Recover\Recover.js" />
+    <Content Include="Account\Register\js\register.js" />
     <Content Include="BuyTicket\Buyticket.aspx" />
     <Content Include="BuyTicket\css\BuyTicket.css" />
     <Content Include="BuyTicket\js\BuyTicket.js" />
