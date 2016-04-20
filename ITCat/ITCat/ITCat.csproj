@@ -67,13 +67,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Login\css\login.css" />
-    <Content Include="Account\Login\images\52.jpg" />
-    <Content Include="Account\Login\images\57.jpg" />
+    <Content Include="Account\Register\css\Register.css" />
     <Content Include="Account\Login\js\login.js" />
+    <Content Include="Account\Login\login.html" />
     <Content Include="Account\PersonalCenter\css\Pim.css" />
     <Content Include="Account\PersonalCenter\IMG\101.png" />
     <Content Include="Account\PersonalCenter\IMG\102.png" />
-    <Content Include="Account\PersonalCenter\Pim.aspx" />
     <Content Include="Account\PersonalCenter\Pim.html" />
     <Content Include="Account\Rated\css\Rated.css" />
     <Content Include="Account\Rated\IMG\00.png" />
@@ -85,6 +84,7 @@
     <Content Include="Account\Recover\Recover.css" />
     <Content Include="Account\Recover\Recover.html" />
     <Content Include="Account\Recover\Recover.js" />
+    <Content Include="Account\Register\js\register.js" />
     <Content Include="BuyTicket\Buyticket.aspx" />
     <Content Include="BuyTicket\css\BuyTicket.css" />
     <Content Include="BuyTicket\js\BuyTicket.js" />
@@ -99,7 +99,6 @@
     <Content Include="BuyTicket\LoginIcon\购票_03.png" />
     <Content Include="BuyTicket\LoginIcon\购票_05.png" />
     <Content Include="BuyTicket\LoginIcon\购票_08.png" />
-    <Content Include="Account\Login\Login.html" />
     <Content Include="Account\Register\Register.html" />
     <Content Include="Index\css\bootstrap.css" />
     <Content Include="Index\img\100X125.gif" />
@@ -110,8 +109,13 @@
     <Content Include="Index\js\bootstrap.min.js" />
     <Content Include="Index\js\jquery-1.11.2.min.js" />
     <Content Include="Management\NewAttractions\css\StyleSheet1.css" />
+    <Content Include="Management\NewAttractions\js\JavaScript3.js" />
     <Content Include="packages.config" />
     <Content Include="Handler.ashx" />
+    <Content Include="Public\icomoon\fonts\icomoon.eot" />
+    <Content Include="Public\icomoon\fonts\icomoon.ttf" />
+    <Content Include="Public\icomoon\fonts\icomoon.woff" />
+    <Content Include="Public\icomoon\selection.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -130,6 +134,7 @@
     <Content Include="Management\NewTicketClass\css\ticket.css" />
     <Content Include="Management\NewTicketClass\NewTicketClass.aspx" />
     <Content Include="Public\css\demo.css" />
+    <Content Include="Public\css\public.css" />
     <Content Include="Public\css\themes\black\accordion.css" />
     <Content Include="Public\css\themes\black\calendar.css" />
     <Content Include="Public\css\themes\black\combo.css" />
@@ -464,6 +469,12 @@
     <Content Include="Public\css\themes\metro\validatebox.css" />
     <Content Include="Public\css\themes\metro\window.css" />
     <Content Include="Public\css\themes\mobile.css" />
+    <Content Include="Public\icomoon\demo-files\demo.css" />
+    <Content Include="Public\icomoon\demo-files\demo.js" />
+    <Content Include="Public\icomoon\demo.html" />
+    <Content Include="Public\icomoon\fontIconStyle.css" />
+    <Content Include="Public\icomoon\fonts\icomoon.svg" />
+    <Content Include="Public\icomoon\Read Me.txt" />
     <Content Include="Public\js\bootstrap.min.js" />
     <Content Include="Public\js\easyloader.js" />
     <Content Include="Public\js\jquery-2.2.3.js" />
@@ -471,7 +482,7 @@
     <Content Include="Public\js\jquery.easyui.min.js" />
     <Content Include="Public\js\jquery.easyui.mobile.js" />
     <Content Include="Public\js\jquery.min.js" />
-    <Content Include="Scenic\css\Scenic.css" />
+    <Content Include="Scenic\css\StyleSheet1.css" />
     <Content Include="Scenic\images\1.jpg" />
     <Content Include="Scenic\images\2.jpg" />
     <Content Include="Scenic\images\3.jpg" />
@@ -488,13 +499,6 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Account\PersonalCenter\Pim.aspx.cs">
-      <DependentUpon>Pim.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\PersonalCenter\Pim.aspx.designer.cs">
-      <DependentUpon>Pim.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Handler.ashx.cs">
       <DependentUpon>Handler.ashx</DependentUpon>
     </Compile>
@@ -516,6 +520,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Account\Login\images\" />
     <Folder Include="Account\PersonalCenter\js\" />
     <Folder Include="Management\NewTicketClass\js\" />
   </ItemGroup>
@@ -523,6 +528,14 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{c891099f-d277-400f-95e2-70edaaa66358}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{9e70420b-9222-4580-b12e-ea8e0a2ec17e}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MSSQLDAL\MSSQLDAL.csproj">
+      <Project>{838cd31b-355a-46e2-99e9-a167670bb85f}</Project>
+      <Name>MSSQLDAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

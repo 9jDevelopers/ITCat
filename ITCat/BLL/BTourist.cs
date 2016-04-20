@@ -10,7 +10,7 @@ namespace BLL
 {
     public class BTourist
     {
-        public TouristDal TouristDal { get; set; }
+        public TouristDal TouristDal  { get; set; }
         TouristDal td = new TouristDal();
 
         public bool Login(string LoginName, string Password)
@@ -19,31 +19,23 @@ namespace BLL
         }
 
         public bool ToString(string attractionsID,
-                            string attractions_name,
-                            string attractions_title,
-                            string level_RadioButton,
-                            string address,
-                            string openTime,
-                            string introduce,
-                            string attractionsTraffic,
-                            string contact,
-                            string attractionsAnnotation,
-                            string administratorName)
+            string attractions_name,
+            string attractions_title, 
+            string level_RadioButton,
+            string address, 
+            string openTime, 
+            string introduce,
+            string attractionsTraffic,
+            string contact, 
+            string attractionsAnnotation, 
+            string administratorName)
         {
             return td.ToString
                 (attractionsID, attractions_name,
                 attractions_title, level_RadioButton,
-                address, openTime, introduce,
-                attractionsTraffic, contact,
+                address, openTime, introduce, 
+                attractionsTraffic,contact,
                 attractionsAnnotation, administratorName);
         }
-
-
-        public bool TM(string Tel, string Email, string Pname, string Name, string Gender, string Birthday, string Pone, string City)
-        {
-            return td.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City);
-        }
-
     }
 }
-

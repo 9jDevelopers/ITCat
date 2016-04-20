@@ -86,5 +86,8 @@ namespace Model
         /// 景点联系方式
         /// </summary>
         public String contact { get; set; }
+
+
+        //
     }
 }
