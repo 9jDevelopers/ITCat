@@ -90,8 +90,8 @@ function submitForm() {
           Introduce: $("#IntroduceTextBox").val(),
           AttractionsTraffic: $("#attractions_traffic").val(),
           Contact: $("#contact").val(),
-          AttractionsAnnotation: $("#Attractions_annotation").val(),
-          AdministratorName: $("#AdministratorName-TextBox").val(),
+          NoteAttractions: $("#NoteAttractions").val(),
+         
         },
          function (data) {
              if (data == "1") {

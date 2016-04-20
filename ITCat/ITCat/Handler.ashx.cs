@@ -44,9 +44,12 @@ namespace iTCat
                 string Introduce = context.Request["IntroduceTextBox"];
                 string AttractionsTraffic = context.Request["attractions_traffic"];
                 string Contact = context.Request["contact"];
-                string AttractionsAnnotation = context.Request["Attractions_annotation"];
-                string AdministratorName = context.Request["AdministratorName-TextBox"];
-                if (bt.ToString(AttractionsID, Attractions_name, Attractions_title, Level_RadioButton, Address, OpenTime, Introduce, AttractionsTraffic, Contact, AttractionsAnnotation, AdministratorName))
+                string NoteAttractions = context.Request["NoteAttractions"];
+               
+                if (bt.ToString
+                    (AttractionsID, Attractions_name, Attractions_title,
+                    Level_RadioButton, Address, OpenTime, Introduce,
+                    AttractionsTraffic, Contact, NoteAttractions))
                 {
                     context.Response.Write(1);
                 }
@@ -56,21 +59,28 @@ namespace iTCat
                 }
             }
 
-
-            //新建票种
-            string ticketsID = context.Request[""];
-            string Ticket_type = context.Request[""];
-            string tickets_name = context.Request[""];
-            string ticketsPrices = context.Request[""];
-            string Tickets_illustrate = context.Request[""];
-            string AdministratorName_TextBox = context.Request[""];
-            if (bt.ToString(ticketsID, Ticket_type, tickets_name, ticketsPrices, Tickets_illustrate, AdministratorName_TextBox))
+            else if (context.Request["ticketsID"] != null)
             {
-                context.Response.Write(1);
-            }
-            else
-            {
-                context.Response.Write(0);
+                //新建票种
+                string ticketsID = context.Request["ticketsID"];
+                string Ticket_type = context.Request["Ticket_type"];
+                string tickets_name = context.Request["tickets_name"];
+                string ticketsPrices = context.Request["ticketsPrices"];
+                string Tickets_illustrate = context.Request["Tickets_illustrate"];
+                string OrderDateD = context.Request["OrderDateD"];
+                string SpotID = context.Request["SpotID_text"];
+                string Ticket_time = context.Request["Ticket_time"];
+                if (bt.ToString
+                    (ticketsID, Ticket_type, tickets_name,
+                    ticketsPrices, Tickets_illustrate,
+                    OrderDateD, SpotID, Ticket_time))
+                {
+                    context.Response.Write(1);
+                }
+                else
+                {
+                    context.Response.Write(0);
+                }
             }
 
             //个人信息
@@ -93,6 +103,7 @@ namespace iTCat
 
 
         }
+
 
         public bool IsReusable
         {
