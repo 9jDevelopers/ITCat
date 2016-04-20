@@ -114,11 +114,11 @@
     <Content Include="Management\NewTicketClass\js\JavaScript.js" />
     <Content Include="Management\NewTicketClass\NewTicketClass.aspx" />
     <Content Include="packages.config" />
-    <Content Include="Handler.ashx" />
     <Content Include="Public\icomoon\fonts\icomoon.eot" />
     <Content Include="Public\icomoon\fonts\icomoon.ttf" />
     <Content Include="Public\icomoon\fonts\icomoon.woff" />
     <Content Include="Public\icomoon\selection.json" />
+    <Content Include="Handler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -498,6 +498,7 @@
     <Content Include="Scenic\scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scenic\scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scenic\Scenic.aspx" />
+    <Content Include="Scenic\scripts\Scenic.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

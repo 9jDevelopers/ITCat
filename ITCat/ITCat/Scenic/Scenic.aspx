@@ -32,13 +32,13 @@
   
                         <div class="mp-description-detail">
                             <div class="mp-description-view">
-                                <span class="mp-description-name" title="庐山">庐山</span>
+                                <span class="mp-description-name" id="txtScenicspotName  "  title="庐山">庐山</span>
                             </div>
-                            <div class="mp-description-onesentence">风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美。</div>
+                            <div class="mp-description-onesentence" id="txtScenicspotIntroduction ">风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美。</div>
                             <div class="mp-description-location">
 
                                 <span class="mp-description-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位      置：</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="mp-description-address" title="江西省九江市庐山区">江西省九江市庐山区</span>
+                                <span class="mp-description-address" id="txtScenicspotAddress " title="江西省九江市庐山区">江西省九江市庐山区</span>
                                 <a class="ditu">查看地图</a>
                             </div>
                             <div class="mp-description-price" style="display: block;">
@@ -65,7 +65,7 @@
             <div>门票</div>
             <div class="table-tr">
                 <div class="table-td-1">XX成人票</div>
-                <div class="table-td-2">XX元</div>
+                <div class="table-td-2" id="txtTicketPrice">XX元</div>
                 <div class="table-td-3">预定</div>
                 <div style="clear:both"></div>
             </div>
@@ -104,7 +104,7 @@
         
         <div class="mp-description-img">
             <img width="990px" height="390px" src="images/dcb.jpg" />
-            <div class="mp-description-onesentence">含鄱口:对面为庐山最高峰“汉阳峰”，北面为第二高峰“大月山”，南面为庐山第三高峰 “五老峰”，湖光山色，相互比美。</div>
+            <div class="mp-description-onesentence" id="txtScenicspotPicture">含鄱口:对面为庐山最高峰“汉阳峰”，北面为第二高峰“大月山”，南面为庐山第三高峰 “五老峰”，湖光山色，相互比美。</div>
             <img width="990px" height="390px" src="images/dcbb.jpg" />
             <div class="mp-description-onesentence">花径公园:位于牯岭街西南2公里处，相传是唐代诗人白居易咏诗《大林寺桃花》的地方。园中繁花似锦，亭台碑碣，湖光山色。</div>
             <img width="990px" height="390px" src="images/dcbbb.jpg" />
@@ -114,13 +114,13 @@
         </div>
         <div class="mp-descr">
           <div class="mp-description-towtxt">
-            <div class="mp-descrone">
+            <div class="mp-descrone" id="txtFreePolicy ">
                 <p>免费政策</p>
                 <p>1.身高1.4米以下儿童免票；</p>
                 <p>2. 70周岁以上（含70周岁）老年人凭有效证件免票；</p>
                 <p> 3. 残疾人、现役军人、全国人大代表、全国政协委员、先进模范群体、省级以上媒体记者、省内市级以上媒体记者、九江本地居民凭有效证件免票。</p>
                 <p> Tips庐山景区在特殊节假日对相应群体有特色的优惠、免票活动，具体参见景区公告。</p></div>
-            <div class="mp-descrtwo">
+            <div class="mp-descrtwo" id="txtFavouredPolicy ">
                 <p>优惠政策</p>
                 <p>1、大学生凭有效证件，门票7.5折优惠；</p>
                 <p>2、中学生及中等专业学校学生凭有效证件，门票半价优惠。</p>
@@ -128,7 +128,7 @@
          </div>
         </div>
         <div name="contact" id="contact"><h2>地图交通</h2></div>
-        <div class="mp-descriptio"> <!--�ٶȵ�ͼ����-->
+        <div class="mp-descriptio" id="txtScenicspotMap "> <!--�ٶȵ�ͼ����-->
         <div style="width:1190px;height:521px;border:#ccc solid 1px;" id="dituContent"></div>
    </div>
         <div id="mp-nearsight" class="mp-nearsight">
