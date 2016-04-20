@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Login\css\login.css" />
+    <Content Include="Account\PersonalCenter\Pim.aspx" />
     <Content Include="Account\Register\css\Register.css" />
     <Content Include="Account\Login\js\login.js" />
     <Content Include="Account\Login\login.html" />
@@ -499,6 +500,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\PersonalCenter\Pim.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\PersonalCenter\Pim.aspx.designer.cs">
+      <DependentUpon>Pim.aspx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Handler.ashx.cs">
       <DependentUpon>Handler.ashx</DependentUpon>
     </Compile>
