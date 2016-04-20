@@ -49,6 +49,23 @@ namespace iTCat
             {
                 context.Response.Write(0);
             }
+            //个人信息
+            string Tel = context.Request["Tel"];
+            string Email = context.Request["Email"];
+            string Pname = context.Request["Pname"];
+            string Name = context.Request["Name"];
+            string Gender = context.Request["Gender"];
+            string Birthday = context.Request[" Birthday"];
+            string Pone = context.Request[" Pone"];
+            string City = context.Request["City"];
+            if (bt.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City))
+            {
+                context.Response.Write(1);
+            }
+            else
+            {
+                context.Response.Write(0);
+            }
 
         }
 

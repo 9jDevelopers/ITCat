@@ -60,6 +60,27 @@ namespace Model
             else
                 return false;
         }
-     
+        public bool TM(string Tel, string Email, string Pname, string Name, string Gender, string Birthday, string Pone, string City)
+        {
+            DbHelper db = new DbHelper();
+
+            //数据库执行代码 待修改
+            //DbCommand cmd = db.GetStoredProcCommond("sp_Login");
+            //db.AddInParameter(cmd, "@TMTel", DbType.String, TMTel);
+            //db.AddInParameter(cmd, "@Password", DbType.String, Password);
+            //db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
+
+            //db.ExecuteNonQuery(cmd);
+
+
+            //string result = cmd.Parameters["@retValue"].Value.ToString();
+
+            //if (result == "1")
+            //    //登陆成功
+            //    return true;
+            //else
+            return false;
+        }
+
     }
 }
