@@ -87,9 +87,8 @@ function submitForm() {
           Level_RadioButton: $("#Level_RadioButton").val(),
           Address: $("#AddressTextBox").val(),
           OpenTime: $("#OpenTimeTextBox").val(),
-          Introduce: $("#IntroduceTextBox").val(),
-          AttractionsTraffic: $("#attractions_traffic").val(),
-          Contact: $("#contact").val(),
+          Introduce: $("#IntroduceTextBox").val(),      
+          Contact: $("#Contact").val(),
           NoteAttractions: $("#NoteAttractions").val(),
          
         },

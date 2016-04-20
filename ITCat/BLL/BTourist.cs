@@ -18,24 +18,15 @@ namespace BLL
             return td.Login(LoginName, Password);
         }
 
-        public bool ToString(string attractionsID,
-            string attractions_name,
-            string attractions_title, 
-            string level_RadioButton,
-            string address, 
-            string openTime, 
-            string introduce,
-            string attractionsTraffic,
-            string contact, 
-            string NoteAttractions
+        public bool ToString(string AttractionsID, string Attractions_name, string Attractions_title,
+                    string Level_RadioButton, string Address, string OpenTime, string Introduce,
+                    string Contact, string NoteAttractions
             )
         {
-            return td.ToString
-                (attractionsID, attractions_name,
-                attractions_title, level_RadioButton,
-                address, openTime, introduce, 
-                attractionsTraffic,contact,
-                NoteAttractions);
+            return td.ToString(
+             AttractionsID, Attractions_name, Attractions_title,
+                    Level_RadioButton, Address, OpenTime, Introduce,
+                    Contact, NoteAttractions);
         }
 
         public bool TM(

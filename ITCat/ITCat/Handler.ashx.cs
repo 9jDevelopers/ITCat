@@ -41,15 +41,14 @@ namespace iTCat
                 string Level_RadioButton = context.Request["lang"];
                 string Address = context.Request["AddressTextBox"];
                 string OpenTime = context.Request["OpenTimeTextBox"];
-                string Introduce = context.Request["IntroduceTextBox"];
-                string AttractionsTraffic = context.Request["attractions_traffic"];
+                string Introduce = context.Request["IntroduceTextBox"];               
                 string Contact = context.Request["contact"];
                 string NoteAttractions = context.Request["NoteAttractions"];
                
                 if (bt.ToString
                     (AttractionsID, Attractions_name, Attractions_title,
                     Level_RadioButton, Address, OpenTime, Introduce,
-                    AttractionsTraffic, Contact, NoteAttractions))
+                    Contact, NoteAttractions))
                 {
                     context.Response.Write(1);
                 }

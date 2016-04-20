@@ -32,20 +32,20 @@ namespace Model
                 return false;
         }
 
-        public bool ToString(string attractionsID, string attractions_name, string attractions_title, string level_RadioButton, string address, string openTime, string introduce, string attractionsTraffic, string contact, string NoteAttractions)
+        public bool ToString(string attractionsID, string attractions_name, string attractions_title, string level_RadioButton, string address, string openTime, string introduce, string contact, string noteAttractions)
         {
+                 
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetStoredProcCommond("sp_Login");
             db.AddInParameter(cmd, "@spotID", DbType.String, attractionsID);
-            db.AddInParameter(cmd, "@name", DbType.String, attractions_name);
-            db.AddInParameter(cmd, "@title", DbType.String, attractions_title);
-            db.AddInParameter(cmd, "@level", DbType.String, level_RadioButton);
+            db.AddInParameter(cmd, "@attractions_name", DbType.String, attractions_name);
+            db.AddInParameter(cmd, "@attractions_title", DbType.String, attractions_title);
+            db.AddInParameter(cmd, "@attractions_level", DbType.String, level_RadioButton);
             db.AddInParameter(cmd, "@address", DbType.String, address);
             db.AddInParameter(cmd, "@openTime", DbType.String, openTime);
             db.AddInParameter(cmd, "@introduce", DbType.String, introduce);
             db.AddInParameter(cmd, "@contact", DbType.String, contact);
-            db.AddInParameter(cmd, "@attractionsAnnotation", DbType.String, NoteAttractions);
-            db.AddInParameter(cmd, "@positionJ", DbType.String, attractionsTraffic);
+            db.AddInParameter(cmd, "@NoteAttractions", DbType.String, noteAttractions);           
             db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
 
             db.ExecuteNonQuery(cmd);

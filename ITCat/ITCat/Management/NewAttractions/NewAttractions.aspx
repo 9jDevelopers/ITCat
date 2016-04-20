@@ -89,10 +89,10 @@
               <tr>
                 <td class ="The_title">*景点图片:  <a href="">添加图片</a></td>
                 <td>
-                <div id="images">
+                <div id="AttractionImages">
                     
                     <%--<asp:ImageButton ID="ImageButton1"  runat="server" OnClick="ImageButton1_Click" />--%>
-                  <div id="fileups">               
+                  <div id="Fileups">               
                    <input type="file" class="file-up" name="btnim0" style="display:none;"/>
                    <input type="file" class="file-up" name="btnim1" style="display:none;"/>
                    <input type="file" class="file-up" name="btnim2" style="display:none;"/>
@@ -120,7 +120,7 @@
             <tr>
                 <td class ="The_title">*联系方式:</td>
                 <td class="Textbox_one"><input class="easyui-textbox" runat="server"
-                    id="contact" data-options="prompt:'请填写景点客服的联系方式',validType:'Lenght[11]'" /></td>
+                    id="Contact" data-options="prompt:'请填写景点客服的联系方式',validType:'Lenght[11]'" /></td>
             </tr>
             </table>
         </div>
