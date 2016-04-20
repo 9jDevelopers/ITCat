@@ -43,5 +43,9 @@ namespace BLL
             return td.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City);
         }
 
+        public bool ToString(string ticketsID, string ticket_type, string tickets_name, string ticketsPrices, string tickets_illustrate, string administratorName_TextBox)
+        {
+            return td.ToString( ticketsID, ticket_type,  tickets_name,  ticketsPrices,  tickets_illustrate,  administratorName_TextBox);
+        }
     }
 }

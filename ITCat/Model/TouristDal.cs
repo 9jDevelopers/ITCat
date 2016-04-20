@@ -60,6 +60,12 @@ namespace Model
             else
                 return false;
         }
+
+        public bool ToString(string ticketsID, string ticket_type, string tickets_name, string ticketsPrices, string tickets_illustrate, string administratorName_TextBox)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool TM(string Tel, string Email, string Pname, string Name, string Gender, string Birthday, string Pone, string City)
         {
             DbHelper db = new DbHelper();

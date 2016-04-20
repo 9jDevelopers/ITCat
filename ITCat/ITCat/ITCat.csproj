@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Login\css\login.css" />
+    <Content Include="Account\PersonalCenter\Pim.aspx" />
     <Content Include="Account\Register\css\Register.css" />
     <Content Include="Account\Login\js\login.js" />
     <Content Include="Account\Login\login.html" />
@@ -110,6 +111,8 @@
     <Content Include="Index\js\jquery-1.11.2.min.js" />
     <Content Include="Management\NewAttractions\css\StyleSheet1.css" />
     <Content Include="Management\NewAttractions\js\JavaScript3.js" />
+    <Content Include="Management\NewTicketClass\js\JavaScript.js" />
+    <Content Include="Management\NewTicketClass\NewTicketClass.aspx" />
     <Content Include="packages.config" />
     <Content Include="Handler.ashx" />
     <Content Include="Public\icomoon\fonts\icomoon.eot" />
@@ -132,7 +135,6 @@
     <Content Include="Management\NewAttractions\js\JavaScript2.js" />
     <Content Include="Management\NewAttractions\NewAttractions.aspx" />
     <Content Include="Management\NewTicketClass\css\ticket.css" />
-    <Content Include="Management\NewTicketClass\NewTicketClass.aspx" />
     <Content Include="Public\css\demo.css" />
     <Content Include="Public\css\public.css" />
     <Content Include="Public\css\themes\black\accordion.css" />
@@ -499,6 +501,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account\PersonalCenter\Pim.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\PersonalCenter\Pim.aspx.designer.cs">
+      <DependentUpon>Pim.aspx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Handler.ashx.cs">
       <DependentUpon>Handler.ashx</DependentUpon>
     </Compile>
@@ -522,7 +530,6 @@
   <ItemGroup>
     <Folder Include="Account\Login\images\" />
     <Folder Include="Account\PersonalCenter\js\" />
-    <Folder Include="Management\NewTicketClass\js\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
