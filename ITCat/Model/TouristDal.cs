@@ -15,7 +15,6 @@ namespace Model
         {
             DbHelper db = new DbHelper();
 
-            //数据库执行代码 待修改
             DbCommand cmd = db.GetStoredProcCommond("sp_Login");
             db.AddInParameter(cmd, "@LoginName", DbType.String, LoginName);
             db.AddInParameter(cmd, "@Password", DbType.String, Password);
