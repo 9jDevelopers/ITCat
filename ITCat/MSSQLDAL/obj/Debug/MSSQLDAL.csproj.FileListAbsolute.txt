@@ -6,8 +6,3 @@ F:\GitHub\ITCat\ITCat\MSSQLDAL\bin\Debug\MSSQLDAL.dll
 F:\GitHub\ITCat\ITCat\MSSQLDAL\bin\Debug\MSSQLDAL.pdb
 F:\GitHub\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.dll
 F:\GitHub\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.pdb
-E:\安装应用\项目\ITCat\ITCat\ITCat\MSSQLDAL\bin\Debug\MSSQLDAL.dll
-E:\安装应用\项目\ITCat\ITCat\ITCat\MSSQLDAL\bin\Debug\MSSQLDAL.pdb
-E:\安装应用\项目\ITCat\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.dll
-E:\安装应用\项目\ITCat\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.pdb
-E:\安装应用\项目\ITCat\ITCat\ITCat\MSSQLDAL\obj\Debug\MSSQLDAL.csprojResolveAssemblyReference.cache
