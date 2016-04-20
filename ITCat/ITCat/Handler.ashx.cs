@@ -17,56 +17,54 @@ namespace iTCat
         {
             context.Response.ContentType = "text/plain";
 
-            //登陆
+
             BTourist bt = new BTourist();
-            string username = context.Request["UserName"];
-            string password = context.Request["UserPassword"];
-            if (bt.Login(username, password))
+            //登陆
+            if (context.Request["UserName"] != null)
             {
-                context.Response.Write(1);
+                string username = context.Request["UserName"];
+                string password = context.Request["UserPassword"];
+                if (bt.Login(username, password))
+                {
+                    context.Response.Write(1);
+                }
+                else
+                {
+                    context.Response.Write(0);
+                }
             }
-            else
-            {
-                context.Response.Write(0);
+            else if (context.Request["txtAttractionsID"] != null)
+            {   //新建景点
+                string AttractionsID = context.Request["txtAttractionsID"];
+                string Attractions_name = context.Request["txtAttractions_name"];
+                string Attractions_title = context.Request["txtAttractions_title"];
+                string Level_RadioButton = context.Request["lang"];
+                string Address = context.Request["AddressTextBox"];
+                string OpenTime = context.Request["OpenTimeTextBox"];
+                string Introduce = context.Request["IntroduceTextBox"];
+                string AttractionsTraffic = context.Request["attractions_traffic"];
+                string Contact = context.Request["contact"];
+                string AttractionsAnnotation = context.Request["Attractions_annotation"];
+                string AdministratorName = context.Request["AdministratorName-TextBox"];
+                if (bt.ToString(AttractionsID, Attractions_name, Attractions_title, Level_RadioButton, Address, OpenTime, Introduce, AttractionsTraffic, Contact, AttractionsAnnotation, AdministratorName))
+                {
+                    context.Response.Write(1);
+                }
+                else
+                {
+                    context.Response.Write(0);
+                }
             }
 
-            //新建景点
-            string AttractionsID = context.Request["txtAttractionsID"];
-            string Attractions_name = context.Request["txtAttractions_name"];
-            string Attractions_title = context.Request["txtAttractions_title"];
-            string Level_RadioButton = context.Request["lang"];
-            string Address = context.Request["AddressTextBox"];
-            string OpenTime = context.Request["OpenTimeTextBox"];
-            string Introduce = context.Request["IntroduceTextBox"];
-            string AttractionsTraffic = context.Request["attractions_traffic"];
-            string Contact = context.Request["contact"];
-            string AttractionsAnnotation = context.Request["Attractions_annotation"];
-            string AdministratorName = context.Request["AdministratorName-TextBox"];
-            if (bt.ToString
-                (AttractionsID, Attractions_name, Attractions_title,
-                Level_RadioButton, Address, OpenTime, 
-                Introduce, AttractionsTraffic, Contact, 
-                AttractionsAnnotation, AdministratorName))
-            {
-                context.Response.Write(1);
-            }
-            else
-            {
-                context.Response.Write(0);
-            }
+
             //新建票种
             string ticketsID = context.Request[""];
             string Ticket_type = context.Request[""];
             string tickets_name = context.Request[""];
             string ticketsPrices = context.Request[""];
             string Tickets_illustrate = context.Request[""];
-            string OrderDateD = context.Request[""];
-            string SpotID = context.Request[""];
-            string Ticket_time = context.Request[""];
-            if (bt.ToString
-                (ticketsID, Ticket_type, tickets_name, 
-                ticketsPrices, Tickets_illustrate, 
-                OrderDateD , SpotID, Ticket_time))
+            string AdministratorName_TextBox = context.Request[""];
+            if (bt.ToString(ticketsID, Ticket_type, tickets_name, ticketsPrices, Tickets_illustrate, AdministratorName_TextBox))
             {
                 context.Response.Write(1);
             }
