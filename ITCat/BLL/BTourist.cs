@@ -38,14 +38,34 @@ namespace BLL
                 attractionsAnnotation, administratorName);
         }
 
-        public bool TM(string Tel, string Email, string Pname, string Name, string Gender, string Birthday, string Pone, string City)
+        public bool TM(
+            string Tel,
+            string Email,
+            string Pname,
+            string Name,
+            string Gender, 
+            string Birthday,
+            string Pone,
+            string City)
         {
             return td.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City);
         }
 
-        public bool ToString(string ticketsID, string ticket_type, string tickets_name, string ticketsPrices, string tickets_illustrate, string administratorName_TextBox)
+        public bool ToString(
+            string ticketsID,
+            string ticket_type,
+            string tickets_name,
+            string ticketsPrices, 
+            string tickets_illustrate,
+            string OrderDateD,
+            string SpotID,
+            string Ticket_time
+            )
         {
-            return td.ToString( ticketsID, ticket_type,  tickets_name,  ticketsPrices,  tickets_illustrate,  administratorName_TextBox);
+            return td.ToString( 
+                ticketsID, ticket_type,  tickets_name, 
+                ticketsPrices,  tickets_illustrate,
+                OrderDateD , SpotID, Ticket_time);
         }
     }
 }

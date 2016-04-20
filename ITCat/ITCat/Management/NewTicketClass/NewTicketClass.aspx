@@ -104,10 +104,10 @@
         <div>
             <table>
             <tr>
-                <td>注意事项</td>
+                <td>景点ID</td>
                 <td>
-                    <input class="easyui-textbox" data-options="prompt:'请填写门票的注意事项',validType:'Lenght[20,40]'"
-                    id="annotation-TextBox" />
+                    <input class="easyui-textbox" data-options="prompt:'请填写门票对应的景点ID',validType:'Lenght[20,40]'"
+                    id="SpotID_text" />
                 </td>
             </tr>
            </table>
@@ -115,11 +115,22 @@
         <div>
             <table>
             <tr>
-                <td>管理员</td>
+                <td>门票期限</td>
+                <td>
+                    <input class="easyui-textbox" data-options="prompt:'请填写该门票的使用期限',validType:'Lenght[20,40]'"
+                    id="Ticket_time" />
+                </td>
+            </tr>
+           </table>
+        </div>
+        <div>
+            <table>
+            <tr>
+                <td>提前订票的时间</td>
                 <td>
                     <input class="easyui-validatebox textbox"
-                     data-options=" missingMessage:'请输入该门票的管理员姓名' , prompt:'验证完成.',invalidMessage:'请输入3个以上中文字',required:true,validType:'ChineseLength[3]'"
-                        id="AdministratorName-TextBox" />
+                     data-options=" missingMessage:'请输入该门票可以提前预定的时间' , prompt:'验证完成.',required:true,validType:'Length[10,20]'"
+                        id="OrderDateD" />
                 </td>             
             </tr>
            </table>
@@ -129,10 +140,7 @@
             <tr>
                 <td>
                      <a href="javascript:NewTicketClass" class="easyui-linkbutton" id="submitForm" onclick="submitForm()">提交</a>
-                </td>
-                <td>
-                    <asp:Button ID="Button2" runat="server" type="reset" Text="重置" />
-                </td>
+                </td>              
             </tr>
            </table>
         </div>

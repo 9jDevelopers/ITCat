@@ -22,8 +22,9 @@ function submitForm() {
             tickets_name: $("#tickets_name").val(),
             ticketsPrices: $("#ticketsPrices").val(),
             Tickets_illustrate: $("#Tickets_illustrate").val(),
-            AdministratorName_TextBox: $("#AdministratorName-TextBox").val()
-            
+            OrderDateD: $("#OrderDateD").val(),
+            SpotID: $("#SpotID_text").val(),
+            Ticket_time: $("#Ticket_time").val()
         },
          function (data) {
              if (data == "1") {

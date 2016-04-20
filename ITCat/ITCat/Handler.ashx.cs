@@ -42,7 +42,11 @@ namespace iTCat
             string Contact = context.Request["contact"];
             string AttractionsAnnotation = context.Request["Attractions_annotation"];
             string AdministratorName = context.Request["AdministratorName-TextBox"];
-            if (bt.ToString(AttractionsID, Attractions_name, Attractions_title, Level_RadioButton, Address, OpenTime, Introduce, AttractionsTraffic, Contact, AttractionsAnnotation, AdministratorName))
+            if (bt.ToString
+                (AttractionsID, Attractions_name, Attractions_title,
+                Level_RadioButton, Address, OpenTime, 
+                Introduce, AttractionsTraffic, Contact, 
+                AttractionsAnnotation, AdministratorName))
             {
                 context.Response.Write(1);
             }
@@ -56,8 +60,13 @@ namespace iTCat
             string tickets_name = context.Request[""];
             string ticketsPrices = context.Request[""];
             string Tickets_illustrate = context.Request[""];
-            string AdministratorName_TextBox = context.Request[""];
-            if (bt.ToString(ticketsID, Ticket_type, tickets_name, ticketsPrices, Tickets_illustrate, AdministratorName_TextBox))
+            string OrderDateD = context.Request[""];
+            string SpotID = context.Request[""];
+            string Ticket_time = context.Request[""];
+            if (bt.ToString
+                (ticketsID, Ticket_type, tickets_name, 
+                ticketsPrices, Tickets_illustrate, 
+                OrderDateD , SpotID, Ticket_time))
             {
                 context.Response.Write(1);
             }
