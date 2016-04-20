@@ -23,7 +23,7 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="ff" method="post" runat="server">
 
         <div class="center">
             <table>
@@ -128,7 +128,7 @@
             <table>
             <tr>
                 <td>
-                    <asp:Button ID="Button1" runat="server" Text="提交" />
+                     <a href="javascript:NewTicketClass" class="easyui-linkbutton" id="submitForm" onclick="submitForm()">提交</a>
                 </td>
                 <td>
                     <asp:Button ID="Button2" runat="server" type="reset" Text="重置" />

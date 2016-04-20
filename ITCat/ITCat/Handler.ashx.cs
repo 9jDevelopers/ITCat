@@ -29,7 +29,8 @@ namespace iTCat
             {
                 context.Response.Write(0);
             }
-            //新建景点数据
+
+            //新建景点
             string AttractionsID = context.Request["txtAttractionsID"];
             string Attractions_name = context.Request["txtAttractions_name"];
             string Attractions_title = context.Request["txtAttractions_title"];
@@ -49,6 +50,22 @@ namespace iTCat
             {
                 context.Response.Write(0);
             }
+            //新建票种
+            string ticketsID = context.Request[""];
+            string Ticket_type = context.Request[""];
+            string tickets_name = context.Request[""];
+            string ticketsPrices = context.Request[""];
+            string Tickets_illustrate = context.Request[""];
+            string AdministratorName_TextBox = context.Request[""];
+            if (bt.ToString(ticketsID, Ticket_type, tickets_name, ticketsPrices, Tickets_illustrate, AdministratorName_TextBox))
+            {
+                context.Response.Write(1);
+            }
+            else
+            {
+                context.Response.Write(0);
+            }
+
             //个人信息
             string Tel = context.Request["Tel"];
             string Email = context.Request["Email"];
@@ -66,6 +83,7 @@ namespace iTCat
             {
                 context.Response.Write(0);
             }
+
 
         }
 
