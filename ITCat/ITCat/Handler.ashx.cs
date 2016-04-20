@@ -17,62 +17,70 @@ namespace iTCat
         {
             context.Response.ContentType = "text/plain";
 
-            //登陆
+
             BTourist bt = new BTourist();
-            string username = context.Request["UserName"];
-            string password = context.Request["UserPassword"];
-            if (bt.Login(username, password))
+            //登陆
+            if (context.Request["UserName"] != null)
             {
-                context.Response.Write(1);
+                string username = context.Request["UserName"];
+                string password = context.Request["UserPassword"];
+                if (bt.Login(username, password))
+                {
+                    context.Response.Write(1);
+                }
+                else
+                {
+                    context.Response.Write(0);
+                }
             }
-            else
-            {
-                context.Response.Write(0);
+            else if (context.Request["txtAttractionsID"] != null)
+            {   //新建景点
+                string AttractionsID = context.Request["txtAttractionsID"];
+                string Attractions_name = context.Request["txtAttractions_name"];
+                string Attractions_title = context.Request["txtAttractions_title"];
+                string Level_RadioButton = context.Request["lang"];
+                string Address = context.Request["AddressTextBox"];
+                string OpenTime = context.Request["OpenTimeTextBox"];
+                string Introduce = context.Request["IntroduceTextBox"];
+                string AttractionsTraffic = context.Request["attractions_traffic"];
+                string Contact = context.Request["contact"];
+                string NoteAttractions = context.Request["NoteAttractions"];
+               
+                if (bt.ToString
+                    (AttractionsID, Attractions_name, Attractions_title,
+                    Level_RadioButton, Address, OpenTime, Introduce,
+                    AttractionsTraffic, Contact, NoteAttractions))
+                {
+                    context.Response.Write(1);
+                }
+                else
+                {
+                    context.Response.Write(0);
+                }
             }
 
-            //新建景点
-            string AttractionsID = context.Request["txtAttractionsID"];
-            string Attractions_name = context.Request["txtAttractions_name"];
-            string Attractions_title = context.Request["txtAttractions_title"];
-            string Level_RadioButton = context.Request["lang"];
-            string Address = context.Request["AddressTextBox"];
-            string OpenTime = context.Request["OpenTimeTextBox"];
-            string Introduce = context.Request["IntroduceTextBox"];
-            string AttractionsTraffic = context.Request["attractions_traffic"];
-            string Contact = context.Request["contact"];
-            string AttractionsAnnotation = context.Request["Attractions_annotation"];
-            string AdministratorName = context.Request["AdministratorName-TextBox"];
-            if (bt.ToString
-                (AttractionsID, Attractions_name, Attractions_title,
-                Level_RadioButton, Address, OpenTime, 
-                Introduce, AttractionsTraffic, Contact, 
-                AttractionsAnnotation, AdministratorName))
+            else if (context.Request["ticketsID"] != null)
             {
-                context.Response.Write(1);
-            }
-            else
-            {
-                context.Response.Write(0);
-            }
-            //新建票种
-            string ticketsID = context.Request[""];
-            string Ticket_type = context.Request[""];
-            string tickets_name = context.Request[""];
-            string ticketsPrices = context.Request[""];
-            string Tickets_illustrate = context.Request[""];
-            string OrderDateD = context.Request[""];
-            string SpotID = context.Request[""];
-            string Ticket_time = context.Request[""];
-            if (bt.ToString
-                (ticketsID, Ticket_type, tickets_name, 
-                ticketsPrices, Tickets_illustrate, 
-                OrderDateD , SpotID, Ticket_time))
-            {
-                context.Response.Write(1);
-            }
-            else
-            {
-                context.Response.Write(0);
+                //新建票种
+                string ticketsID = context.Request["ticketsID"];
+                string Ticket_type = context.Request["Ticket_type"];
+                string tickets_name = context.Request["tickets_name"];
+                string ticketsPrices = context.Request["ticketsPrices"];
+                string Tickets_illustrate = context.Request["Tickets_illustrate"];
+                string OrderDateD = context.Request["OrderDateD"];
+                string SpotID = context.Request["SpotID_text"];
+                string Ticket_time = context.Request["Ticket_time"];
+                if (bt.ToString
+                    (ticketsID, Ticket_type, tickets_name,
+                    ticketsPrices, Tickets_illustrate,
+                    OrderDateD, SpotID, Ticket_time))
+                {
+                    context.Response.Write(1);
+                }
+                else
+                {
+                    context.Response.Write(0);
+                }
             }
 
             //个人信息
@@ -95,6 +103,7 @@ namespace iTCat
 
 
         }
+
 
         public bool IsReusable
         {

@@ -27,15 +27,15 @@ namespace BLL
             string introduce,
             string attractionsTraffic,
             string contact, 
-            string attractionsAnnotation, 
-            string administratorName)
+            string NoteAttractions
+            )
         {
             return td.ToString
                 (attractionsID, attractions_name,
                 attractions_title, level_RadioButton,
                 address, openTime, introduce, 
                 attractionsTraffic,contact,
-                attractionsAnnotation, administratorName);
+                NoteAttractions);
         }
 
         public bool TM(

@@ -32,7 +32,7 @@ namespace Model
                 return false;
         }
 
-        public bool ToString(string attractionsID, string attractions_name, string attractions_title, string level_RadioButton, string address, string openTime, string introduce, string attractionsTraffic, string contact, string attractionsAnnotation, string administratorName)
+        public bool ToString(string attractionsID, string attractions_name, string attractions_title, string level_RadioButton, string address, string openTime, string introduce, string attractionsTraffic, string contact, string NoteAttractions)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetStoredProcCommond("sp_Login");
@@ -44,8 +44,8 @@ namespace Model
             db.AddInParameter(cmd, "@openTime", DbType.String, openTime);
             db.AddInParameter(cmd, "@introduce", DbType.String, introduce);
             db.AddInParameter(cmd, "@contact", DbType.String, contact);
-            db.AddInParameter(cmd, "@attractionsAnnotation", DbType.String, attractionsAnnotation);
-            db.AddInParameter(cmd, "@attractionsTraffic", DbType.String, attractionsTraffic);
+            db.AddInParameter(cmd, "@attractionsAnnotation", DbType.String, NoteAttractions);
+            db.AddInParameter(cmd, "@positionJ", DbType.String, attractionsTraffic);
             db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
 
             db.ExecuteNonQuery(cmd);
@@ -60,38 +60,40 @@ namespace Model
                 return false;
         }
 
-        public bool ToString(string ticketsID, string ticket_type, string tickets_name, string ticketsPrices, string tickets_illustrate, string orderDateD, string spotID, string ticket_time)
+        public bool ToString(
+            string ticketsID, 
+            string ticket_type, 
+            string tickets_name, 
+            string ticketsPrices,
+            string tickets_illustrate,
+            string OrderDateD,
+            string spotID,
+            string ticket_time)
         {
-            throw new NotImplementedException();
-        }
+            {
+                DbHelper db = new DbHelper();
+                DbCommand cmd = db.GetStoredProcCommond("sp_Login");
+                db.AddInParameter(cmd, "@TicketsID", DbType.String, ticketsID);
+                db.AddInParameter(cmd, "@TicketsType", DbType.String, ticket_type);
+                db.AddInParameter(cmd, "@TicketsName", DbType.String, tickets_name);
+                db.AddInParameter(cmd, "@Price", DbType.String, ticketsPrices);
+                db.AddInParameter(cmd, "@explain", DbType.String, tickets_illustrate);
+                db.AddInParameter(cmd, "@OrderDateD", DbType.String, OrderDateD);
+                db.AddInParameter(cmd, "@spotID", DbType.String, spotID);
+                db.AddInParameter(cmd, "@time", DbType.String, ticket_time);
+                db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
 
-        public bool ToString(string ticketsID, string ticket_type, string tickets_name, string ticketsPrices, string tickets_illustrate, string orderDateD, string spotID)
-        {
-            throw new NotImplementedException();
-        }
-
-        public bool ToString(string ticketsID, string ticket_type, string tickets_name, string ticketsPrices, string tickets_illustrate, string OrderDateD)
-        {
-            DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetStoredProcCommond("sp_Login");
-            db.AddInParameter(cmd, "@TicketsID", DbType.String, ticketsID);
-            db.AddInParameter(cmd, "@TicketsType", DbType.String, ticket_type);
-            db.AddInParameter(cmd, "@TicketsName", DbType.String, tickets_name);
-            db.AddInParameter(cmd, "@Price", DbType.String, ticketsPrices);
-            db.AddInParameter(cmd, "@explain", DbType.String, tickets_illustrate);
-            db.AddInParameter(cmd, "@OrderDateD", DbType.String, OrderDateD);
-            db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
-
-            db.ExecuteNonQuery(cmd);
+                db.ExecuteNonQuery(cmd);
 
 
-            string result = cmd.Parameters["@retValue"].Value.ToString();
+                string result = cmd.Parameters["@retValue"].Value.ToString();
 
-            if (result == "1")
-                //新建票种成功
-                return true;
-            else
-                return false;
+                if (result == "1")
+                    //新建票种成功
+                    return true;
+                else
+                    return false;
+            }
         }
 
         public bool TM(string Tel, string Email, string Pname, string Name, string Gender, string Birthday, string Pone, string City)

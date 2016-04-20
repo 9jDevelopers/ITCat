@@ -129,22 +129,12 @@
             <tr>
                 <td class ="The_title">*注释:      
                 </td>
-                <td class="Textbox_one">&nbsp;&nbsp;<input  id="Attractions_annotation" runat="server"
+                <td class="Textbox_one">&nbsp;&nbsp;<input  id="NoteAttractions" runat="server"
                     class="easyui-textbox" data-options="prompt:'请填写景点注意事项和说明',validType:'Lenght[20,30]'" /></td>
             </tr>
             </table>
         </div>
-         <div>
-             <table>
-            <tr>
-                <td class ="The_title">*管理员:</td>
-                <td class="Textbox_one">&nbsp;
-                    <input class="easyui-validatebox textbox"
-                     data-options=" missingMessage:'请输入该景点的管理员姓名' , prompt:'验证完成.',invalidMessage:'请输入3个以上中文字',required:true,validType:'ChineseLength[3]'"
-                        id="AdministratorName-TextBox"/></td>
-                </tr>              
-            </table>
-        </div>
+       
         <div>
             <table>
            <tr>
