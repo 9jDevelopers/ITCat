@@ -43,7 +43,7 @@
     <Compile Include="Actor.cs" />
     <Compile Include="Attractions .cs" />
     <Compile Include="City.cs" />
-    <Compile Include="DAL\PimDal.cs" />
+    <Compile Include="DAL\TouristDal.cs" />
     <Compile Include="Journal.cs" />
     <Compile Include="Member.cs" />
     <Compile Include="Order.cs" />
@@ -51,7 +51,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Rated.cs" />
     <Compile Include="Ticket.cs" />
-    <Compile Include="TouristDal.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MSSQLDAL\MSSQLDAL.csproj">

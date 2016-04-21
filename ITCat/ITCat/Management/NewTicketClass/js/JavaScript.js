@@ -15,7 +15,7 @@ function submitForm() {
     $("#submitForm").click(
      function () {
          $.post(
-             "../../../Handler.ashx",
+             "../../../NewTicketClassHandler.ashx",
         {
             ticketsID: $("#ticketsID").val(),
             Ticket_type: $("#Ticket_type").val(),
