@@ -10,6 +10,7 @@ namespace BLL
 {
     public class BNewAttractions
     {
+        //新建景点BLL代码
         public NewAttractionsDAL NewAttractionsDAL { get; set; }
         NewAttractionsDAL td = new NewAttractionsDAL();
         public bool ToString(string AttractionsID, string Attractions_name, string Attractions_title,
@@ -23,7 +24,7 @@ namespace BLL
                     Contact, NoteAttractions);
         }
 
-
-      }
+      
+    }
     }
 
