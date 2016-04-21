@@ -74,34 +74,3 @@ $.extend($.fn.validatebox.defaults.rules, {
     }
 });
 //提交数据的JS代码
-function submitForm() {
-    $('#ff').form('submit');
-    $("#submitForm").click(
-     function () {
-         $.post(
-             "../../../Handler.ashx",
-        { 
-          AttractionsID: $("#txtAttractionsID").val() ,
-          Attractions_name: $("#txtAttractions_name").val(),
-          Attractions_title: $("#txtAttractions_title").val(),
-          Level_RadioButton: $("#Level_RadioButton").val(),
-          Address: $("#AddressTextBox").val(),
-          OpenTime: $("#OpenTimeTextBox").val(),
-          Introduce: $("#IntroduceTextBox").val(),      
-          Contact: $("#Contact").val(),
-          NoteAttractions: $("#NoteAttractions").val(),
-         
-        },
-         function (data) {
-             if (data == "1") {
-                 alert("提交成功");
-             }
-             else {
-                 alert("提交失败");
-             }
-         }
-        );
-     }
-             );
-                               
-    }
