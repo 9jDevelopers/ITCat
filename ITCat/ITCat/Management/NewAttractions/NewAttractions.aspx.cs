@@ -5,14 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class New_attractions : System.Web.UI.Page
+namespace iTCat.Management.NewAttractions
 {
-    protected void Page_Load(object sender, EventArgs e)
-    {
-        
-       
-            
-        
-    }
-   
+	public partial class NewAttractions : System.Web.UI.Page
+	{
+		protected void Page_Load(object sender, EventArgs e)
+		{
+
+		}
+	}
 }

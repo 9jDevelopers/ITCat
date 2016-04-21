@@ -1,15 +1,11 @@
-﻿ 
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="NewAttractions.aspx.cs" Inherits="iTCat.Management.NewAttractions.NewAttractions" %>
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>   
-    <title></title>  
-    <link href="../../Public/css/themes/default/easyui.css" rel="stylesheet" />
-    <link href="../../Public/css/themes/icon.css" rel="stylesheet" />
-    <link href="../../Public/css/demo.css" rel="stylesheet" />
-    <script src="../../Public/js/jquery.min.js"></script>
-    <script src="../../Public/js/jquery.easyui.min.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
 </head>
 <body>
     <form  id="ff" method="post" runat="server">
@@ -154,7 +150,6 @@
 			box-sizing:content-box;
 		}
         </style>
-    
-    <script src="js/NewAttractions.aspx.js"></script>  
+    <script src="js/NewAttractions.aspx.js"></script>
 </body>
 </html>
