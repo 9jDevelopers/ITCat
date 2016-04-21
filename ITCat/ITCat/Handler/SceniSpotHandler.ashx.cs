@@ -15,7 +15,7 @@ namespace iTCat.Handler
 
         public void ProcessRequest(HttpContext context)
         {
-            BTourist bt = new BTourist();  
+            BScenic bs = new BScenic();  
               if (context.Request["txtScenicspotID"] != null)
             {
                 //景点浏览
@@ -31,7 +31,7 @@ namespace iTCat.Handler
                 string ScenicspotGrade = context.Request["txtScenicspot_Grade"];
                 string ScenicspotTitle = context.Request["txtScenicspot_Title"];
                 string ScenicSpotContactPhone = context.Request["txtScenicSpot_ContactPhone"];
-                if (bt.browse(ScenicspotID, Scenicspot_Name, ScenicspotIntroduction, ScenicspotAddress, TicketPrice, ScenicspotPicture, FreePolicy, FavouredPolicy, ScenicspotMap, ScenicspotGrade, ScenicspotTitle, ScenicSpotContactPhone))
+                if (bs.browse(ScenicspotID, Scenicspot_Name, ScenicspotIntroduction, ScenicspotAddress, TicketPrice, ScenicspotPicture, FreePolicy, FavouredPolicy, ScenicspotMap, ScenicspotGrade, ScenicspotTitle, ScenicSpotContactPhone))
                 {
                     context.Response.Write(1);
                 }

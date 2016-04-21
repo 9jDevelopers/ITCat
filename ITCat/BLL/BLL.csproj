@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BPim.cs" />
+    <Compile Include="BScenic.cs" />
     <Compile Include="BTourist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
