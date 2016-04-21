@@ -11,7 +11,7 @@ namespace iTCat.Handler
     /// </summary>
     public class NewAttractionsHandler : IHttpHandler
     {
-
+        //新建景点Handler代码
         public void ProcessRequest(HttpContext context)
         {
             BNewAttractions  bt = new  BNewAttractions();

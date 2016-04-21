@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BNewAttractions.cs" />
+    <Compile Include="BNewTicketClass.cs" />
     <Compile Include="BPim.cs" />
     <Compile Include="BScenic.cs" />
     <Compile Include="BTourist.cs" />

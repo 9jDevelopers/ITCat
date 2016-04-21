@@ -9,7 +9,10 @@ using Model.DAL;
 namespace BLL
 {
     public class BScenic
-    {   
+    {
+        public ScenicDal ScenicDal { get; set; }
+        ScenicDal td = new ScenicDal();
+
         public bool browse(string scenicspotID, string scenicspot_Name, string scenicspotIntroduction, string scenicspotAddress, string ticketPrice, string scenicspotPicture, string freePolicy, string favouredPolicy, string scenicspotMap, string scenicspotGrade, string scenicspotTitle, string scenicSpotContactPhone)
         {
             throw new NotImplementedException();
