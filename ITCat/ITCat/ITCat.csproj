@@ -481,6 +481,7 @@
     <Content Include="Public\js\jquery.easyui.min.js" />
     <Content Include="Public\js\jquery.easyui.mobile.js" />
     <Content Include="Public\js\jquery.min.js" />
+    <Content Include="Scenic\css\Scenic.css" />
     <Content Include="Scenic\images\1.jpg" />
     <Content Include="Scenic\images\2.jpg" />
     <Content Include="Scenic\images\3.jpg" />
@@ -503,6 +504,9 @@
       <DependentUpon>Pim.aspx.cs</DependentUpon>
     </Compile>
     <Compile Include="Handler.ashx.cs" />
+    <Compile Include="Handler\LoginHandler.ashx.cs">
+      <DependentUpon>LoginHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Management\NewAttractions\NewAttractions.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>NewAttractions.aspx</DependentUpon>
@@ -525,7 +529,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Account\Login\images\" />
-    <Folder Include="Scenic\css\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -544,6 +547,7 @@
   <ItemGroup>
     <Content Include="Scenic\scripts\Scenic.js" />
     <Content Include="web.config" />
+    <Content Include="Handler\LoginHandler.ashx" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
