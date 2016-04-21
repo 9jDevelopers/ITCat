@@ -33,7 +33,22 @@ namespace Model
                 return false;
         }
 
-        public bool ToString(string attractionsID, string attractions_name, string attractions_title, string level_RadioButton, string address, string openTime, string introduce, string attractionsTraffic, string contact, string attractionsAnnotation, string administratorName)
+        public bool ToString(string attractionsID, string attractions_name, string attractions_title, string level_RadioButton, string address, string openTime, string introduce, string contact, string noteAttractions)
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool ToString(
+            string attractionsID,
+            string attractions_name,
+            string attractions_title, 
+            string level_RadioButton, 
+            string address,
+            string openTime, 
+            string introduce,
+            string attractionsTraffic,
+            string contact, 
+            string NoteAttractions)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetStoredProcCommond("sp_Login");
@@ -45,8 +60,7 @@ namespace Model
             db.AddInParameter(cmd, "@openTime", DbType.String, openTime);
             db.AddInParameter(cmd, "@introduce", DbType.String, introduce);
             db.AddInParameter(cmd, "@contact", DbType.String, contact);
-            db.AddInParameter(cmd, "@attractionsAnnotation", DbType.String, attractionsAnnotation);
-            db.AddInParameter(cmd, "@attractionsTraffic", DbType.String, attractionsTraffic);
+            db.AddInParameter(cmd, "@NoteAttractions", DbType.String, NoteAttractions);
             db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
 
             db.ExecuteNonQuery(cmd);

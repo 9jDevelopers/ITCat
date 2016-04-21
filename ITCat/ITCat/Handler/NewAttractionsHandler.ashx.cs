@@ -17,18 +17,16 @@ namespace iTCat.Handler
             BTourist bt = new BTourist();
             
                 //新建景点数据
-                string AttractionsID = context.Request["txtAttractionsID"];
-                string Attractions_name = context.Request["txtAttractions_name"];
-                string Attractions_title = context.Request["txtAttractions_title"];
-                string Level_RadioButton = context.Request["lang"];
-                string Address = context.Request["AddressTextBox"];
-                string OpenTime = context.Request["OpenTimeTextBox"];
-                string Introduce = context.Request["IntroduceTextBox"];
-                string AttractionsTraffic = context.Request["attractions_traffic"];
-                string Contact = context.Request["contact"];
-                string AttractionsAnnotation = context.Request["Attractions_annotation"];
-                string AdministratorName = context.Request["AdministratorName-TextBox"];
-                if (bt.ToString(AttractionsID, Attractions_name, Attractions_title, Level_RadioButton, Address, OpenTime, Introduce, AttractionsTraffic, Contact, AttractionsAnnotation, AdministratorName))
+                string AttractionsID = context.Request["AttractionsID"];
+                string Attractions_name = context.Request["Attractions_name"];
+                string Attractions_title = context.Request["Attractions_title"];
+                string Level_RadioButton = context.Request["Level_RadioButton"];
+                string Address = context.Request["Address"];
+                string OpenTime = context.Request["OpenTime"];
+                string Introduce = context.Request["Introduce"];
+                string Contact = context.Request["Contact"];
+                string NoteAttractions = context.Request["NoteAttractions"];              
+                if (bt.ToString(AttractionsID, Attractions_name, Attractions_title, Level_RadioButton, Address, OpenTime, Introduce,  Contact, NoteAttractions ))
                 {
                     context.Response.Write(1);
                 }
