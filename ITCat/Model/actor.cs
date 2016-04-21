@@ -38,7 +38,7 @@ namespace Model
         /// <summary>
         /// 邮箱
         /// </summary>
-        public string MailBox { get; set; }
+        public string Email { get; set; }
         /// <summary>
         /// 性别
         /// </summary>

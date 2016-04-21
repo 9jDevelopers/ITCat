@@ -13,19 +13,19 @@ namespace iTCat.Handler
 
         public void ProcessRequest(HttpContext context)
         {
-            BTourist bt = new BTourist();
+            BPim a = new BPim();
            if (context.Request["Tel"] != null)
             {
-                string Tel = context.Request["Tel"];
+                string  Tel = context.Request["Tel"];
                 string Email = context.Request["Email"];
                 string Pname = context.Request["Pname"];
                 string Name = context.Request["Name"];
-                string Gender = context.Request["Gender"];
-                string Birthday = context.Request[" Birthday"];
+                string  Gender = context.Request["Gender"];
+                DateTime Birthday = DateTime.Parse(context.Request["Birthday"]);
                 string Pone = context.Request[" Pone"];
                 string City = context.Request["City"];
-                string Head_Portrait = context.Request["Head_Portrait"];
-                if (bt.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City, Head_Portrait))
+                byte[] Head_Portrait = null; // byte.Parse context.Request["Head_Portrait"];
+                if (a.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City, Head_Portrait))
                 {
                     context.Response.Write(1);
                 }
