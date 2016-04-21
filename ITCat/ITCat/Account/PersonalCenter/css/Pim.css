@@ -46,30 +46,65 @@
      {
         color:#1C86EE;
      }
-.imgs 
-{
-    border-color:blue;
-    border-width:0.5px;
-    margin-top:5px;
-    margin-left:100px;
-    width:294px;
-    height:318px;
-    border-style:dashed;
-    border-bottom-color:#CDCDB4;
-    background-image:url(../IMG/102.png);
-}
 .imgss 
 {
   background-image:url(../IMG/101.png);
   margin-left:450px;
-  margin-top:-260px;
-    width:192px;
-    height:192px;
+  margin-top:-180px;
+  width:192px;
+  height:192px;
+  
 }
 .kj 
 {
     margin-left:220px;
-    margin-top:95px;
+    margin-top:40px;
     
    
+}
+.TP
+{
+    border-color:blue;
+    border-width:0.5px;
+    margin-top:50px;
+    margin-left:100px;
+    width:280px;
+    height:280px;
+    border-style:dashed;
+    border-bottom-color:#CDCDB4;
+}
+.add-images add
+{
+    margin-left:200px;
+   
+}
+.icon-heart2
+{
+    color:Red;
+    font-size:3rem;
+    margin-left:200px;   
+}
+.item
+{
+  margin-left:-5px; 
+  width:280px; 
+  height:280px;
+  left:5px; 
+  top:5px;
+}
+
+.im
+{
+  margin-left:-5px; 
+  width:280px; 
+  height:280px;
+  left:5px; 
+  top:5px;
+}
+.item i
+{
+    /*绝对定位*/
+  position:absolute;
+  top:-5px;
+  right:-5px;
 }

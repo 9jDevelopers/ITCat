@@ -12,6 +12,8 @@
     <link href="css/Pim.css" rel="stylesheet" />
     <script src="../../Public/js/jquery.min.js"></script>
     <script src="../../Public/js/jquery.easyui.min.js"></script> 
+    <script src="js/Pim.js"></script>
+   
 </head>
 <body>
   
@@ -157,14 +159,18 @@
 
                 <div class="down">
                     <div class="ft">
-                        头像&nbsp;<button type="button">上传图片</button><h5>仅支持jpg,gif,png格式图片，且文件小于2M.</h5>
+                        <h5>仅支持jpg,gif,png格式图片，且文件小于2M.</h5>
                     </div>
-                    <div class="images-preview clearfix">   
-                <div class="add-images add"></div>
-                <div class="icon-heart2"></div>
-                 <input type="file" capture="camera" accept="image/*" class="file-up" name="fileUp0" />    
+                <div class="TP">   
+                    <input type="button" id="btnimage"  onclick="test()"  style="margin-left:20px;"> 
+                        <div id="fileups">                  
+                            <input type="file" class="file-up" name="btnim1"onchange=" previewImages()" style="display:none;"/>
+                            <input type="file" class="file-up" name="btnim2" onchange=" previewImages()" style="display:none;"/>
+                        <input type="file" class="file-up" name="btnim3" onchange=" previewImages()" style="display:none;"/>
+                        </div>   
                 </div>
-                    <div class="imgs"></div>
+                    
+                    <div class="add-images"></div>
                     <div class="imgss"></div>
                     <div class="kj"><input type="button" value="提交"  onclick = "" /></div>
                 </div>

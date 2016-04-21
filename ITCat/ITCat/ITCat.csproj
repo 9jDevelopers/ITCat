@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Login\css\login.css" />
+    <Content Include="Account\PersonalCenter\js\Pim.js" />
     <Content Include="Account\PersonalCenter\Pim.aspx" />
     <Content Include="Account\Register\css\Register.css" />
     <Content Include="Account\Login\js\login.js" />
@@ -74,7 +75,6 @@
     <Content Include="Account\PersonalCenter\css\Pim.css" />
     <Content Include="Account\PersonalCenter\IMG\101.png" />
     <Content Include="Account\PersonalCenter\IMG\102.png" />
-    <Content Include="Account\PersonalCenter\Pim.html" />
     <Content Include="Account\Rated\css\Rated.css" />
     <Content Include="Account\Rated\IMG\00.png" />
     <Content Include="Account\Rated\IMG\01.png" />
@@ -522,7 +522,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Account\Login\images\" />
-    <Folder Include="Account\PersonalCenter\js\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
