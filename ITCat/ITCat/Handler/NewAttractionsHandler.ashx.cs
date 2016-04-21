@@ -13,8 +13,8 @@ namespace iTCat.Handler
     {
 
         public void ProcessRequest(HttpContext context)
-        {           
-            BTourist bt = new BTourist();
+        {
+            BNewAttractions  bt = new  BNewAttractions();
             
                 //新建景点数据
                 string AttractionsID = context.Request["AttractionsID"];
