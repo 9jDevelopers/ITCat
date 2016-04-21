@@ -120,7 +120,7 @@
     <Content Include="Management\NewAttractions\css\StyleSheet2.css" />
     <Content Include="Management\NewAttractions\js\JavaScript.js" />
     <Content Include="Management\NewAttractions\js\JavaScript2.js" />
-    <Content Include="Management\NewAttractions\js\NewAttractions.aspx.js" />
+    <Content Include="Management\NewAttractions\js\JavaScript3.js" />
     <Content Include="Management\NewAttractions\NewAttractions.aspx" />
     <Content Include="Management\NewTicketClass\css\ticket.css" />
     <Content Include="Management\NewTicketClass\js\JavaScript.js" />
@@ -507,8 +507,19 @@
     <Compile Include="Handler\LoginHandler.ashx.cs">
       <DependentUpon>LoginHandler.ashx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Handler\SceniSpotHandler.ashx.cs">
       <DependentUpon>SceniSpotHandler.ashx</DependentUpon>
+=======
+    <Compile Include="Handler\NewAttractionsHandler.ashx.cs">
+      <DependentUpon>NewAttractionsHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\NewTicketClassHandler.ashx.cs">
+      <DependentUpon>NewTicketClassHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\PimHandler1.ashx.cs">
+      <DependentUpon>PimHandler1.ashx</DependentUpon>
+>>>>>>> origin/master
     </Compile>
     <Compile Include="Management\NewAttractions\NewAttractions.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -551,7 +562,13 @@
     <Content Include="Scenic\scripts\Scenic.js" />
     <Content Include="web.config" />
     <Content Include="Handler\LoginHandler.ashx" />
+<<<<<<< HEAD
     <Content Include="Handler\SceniSpotHandler.ashx" />
+=======
+    <Content Include="Handler\PimHandler1.ashx" />
+    <Content Include="Handler\NewAttractionsHandler.ashx" />
+    <Content Include="Handler\NewTicketClassHandler.ashx" />
+>>>>>>> origin/master
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
