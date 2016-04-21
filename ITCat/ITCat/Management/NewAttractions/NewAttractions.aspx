@@ -6,6 +6,12 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link href="../../Public/css/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../../Public/css/themes/icon.css" rel="stylesheet" />
+    <link href="../../Public/css/demo.css" rel="stylesheet" />
+    <script src="../../Public/js/jquery.min.js"></script>
+    <script src="../../Public/js/jquery.easyui.min.js"></script>
+    <script src="js/JavaScript3.js"></script>
 </head>
 <body>
     <form  id="ff" method="post" runat="server">
@@ -86,7 +92,7 @@
                 <td>
                 <div id="AttractionImages">
                     
-                    <asp:ImageButton ID="ImageButton1"  runat="server" OnClick="ImageButton1_Click" />
+                   <%-- <asp:ImageButton ID="ImageButton1"  runat="server" OnClick="ImageButton1_Click" />--%>
                   <div id="Fileups">               
                    <input type="file" class="file-up" name="btnim0" style="display:none;"/>
                    <input type="file" class="file-up" name="btnim1" style="display:none;"/>
@@ -134,7 +140,7 @@
             <table>
            <tr>
                 <td>
-                    <a href="javascript:NewAttractions" class="easyui-linkbutton" id="submitForm" onclick="submitForm()">提交</a>                    
+                    <a href="javascript:NewAttractions" class="easyui-linkbutton" id="submitForm" onclick="submitForm()">提交</a>                   
                     <input  runat="server" height="36px" style="margin-top: 0px"  value="重置" type="submit"  width="72px" />
                 </td>
              </tr> 
@@ -149,7 +155,39 @@
 			padding:0 2px;
 			box-sizing:content-box;
 		}
-        </style>
-    <script src="js/NewAttractions.aspx.js"></script>
+     </style>
+    <script  >       
+        function submitForm() {            
+            $('#ff').form('submit');
+            $("#submitForm").click(
+             function () {
+                 
+                 $.post(
+                     "../../../NewAttractionsHandler.ashx",
+                {                    
+                    AttractionsID: $("#txtAttractionsID").val(),
+                    Attractions_name: $("#txtAttractions_name").val(),
+                    Attractions_title: $("#txtAttractions_title").val(),
+                    Level_RadioButton: $("#Level_RadioButton").val(),
+                    Address: $("#AddressTextBox").val(),
+                    OpenTime: $("#OpenTimeTextBox").val(),
+                    Introduce: $("#IntroduceTextBox").val(),
+                    Contact: $("#Contact").val(),
+                    NoteAttractions: $("#NoteAttractions").val(),
+                    
+                },
+                 function (data) {
+                     if (data == "1") {
+                         alert("提交成功");
+                     }
+                     else {
+                         alert("提交失败");
+                     }
+                 }
+                );
+             }
+                     );
+        }
+    </script>
 </body>
 </html>
