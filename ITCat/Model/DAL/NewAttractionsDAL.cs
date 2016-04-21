@@ -8,6 +8,7 @@ namespace Model.DAL
 {
     public class NewAttractionsDAL
     {
+        //新建景点DAL代码
         public bool ToString(string attractionsID, string attractions_name, string attractions_title, string level_RadioButton, string address, string openTime, string introduce, string contact, string noteAttractions)
         {
             throw new NotImplementedException();

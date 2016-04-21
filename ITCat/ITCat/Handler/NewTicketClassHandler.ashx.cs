@@ -11,13 +11,13 @@ namespace iTCat.Handler
     /// </summary>
     public class NewTicketClassHandler : IHttpHandler
     {
-
+        //新建票种Handler代码
         public void ProcessRequest(HttpContext context)
         {
-             BTourist bt = new BTourist();
+            BNewTicketClass bt = new BNewTicketClass();
               if (context.Request["ticketsID"] != null)
             {
-                //新建票种成功
+                
                 string ticketsID = context.Request["ticketsID"];
                 string Ticket_type = context.Request["Ticket_type"];
                 string tickets_name = context.Request["tickets_name"];
@@ -26,12 +26,13 @@ namespace iTCat.Handler
                 string OrderDateD = context.Request["OrderDateD"];
                 string SpotID = context.Request["SpotID_text"];
                 string Ticket_time = context.Request["Ticket_time"];
-                if (bt.ToString
+                if (bt.Ticket
                     (ticketsID, Ticket_type, tickets_name,
                     ticketsPrices, Tickets_illustrate,
                     OrderDateD, SpotID, Ticket_time))
                 {
                     context.Response.Write(1);
+                    //新建票种成功
                 }
                 else
                 {
