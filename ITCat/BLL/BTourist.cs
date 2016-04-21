@@ -64,5 +64,21 @@ namespace BLL
                 );
         }
 
+        public bool ToString(
+            string ticketsID, 
+            string ticket_type,
+            string tickets_name,
+            string ticketsPrices,
+            string tickets_illustrate,
+            string orderDateD, 
+            string spotID,
+            string ticket_time)
+        {
+
+            return td.ToString(
+                ticketsID, ticket_type, tickets_name,
+                ticketsPrices, tickets_illustrate,
+                orderDateD, spotID, ticket_time);
+        }
     }
 }

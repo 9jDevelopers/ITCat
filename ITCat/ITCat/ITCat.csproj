@@ -109,26 +109,29 @@
     <Content Include="Index\index.html" />
     <Content Include="Index\js\bootstrap.min.js" />
     <Content Include="Index\js\jquery-1.11.2.min.js" />
-    <Content Include="Management\NewAttractions\css\StyleSheet1.css" />
+    <Content Include="Management\imges\01.jpeg" />
+    <Content Include="Management\imges\939.jpg" />
+    <Content Include="Management\imges\dong_zhiwu.jpg" />
+    <Content Include="Management\imges\piaolei.jpg" />
+    <Content Include="Management\NewAttractions\css\good.css" />
+    <Content Include="Management\NewAttractions\css\NewAttractions.css" />
+    <Content Include="Management\NewAttractions\css\newStyle.css" />
+    <Content Include="Management\NewAttractions\css\StyleSheet.css" />
+    <Content Include="Management\NewAttractions\css\StyleSheet2.css" />
+    <Content Include="Management\NewAttractions\js\JavaScript.js" />
+    <Content Include="Management\NewAttractions\js\JavaScript2.js" />
     <Content Include="Management\NewAttractions\js\JavaScript3.js" />
+    <Content Include="Management\NewAttractions\NewAttractions.html" />
+    <Content Include="Management\NewTicketClass\css\ticket.css" />
     <Content Include="Management\NewTicketClass\js\JavaScript.js" />
     <Content Include="Management\NewTicketClass\NewTicketClass.aspx" />
     <Content Include="packages.config" />
-    <Content Include="Handler.ashx" />
     <Content Include="Public\icomoon\fonts\icomoon.eot" />
     <Content Include="Public\icomoon\fonts\icomoon.ttf" />
     <Content Include="Public\icomoon\fonts\icomoon.woff" />
     <Content Include="Public\icomoon\selection.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Management\imges\01.jpeg" />
-    <Content Include="Management\imges\939.jpg" />
-    <Content Include="Management\imges\dong_zhiwu.jpg" />
-    <Content Include="Management\imges\piaolei.jpg" />
-    <Content Include="Management\NewAttractions\js\JavaScript.js" />
-    <Content Include="Management\NewAttractions\js\JavaScript2.js" />
-    <Content Include="Management\NewAttractions\NewAttractions.html" />
-    <Content Include="Management\NewTicketClass\css\ticket.css" />
     <Content Include="Public\css\demo.css" />
     <Content Include="Public\css\public.css" />
     <Content Include="Public\css\themes\black\accordion.css" />
@@ -500,11 +503,8 @@
     <Compile Include="Account\PersonalCenter\Pim.aspx.designer.cs">
       <DependentUpon>Pim.aspx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Handler.ashx.cs">
-      <DependentUpon>Handler.ashx</DependentUpon>
-    </Compile>
+    <Compile Include="Handler.ashx.cs" />
     <Compile Include="Management\NewAttractions\NewAttractions.aspx.cs">
-      <DependentUpon>NewAttractions.html</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Management\NewTicketClass\NewTicketClass.aspx.cs">

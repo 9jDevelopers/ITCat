@@ -55,10 +55,45 @@ namespace Model
             string result = cmd.Parameters["@retValue"].Value.ToString();
 
             if (result == "1")
-                //登陆成功
+                //新建景点成功
                 return true;
             else
                 return false;
+        }
+        public bool ToString(
+           string ticketsID,
+           string ticket_type,
+           string tickets_name,
+           string ticketsPrices,
+           string tickets_illustrate,
+           string OrderDateD,
+           string spotID,
+           string ticket_time)
+        {
+            {
+                DbHelper db = new DbHelper();
+                DbCommand cmd = db.GetStoredProcCommond("sp_Login");
+                db.AddInParameter(cmd, "@TicketsID", DbType.String, ticketsID);
+                db.AddInParameter(cmd, "@TicketsType", DbType.String, ticket_type);
+                db.AddInParameter(cmd, "@TicketsName", DbType.String, tickets_name);
+                db.AddInParameter(cmd, "@Price", DbType.String, ticketsPrices);
+                db.AddInParameter(cmd, "@explain", DbType.String, tickets_illustrate);
+                db.AddInParameter(cmd, "@OrderDateD", DbType.String, OrderDateD);
+                db.AddInParameter(cmd, "@spotID", DbType.String, spotID);
+                db.AddInParameter(cmd, "@time", DbType.String, ticket_time);
+                db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
+
+                db.ExecuteNonQuery(cmd);
+
+
+                string result = cmd.Parameters["@retValue"].Value.ToString();
+
+                if (result == "1")
+                    //新建票种成功
+                    return true;
+                else
+                    return false;
+            }
         }
 
         public bool browse(string scenicspot_Name, string scenicspotIntroduction, string scenicspotAddress, string ticketPrice, string scenicspotPicture, string freePolicy, string favouredPolicy, string scenicspotMap, string scenicspotGrade, string scenicspotTitle, string scenicSpotContactPhone)
