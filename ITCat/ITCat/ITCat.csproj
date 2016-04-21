@@ -481,6 +481,7 @@
     <Content Include="Public\js\jquery.easyui.min.js" />
     <Content Include="Public\js\jquery.easyui.mobile.js" />
     <Content Include="Public\js\jquery.min.js" />
+    <Content Include="Scenic\css\Scenic.css" />
     <Content Include="Scenic\images\1.jpg" />
     <Content Include="Scenic\images\2.jpg" />
     <Content Include="Scenic\images\3.jpg" />
@@ -528,7 +529,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Account\Login\images\" />
-    <Folder Include="Scenic\css\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
