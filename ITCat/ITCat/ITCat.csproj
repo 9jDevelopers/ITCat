@@ -507,6 +507,12 @@
     <Compile Include="Handler\LoginHandler.ashx.cs">
       <DependentUpon>LoginHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\NewAttractionsHandler.ashx.cs">
+      <DependentUpon>NewAttractionsHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\NewTicketClassHandler.ashx.cs">
+      <DependentUpon>NewTicketClassHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\PimHandler1.ashx.cs">
       <DependentUpon>PimHandler1.ashx</DependentUpon>
     </Compile>
@@ -552,6 +558,8 @@
     <Content Include="web.config" />
     <Content Include="Handler\LoginHandler.ashx" />
     <Content Include="Handler\PimHandler1.ashx" />
+    <Content Include="Handler\NewAttractionsHandler.ashx" />
+    <Content Include="Handler\NewTicketClassHandler.ashx" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

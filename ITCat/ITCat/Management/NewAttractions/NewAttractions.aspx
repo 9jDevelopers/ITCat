@@ -163,7 +163,7 @@
              function () {
                  
                  $.post(
-                     "../../../Handler.ashx",
+                     "../../../NewAttractionsHandler.ashx",
                 {                    
                     AttractionsID: $("#txtAttractionsID").val(),
                     Attractions_name: $("#txtAttractions_name").val(),
