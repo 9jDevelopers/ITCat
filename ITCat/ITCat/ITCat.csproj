@@ -503,6 +503,9 @@
       <DependentUpon>Pim.aspx.cs</DependentUpon>
     </Compile>
     <Compile Include="Handler.ashx.cs" />
+    <Compile Include="Handler\LoginHandler.ashx.cs">
+      <DependentUpon>LoginHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Management\NewAttractions\NewAttractions.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>NewAttractions.aspx</DependentUpon>
@@ -544,6 +547,7 @@
   <ItemGroup>
     <Content Include="Scenic\scripts\Scenic.js" />
     <Content Include="web.config" />
+    <Content Include="Handler\LoginHandler.ashx" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>

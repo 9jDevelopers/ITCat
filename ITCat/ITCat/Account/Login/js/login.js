@@ -16,7 +16,7 @@
             ShowTip("密码不能为空");
             return;
         }
-        $.post("/Handler.ashx",
+        $.post("Handler/LoginHandler.ashx",
                 {
                     //<input name="UserName" value="login_Name">
                     UserName: login_Name,
