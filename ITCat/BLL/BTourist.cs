@@ -38,6 +38,11 @@ namespace BLL
                 attractionsAnnotation, administratorName);
         }
 
+        public bool TM(string tel, string email, string pname, string name, string gender, string birthday, string pone, string city, string head_Portrait)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool TM(string Tel, string Email, string Pname, string Name, string Gender, string Birthday, string Pone, string City)
         {
             return td.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City);
