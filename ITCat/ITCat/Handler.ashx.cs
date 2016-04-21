@@ -66,7 +66,8 @@ namespace iTCat
                 string Birthday = context.Request[" Birthday"];
                 string Pone = context.Request[" Pone"];
                 string City = context.Request["City"];
-                if (bt.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City))
+                string Head_Portrait = context.Request["Head_Portrait"];
+                if (bt.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City, Head_Portrait))
                 {
                     context.Response.Write(1);
                 }

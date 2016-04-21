@@ -78,33 +78,18 @@
     margin-left:200px;
    
 }
-.icon-heart2
-{
-    color:Red;
-    font-size:3rem;
-    margin-left:200px;   
-}
+
 .item
 {
-  margin-left:-5px; 
+  margin-left:0px; 
   width:280px; 
   height:280px;
-  left:5px; 
-  top:5px;
+  
 }
 
 .im
 {
-  margin-left:-5px; 
+  margin-left:0px; 
   width:280px; 
-  height:280px;
-  left:5px; 
-  top:5px;
-}
-.item i
-{
-    /*绝对定位*/
-  position:absolute;
-  top:-5px;
-  right:-5px;
+  height:280px; 
 }
