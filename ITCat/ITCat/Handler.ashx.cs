@@ -101,7 +101,7 @@ namespace iTCat
               }
             else if (context.Request["ticketsID"] != null)
             {
-                //新建票种
+                //新建票种成功
                 string ticketsID = context.Request["ticketsID"];
                 string Ticket_type = context.Request["Ticket_type"];
                 string tickets_name = context.Request["tickets_name"];
