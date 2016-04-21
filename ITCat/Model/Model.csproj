@@ -43,6 +43,8 @@
     <Compile Include="Actor.cs" />
     <Compile Include="Attractions .cs" />
     <Compile Include="City.cs" />
+    <Compile Include="DAL\NewAttractionsDAL.cs" />
+    <Compile Include="DAL\PimDal.cs" />
     <Compile Include="DAL\ScenicDal.cs" />
     <Compile Include="DAL\TouristDal.cs" />
     <Compile Include="Journal.cs" />

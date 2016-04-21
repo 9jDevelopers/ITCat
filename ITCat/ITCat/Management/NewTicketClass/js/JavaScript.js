@@ -10,32 +10,3 @@
         $('#cc').combo('setValue', v).combo('setText', s).combo('hidePanel');
     });
 });
-function submitForm() {
-    $('#ff').form('submit');
-    $("#submitForm").click(
-     function () {
-         $.post(
-             "../../../NewTicketClassHandler.ashx",
-        {
-            ticketsID: $("#ticketsID").val(),
-            Ticket_type: $("#Ticket_type").val(),
-            tickets_name: $("#tickets_name").val(),
-            ticketsPrices: $("#ticketsPrices").val(),
-            Tickets_illustrate: $("#Tickets_illustrate").val(),
-            OrderDateD: $("#OrderDateD").val(),
-            SpotID: $("#SpotID_text").val(),
-            Ticket_time: $("#Ticket_time").val()
-        },
-         function (data) {
-             if (data == "1") {
-                 alert("提交成功");
-             }
-             else {
-                 alert("提交失败");
-             }
-         }
-        );
-     }
-             );
-
-}

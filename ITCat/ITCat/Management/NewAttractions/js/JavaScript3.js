@@ -73,4 +73,3 @@ $.extend($.fn.validatebox.defaults.rules, {
         message: 'Please enter at least {0} characters.'
     }
 });
-//提交数据的JS代码
