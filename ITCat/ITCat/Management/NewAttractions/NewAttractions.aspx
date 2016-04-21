@@ -158,12 +158,12 @@
      </style>
     <script  >       
         function submitForm() {            
-            $('#ff').form('submit');
+            $('#ff').form('submit',
             $("#submitForm").click(
              function () {
-                 
+                 alert("1");
                  $.post(
-                     "../../../NewAttractionsHandler.ashx",
+                     "../../Handler/NewAttractionsHandler.ashx",
                 {                    
                     AttractionsID: $("#txtAttractionsID").val(),
                     Attractions_name: $("#txtAttractions_name").val(),
@@ -186,7 +186,9 @@
                  }
                 );
              }
-                     );
+                     )
+            );
+            
         }
     </script>
 </body>

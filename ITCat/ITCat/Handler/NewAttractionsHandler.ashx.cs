@@ -15,8 +15,7 @@ namespace iTCat.Handler
         public void ProcessRequest(HttpContext context)
         {           
             BTourist bt = new BTourist();
-            if (context.Request["txtAttractionsID"] != null)
-            {
+            
                 //新建景点数据
                 string AttractionsID = context.Request["txtAttractionsID"];
                 string Attractions_name = context.Request["txtAttractions_name"];
@@ -37,7 +36,7 @@ namespace iTCat.Handler
                 {
                     context.Response.Write(0);
                 }
-            }
+            
         }
 
         public bool IsReusable

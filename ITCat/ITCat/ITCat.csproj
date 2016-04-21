@@ -503,7 +503,6 @@
     <Compile Include="Account\PersonalCenter\Pim.aspx.designer.cs">
       <DependentUpon>Pim.aspx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Handler.ashx.cs" />
     <Compile Include="Handler\LoginHandler.ashx.cs">
       <DependentUpon>LoginHandler.ashx</DependentUpon>
     </Compile>
