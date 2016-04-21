@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model.DAL
 {
-    class ScenicDal
+    public class ScenicDal
     {
     }
 }
