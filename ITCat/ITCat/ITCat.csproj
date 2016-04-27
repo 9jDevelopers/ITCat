@@ -68,6 +68,7 @@
   <ItemGroup>
     <Content Include="Account\Login\css\login.css" />
     <Content Include="Account\PersonalCenter\js\Pim.js" />
+    <Content Include="Account\PersonalCenter\js\tijiao.js" />
     <Content Include="Account\PersonalCenter\Pim.aspx" />
     <Content Include="Account\Register\css\Register.css" />
     <Content Include="Account\Login\js\login.js" />

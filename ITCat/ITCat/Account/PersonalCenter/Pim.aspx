@@ -18,7 +18,7 @@
 <body>
   
     <div class="wz ">个人资料设置</div>
-    <form id="form1">
+    <form id="form1"method="post" runat="server">
 
         <div class="easyui-accordion" style="width:900px;height:500px;">
             <div title="个人信息"  style="overflow:auto;padding:10px;">
@@ -146,8 +146,11 @@
                             <div class="gg">
                                 <tr>
                                     <td>常用出发城市:</td>
-                                    <td><input class="easyui-textbox" id="txtCity" style="width:200px;height:25px" runat="server"></td>
-                                        &nbsp;&nbsp;&nbsp;&nbsp; <input type="button" id="TM" value="提交"  onclick = "" />
+                                    <td>&nbsp;&nbsp;&nbsp;&nbsp; 
+                                    <a href="javascript:NewAttractions" class="easyui-linkbutton" id="submitForm" onclick="submitForm()">提交</a>                   
+                                    <input  runat="server" height="36px" style="margin-top: 0px"  value="重置" type="submit"  width="200px" /></td>
+                                        
+                                    
                                     </tr>
                                 </tr>
                             </div>
@@ -195,6 +198,7 @@
                 message: 'Please enter at least {0} characters.'
             }
         });
+        }
     </script>
 </body>
 </html>
