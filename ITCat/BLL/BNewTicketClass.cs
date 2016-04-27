@@ -14,24 +14,24 @@ namespace BLL
         NewTicketClassDAL td = new NewTicketClassDAL();
         public bool Ticket(
             string ticketsID ,
-            string Ticket_type, 
+            string ticket_type, 
             string tickets_name,
             string ticketsPrices,
-            string Tickets_illustrate,
-            string OrderDateD,
-            string SpotID, 
-            string Ticket_time
+            string tickets_illustrate,
+            string orderDateD,
+            string spotID, 
+            string ticket_time
             )
         {
             return td.Ticket(
              ticketsID,
-             Ticket_type,
+             ticket_type,
              tickets_name,
              ticketsPrices,
-             Tickets_illustrate,
-             OrderDateD,
-             SpotID,
-             Ticket_time);
+             tickets_illustrate,
+             orderDateD,
+             spotID,
+             ticket_time);
         }
     }
 }
