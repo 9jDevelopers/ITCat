@@ -151,13 +151,14 @@
             $('#ff').form('submit');
             $("#submitForm").click(
              function () {
+                 alert("1");
                  $.post(
-                     "../../../NewTicketClassHandler.ashx",
+                     "../../Handler/NewTicketClassHandler.ashx",
                 {
-                    ticketsID: $("#ticketsID").val(),
+                    TicketsID: $("#ticketsID").val(),
                     Ticket_type: $("#Ticket_type").val(),
-                    tickets_name: $("#tickets_name").val(),
-                    ticketsPrices: $("#ticketsPrices").val(),
+                    Tickets_name: $("#tickets_name").val(),
+                    TicketsPrices: $("#ticketsPrices").val(),
                     Tickets_illustrate: $("#Tickets_illustrate").val(),
                     OrderDateD: $("#OrderDateD").val(),
                     SpotID: $("#SpotID_text").val(),
@@ -174,7 +175,6 @@
                 );
              }
                      );
-
         }
     </script>
 </body>

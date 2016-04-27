@@ -19,17 +19,17 @@ namespace iTCat.Handler
             {
                 
                 string ticketsID = context.Request["ticketsID"];
-                string Ticket_type = context.Request["Ticket_type"];
-                string tickets_name = context.Request["tickets_name"];
-                string ticketsPrices = context.Request["ticketsPrices"];
-                string Tickets_illustrate = context.Request["Tickets_illustrate"];
-                string OrderDateD = context.Request["OrderDateD"];
-                string SpotID = context.Request["SpotID_text"];
-                string Ticket_time = context.Request["Ticket_time"];
+                string ticket_type = context.Request["Ticket_type"];
+                string tickets_name = context.Request["Tickets_name"];
+                string ticketsPrices = context.Request["TicketsPrices"];
+                string tickets_illustrate = context.Request["Tickets_illustrate"];
+                string orderDateD = context.Request["OrderDateD"];
+                string spotID = context.Request["SpotID"];
+                string ticket_time = context.Request["Ticket_time"];
                 if (bt.Ticket
-                    (ticketsID, Ticket_type, tickets_name,
-                    ticketsPrices, Tickets_illustrate,
-                    OrderDateD, SpotID, Ticket_time))
+                    (ticketsID, ticket_type, tickets_name,
+                    ticketsPrices, tickets_illustrate,
+                    orderDateD, spotID, ticket_time))
                 {
                     context.Response.Write(1);
                     //新建票种成功
