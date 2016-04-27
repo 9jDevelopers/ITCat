@@ -5,17 +5,17 @@
             function () {
                 alert("1");
                 $.post(
-                    "../../Handler/NewAttractionsHandler.ashx",
+                    "../../Handler/PimHandler1.ashx",
                {                    
-                   Tel: $("#Tel").val(),
-                   Email: $("#Email").val(),
-                   Pname: $("#Pname").val(),
-                   Name: $("#Name").val(),
-                   Gender: $("#Gender").val(),
-                   Birthday: $("#Birthday").val(),
-                   Pone: $("#Pone").val(),
-                   City: $("#City").val(),
-                   Head_Portrait: $("#Head_Portrait").val(),
+                   Tel: $("#txtTel").val(),
+                   Email: $("#txtEmail").val(),
+                   Pname: $("#txtPname").val(),
+                   Name: $("#txtName").val(),
+                   Gender: $("#txtGender").val(),
+                   Birthday: $("#txtBirthday").val(),
+                   Pone: $("#txtPone").val(),
+                   City: $("#txtCity").val(),
+                   Head_Portrait: $("#txtHead_Portrait").val(),
                     
                },
                 function (data) {

@@ -14,6 +14,7 @@ namespace iTCat.Handler
         public void ProcessRequest(HttpContext context)
         {
             BPim a = new BPim();
+            
            if (context.Request["Tel"] != null)
             {
                 string  Tel = context.Request["Tel"];

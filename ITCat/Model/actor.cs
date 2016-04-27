@@ -26,11 +26,11 @@ namespace Model
         /// <summary>
         /// 手机号码
         /// </summary>
-        public int Tel_Phone { get; set; }
+        public string  Tel_Phone { get; set; }
         /// <summary>
         /// 姓名
         /// </summary>
-        public int Name { get; set; }
+        public string Name { get; set; }
         /// <summary>
         /// 身份证号码
         /// </summary>
@@ -42,7 +42,7 @@ namespace Model
         /// <summary>
         /// 性别
         /// </summary>
-        public int Gender { get; set; }
+        public string Gender { get; set; }
         /// <summary>
         /// 生日
         /// </summary>

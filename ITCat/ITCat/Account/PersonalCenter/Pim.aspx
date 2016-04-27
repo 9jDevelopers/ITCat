@@ -13,12 +13,13 @@
     <script src="../../Public/js/jquery.min.js"></script>
     <script src="../../Public/js/jquery.easyui.min.js"></script> 
     <script src="js/Pim.js"></script>
+    <script src="js/tijiao.js"></script>
    
 </head>
 <body>
   
     <div class="wz ">个人资料设置</div>
-    <form id="form1"method="post" runat="server">
+    <form id="form1">
 
         <div class="easyui-accordion" style="width:900px;height:500px;">
             <div title="个人信息"  style="overflow:auto;padding:10px;">
@@ -97,7 +98,7 @@
                                         手机:
                                     </td>
                                     <td>
-                                        <input class="easyui-textbox" id="txtTel"  data-options="prompt:'请输入11位数字',validType:'email'" style="width:200px;height:25px" runat="server">
+                                        <input class="easyui-textbox" id="txtTel"  data-options="prompt:'请输入11位数字',invalidMessage:'请输入正确的手机号',validType:'lenght[11]'" style="width:200px;height:25px" runat="server">
                                     </td>
                                    
                                 </tr>
@@ -147,7 +148,7 @@
                                 <tr>
                                     <td>常用出发城市:</td>
                                     <td>&nbsp;&nbsp;&nbsp;&nbsp; 
-                                    <a href="javascript:NewAttractions" class="easyui-linkbutton" id="submitForm" onclick="submitForm()">提交</a>                   
+                                    <a href="javascript:Pim" class="easyui-linkbutton" id="submitForm" onclick="submitForm()">提交</a>                   
                                     <input  runat="server" height="36px" style="margin-top: 0px"  value="重置" type="submit"  width="200px" /></td>
                                         
                                     
