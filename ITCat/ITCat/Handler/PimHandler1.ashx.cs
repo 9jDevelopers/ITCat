@@ -22,8 +22,9 @@ namespace iTCat.Handler
                 string Pname = context.Request["Pname"];
                 string Name = context.Request["Name"];
                 string  Gender = context.Request["Gender"];
-                DateTime Birthday = DateTime.Parse(context.Request["Birthday"]);
-                string Pone = context.Request[" Pone"];
+                string birthday = context.Request["Birthday"];
+                DateTime Birthday = DateTime.Parse(birthday);
+                string Pone = context.Request["Pone"];
                 string City = context.Request["City"];
                 byte[] Head_Portrait = null; // byte.Parse context.Request["Head_Portrait"];
                 if (a.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City, Head_Portrait))
