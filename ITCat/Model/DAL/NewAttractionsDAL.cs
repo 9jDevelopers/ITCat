@@ -16,16 +16,16 @@ namespace Model.DAL
         {         
         {
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetStoredProcCommond("sp_Login");
-            db.AddInParameter(cmd, "@spotID", DbType.String, attractionsID);
-            db.AddInParameter(cmd, "@name", DbType.String, attractions_name);
-            db.AddInParameter(cmd, "@title", DbType.String, attractions_title);
-            db.AddInParameter(cmd, "@level", DbType.String, level_RadioButton);
-            db.AddInParameter(cmd, "@address", DbType.String, address);
-            db.AddInParameter(cmd, "@openTime", DbType.String, openTime);
-            db.AddInParameter(cmd, "@introduce", DbType.String, introduce);
+            DbCommand cmd = db.GetStoredProcCommond("sp_Attractions");
+            db.AddInParameter(cmd, "@AttractionsID", DbType.String, attractionsID);
+            db.AddInParameter(cmd, "@AttractionsName", DbType.String, attractions_name);
+            db.AddInParameter(cmd, "@AttractionsTitle", DbType.String, attractions_title);
+            db.AddInParameter(cmd, "@AttractionsLevel", DbType.String, level_RadioButton);
+            db.AddInParameter(cmd, "@AttractionsAddress", DbType.String, address);
+            db.AddInParameter(cmd, "@OpenTime", DbType.String, openTime);
+            db.AddInParameter(cmd, "@AttractionsSynopsis", DbType.String, introduce);
             db.AddInParameter(cmd, "@contact", DbType.String, contact);
-            db.AddInParameter(cmd, "@NoteAttractions", DbType.String, NoteAttractions);
+            db.AddInParameter(cmd, "@NoteAttractions", DbType.String, noteAttractions);
             db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
 
             db.ExecuteNonQuery(cmd);
