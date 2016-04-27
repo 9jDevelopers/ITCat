@@ -18,7 +18,7 @@ namespace BLL
             return td.Login(LoginName, Password);
         }
 
-        public bool ToString(string ticketsID, string ticket_type, string tickets_name, string ticketsPrices, string tickets_illustrate, string orderDateD, string spotID, string ticket_time)
+        public bool Register(string rusername, string rpassword)
         {
             throw new NotImplementedException();
         }
