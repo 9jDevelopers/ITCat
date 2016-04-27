@@ -24,7 +24,7 @@ namespace Model.DAL
             db.AddInParameter(cmd, "@AttractionsAddress", DbType.String, address);
             db.AddInParameter(cmd, "@OpenTime", DbType.String, openTime);
             db.AddInParameter(cmd, "@AttractionsSynopsis", DbType.String, introduce);
-            db.AddInParameter(cmd, "@contact", DbType.String, contact);
+            db.AddInParameter(cmd, "@AttractionsContact", DbType.String, contact);
             db.AddInParameter(cmd, "@NoteAttractions", DbType.String, noteAttractions);
             db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
 
