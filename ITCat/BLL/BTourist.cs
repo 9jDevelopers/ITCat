@@ -18,5 +18,9 @@ namespace BLL
             return td.Login(LoginName, Password);
         }
 
+        public bool Register(string rusername, string rpassword)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
