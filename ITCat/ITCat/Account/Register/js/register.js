@@ -2,21 +2,21 @@
 {
     //给ID为btn-register的标签设置点击事件
     $("#btn-register").click(function ()
-{
+    {
         var register_Name = $("#txtregisterName").val();
         var register_Password = $("#txtregisterPassword").val();
         //判断用户名或密码不为空
         if (register_Name == "" || register_Name == null)
-{
+        {
             ShowTip("帐号不能为空");
             return;
         }
         if (register_Password == "" || register_Password == null)
-{
+        {
             ShowTip("密码不能为空");
             return;
         }
-        $.post("/Handler.ashx",
+        $.post("/Handler/RegisterHandler.ashx",
                 {
                     //<input name="UserName" value="register_Name">
                     rUserName: register_Name,
@@ -24,17 +24,17 @@
                 },
                 //data：AccountHandler中返回的值
                 function (data)
-{
+                {
                     if (data == 1)
-{
+                    {
                         ShowTip("注册成功");
                     }
                     else if (data == 0)
-{
+                    {
                         ShowTip("用户名已经存在,请更换用户名");
                     }
                     else if (data == -1)
-{
+                    {
                         ShowTip("服务器暂时无法连接");
                     }
                 }

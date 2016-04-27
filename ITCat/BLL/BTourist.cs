@@ -20,7 +20,7 @@ namespace BLL
 
         public bool Register(string rusername, string rpassword)
         {
-            throw new NotImplementedException();
+            return td.Register(rusername,rpassword);
         }
     }
 }
