@@ -506,10 +506,12 @@
     <Compile Include="Handler\LoginHandler.ashx.cs">
       <DependentUpon>LoginHandler.ashx</DependentUpon>
     </Compile>
- 
+    <Compile Include="Handler\RegisterHandler.ashx.cs">
+      <DependentUpon>RegisterHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\SceniSpotHandler.ashx.cs">
       <DependentUpon>SceniSpotHandler.ashx</DependentUpon>
-   </Compile>
+    </Compile>
     <Compile Include="Handler\NewAttractionsHandler.ashx.cs">
       <DependentUpon>NewAttractionsHandler.ashx</DependentUpon>
     </Compile>
@@ -518,7 +520,6 @@
     </Compile>
     <Compile Include="Handler\PimHandler1.ashx.cs">
       <DependentUpon>PimHandler1.ashx</DependentUpon>
- 
     </Compile>
     <Compile Include="Management\NewAttractions\NewAttractions.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -535,7 +536,7 @@
     <Compile Include="Scenic\Scenic.aspx.cs">
       <DependentUpon>Scenic.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
-    </Compile>  
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Account\Login\images\" />
@@ -558,13 +559,11 @@
     <Content Include="Scenic\scripts\Scenic.js" />
     <Content Include="web.config" />
     <Content Include="Handler\LoginHandler.ashx" />
- 
     <Content Include="Handler\SceniSpotHandler.ashx" />
- 
     <Content Include="Handler\PimHandler1.ashx" />
     <Content Include="Handler\NewAttractionsHandler.ashx" />
     <Content Include="Handler\NewTicketClassHandler.ashx" />
- 
+    <Content Include="Handler\RegisterHandler.ashx" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>
     </None>
