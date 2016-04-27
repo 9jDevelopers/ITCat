@@ -31,5 +31,10 @@ namespace Model.DAL
             else
                 return false;
         }
+
+        public bool Register(string rusername, string rpassword)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
