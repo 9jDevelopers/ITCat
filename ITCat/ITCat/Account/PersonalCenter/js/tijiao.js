@@ -3,7 +3,8 @@
            $('#form1').form('submit',
            $("#submitForm").click(
             function () {
-                alert("1");
+                
+               
                 $.post(
                     "../../Handler/PimHandler1.ashx",
                {                    
@@ -12,7 +13,7 @@
                    Pname: $("#txtPname").val(),
                    Name: $("#txtName").val(),
                    Gender: $("#txtGender").val(),
-                   Birthday: $("#txtBirthday").val(),
+                   Birthday: $("#txtBirthday").datebox("getValue"),
                    Pone: $("#txtPone").val(),
                    City: $("#txtCity").val(),
                    Head_Portrait: $("#txtHead_Portrait").val(),

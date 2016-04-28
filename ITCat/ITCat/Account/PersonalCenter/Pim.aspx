@@ -147,6 +147,7 @@
                             <div class="gg">
                                 <tr>
                                     <td>常用出发城市:</td>
+                                    <td><input class="easyui-textbox" id="txtCity" style="width:200px;height:25px" runat="server"></td>
                                     <td>&nbsp;&nbsp;&nbsp;&nbsp; 
                                     <a href="javascript:Pim" class="easyui-linkbutton" id="submitForm" onclick="submitForm()">提交</a>                   
                                     <input  runat="server" height="36px" style="margin-top: 0px"  value="重置" type="submit"  width="200px" /></td>
