@@ -18,7 +18,7 @@ namespace iTCat.Handler
               if (context.Request["ticketsID"] != null)
             {
                 
-                string ticketsID = context.Request["ticketsID"];
+                int ticketsID = int.Parse(context.Request["ticketsID"]);
                 string ticket_type = context.Request["Ticket_type"];
                 string tickets_name = context.Request["Tickets_name"];
                 string ticketsPrices = context.Request["TicketsPrices"];
