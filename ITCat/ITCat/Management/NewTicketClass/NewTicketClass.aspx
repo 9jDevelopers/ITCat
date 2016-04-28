@@ -156,7 +156,8 @@
                      "../../Handler/NewTicketClassHandler.ashx",
                 {
                     TicketsID: $("#ticketsID").val(),
-                    Ticket_type: $("#Ticket_type").val(),
+                   
+                    Ticket_type: $(("#Ticket_type").innerHTML).val(),
                     Tickets_name: $("#tickets_name").val(),
                     TicketsPrices: $("#ticketsPrices").val(),
                     Tickets_illustrate: $("#Tickets_illustrate").val(),
