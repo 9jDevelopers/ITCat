@@ -200,7 +200,6 @@
                 message: 'Please enter at least {0} characters.'
             }
         });
-        }
     </script>
 </body>
 </html>
