@@ -34,7 +34,23 @@ namespace Model.DAL
 
         public bool Register(string rusername, string rpassword)
         {
-            throw new NotImplementedException();
+            DbHelper db = new DbHelper();
+
+            DbCommand cmd = db.GetStoredProcCommond("sp_Register");
+            db.AddInParameter(cmd, "@Pname", DbType.String, rusername);
+            db.AddInParameter(cmd, "@Password", DbType.String, rpassword);
+            db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
+
+            db.ExecuteNonQuery(cmd);
+
+
+            string result = cmd.Parameters["@retValue"].Value.ToString();
+
+            if (result == "1")
+                //注册成功
+                return true;
+            else
+                return false;
         }
     }
 }
