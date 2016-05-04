@@ -25,18 +25,15 @@
                 //data：AccountHandler中返回的值
                 function (data)
                 {
-                    if (data == 1)
-                    {
-                        ShowTip("账号密码存在");
-                    }
-                    else if (data == 0)
+                    if (data == -1)
                     {
                         ShowTip("账号密码不存在");
                     }
-                    else if (data == -1)
+                    else 
                     {
-                        ShowTip("服务器暂时无法连接");
+                        //将ID传到其他页面
                     }
+                    
                 }
                 //回调函数
             );

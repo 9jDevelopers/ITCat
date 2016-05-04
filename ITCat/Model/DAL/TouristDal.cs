@@ -11,7 +11,7 @@ namespace Model.DAL
 {
     public class TouristDal
     {
-        public bool Login(string LoginName, string Password)
+        public String Login(string LoginName, string Password)
         {
             DbHelper db = new DbHelper();
 
@@ -25,11 +25,10 @@ namespace Model.DAL
 
             string result = cmd.Parameters["@retValue"].Value.ToString();
 
-            if (result == "1")
-                //登陆成功
-                return true;
+            if (result == "-1")
+                return "-1";
             else
-                return false;
+                return result;
         }
 
         public bool Register(string rusername, string rpassword)
