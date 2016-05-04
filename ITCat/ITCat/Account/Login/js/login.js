@@ -31,7 +31,8 @@
                     }
                     else 
                     {
-                        //将ID传到其他页面
+
+                        window.location = '../../PersonalCenter/Pim.aspx';
                     }
                     
                 }
