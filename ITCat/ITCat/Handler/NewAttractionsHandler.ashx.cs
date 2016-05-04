@@ -14,8 +14,9 @@ namespace iTCat.Handler
         //新建景点Handler代码
         public void ProcessRequest(HttpContext context)
         {
-            BNewAttractions  bt = new  BNewAttractions();
-            
+            BNewAttractions bt = new BNewAttractions();
+            if (context.Request["AttractionsID"] != null)
+            {
                 //新建景点数据
                 string AttractionsID = context.Request["AttractionsID"];
                 string Attractions_name = context.Request["Attractions_name"];
@@ -25,8 +26,8 @@ namespace iTCat.Handler
                 string OpenTime = context.Request["OpenTime"];
                 string Introduce = context.Request["Introduce"];
                 string Contact = context.Request["Contact"];
-                string NoteAttractions = context.Request["NoteAttractions"];              
-                if (bt.ToString(AttractionsID, Attractions_name, Attractions_title, Level_RadioButton, Address, OpenTime, Introduce,  Contact, NoteAttractions ))
+                string NoteAttractions = context.Request["NoteAttractions"];
+                if (bt.ToString(AttractionsID, Attractions_name, Attractions_title, Level_RadioButton, Address, OpenTime, Introduce, Contact, NoteAttractions))
                 {
                     context.Response.Write(1);
                 }
@@ -34,9 +35,9 @@ namespace iTCat.Handler
                 {
                     context.Response.Write(0);
                 }
-            
-        }
 
+            }
+        }
         public bool IsReusable
         {
             get
