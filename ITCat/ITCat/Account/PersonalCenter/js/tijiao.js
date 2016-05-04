@@ -8,14 +8,13 @@
                 $.post(
                     "../../Handler/PimHandler1.ashx",
                {
-                   UserID: "1",
+                   UserID: 1,
                    Tel: $("#txtTel").val(),
                    Email: $("#txtEmail").val(),
                    Pname: $("#txtPname").val(),
                    Name: $("#txtName").val(),
                    Gender: $("#txtGender").val(),
                    Birthday: $("#txtBirthday").datebox("getValue"),
-                   Pone: $("#txtPone").val(),
                    City: $("#txtCity").val(),
                    Head_Portrait: $("#txtHead_Portrait").val(),
                     
