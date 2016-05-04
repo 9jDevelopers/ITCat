@@ -19,14 +19,14 @@ namespace Model.DAL
             //数据库执行代码 待修改
             DbCommand cmd = db.GetStoredProcCommond("sp_Pim");
             db.AddInParameter(cmd, "@UserID", DbType.Int32, UserID);
-            db.AddInParameter(cmd, "@Head_Portrait", DbType.Byte, null);
+            //db.AddInParameter(cmd, "@Head_Portrait", DbType.Byte, null);
             db.AddInParameter(cmd, "@Tel", DbType.String, Tel);           
             db.AddInParameter(cmd, "@Name", DbType.String, Name);
             db.AddInParameter(cmd, "@Email", DbType.String, Email);           
             db.AddInParameter(cmd, "@Gender", DbType.String, Gender);
             db.AddInParameter(cmd, "@Birthday", DbType.DateTime, Birthday);
             db.AddInParameter(cmd, "@City", DbType.String, City);
-            //db.AddInParameter(cmd, "@Pname", DbType.String, Pname);
+            db.AddInParameter(cmd, "@Pname", DbType.String, Pname);
 
             int result =    db.ExecuteNonQuery(cmd);
 

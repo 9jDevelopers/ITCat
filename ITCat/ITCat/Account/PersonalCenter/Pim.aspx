@@ -14,6 +14,7 @@
     <script src="../../Public/js/jquery.easyui.min.js"></script> 
     <script src="js/Pim.js"></script>
     <script src="js/tijiao.js"></script>
+    <script src="js/ajaxupload.3.9.js"></script>
    
 </head>
 <body>
@@ -33,7 +34,7 @@
                                 手机
                             </td>
                             <td>
-                                18146725658
+                                <input class="easyui-textbox" id="Text1" style="width:200px;height:25px" runat="server">
                             </td>
                             <td>
                                 <a href="javascript:void(0)" class="easyui-2" onclick="$('#w').window('open')"> 修改</a>
@@ -44,7 +45,7 @@
                     <div class="gf">
                         <tr>
                             <td>邮箱</td>
-                            <td>未填写</td>
+                            <td><input class="easyui-textbox" id="Text2" style="width:200px;height:25px" runat="server"></td>
                             <td> <a href="javascript:void(0)" class="easyui-2" onclick="$('#w').window('open')"> 验证</a></td>                 
                         </tr>
                         <div id="q" class="easyui-window" title="Modal Window" data-options="modal:true,closed:true,iconCls:'icon-save'" style="width:200px;height:200px;padding:10px;">
@@ -53,37 +54,31 @@
                     <div class="gf">
                         <tr>
                             <td>昵称</td>
-                            <td>未设置</td>
+                            <td><input class="easyui-textbox" id="Text3" style="width:200px;height:25px" runat="server"></td>
                         </tr>
                     </div>
                     <div class="gf">
                         <tr>
                             <td>姓名</td>
-                            <td>未设置</td>
+                            <td><input class="easyui-textbox" id="Text4" style="width:200px;height:25px" runat="server"></td>
                         </tr>
                     </div>
                     <div class="gf">
                         <tr>
                             <td>性别</td>
-                            <td>未设置</td>
+                            <td><input class="easyui-textbox" id="Text5" style="width:200px;height:25px" runat="server"></td>
                         </tr>
                     </div>
                     <div class="gf">
                         <tr>
                             <td>生日</td>
-                            <td>未设置</td>
-                        </tr>
-                    </div>
-                    <div class="gh">
-                        <tr>
-                            <td>联系电话</td>
-                            <td>未设置</td>
+                            <td><input class="easyui-textbox" id="Text6" style="width:200px;height:25px" runat="server"></td>
                         </tr>
                     </div>
                     <div class="gg">
                         <tr>
                             <td>常用出发城市</td>
-                            <td>未设置</td>
+                            <td><input class="easyui-textbox" id="Text8" style="width:200px;height:25px" runat="server"></td>
                         </tr>
                     </div>
                     <div class="gi">
@@ -138,12 +133,7 @@
                                     <div id="cc" class="easyui-calendar"></div>
                                 </tr>
                             </div>
-                            <div class="gh">
-                                <tr>
-                                    <td>联系电话:</td>
-                                    <td><input class="easyui-textbox" id="txtPone" style="width:200px;height:25px" runat="server"></td>
-                                </tr>
-                            </div>
+                            
                             <div class="gg">
                                 <tr>
                                     <td>常用出发城市:</td>
@@ -177,7 +167,7 @@
                     
                     <div class="add-images"></div>
                     <div class="imgss"></div>
-                    <div class="kj"><input type="button" value="提交"  onclick = "" /></div>
+                    <div class="kj"><input type="button" id="txtFileName"  value="提交"  onclick = "" /></div>
                 </div>
             </div>
         </div>

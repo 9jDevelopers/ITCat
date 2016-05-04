@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Account\Login\css\login.css" />
+    <Content Include="Account\PersonalCenter\js\ajaxupload.3.9.js" />
     <Content Include="Account\PersonalCenter\js\Pim.js" />
     <Content Include="Account\PersonalCenter\js\tijiao.js" />
     <Content Include="Account\PersonalCenter\Pim.aspx" />
