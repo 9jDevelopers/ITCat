@@ -14,7 +14,7 @@ namespace iTCat
 
         public void ProcessRequest(HttpContext context)
         {
-            String result;
+            string result;
             BTourist bt = new BTourist();
             if (context.Request["UserName"] != null|| context.Request["UserPassword"]!=null)
             {
