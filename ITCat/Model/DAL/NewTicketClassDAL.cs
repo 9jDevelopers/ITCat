@@ -30,7 +30,7 @@ namespace Model.DAL
             db.AddInParameter(cmd, "@Price", DbType.String, ticketsPrices);
             db.AddInParameter(cmd, "@explain", DbType.String, tickets_illustrate);
             db.AddInParameter(cmd, "@OrderDateD", DbType.String, orderDateD);
-            db.AddInParameter(cmd, "@SpotID", DbType.String, spotID);
+            db.AddInParameter(cmd, "@AttractionsID", DbType.String, spotID);
             db.AddInParameter(cmd, "@time", DbType.String, ticket_time);
             db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
 

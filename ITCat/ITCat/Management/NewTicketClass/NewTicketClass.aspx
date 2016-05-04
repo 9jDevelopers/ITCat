@@ -55,9 +55,9 @@
                    <div id="sp">
                     <div style="color:#99BBE8;background:#fafafa;padding:5px;">以下是选择票的类型</div>
                     <div style="padding:10px" id="Ticket_type">
-                     <input type="radio" name="lang" value="01"/><span>成人票</span><br/>
-                     <input type="radio" name="lang" value="02"/><span>儿童票</span><br/>
-                     <input type="radio" name="lang" value="03"/><span>学生票</span>                     
+                     <input type="radio" name="lang" value="01"/><span onclick="">成人票</span><br/>
+                     <input type="radio" name="lang" value="02"/><span onclick="">儿童票</span><br/>
+                     <input type="radio" name="lang" value="03"/><span onclick="">学生票</span>                     
                      </div>        
                     </div>                            
                 </td>
@@ -157,7 +157,7 @@
                 {
                     TicketsID: $("#ticketsID").val(),
                    
-                    Ticket_type: $(("#Ticket_type").innerHTML).val(),
+                    Ticket_type: $('#cc').combo('getText'),
                     Tickets_name: $("#tickets_name").val(),
                     TicketsPrices: $("#ticketsPrices").val(),
                     Tickets_illustrate: $("#Tickets_illustrate").val(),
