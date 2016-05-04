@@ -12,13 +12,13 @@ namespace Model.DAL
 {
     public class PimDal
     {
-        public bool TM(string Tel, string Email, string Pname, string Name, string Gender, DateTime  Birthday, string Pone, string City, byte[]  Head_Portrait, string IDCard)
+        public bool TM(string Tel, string Email, string Pname, string Name, string Gender, DateTime  Birthday, string Pone, string City, byte[]  Head_Portrait, string UserID)
         {
             DbHelper db = new DbHelper();
 
             //数据库执行代码 待修改
-            DbCommand cmd = db.GetStoredProcCommond("TM");
-            db.AddInParameter(cmd, "@IDCard", DbType.String, IDCard);
+            DbCommand cmd = db.GetStoredProcCommond("sp_Pim");
+            db.AddInParameter(cmd, "@UserID", DbType.String, UserID);
             db.AddInParameter(cmd, "@Tel", DbType.String, Tel);
             db.AddInParameter(cmd, "@Email", DbType.String, Email);
             db.AddInParameter(cmd, "@Pname", DbType.String, Pname);

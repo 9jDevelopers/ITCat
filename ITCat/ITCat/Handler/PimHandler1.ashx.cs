@@ -15,9 +15,9 @@ namespace iTCat.Handler
         {
             BPim a = new BPim();
             
-           if (context.Request["Tel"] != null)
+           if (context.Request["UserID"] != null)
             {
-                string IDCard = context.Request["IDCard"];
+                string UserID = context.Request["UserID"];
                 string  Tel = context.Request["Tel"];
                 string Email = context.Request["Email"];
                 string Pname = context.Request["Pname"];
@@ -28,7 +28,7 @@ namespace iTCat.Handler
                 string Pone = context.Request["Pone"];
                 string City = context.Request["City"];
                 byte[] Head_Portrait = null; // byte.Parse context.Request["Head_Portrait"];
-                if (a.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City, Head_Portrait, IDCard))
+                if (a.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City, Head_Portrait, UserID))
                 {
                     context.Response.Write(1);
                 }
