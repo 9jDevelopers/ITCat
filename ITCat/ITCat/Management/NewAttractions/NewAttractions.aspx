@@ -168,7 +168,7 @@
                     AttractionsID: $("#txtAttractionsID").val(),
                     Attractions_name: $("#txtAttractions_name").val(),
                     Attractions_title: $("#txtAttractions_title").val(),
-                    Level_RadioButton: $("#Level_RadioButton").val(),
+                    Level_RadioButton: $('#cc').combo('getText'),
                     Address: $("#AddressTextBox").val(),
                     OpenTime: $("#OpenTimeTextBox").val(),
                     Introduce: $("#IntroduceTextBox").val(),
