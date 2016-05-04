@@ -18,7 +18,7 @@
 </style>
 <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
-<body>
+<body onload="javascript:Scenic"id="submitForm">
     <form id="form1" runat="server">
         <div>
             <div class="mp-description pngfix ">
@@ -242,6 +242,26 @@
     }
     
     initMap();//�����ͳ�ʼ����ͼ
+    window.onload = function () {
+        alert(1);
+
+        $.post(
+            "../../../Handler.ashx",
+       {
+           ScenicspotID: $("#txtScenicspotID").val(),
+
+       },
+        function (data) {
+            if (data == "1") {
+                alert("提交成功");
+            }
+            else {
+                alert("提交失败");
+            }
+        }
+       );
+
+    }
 </script>
 
 </html>
