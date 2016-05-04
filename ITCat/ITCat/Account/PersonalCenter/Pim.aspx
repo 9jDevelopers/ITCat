@@ -107,7 +107,7 @@
                                 <tr>
                                     <td>邮箱:</td>
                                     <td>
-                                        <input class="easyui-textbox" id="txtEmail" data-options="prompt:'请输入邮箱',missingMessage:'',invalidMessage:'请输入正确的邮箱格式',required:true, validType:'email'" style="width:200px;height:25px" runat="server">
+                                        <input class="easyui-textbox" id="txtEmail" data-options="" style="width:200px;height:25px" runat="server">
                                       
                                     </td>
                                     <td></td>
