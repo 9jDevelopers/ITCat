@@ -13,7 +13,7 @@ namespace Model.DAL
     {
         //新建票种DAL代码
         public bool Ticket
-            (string ticketsID,
+            (int ticketsID,
             string ticket_type,
             string tickets_name,
             string ticketsPrices,
@@ -24,7 +24,7 @@ namespace Model.DAL
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetStoredProcCommond("sp_NewTicket");
-            db.AddInParameter(cmd, "@TicketsID", DbType.String, ticketsID);
+            db.AddInParameter(cmd, "@TicketsID", DbType.Int32, ticketsID);
             db.AddInParameter(cmd, "@TicketsType", DbType.String, ticket_type);
             db.AddInParameter(cmd, "@TicketsName", DbType.String, tickets_name);
             db.AddInParameter(cmd, "@Price", DbType.String, ticketsPrices);

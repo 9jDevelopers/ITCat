@@ -13,7 +13,7 @@ namespace BLL
         public NewTicketClassDAL NewTicketClassDAL { get; set; }
         NewTicketClassDAL td = new NewTicketClassDAL();
         public bool Ticket(
-            string ticketsID ,
+            int ticketsID ,
             string ticket_type, 
             string tickets_name,
             string ticketsPrices,
