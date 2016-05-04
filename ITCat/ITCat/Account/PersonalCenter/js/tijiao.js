@@ -7,7 +7,8 @@
                
                 $.post(
                     "../../Handler/PimHandler1.ashx",
-               {                    
+               {
+                   IDCard: $("#1").val(),
                    Tel: $("#txtTel").val(),
                    Email: $("#txtEmail").val(),
                    Pname: $("#txtPname").val(),

@@ -17,6 +17,7 @@ namespace iTCat.Handler
             
            if (context.Request["Tel"] != null)
             {
+                string IDCard = context.Request["IDCard"];
                 string  Tel = context.Request["Tel"];
                 string Email = context.Request["Email"];
                 string Pname = context.Request["Pname"];
@@ -27,7 +28,7 @@ namespace iTCat.Handler
                 string Pone = context.Request["Pone"];
                 string City = context.Request["City"];
                 byte[] Head_Portrait = null; // byte.Parse context.Request["Head_Portrait"];
-                if (a.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City, Head_Portrait))
+                if (a.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City, Head_Portrait, IDCard))
                 {
                     context.Response.Write(1);
                 }
