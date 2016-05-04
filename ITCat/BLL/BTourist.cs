@@ -13,7 +13,7 @@ namespace BLL
         public TouristDal TouristDal  { get; set; }
         TouristDal td = new TouristDal();
 
-        public bool Login(string LoginName, string Password)
+        public string Login(string LoginName, string Password)
         {
             return td.Login(LoginName, Password);
         }
