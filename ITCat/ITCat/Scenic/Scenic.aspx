@@ -244,19 +244,24 @@
     initMap();//�����ͳ�ʼ����ͼ
     window.onload = function () {
         alert(1);
-
+        var i = 147456;
         $.post(
-            "../../../Handler.ashx",
+            "../../Handler/SceniSpotHandler.ashx",
        {
-           ScenicspotID: $("#txtScenicspotID").val(),
+           ScenicspotID: i.val(),
 
        },
         function (data) {
-            if (data == "1") {
+            if (data == "-1") {
                 alert("提交成功");
             }
             else {
-                alert("提交失败");
+                function showJson() {
+                    
+                    var obj = JSON.parse('{"data":"ScenicspotID"}');
+                    console.log(obj.data);  // 取得的值为：this-is-json
+
+                }
             }
         }
        );

@@ -6,52 +6,52 @@ using System.Threading.Tasks;
 using MSSQLDAL;
 using System.Data;
 using System.Data.Common;
+using System.Data.SqlClient;
 
 namespace Model.DAL
 {
     public class ScenicDal
     {
-        public bool browse(
+        public string browse(
                              string ScenicspotID,
                              string Scenicspot_Name,
                              string ScenicspotIntroduction,
-                             string ScenicspotAddress,
-                             string TicketPrice,
-                             string ScenicspotPicture ,
-                             string FreePolicy,
-                             string FavouredPolicy,
-                             string ScenicspotMap ,
+                             string ScenicspotAddress,                        
                              string ScenicspotGrade ,
                              string ScenicspotTitle ,
-                             string ScenicSpotContactPhone     )
+                             string ScenicSpotContactPhone,
+                             string TicketPrice,
+                             string ScenicspotPicture,
+                             string FreePolicy,
+                             string FavouredPolicy,
+                             string ScenicspotMap            )
 
         {  
             DbHelper db = new DbHelper();
             //数据库执行代码 待修改
 
-            DbCommand cmd = db.GetStoredProcCommond("browse");
-            db.AddInParameter(cmd, "@ScenicspotID", DbType.String, ScenicspotID);
-            db.AddInParameter(cmd, "@Scenicspot_Name", DbType.String, Scenicspot_Name);
-            db.AddInParameter(cmd, "@ScenicspotIntroduction", DbType.String, ScenicspotIntroduction);
-            db.AddInParameter(cmd, "@ScenicspotAddress", DbType.String, ScenicspotAddress);
-            db.AddInParameter(cmd, "@TicketPrice", DbType.String, TicketPrice);
-            db.AddInParameter(cmd, "@ScenicspotPicture", DbType.String, ScenicspotPicture);
-            db.AddInParameter(cmd, "@FreePolicy", DbType.String, FreePolicy);
-            db.AddInParameter(cmd, "@FavouredPolicy", DbType.String, FavouredPolicy);
-            db.AddInParameter(cmd, "@ScenicspotMap", DbType.String, ScenicspotMap);
-            db.AddInParameter(cmd, "@ScenicspotGrade", DbType.String, ScenicspotGrade);
-            db.AddInParameter(cmd, "@ScenicspotTitle", DbType.String, ScenicspotTitle);
-            db.AddInParameter(cmd, "@ScenicSpotContactPhone", DbType.String, ScenicSpotContactPhone);
+            DbCommand cmd = db.GetStoredProcCommond("sp_Scenic");
+            db.AddInParameter(cmd, "@AttractionsID", DbType.String, ScenicspotID);
+            db.AddInParameter(cmd, "@AttractionsName", DbType.String, Scenicspot_Name);
+            db.AddInParameter(cmd, "@AttractionsSynopsis", DbType.String, ScenicspotIntroduction);
+            db.AddInParameter(cmd, "@AttractionsAddress", DbType.String, ScenicspotAddress);
+            db.AddInParameter(cmd, "@AttractionsLevel", DbType.String, ScenicspotGrade);
+            db.AddInParameter(cmd, "@AttractionsTitle", DbType.String, ScenicspotTitle);
+            db.AddInParameter(cmd, "@AttractionsContact", DbType.String, ScenicSpotContactPhone);
+            //db.AddInParameter(cmd, "@TicketPrice", DbType.String, TicketPrice);
+            //db.AddInParameter(cmd, "@ScenicspotPicture", DbType.String, ScenicspotPicture);
+            //db.AddInParameter(cmd, "@FreePolicy", DbType.String, FreePolicy);
+            //db.AddInParameter(cmd, "@FavouredPolicy", DbType.String, FavouredPolicy);
+            //db.AddInParameter(cmd, "@ScenicspotMap", DbType.String, ScenicspotMap);
 
             db.ExecuteNonQuery(cmd);
-
             string result = cmd.Parameters["@retValue"].Value.ToString();
 
-            if (result == "1")
-               
-                return true;
+            if (result == "-1")
+
+                return "-1";
             else
-                return false;
+                return result;
         }
     }
 }
