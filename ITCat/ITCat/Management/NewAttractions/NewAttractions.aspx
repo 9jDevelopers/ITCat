@@ -88,11 +88,11 @@
         <div>
              <table>
               <tr>
-                <td class ="The_title">*景点图片:  <a href="">添加图片</a></td>
+                <td class ="The_title">*景点图片:  <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-large-picture',size:'large',iconAlign:'top'">Picture</a></td>
                 <td>
                 <div id="AttractionImages">
                     
-                   <%-- <asp:ImageButton ID="ImageButton1"  runat="server" OnClick="ImageButton1_Click" />--%>
+                  
                   <div id="Fileups">               
                    <input type="file" class="file-up" name="btnim0" style="display:none;"/>
                    <input type="file" class="file-up" name="btnim1" style="display:none;"/>
