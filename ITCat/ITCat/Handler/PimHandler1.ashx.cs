@@ -17,18 +17,22 @@ namespace iTCat.Handler
             
            if (context.Request["UserID"] != null)
             {
-                string UserID = context.Request["UserID"];
-                string  Tel = context.Request["Tel"];
+
+                //string UserID = (4).ToString(context.Request["UserID"]);
+                //string uesrid = context.Request["UserID"];
+                //int UserID = int.Parse(userid);
+                string userid = context.Request["UserID"];
+                int UserID = int.Parse(userid);
+                string Tel = context.Request["Tel"];
                 string Email = context.Request["Email"];
                 string Pname = context.Request["Pname"];
                 string Name = context.Request["Name"];
                 string  Gender = context.Request["Gender"];
                 string birthday = context.Request["Birthday"];
-                DateTime Birthday = DateTime.Parse(birthday);
-                string Pone = context.Request["Pone"];
+                DateTime Birthday = DateTime.Parse(birthday); 
                 string City = context.Request["City"];
                 byte[] Head_Portrait = null; // byte.Parse context.Request["Head_Portrait"];
-                if (a.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City, Head_Portrait, UserID))
+                if (a.TM(Tel, Email, Pname, Name, Gender, Birthday, City, Head_Portrait, UserID))
                 {
                     context.Response.Write(1);
                 }

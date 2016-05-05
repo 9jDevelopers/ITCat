@@ -31,8 +31,7 @@
                     }
                     else 
                     {
-
-                        window.location = '../../PersonalCenter/Pim.aspx';
+                        window.location = "../PersonalCenter/Pim.aspx?userID="+data;
                     }
                     
                 }
@@ -49,41 +48,6 @@ function ShowTip(text)
     var tip_left = body_width / 2 - tip_width / 2 - 26;
     $("#tip").css("left", tip_left).show().fadeOut(5000);
 }
-
-
-
-
-
-//$("#btn-login").click(function () {
-//    var loginName = $("#txtLoginName").val();
-//    var loginPassword = $("#txtLoginPassword").val();
-//    if (loginName == "" || loginName == null)
-//    {
-//        tip("请输入账号");
-//        return;
-//    }
-//    $.post("/Handlers/AccountServer/AccountHandler.ashx",
-//            {
-//                UserName: loginName,
-//                UserPassword:loginPassword
-//            },
-//            //data后台返回结果即AccountHandler.ashx页面
-//            function (data)
-//            {
-//                if (data == 1)
-//                {
-//                    tip("账号存在");
-//                    ////跳转到首页
-//                    //window.location.href = "/Default.aspx";
-//                }
-//                if (data == -1)
-//                {
-//                    tip("账号或密码错误");
-//                }
-
-//            }
-//        );
-//});
 
 
 function tip(txt)

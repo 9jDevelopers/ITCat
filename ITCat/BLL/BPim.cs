@@ -12,9 +12,9 @@ namespace BLL
         public PimDal PimDal { get; set; }
         PimDal a = new PimDal();
         
-        public bool TM(string Tel, string Email, string Pname, string Name, string Gender, DateTime Birthday, string  Pone, string City, byte[] Head_Portrait,string UserID)
+        public bool TM(string Tel, string Email, string Pname, string Name, string Gender, DateTime Birthday,  string City, byte[] Head_Portrait, Int32 UserID)
         {
-            return a.TM(Tel, Email, Pname, Name, Gender, Birthday, Pone, City, Head_Portrait, UserID);
+            return a.TM(Tel, Email, Pname, Name, Gender, Birthday,  City, Head_Portrait, UserID);
         }
 
 
