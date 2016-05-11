@@ -13,7 +13,7 @@ namespace BLL
         public ScenicDal ScenicDal { get; set; }
         ScenicDal td = new ScenicDal();
 
-        public bool browse(string scenicspotID, string scenicspot_Name, string scenicspotIntroduction, string scenicspotAddress, string ticketPrice, string scenicspotPicture, string freePolicy, string favouredPolicy, string scenicspotMap, string scenicspotGrade, string scenicspotTitle, string scenicSpotContactPhone)
+        public string browse(string scenicspotID, string scenicspot_Name, string scenicspotIntroduction, string scenicspotAddress, string ticketPrice, string scenicspotPicture, string freePolicy, string favouredPolicy, string scenicspotMap, string scenicspotGrade, string scenicspotTitle, string scenicSpotContactPhone)
         {
             return td.browse(scenicspotID,scenicspot_Name,scenicspotIntroduction,scenicspotAddress,ticketPrice, scenicspotPicture,freePolicy,favouredPolicy,scenicspotMap,scenicspotGrade,scenicspotTitle,scenicSpotContactPhone);
         }
