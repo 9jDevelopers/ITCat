@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BIndex.cs" />
     <Compile Include="BNewAttractions.cs" />
     <Compile Include="BNewTicketClass.cs" />
     <Compile Include="BPim.cs" />
