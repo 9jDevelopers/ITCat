@@ -88,7 +88,7 @@
         <div>
              <table>
               <tr>
-                <td class ="The_title">*景点图片:  <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-large-picture',size:'large',iconAlign:'top'">Picture</a></td>
+                <td class ="The_title">*景点图片:  <a href="#" onclick="Addimg()" id ="btnimage" class="easyui-linkbutton" data-options="iconCls:'icon-large-picture',size:'large',iconAlign:'top'">Picture</a></td>
                 <td>
                 <div id="AttractionImages">
                     
