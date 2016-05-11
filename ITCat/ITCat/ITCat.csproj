@@ -494,7 +494,6 @@
     <Content Include="Scenic\images\e1.jpg" />
     <Content Include="Scenic\images\e2.jpg" />
     <Content Include="Scenic\images\e3.jpg" />
-    <Content Include="Scenic\scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scenic\scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scenic\Scenic.aspx" />
   </ItemGroup>
