@@ -167,13 +167,27 @@
                     
                     <div class="add-images"></div>
                     <div class="imgss"></div>
-                    <div class="kj"><input type="button" id="txtFileName"  value="提交"  onclick = "" /></div>
+                    <div class="kj"><input type="button" id="FileName"  value="提交"  onclick = "" /></div>
+                    <div><img id="im" src=""></div>
+
                 </div>
             </div>
         </div>
         
     </form>
     <script >
+        //上传图片
+         $(function () 
+        {
+            var button = $('#FileName');
+            
+            new AjaxUpload(button, 
+         {
+                action: 'one.ashx.cs',
+                name: 'myflie',
+         })
+       });
+           
         $.extend($.fn.validatebox.defaults.rules, {
             email: {
                 
