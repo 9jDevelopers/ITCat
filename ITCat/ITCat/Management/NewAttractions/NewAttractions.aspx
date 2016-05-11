@@ -11,7 +11,8 @@
     <link href="../../Public/css/demo.css" rel="stylesheet" />
     <script src="../../Public/js/jquery.min.js"></script>
     <script src="../../Public/js/jquery.easyui.min.js"></script>
-    <script src="js/JavaScript3.js"></script>
+    <script src="js/Submit.js"></script>
+    <script src="js/upload_image.js"></script>
 </head>
 <body>
     <form  id="ff" method="post" runat="server">
@@ -88,17 +89,24 @@
         <div>
              <table>
               <tr>
-                <td class ="The_title">*景点图片:  <a href="#" onclick="Addimg()" id ="btnimage" class="easyui-linkbutton" data-options="iconCls:'icon-large-picture',size:'large',iconAlign:'top'">Picture</a></td>
+                <td class ="The_title">*景点图片:</td>
                 <td>
-                <div id="AttractionImages">
-                    
-                  
-                  <div id="Fileups">               
-                   <input type="file" class="file-up" name="btnim0" style="display:none;"/>
-                   <input type="file" class="file-up" name="btnim1" style="display:none;"/>
-                   <input type="file" class="file-up" name="btnim2" style="display:none;"/>
-                   <input type="file" class="file-up" name="btnim3" style="display:none;"/>
+                <div class="down">
+                    <div class="ft">
+                        <h5>仅支持jpg,gif,png格式图片，且文件小于2M.</h5>
+                    </div>
+                <div class="TP">   
+                    <input type="button" id="Bimage" onclick="Addimg()"  value="点击添加图片" style="margin-left:20px;"/> 
+                        <div id="fileups">                  
+                            <input type="file" class="file-up" name="btnim1"onchange=" previewImages()" style="display:none;"/>
+                            <input type="file" class="file-up" name="btnim2" onchange=" previewImages()" style="display:none;"/>
+                        <input type="file" class="file-up" name="btnim3" onchange=" previewImages()" style="display:none;"/>
+                        </div>   
                 </div>
+                    
+                    <div class="add-images"></div>
+                    <div class="imgss"></div>
+                    <div class="kj"><input type="button" id="txtFileName"  value="提交"  onclick = "" /></div>
                 </div>
                 </td>
             </tr>
