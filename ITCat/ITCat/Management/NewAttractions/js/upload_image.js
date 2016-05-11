@@ -1,65 +1,63 @@
 ﻿var count = 0;
-$(function () {
-    $("#btnimage").click(function () {
-        count = $("#images .item").size();
-        $(".file-up").eq(count).click();
-    });
-});
 
-$(function () {
-    $(".file-up").live("change", function () {
-        previewImages();
-    });
-});
+
+function Addimg() {
+
+
+    $(".file-up").eq(count).click();
+
+}
+//$(function () {
+//    $(".file-up").live("change", function () {
+//        previewImages();
+//    });
+//});
 function previewImages() {
     var file = $(".file-up").eq(count)[0].files[0];
     if (typeof FileReader != undefined) {
         var reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = function () {
+
             addPreviewHtml(this.result);
         };
     }
 }
 function addPreviewHtml(src) {
 
-    $("#btnimage").before("<div class='item'>" +
+    $("#Bimage").before("<div class='item'>" +
                             "<div class='im' style='background-image:url(" + src + ");'></div>" +
-                            "<i class='icon-close ic'></i>" +
+
                          "</div>");
-    var itemSize = $("#images .item").size();
-    if (itemSize == 4) {
-        $("#btnimage").hide();
-        alert('已达到图片上限');
+
+
+}
+function closeImage(obj) {
+
+    var index = $(obj).parent(".item").index();
+
+    $(obj).parent().remove();
+    $(".file-up").eq(index).remove();
+    $(".file-up").each(function (id) {
+        $(this).attr("name", "fileUp" + id);
     }
-    else {
-        $("#btnimage").show();
+    );
+    $("#fileups").append("<input type='file'  capture='camera' accept='image/*' class='file-up' onchange=' previewImages()' name='fileUp3' style='display:none;'/> ");
+    var itemSize = $(".images-preview .item").size();
+    if (itemSize != 1) {
+        $("#Bimage").show();
     }
 }
-$(function () {
-    $(".icon-close").live("click", function () {
-        var index = $(this).parent(".item").index();
-        $(this).parent().remove();
-        $(".file-up").eq(index).remove();
-        $(".file-up").each(function (id) {
-            $(this).attr("name", "fileUp" + id);
-        });
-        $("#fileups").append("<input type='file'  capture='camera' accept='image/*' class='file-up' name='fileUp3' style='display:none;'/> ");
-        var itemSize = $(".images-preview .item").size();
-        if (itemSize != 4) {
-            $("#btnimage").show();
-        }
-    });
-});
+
+
 
 $(function () {
-    $("#btnEnter").click(function () {
-        alert(222);
-        var formData = new FormData($("#frmMain")[0]);
+    $("#txtFileName").click(function () {
+        var formData = new FormData($("#ff")[0]);
         $.ajax({
             cache: true, //缓存
             type: "POST", //提交方式post get
-            url: "Handler_goods.ashx",
+            url: "NewAttractionsHandler.ashx",
             data: formData,
             async: true, //异步
             contentType: false, //避免jQuery将你的表格数据转换为字符串，导致提交失败。
