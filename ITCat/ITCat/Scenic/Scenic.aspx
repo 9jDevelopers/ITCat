@@ -6,16 +6,17 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>景点</title>
-    <link href="css/Scenic.css" rel="stylesheet" />
+    <link href="css/Scenic.css" rel="stylesheet" />  
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 <meta name="keywords" content="�ٶȵ�ͼ,�ٶȵ�ͼAPI���ٶȵ�ͼ�Զ��幤�ߣ��ٶȵ�ͼ���������ù���" />
 <meta name="description" content="�ٶȵ�ͼAPI�Զ����ͼ�������û��ڿ��ӻ����������ɰٶȵ�ͼ" />
-
 <style type="text/css">
     html,body{margin:0;padding:0;}
     .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
     .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
 </style>
+     <script type="text/javascript" src="../Public/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../Public/js/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
 <body onload="javascript:Scenic"id="submitForm">
@@ -245,10 +246,11 @@
     window.onload = function () {
         alert(1);
         var i = 147456;
+       
         $.post(
-            "../../Handler/SceniSpotHandler.ashx",
+            "../Handler/SceniSpotHandler.ashx",
        {
-           ScenicspotID: i.val(),
+           ScenicspotID: 147456
 
        },
         function (data) {
@@ -267,6 +269,7 @@
        );
 
     }
+        
 </script>
 
 </html>
