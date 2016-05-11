@@ -66,6 +66,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account\change\change.html" />
+    <Content Include="Account\change\css\change.css" />
+    <Content Include="Account\change\js\change.js" />
     <Content Include="Account\Login\css\login.css" />
     <Content Include="Account\PersonalCenter\js\ajaxupload.3.9.js" />
     <Content Include="Account\PersonalCenter\js\Pim.js" />
@@ -494,7 +497,6 @@
     <Content Include="Scenic\images\e1.jpg" />
     <Content Include="Scenic\images\e2.jpg" />
     <Content Include="Scenic\images\e3.jpg" />
-    <Content Include="Scenic\scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scenic\scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="Scenic\Scenic.aspx" />
   </ItemGroup>

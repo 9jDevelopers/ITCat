@@ -15,11 +15,12 @@ namespace iTCat.Handler
 
         public void ProcessRequest(HttpContext context)
         {
-            BScenic bs = new BScenic();  
-              if (context.Request["txtScenicspotID"] != null)
-            {
-                //景点浏览
-                string ScenicspotID = context.Request["txtScenicspotID"];
+            string result;
+            BScenic bs = new BScenic();
+            
+            
+            //景点浏览
+            string ScenicspotID = context.Request["txtScenicspotID"];
                 string Scenicspot_Name = context.Request["txtScenicspot_Name"];
                 string ScenicspotIntroduction = context.Request["txtScenicspot_Introduction"];
                 string ScenicspotAddress = context.Request["txtScenicspot_Address"];
@@ -31,22 +32,32 @@ namespace iTCat.Handler
                 string ScenicspotGrade = context.Request["txtScenicspot_Grade"];
                 string ScenicspotTitle = context.Request["txtScenicspot_Title"];
                 string ScenicSpotContactPhone = context.Request["txtScenicSpot_ContactPhone"];
-                if (bs.browse(ScenicspotID, Scenicspot_Name, ScenicspotIntroduction, ScenicspotAddress, TicketPrice, ScenicspotPicture, FreePolicy, FavouredPolicy, ScenicspotMap, ScenicspotGrade, ScenicspotTitle, ScenicSpotContactPhone))
-                {
-                    context.Response.Write(1);
-                }
-                else
-                {
-                    context.Response.Write(0);
-                }
+            result = bs.browse(ScenicspotID, Scenicspot_Name, ScenicspotIntroduction, ScenicspotAddress, TicketPrice, ScenicspotPicture, FreePolicy, FavouredPolicy, ScenicspotMap, ScenicspotGrade, ScenicspotTitle, ScenicSpotContactPhone);
+            if (result == "-1")
+            {
+                context.Response.Write(-1);
             }
+            else
+            {
+                context.Response.Write(result);
+            }
+
         }
+        
    
-        public bool IsReusable
+        public string  IsReusable
         {
             get
             {
-                return false;
+                return "-1";
+            }
+        }
+
+        bool IHttpHandler.IsReusable
+        {
+            get
+            {
+                throw new NotImplementedException();
             }
         }
     }
