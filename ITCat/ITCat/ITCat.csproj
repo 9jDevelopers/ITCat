@@ -118,9 +118,7 @@
     <Content Include="Management\imges\939.jpg" />
     <Content Include="Management\imges\dong_zhiwu.jpg" />
     <Content Include="Management\imges\piaolei.jpg" />
-    <Content Include="Management\NewAttractions\css\good.css" />
     <Content Include="Management\NewAttractions\css\NewAttractions.css" />
-    <Content Include="Management\NewAttractions\css\newStyle.css" />
     <Content Include="Management\NewAttractions\css\StyleSheet.css" />
     <Content Include="Management\NewAttractions\css\StyleSheet2.css" />
     <Content Include="Management\NewAttractions\js\upload_image.js" />
