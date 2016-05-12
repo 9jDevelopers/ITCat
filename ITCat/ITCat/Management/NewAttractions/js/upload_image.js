@@ -1,65 +1,95 @@
 ﻿var count = 0;
+//点击添加图片按钮，触发上传控件
 $(function () {
-    $("#btnimage").click(function () {
-        count = $("#images .item").size();
+    $("#btn-add-images").click(function () {
+        alert(1);
+        count = $(".images-preview .item").size();
         $(".file-up").eq(count).click();
+        //        $(".file-up").each(function () {
+        //            var name = $(this).val();
+        //            if (name == "") {
+        //                $(this).click();
+        //                return false;
+        //            }
+        //        });
     });
 });
 
+
+
 $(function () {
     $(".file-up").live("change", function () {
+        //操作读取事件
+       
         previewImages();
     });
+
 });
+
+//读取图片
 function previewImages() {
+    //获取上传控件中的图片
     var file = $(".file-up").eq(count)[0].files[0];
+    //读取图片文件
     if (typeof FileReader != undefined) {
         var reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = function () {
+            //显示图片
             addPreviewHtml(this.result);
         };
     }
 }
-function addPreviewHtml(src) {
 
-    $("#btnimage").before("<div class='item'>" +
-                            "<div class='im' style='background-image:url(" + src + ");'></div>" +
-                            "<i class='icon-close ic'></i>" +
-                         "</div>");
-    var itemSize = $("#images .item").size();
+function addPreviewHtml(src) {
+    $(".add-images").before("<div class='item'>" +
+                                   "<div class='content' style='background-image:url(" + src + ");'></div>" +
+                                   "<i class='icon-close'></i>" +
+                            "</div>");
+    //获取.images-preview下有多少个item
+    var itemSize = $(".images-preview .item").size();
+
     if (itemSize == 4) {
-        $("#btnimage").hide();
-        alert('已达到图片上限');
+        $(".add-images").hide();
     }
     else {
-        $("#btnimage").show();
+        $(".add-images").show();
     }
 }
+
+
+//删除图片div组
 $(function () {
     $(".icon-close").live("click", function () {
+        //获取父级.item的index的索引
         var index = $(this).parent(".item").index();
+        //删除对应item的div
         $(this).parent().remove();
+        //删除索引上传控件
         $(".file-up").eq(index).remove();
+        //循环修改上传控件name
         $(".file-up").each(function (id) {
             $(this).attr("name", "fileUp" + id);
         });
-        $("#fileups").append("<input type='file'  capture='camera' accept='image/*' class='file-up' name='fileUp3' style='display:none;'/> ");
+        //.images-preview结尾插入一个控件
+        $(".images-preview").append("<input type='file'  capture='camera' accept='image/*' class='file-up' name='fileUp3' style='display:block;'/> ");
         var itemSize = $(".images-preview .item").size();
         if (itemSize != 4) {
-            $("#btnimage").show();
+            $(".add-images").show();
         }
     });
+
 });
 
+
+
 $(function () {
-    $("#btnEnter").click(function () {
-        alert(222);
-        var formData = new FormData($("#frmMain")[0]);
+    $("#txtFileName").click(function () {
+        var formData = new FormData($("#ff")[0]);
         $.ajax({
             cache: true, //缓存
             type: "POST", //提交方式post get
-            url: "Handler_goods.ashx",
+            url: "NewAttractionsHandler.ashx",
             data: formData,
             async: true, //异步
             contentType: false, //避免jQuery将你的表格数据转换为字符串，导致提交失败。

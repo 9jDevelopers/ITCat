@@ -9,9 +9,11 @@
     <link href="../../Public/css/themes/default/easyui.css" rel="stylesheet" />
     <link href="../../Public/css/themes/icon.css" rel="stylesheet" />
     <link href="../../Public/css/demo.css" rel="stylesheet" />
+    <link href="css/NewAttractions.css" rel="stylesheet" />
     <script src="../../Public/js/jquery.min.js"></script>
     <script src="../../Public/js/jquery.easyui.min.js"></script>
-    <script src="js/JavaScript3.js"></script>
+    <script src="js/Submit.js"></script>
+    <script src="js/upload_image.js"></script>
 </head>
 <body>
     <form  id="ff" method="post" runat="server">
@@ -88,18 +90,18 @@
         <div>
              <table>
               <tr>
-                <td class ="The_title">*景点图片:  <a href="#" onclick="Addimg()" id ="btnimage" class="easyui-linkbutton" data-options="iconCls:'icon-large-picture',size:'large',iconAlign:'top'">Picture</a></td>
+                <td class ="The_title">*景点图片:</td>
                 <td>
-                <div id="AttractionImages">
-                    
-                  
-                  <div id="Fileups">               
-                   <input type="file" class="file-up" name="btnim0" style="display:none;"/>
-                   <input type="file" class="file-up" name="btnim1" style="display:none;"/>
-                   <input type="file" class="file-up" name="btnim2" style="display:none;"/>
-                   <input type="file" class="file-up" name="btnim3" style="display:none;"/>
-                </div>
-                </div>
+                     <div class="images-preview clearfix">                           
+                            <%--通过JS添加显示图片的html--%>                         
+                            <div class="add-images">
+                                <a id="btn-add-images">添加图片</a>    
+                            </div>                        
+                            <input type="file"  capture="camera" accept="image/*" class="file-up" name="fileUp0" style="display:block;"/> 
+                            <input type="file"  capture="camera" accept="image/*" class="file-up" name="fileUp1" style="display:block;"/> 
+                            <input type="file"  capture="camera" accept="image/*" class="file-up" name="fileUp2" style="display:block;"/> 
+                            <input type="file"  capture="camera" accept="image/*" class="file-up" name="fileUp3" style="display:block;"/> 
+                       </div>
                 </td>
             </tr>
             </table>
