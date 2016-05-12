@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using BLL;
 
 namespace iTCat.Handler
@@ -16,7 +13,8 @@ namespace iTCat.Handler
         {
             context.Response.ContentType = "text/plain";
             BIndex bI = new BIndex();
-            bI.Index();
+            string json=bI.Index();
+            context.Response.Write(json);
         }
 
         public bool IsReusable
