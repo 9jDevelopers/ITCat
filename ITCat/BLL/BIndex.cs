@@ -1,4 +1,5 @@
 ﻿using Model.DAL;
+using System.Data;
 
 namespace BLL
 {
@@ -7,7 +8,7 @@ namespace BLL
         public IndexDal IndexDal { get; set; }
         IndexDal ID = new IndexDal();
 
-        public string Index()
+        public DataTable Index()
         {
             return ID.Index();
         }
