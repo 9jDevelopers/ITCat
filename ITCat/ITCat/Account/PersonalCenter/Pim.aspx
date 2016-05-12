@@ -157,7 +157,7 @@
                         <h5>仅支持jpg,gif,png格式图片，且文件小于2M.</h5>
                     </div>
                 <div class="TP">   
-                    <input type="button" id="btnimage"  onclick="test()" value="点击添加图片" style="margin-left:20px;"> 
+                    <input type="button" id="btnimage"  onclick="test()" value="点击添加图片" style="margin-left:20px;"/> 
                         <div id="fileups">                  
                             <input type="file" class="file-up" name="btnim1"onchange=" previewImages()" style="display:none;"/>
                             <input type="file" class="file-up" name="btnim2" onchange=" previewImages()" style="display:none;"/>

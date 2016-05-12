@@ -91,21 +91,28 @@
              <table>
               <tr>
                 <td class ="The_title">*景点图片:</td>
-                <td>
+                <td class="images">
                      <div class="images-preview clearfix">                           
                             <%--通过JS添加显示图片的html--%>                         
                             <div class="add-images">
-                                <a id="btn-add-images">添加图片</a>    
+                                <a id="btn-add-images">添加图片</a> 
+                               
                             </div>                        
-                            <input type="file"  capture="camera" accept="image/*" class="file-up" name="fileUp0" style="display:block;"/> 
-                            <input type="file"  capture="camera" accept="image/*" class="file-up" name="fileUp1" style="display:block;"/> 
-                            <input type="file"  capture="camera" accept="image/*" class="file-up" name="fileUp2" style="display:block;"/> 
-                            <input type="file"  capture="camera" accept="image/*" class="file-up" name="fileUp3" style="display:block;"/> 
+                           <div class="TP">   
+                              <input type="button" id="btnimage"  onclick="test()" value="点击添加图片" style="margin-left:20px;"/>    
+                                         
+                            <input type="file" class="file-up" name="btnim1"onchange=" previewImages()" style="display:none;"/>
+                            <input type="file" class="file-up" name="btnim2" onchange=" previewImages()" style="display:none;"/>
+                            <input type="file" class="file-up" name="btnim3" onchange=" previewImages()" style="display:none;"/>
+                          
+                         </div>
+                    
+                    <div class="add-images"></div>
+                    <div class="imgss"></div>
+                    <div class="kj"><input type="button" id="FileName"  value="提交"  onclick = "" /></div>
+                    <div><img id="im" src=""></div>
                        </div>
-                </td>
-            </tr>
-            </table>
-        </div>
+             
         <div>
             <table>
             <tr>

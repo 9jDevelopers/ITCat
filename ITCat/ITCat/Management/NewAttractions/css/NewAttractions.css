@@ -1,4 +1,8 @@
 ﻿body {
+   font-size: 12px;
+text-align: center;
+margin: 0px;
+padding: 0px;
 }
 .easyui-textbox {
     Height: 8%;
@@ -7,7 +11,7 @@
     padding: 0 2px;
     box-sizing: content-box;
 }
-.item
+/*.item
 {
     float:left;
     width:20%;
@@ -23,4 +27,36 @@
     background-position:center center;
     background-size:cover;
     overflow:hidden;
-    }
+    }*/
+.TP
+{
+    border-color:blue;
+    border-width:0.5px;
+    margin-top:50px;
+    margin-left:100px;
+    width:280px;
+    border-style:dashed;
+    border-bottom-color:#CDCDB4;
+}
+.add-images add
+{
+    margin-left:200px;
+   
+}
+
+.item
+{
+  float:left;
+  margin-left:0px; 
+  width:280px; 
+  margin:0px 2%;
+  position: relative;     
+}
+
+.im {
+    padding-top:100%;
+    width:100%;
+    background-size:cover;
+    overflow:hidden;
+}
+
