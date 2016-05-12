@@ -1,6 +1,4 @@
 ﻿using Model.DAL;
-using System.Data;
-using MSSQLDAL;
 
 namespace BLL
 {
@@ -11,9 +9,7 @@ namespace BLL
 
         public string Index()
         {
-            DataTable dt = ID.Index();
-            string json=DataTableConvertJson.DataTableToJson("index",dt);
-            return json;
+            return ID.Index();
         }
     }
 }

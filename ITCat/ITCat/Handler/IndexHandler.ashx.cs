@@ -1,5 +1,7 @@
-﻿using System.Web;
-using BLL;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
 namespace iTCat.Handler
 {
@@ -12,9 +14,7 @@ namespace iTCat.Handler
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
-            BIndex bI = new BIndex();
-            string json=bI.Index();
-            context.Response.Write(json);
+            context.Response.Write("Hello World");
         }
 
         public bool IsReusable
