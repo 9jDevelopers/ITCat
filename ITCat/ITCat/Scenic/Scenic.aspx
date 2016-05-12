@@ -250,7 +250,7 @@
         $.post(
             "../Handler/SceniSpotHandler.ashx",
        {
-           ScenicspotID: 147456
+           txtScenicspotID: 147456
 
        },
         function (data) {
