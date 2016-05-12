@@ -1,53 +1,85 @@
 ﻿var count = 0;
+//点击添加图片按钮，触发上传控件
+$(function () {
+    $("#btn-add-images").click(function () {
+        alert(1);
+        count = $(".images-preview .item").size();
+        $(".file-up").eq(count).click();
+        //        $(".file-up").each(function () {
+        //            var name = $(this).val();
+        //            if (name == "") {
+        //                $(this).click();
+        //                return false;
+        //            }
+        //        });
+    });
+});
 
 
-function Addimg() {
 
+$(function () {
+    $(".file-up").live("change", function () {
+        //操作读取事件
+       
+        previewImages();
+    });
 
-    $(".file-up").eq(count).click();
+});
 
-}
-//$(function () {
-//    $(".file-up").live("change", function () {
-//        previewImages();
-//    });
-//});
+//读取图片
 function previewImages() {
+    //获取上传控件中的图片
     var file = $(".file-up").eq(count)[0].files[0];
+    //读取图片文件
     if (typeof FileReader != undefined) {
         var reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = function () {
-
+            //显示图片
             addPreviewHtml(this.result);
         };
     }
 }
+
 function addPreviewHtml(src) {
-
-    $("#Bimage").before("<div class='item'>" +
-                            "<div class='im' style='background-image:url(" + src + ");'></div>" +
-
-                         "</div>");
-
-
-}
-function closeImage(obj) {
-
-    var index = $(obj).parent(".item").index();
-
-    $(obj).parent().remove();
-    $(".file-up").eq(index).remove();
-    $(".file-up").each(function (id) {
-        $(this).attr("name", "fileUp" + id);
-    }
-    );
-    $("#fileups").append("<input type='file'  capture='camera' accept='image/*' class='file-up' onchange=' previewImages()' name='fileUp3' style='display:none;'/> ");
+    $(".add-images").before("<div class='item'>" +
+                                   "<div class='content' style='background-image:url(" + src + ");'></div>" +
+                                   "<i class='icon-close'></i>" +
+                            "</div>");
+    //获取.images-preview下有多少个item
     var itemSize = $(".images-preview .item").size();
-    if (itemSize != 1) {
-        $("#Bimage").show();
+
+    if (itemSize == 4) {
+        $(".add-images").hide();
+    }
+    else {
+        $(".add-images").show();
     }
 }
+
+
+//删除图片div组
+$(function () {
+    $(".icon-close").live("click", function () {
+        //获取父级.item的index的索引
+        var index = $(this).parent(".item").index();
+        //删除对应item的div
+        $(this).parent().remove();
+        //删除索引上传控件
+        $(".file-up").eq(index).remove();
+        //循环修改上传控件name
+        $(".file-up").each(function (id) {
+            $(this).attr("name", "fileUp" + id);
+        });
+        //.images-preview结尾插入一个控件
+        $(".images-preview").append("<input type='file'  capture='camera' accept='image/*' class='file-up' name='fileUp3' style='display:block;'/> ");
+        var itemSize = $(".images-preview .item").size();
+        if (itemSize != 4) {
+            $(".add-images").show();
+        }
+    });
+
+});
 
 
 
