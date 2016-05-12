@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BuyTicket11.aspx.cs" Inherits="iTCat.BuyTicket.BuyTicket11" %>
+
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -254,3 +256,4 @@
     <!--js引用End-->      
 </body>
 </html>
+
