@@ -39,7 +39,6 @@ namespace Model.DAL
 
             //数据库执行代码 待修改
             DbCommand cmd = db.GetStoredProcCommond("sp_Pim");
-           
             db.AddInParameter(cmd, "@Tel", DbType.String, Tel);
             db.AddInParameter(cmd, "@Name", DbType.String, Name);
             db.AddInParameter(cmd, "@Email", DbType.String, Email);
