@@ -1,15 +1,28 @@
-﻿$(function ()
+﻿
+$(function ()
 {
-    //给ID为btn-login的标签设置点击事件
+    //页面加载完成执行
     $(document).ready(function ()
     {
         $.post("/Handler/IndexHandler.ashx",
-                //data：AccountHandler中返回的值
+                //参数
+                {},
+                //data：IndexHandler中返回的值
                 function (data)
                 {
-
-                }
-                //回调函数
+                    for (i = 0;i<=5;i++)
+                    {
+                        var name = "#AttractionsName" + i;
+                        $(name).html(data.index[i].AttractionsName);
+                        var synopsis = "#AttractionsSynopsis" + i;
+                        $(synopsis).html(data.index[i].AttractionsSynopsis);
+                        var http = "#http" + i;
+                        $(http).attr('href', '../Scenic/Scenic.aspx?AttractionsID=' + data.index[i].AttractionsID);
+                        //data.index[0].AttractionImages;
+                    }
+                },
+                //返回类型
+                "json"
             );
     });
 });
