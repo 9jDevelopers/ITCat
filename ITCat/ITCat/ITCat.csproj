@@ -119,11 +119,13 @@
     <Content Include="Management\imges\939.jpg" />
     <Content Include="Management\imges\dong_zhiwu.jpg" />
     <Content Include="Management\imges\piaolei.jpg" />
+    <Content Include="Management\NewAttractions\css\jquery-ui-1.8.20.custom.css" />
     <Content Include="Management\NewAttractions\css\NewAttractions.css" />
     <Content Include="Management\NewAttractions\css\StyleSheet.css" />
     <Content Include="Management\NewAttractions\css\StyleSheet2.css" />
-    <Content Include="Management\NewAttractions\js\upload_image.js" />
+    <Content Include="Management\NewAttractions\js\ajaxupload.3.9.js" />
     <Content Include="Management\NewAttractions\js\JavaScript2.js" />
+    <Content Include="Management\NewAttractions\js\jquery-2.1.1.min.js" />
     <Content Include="Management\NewAttractions\js\Submit.js" />
     <Content Include="Management\NewAttractions\NewAttractions.aspx" />
     <Content Include="Management\NewTicketClass\css\ticket.css" />
@@ -527,6 +529,9 @@
     <Compile Include="Handler\PimHandler1.ashx.cs">
       <DependentUpon>PimHandler1.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Management\NewAttractions\Attrctionsimage.ashx.cs">
+      <DependentUpon>Attrctionsimage.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Management\NewAttractions\NewAttractions.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>NewAttractions.aspx</DependentUpon>
@@ -546,6 +551,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Account\Login\images\" />
+    <Folder Include="Management\NewAttractions\img\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -573,6 +579,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
+    <Content Include="Management\NewAttractions\Attrctionsimage.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

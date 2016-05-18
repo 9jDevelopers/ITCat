@@ -15,6 +15,7 @@ namespace iTCat.Handler
         public void ProcessRequest(HttpContext context)
         {
             BNewAttractions bt = new BNewAttractions();
+            var img =context.Request["data"];
             if (context.Request["AttractionsID"] != null)
             {
                 //新建景点数据
@@ -27,7 +28,7 @@ namespace iTCat.Handler
                 string Introduce = context.Request["Introduce"];
                 string Contact = context.Request["Contact"];
                 string NoteAttractions = context.Request["NoteAttractions"];
-                
+               
                 if (bt.ToString(AttractionsID, Attractions_name, Attractions_title, Level_RadioButton, Address, OpenTime, Introduce, Contact, NoteAttractions))
                 {
                     context.Response.Write(1);
