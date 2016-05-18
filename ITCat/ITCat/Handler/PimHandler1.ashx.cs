@@ -13,6 +13,8 @@ namespace iTCat.Handler
 
         public void ProcessRequest(HttpContext context)
         {
+
+
             string action = context.Request["Action"];
             
             if (action == "userInfo")

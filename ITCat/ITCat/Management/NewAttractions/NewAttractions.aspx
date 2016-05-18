@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <link href="css/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
     <link href="../../Public/css/themes/default/easyui.css" rel="stylesheet" />
     <link href="../../Public/css/themes/icon.css" rel="stylesheet" />
     <link href="../../Public/css/demo.css" rel="stylesheet" />
@@ -13,10 +14,11 @@
     <script src="../../Public/js/jquery.min.js"></script>
     <script src="../../Public/js/jquery.easyui.min.js"></script>
     <script src="js/Submit.js"></script>
-    <script src="js/upload_image.js"></script>
+    <script src="js/ajaxupload.3.9.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
 </head>
 <body>
-    <form  id="ff" method="post" runat="server">
+    <form  id="ff" method="post" >
        
     <div class="Main_title"><h1>新建景点</h1></div>
         <div>
@@ -91,21 +93,37 @@
              <table>
               <tr>
                 <td class ="The_title">*景点图片:</td>
-                <td>
-                     <div class="images-preview clearfix">                           
+                <td class="images">
+                    <%-- <div class="images-preview clearfix">                           
                             <%--通过JS添加显示图片的html--%>                         
                             <div class="add-images">
-                                <a id="btn-add-images">添加图片</a>    
+                                <a id="btn-add-images">添加图片</a> 
+                               
                             </div>                        
-                            <input type="file"  capture="camera" accept="image/*" class="file-up" name="fileUp0" style="display:block;"/> 
-                            <input type="file"  capture="camera" accept="image/*" class="file-up" name="fileUp1" style="display:block;"/> 
-                            <input type="file"  capture="camera" accept="image/*" class="file-up" name="fileUp2" style="display:block;"/> 
-                            <input type="file"  capture="camera" accept="image/*" class="file-up" name="fileUp3" style="display:block;"/> 
-                       </div>
-                </td>
-            </tr>
-            </table>
-        </div>
+                           
+                            <div id="images">
+                         
+                    <div id="btnUp1" class="q" style="width:100px;height:100px  "><input type="button" id="btnimage"  value="点击添加图片" style="margin-left:20px;"/>                         
+                       <i class="tu1 w icon-googleplus" ></i> 
+                       <img id="ig1"  src=""/>         
+                   </div>
+
+                    <div id="btnUp2" class="q">
+                       <i class="tu2 w icon-googleplus"></i> 
+                       <img id="ig2" src=""/>         
+                   </div>
+        
+                    <div id="btnUp3" class="q">
+                       <i class="tu3 w icon-googleplus" ></i> 
+                       <img id="ig3" src=""/>         
+                   </div>        
+                    <div id="btnUp4" class="q">
+                       <i class="tu4 w icon-googleplus" ></i> 
+                       <img id="ig4" src=""/>         
+                   </div>   
+                </div>                  
+                    <div class="kj"><input type="button" id="FileName"  value="提交"  onclick = "" /></div>
+         
         <div>
             <table>
             <tr>
@@ -158,7 +176,47 @@
 			box-sizing:content-box;
 		}
      </style>
-    <script  >       
+    <script  >  
+        var button1 = $('#btnUp1');
+        var image1 = $('#ig1');
+        var tu1 = $('.tu1');
+
+        var button2 = $('#btnUp2');
+        var image2 = $('#ig2');
+        var tu2 = $('.tu2');
+
+        var button3 = $('#btnUp3');
+        var image3 = $('#ig3');
+        var tu3 = $('.tu3');
+
+        var button4 = $('#btnUp4');
+        var image4 = $('#ig4');
+        var tu4 = $('.tu4');
+
+        $(function () {
+            imagedata(button1, image1, tu1);
+            imagedata(button2, image2, tu2);
+            imagedata(button3, image3, tu3);
+            imagedata(button4, image4, tu4);
+
+        });
+
+        function imagedata(button, img, tu) {
+
+            new AjaxUpload(button, {
+                action: 'Attrctionsimage.ashx',
+                name: 'myflie',
+
+                //上传结束
+                onComplete: function (file, response) {
+                    $(function () { tu.hide(); })
+                    alert(response);
+                    img.attr("src", "img/" + response);
+                    img.attr("width", "100");
+                    img.attr("height", "100");
+                }
+            })
+        }
         function submitForm() {            
             $('#ff').form('submit',
             $("#submitForm").click(
