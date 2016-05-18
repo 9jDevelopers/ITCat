@@ -506,6 +506,9 @@
     <Compile Include="Account\PersonalCenter\Pim.aspx.designer.cs">
       <DependentUpon>Pim.aspx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Handler\ImgHandler1.ashx.cs">
+      <DependentUpon>ImgHandler1.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\IndexHandler.ashx.cs">
       <DependentUpon>IndexHandler.ashx</DependentUpon>
     </Compile>
@@ -573,6 +576,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
+    <Content Include="Handler\ImgHandler1.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
