@@ -20,9 +20,17 @@ namespace Model.DAL
 
             DbCommand cmd = db.GetStoredProcCommond("sp_Scenic");
             db.AddInParameter(cmd, "@AttractionsID", DbType.String, ScenicspotID);
+            try
+            { 
             DataTable dt = db.ExecuteDataTable(cmd);
-
-             return dt;  
+                return dt;  
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+            
 
         }
     }
