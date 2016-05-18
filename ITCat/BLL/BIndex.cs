@@ -12,7 +12,7 @@ namespace BLL
         public string Index()
         {
             DataTable dt = ID.Index();
-            string json=DataTableConvertJson.DataTableToJson("index",dt);
+            string json = DataTableConvertJson.DataTableToJson("index", dt);
             return json;
         }
     }

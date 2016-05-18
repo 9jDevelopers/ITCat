@@ -14,13 +14,13 @@
     <script src="../../Public/js/jquery.easyui.min.js"></script> 
     <script src="js/Pim.js"></script>
     <script src="js/tijiao.js"></script>
-    <script src="js/ajaxupload.3.9.js"></script>
+   <%-- <script src="js/ajaxupload.3.9.js"></script>--%>
    
 </head>
 <body>
   
     <div class="wz ">个人资料设置</div>
-    <form id="form1">
+    <form id="frmMain">
 
         <div class="easyui-accordion" style="width:900px;height:500px;">
             <div title="个人信息"  style="overflow:auto;padding:10px;">
@@ -157,18 +157,16 @@
                         <h5>仅支持jpg,gif,png格式图片，且文件小于2M.</h5>
                     </div>
                 <div class="TP">   
-                    <input type="button" id="btnimage"  onclick="test()" value="点击添加图片" style="margin-left:20px;"/> 
-                        <div id="fileups">                  
-                            <input type="file" class="file-up" name="btnim1"onchange=" previewImages()" style="display:none;"/>
-                            <input type="file" class="file-up" name="btnim2" onchange=" previewImages()" style="display:none;"/>
-                        <input type="file" class="file-up" name="btnim3" onchange=" previewImages()" style="display:none;"/>
-                        </div>   
+                    <input type="button" id="btnimage"  onclick="test()" value="点击添加图片" style="margin-left:20px">
+                     
+                        
+                       <div id="fileups">                  
+                            <input type="file" class="file-up" name="btnim1"onchange=" previewImages()" style="display:none;"/>                 
                 </div>
-                    
                     <div class="add-images"></div>
                     <div class="imgss"></div>
-                    <div class="kj"><input type="button" id="FileName"  value="提交"  onclick = "" /></div>
-                    <div><img id="im" src=""></div>
+                    <div class="kj"><input type="button" id="btnSubmit"  value="提交"  onclick="submitImg()"  /></div>
+                   
 
                 </div>
             </div>
@@ -176,19 +174,13 @@
         
     </form>
     <script >
-        //上传图片
-         $(function () 
-        {
-            var button = $('#FileName');
-            
-            new AjaxUpload(button, 
-         {
-                action: 'one.ashx.cs',
-                name: 'myflie',
-         })
-       });
-           
-        $.extend($.fn.validatebox.defaults.rules, {
+        
+      
+
+
+
+       
+         $.extend($.fn.validatebox.defaults.rules, {
             email: {
                 
                 validator: function (value, param) {

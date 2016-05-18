@@ -52,12 +52,17 @@ function closeImage(obj) {
 
 
 $(function () {
-    $("#btnimage").click(function () {
-        var formData = new FormData($("#frmMain")[0]);
+   
+});
+function submitImg() {
+  
+    var formData = new FormData($("#frmMain")[0]);
+    alert(formData);
         $.ajax({
+            action: "submitImg",
             cache: true, //缓存
             type: "POST", //提交方式post get
-            url: "Pim.ashx",
+            url: "../../handler/ImgHandler1.ashx",
             data: formData,
             async: true, //异步
             contentType: false, //避免jQuery将你的表格数据转换为字符串，导致提交失败。
@@ -71,5 +76,4 @@ $(function () {
                 alert(data);
             }
         });
-    });
-});
+    }
