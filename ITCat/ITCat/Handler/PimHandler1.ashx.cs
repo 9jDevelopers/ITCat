@@ -14,21 +14,7 @@ namespace iTCat.Handler
         public void ProcessRequest(HttpContext context)
         {
             string action = context.Request["Action"];
-            if (action == "submitImg")
-            {
-                BPim a = new BPim();
-                byte[] Head_Portrait = null; // byte.Parse context.Request["Head_Portrait"];
-                string userid = context.Request["UserID"];
-                int UserID = int.Parse(userid);
-                if (a.IMG( Head_Portrait, UserID))
-                {
-                    context.Response.Write(1);
-                }
-                else
-                {
-                    context.Response.Write(0);
-                }
-            }
+            
             if (action == "userInfo")
             {
                 BPim a = new BPim();

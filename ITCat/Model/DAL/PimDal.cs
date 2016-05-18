@@ -23,9 +23,7 @@ namespace Model.DAL
           
             db.AddInParameter(cmd, "@Head_Portrait", DbType.Byte, null);
             db.AddInParameter(cmd, "@UserID", DbType.Int32, UserID);
-
             int result = db.ExecuteNonQuery(cmd);
-
             if (result == 1)
                 //上传成功
                 return true;
