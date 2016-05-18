@@ -26,7 +26,17 @@ namespace iTCat.Handler
             }
 
             int UserID = 1;
-            if (a.IMG(Head_Portrait, UserID))
+            bool result = false;
+            try
+            {
+                result = a.IMG(Head_Portrait, UserID);
+            }
+            
+            catch(Exception ex)
+            {
+                context.Response.Write(ex.ToString());
+            }
+            if (result)
             {
                 context.Response.Write(1);
             }

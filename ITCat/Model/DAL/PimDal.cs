@@ -16,12 +16,12 @@ namespace Model.DAL
             public bool IMG(byte[] Head_Portrait, Int32 UserID)
         {
             DbHelper db = new DbHelper();
-            DbCommand cmd = db.GetStoredProcCommond("sp_Pim");
+            DbCommand cmd = db.GetStoredProcCommond("sp_Pim2");
 
 
             //数据库执行代码 待修改
           
-            db.AddInParameter(cmd, "@Head_Portrait", DbType.Byte, null);
+            db.AddInParameter(cmd, "@Head_Portrait", DbType.Binary, Head_Portrait);
             db.AddInParameter(cmd, "@UserID", DbType.Int32, UserID);
             int result = db.ExecuteNonQuery(cmd);
             if (result == 1)
