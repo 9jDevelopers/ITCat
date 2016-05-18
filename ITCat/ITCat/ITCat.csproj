@@ -506,6 +506,13 @@
     <Compile Include="Account\PersonalCenter\Pim.aspx.designer.cs">
       <DependentUpon>Pim.aspx.cs</DependentUpon>
     </Compile>
+    <Compile Include="BuyTicket\BuyTicket.aspx.cs">
+      <DependentUpon>Buyticket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BuyTicket\BuyTicket.aspx.designer.cs">
+      <DependentUpon>Buyticket.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\IndexHandler.ashx.cs">
       <DependentUpon>IndexHandler.ashx</DependentUpon>
     </Compile>
