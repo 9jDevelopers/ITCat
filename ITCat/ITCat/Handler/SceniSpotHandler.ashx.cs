@@ -20,11 +20,10 @@ namespace iTCat.Handler
             
             
             //景点浏览
-            string ScenicspotID = context.Request["txtScenicspotID"];
-           
+            string ScenicspotID = context.Request["txtScenicspotID"];       
             result = bs.browse(ScenicspotID);
-          
-                context.Response.Write(result);       
+
+            context.Response.Write(result);       
 
         }
         
