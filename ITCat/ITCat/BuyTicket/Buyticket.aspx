@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BuyTicket11.aspx.cs" Inherits="iTCat.BuyTicket.BuyTicket" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="BuyTicket1.aspx.cs" Inherits="iTCat.BuyTicket.BuyTicket" %>
 
 <!DOCTYPE html>
 <html>
