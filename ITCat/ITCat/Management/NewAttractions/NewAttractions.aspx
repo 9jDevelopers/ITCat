@@ -80,6 +80,16 @@
         <div>
              <table>
               <tr>
+                <td class ="The_title">*景点地图坐标:</td>
+                <td class="Textbox_one">
+                    <input class="easyui-textbox" runat="server"
+                     id="txtPoint" data-options="prompt:'请填写景点的坐标',validType:'Lenght[10,30]'"/></td>
+              </tr>
+            </table>
+        </div>
+        <div>
+             <table>
+              <tr>
                 <td class ="The_title">*开放时间:</td>
                 <td  class="Textbox_one">
                     <input class="easyui-textbox" runat="server"
@@ -87,7 +97,6 @@
             </tr>
             </table>
         </div>
-        <div>
              <table>
               <tr>
                 <td class ="The_title">*景点图片:</td>
@@ -204,24 +213,44 @@
                 name: 'myflie',
 
                 //上传结束
-                onComplete: function (file, response) {
-                    $(function () { tu.hide(); })
+                onComplete: function (file, response) {                   
                     alert(response);
+                    $(function () { tu.hide(); })
                     img.attr("src", "img/" + response);
                     img.attr("width", "100");
                     img.attr("height", "100");
+                    
                 }
             })
         }
-
+       
+        $('#FileName').click(
+            function () {
+                $.post(
+                       "../../Handler/AttractionsImgHandler.ashx",
+                       {
+                           AttractionsID: $("#txtAttractionsID").val(),
+                           image1: $("#ig1").attr("src"),
+                           image2: $("#ig2").attr("src"),
+                           image3: $("#ig3").attr("src"),
+                           image4: $("#ig4").attr("src")
+                       },
+                       function (data) {
+                           if (data == "1") {
+                               alert("提交成功");
+                           }
+                           else {
+                               alert("提交失败");
+                           }
+                       }
+                    );
+            }
+            )
+        
         function submitForm() {            
             $('#ff').form('submit',
             $("#submitForm").click(
-             function () {
-                     var image1 = $("#ig1").attr("src");           
-                     var image2 = $("#ig2").attr("src");        
-                     var image3 = $("ig3").attr("src");
-                     var image4 = $("ig4").attr("src");
+             function () {                    
                  alert("1");
                  $.post(
                      "../../Handler/NewAttractionsHandler.ashx",
@@ -234,11 +263,9 @@
                     OpenTime: $("#OpenTimeTextBox").val(),
                     Introduce: $("#IntroduceTextBox").val(),
                     Contact: $("#Contact").val(),
-                    NoteAttractions: $("#NoteAttractions").val(),
-                    image1 : $("#ig1").attr("src"),          
-                    image2 : $("#ig2").attr("src"),       
-                    image3 : $("ig3").attr("src"),
-                    image4 : $("ig4").attr("src")                    
+                    NoteAttractions: $("#NoteAttractions").val(),      
+                    Point:$("#txtPoint").val()
+                    
                 },
                  function (data) {
                      if (data == "1") {

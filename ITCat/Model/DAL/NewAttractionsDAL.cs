@@ -12,9 +12,9 @@ namespace Model.DAL
     public class NewAttractionsDAL
     {
         //新建景点DAL代码
-        public bool ToString(string attractionsID, string attractions_name, string attractions_title, string level_RadioButton, string address, string openTime, string introduce, string contact, string noteAttractions, string img1, string img2, string img3, string img4)
+        public bool ToString(string attractionsID, string attractions_name, string attractions_title, string level_RadioButton, string address, string openTime, string introduce, string contact, string noteAttractions, string img1, string img2, string img3, string img4,string Point)
         {         
-        {
+        
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetStoredProcCommond("sp_Attractions");
             db.AddInParameter(cmd, "@AttractionsID", DbType.String, attractionsID);
@@ -27,10 +27,11 @@ namespace Model.DAL
             db.AddInParameter(cmd, "@AttractionsContact", DbType.String, contact);
             db.AddInParameter(cmd, "@NoteAttractions", DbType.String, noteAttractions);
             db.AddInParameter(cmd, "@img1", DbType.String, img1);
-                db.AddInParameter(cmd, "@img2", DbType.String, img2);
-                db.AddInParameter(cmd, "@img3", DbType.String, img3);
-                db.AddInParameter(cmd, "@img4", DbType.String, img4);
-                db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
+            db.AddInParameter(cmd, "@img2", DbType.String, img2);
+            db.AddInParameter(cmd, "@img3", DbType.String, img3);
+            db.AddInParameter(cmd, "@img4", DbType.String, img4);
+            db.AddInParameter(cmd, "@point", DbType.String, Point);
+            db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
 
             db.ExecuteNonQuery(cmd);
 
@@ -43,6 +44,6 @@ namespace Model.DAL
             else
                 return false;
         }
-    }
+    
     }
 }

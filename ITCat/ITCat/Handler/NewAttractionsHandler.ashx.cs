@@ -32,7 +32,8 @@ namespace iTCat.Handler
                 string img2 = context.Request["image2"];
                 string img3 = context.Request["image3"];
                 string img4 = context.Request["image4"];
-                if (bt.ToString(AttractionsID, Attractions_name, Attractions_title, Level_RadioButton, Address, OpenTime, Introduce, Contact, NoteAttractions, img1, img2, img3, img4))
+                string Point = context.Request["Point"];
+                if (bt.ToString(AttractionsID, Attractions_name, Attractions_title, Level_RadioButton, Address, OpenTime, Introduce, Contact, NoteAttractions, img1, img2, img3, img4,Point))
                 {
                     context.Response.Write(1);
                 }
