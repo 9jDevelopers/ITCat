@@ -40,11 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAttractionsImg.cs" />
     <Compile Include="BIndex.cs" />
     <Compile Include="BNewAttractions.cs" />
     <Compile Include="BNewTicketClass.cs" />
     <Compile Include="BPim.cs" />
     <Compile Include="BScenic.cs" />
+    <Compile Include="BScenic2.cs" />
     <Compile Include="BTourist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
