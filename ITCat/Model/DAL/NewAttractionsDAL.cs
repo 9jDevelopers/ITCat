@@ -26,7 +26,10 @@ namespace Model.DAL
             db.AddInParameter(cmd, "@AttractionsSynopsis", DbType.String, introduce);
             db.AddInParameter(cmd, "@AttractionsContact", DbType.String, contact);
             db.AddInParameter(cmd, "@NoteAttractions", DbType.String, noteAttractions);
-            db.AddInParameter(cmd, "@NoteAttractions", DbType.String, noteAttractions);
+            db.AddInParameter(cmd, "@img1", DbType.String, img1);
+                db.AddInParameter(cmd, "@img2", DbType.String, img2);
+                db.AddInParameter(cmd, "@img3", DbType.String, img3);
+                db.AddInParameter(cmd, "@img4", DbType.String, img4);
                 db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
 
             db.ExecuteNonQuery(cmd);
