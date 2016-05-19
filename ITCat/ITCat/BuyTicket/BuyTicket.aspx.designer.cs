@@ -10,6 +10,6 @@
 namespace iTCat.BuyTicket {
     
     
-    public partial class BuyTicket11 {
+    public partial class BuyTicket {
     }
 }
