@@ -38,6 +38,7 @@ namespace Model.DAL
             db.AddInParameter(cmd, "@AttractionsLevel", DbType.String, ScenicspotGrade);
             db.AddInParameter(cmd, "@AttractionsTitle", DbType.String, ScenicspotTitle);
             db.AddInParameter(cmd, "@AttractionsContact", DbType.String, ScenicSpotContactPhone);
+            db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
             //db.AddInParameter(cmd, "@TicketPrice", DbType.String, TicketPrice);
             //db.AddInParameter(cmd, "@ScenicspotPicture", DbType.String, ScenicspotPicture);
             //db.AddInParameter(cmd, "@FreePolicy", DbType.String, FreePolicy);
@@ -45,6 +46,8 @@ namespace Model.DAL
             //db.AddInParameter(cmd, "@ScenicspotMap", DbType.String, ScenicspotMap);
 
             db.ExecuteNonQuery(cmd);
+
+
             string result = cmd.Parameters["@retValue"].Value.ToString();
 
             if (result == "-1")

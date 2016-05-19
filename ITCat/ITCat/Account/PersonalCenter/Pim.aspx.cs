@@ -16,34 +16,6 @@ namespace iTCat.Account.PersonalCenter
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-          
-        }
-
-
-        public new void ProcessRequest(HttpContext context)
-        {
-            //context.Response.ContentType = "text/plain";
-            HttpPostedFile postedFile = context.Request.Files[0];
-            //postedFile.
-            string savePath = "IMG/";
-            //返回路径
-            string path = context.Server.MapPath(savePath);
-
-            System.Random Random = new System.Random();
-            int Result = Random.Next(0, 9999999);
-            string filename = ".jpg";
-            postedFile.SaveAs(path + Result + filename);
-
-            context.Response.Write(Result + filename);
-            //postedFile.
-        }
-
-        public new bool IsReusable
-        {
-            get
-            {
-                return false;
-            }
         }
     }
 }

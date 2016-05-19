@@ -1,6 +1,6 @@
 ﻿   
        function submitForm() {            
-           $('#form1').form('submit',
+           $('##frmMain').form('submit',
            $("#submitForm").click(
             function () {
                 
@@ -8,6 +8,7 @@
                 $.post(
                     "../../Handler/PimHandler1.ashx",
                {
+                   Action:"userInfo",
                    UserID: 1,
                    Tel: $("#txtTel").val(),
                    Email: $("#txtEmail").val(),

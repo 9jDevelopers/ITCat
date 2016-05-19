@@ -13,26 +13,14 @@ namespace iTCat.Handler
 
         public void ProcessRequest(HttpContext context)
         {
-            BPim a = new BPim();
-            
-           if (context.Request["UserID"] != null)
+            string action = context.Request["Action"];
+            if (action == "submitImg")
             {
-
-                //string UserID = (4).ToString(context.Request["UserID"]);
-                //string uesrid = context.Request["UserID"];
-                //int UserID = int.Parse(userid);
+                BPim a = new BPim();
+                byte[] Head_Portrait = null; // byte.Parse context.Request["Head_Portrait"];
                 string userid = context.Request["UserID"];
                 int UserID = int.Parse(userid);
-                string Tel = context.Request["Tel"];
-                string Email = context.Request["Email"];
-                string Pname = context.Request["Pname"];
-                string Name = context.Request["Name"];
-                string  Gender = context.Request["Gender"];
-                string birthday = context.Request["Birthday"];
-                DateTime Birthday = DateTime.Parse(birthday); 
-                string City = context.Request["City"];
-                byte[] Head_Portrait = null; // byte.Parse context.Request["Head_Portrait"];
-                if (a.TM(Tel, Email, Pname, Name, Gender, Birthday, City, Head_Portrait, UserID))
+                if (a.IMG( Head_Portrait, UserID))
                 {
                     context.Response.Write(1);
                 }
@@ -41,8 +29,38 @@ namespace iTCat.Handler
                     context.Response.Write(0);
                 }
             }
+            if (action == "userInfo")
+            {
+                BPim a = new BPim();
+
+                if (context.Request["UserID"] != null)
+                {
+                    
+                    string Tel = context.Request["Tel"];
+                    string Email = context.Request["Email"];
+                    string Pname = context.Request["Pname"];
+                    string Name = context.Request["Name"];
+                    string Gender = context.Request["Gender"];
+                    string birthday = context.Request["Birthday"];
+                    DateTime Birthday = DateTime.Parse(birthday);
+                    string City = context.Request["City"];
+                    string userid = context.Request["UserID"];
+                    int UserID = int.Parse(userid);
+
+                    if (a.TM(Tel, Email, Pname, Name, Gender, Birthday, City, UserID))
+                    {
+                        context.Response.Write(1);
+                    }
+                    else
+                    {
+                        context.Response.Write(0);
+                    }
+                }
+
+
+            }
         }
-        
+
         public bool IsReusable
         {
             get

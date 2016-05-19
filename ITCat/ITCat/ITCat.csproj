@@ -570,7 +570,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scenic\scripts\Scenic.js" />
-    <Content Include="web.config" />
     <Content Include="Handler\LoginHandler.ashx" />
     <Content Include="Handler\SceniSpotHandler.ashx" />
     <Content Include="Handler\PimHandler1.ashx" />
@@ -578,11 +577,14 @@
     <Content Include="Handler\NewTicketClassHandler.ashx" />
     <Content Include="Handler\RegisterHandler.ashx" />
     <Content Include="Handler\IndexHandler.ashx" />
-    <None Include="web.Debug.config">
-      <DependentUpon>web.config</DependentUpon>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
     </None>
-    <None Include="web.Release.config">
-      <DependentUpon>web.config</DependentUpon>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
   <PropertyGroup>
