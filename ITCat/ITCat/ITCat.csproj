@@ -125,6 +125,42 @@
     <Content Include="Management\NewAttractions\css\NewAttractions.css" />
     <Content Include="Management\NewAttractions\css\StyleSheet.css" />
     <Content Include="Management\NewAttractions\css\StyleSheet2.css" />
+    <Content Include="Management\NewAttractions\img\146809.jpg" />
+    <Content Include="Management\NewAttractions\img\148756.jpg" />
+    <Content Include="Management\NewAttractions\img\157464.jpg" />
+    <Content Include="Management\NewAttractions\img\167951.jpg" />
+    <Content Include="Management\NewAttractions\img\187722.jpg" />
+    <Content Include="Management\NewAttractions\img\230549.jpg" />
+    <Content Include="Management\NewAttractions\img\260575.jpg" />
+    <Content Include="Management\NewAttractions\img\265499.jpg" />
+    <Content Include="Management\NewAttractions\img\267349.jpg" />
+    <Content Include="Management\NewAttractions\img\295889.jpg" />
+    <Content Include="Management\NewAttractions\img\31027.jpg" />
+    <Content Include="Management\NewAttractions\img\322875.jpg" />
+    <Content Include="Management\NewAttractions\img\329389.jpg" />
+    <Content Include="Management\NewAttractions\img\335926.jpg" />
+    <Content Include="Management\NewAttractions\img\339386.jpg" />
+    <Content Include="Management\NewAttractions\img\368948.jpg" />
+    <Content Include="Management\NewAttractions\img\482631.jpg" />
+    <Content Include="Management\NewAttractions\img\498681.jpg" />
+    <Content Include="Management\NewAttractions\img\507930.jpg" />
+    <Content Include="Management\NewAttractions\img\564858.jpg" />
+    <Content Include="Management\NewAttractions\img\599103.jpg" />
+    <Content Include="Management\NewAttractions\img\632850.jpg" />
+    <Content Include="Management\NewAttractions\img\640118.jpg" />
+    <Content Include="Management\NewAttractions\img\695970.jpg" />
+    <Content Include="Management\NewAttractions\img\754098.jpg" />
+    <Content Include="Management\NewAttractions\img\786884.jpg" />
+    <Content Include="Management\NewAttractions\img\791607.jpg" />
+    <Content Include="Management\NewAttractions\img\803129.jpg" />
+    <Content Include="Management\NewAttractions\img\845457.jpg" />
+    <Content Include="Management\NewAttractions\img\865954.jpg" />
+    <Content Include="Management\NewAttractions\img\874166.jpg" />
+    <Content Include="Management\NewAttractions\img\925309.jpg" />
+    <Content Include="Management\NewAttractions\img\940071.jpg" />
+    <Content Include="Management\NewAttractions\img\954937.jpg" />
+    <Content Include="Management\NewAttractions\img\984475.jpg" />
+    <Content Include="Management\NewAttractions\img\998015.jpg" />
     <Content Include="Management\NewAttractions\js\upload_image.js" />
     <Content Include="Management\NewAttractions\js\JavaScript2.js" />
     <Content Include="Management\NewAttractions\js\Submit.js" />
@@ -522,6 +558,9 @@
     <Compile Include="BuyTicket\BuyTicket.aspx.designer.cs">
       <DependentUpon>Buyticket.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\AttractionsImgHandler.ashx.cs">
+      <DependentUpon>AttractionsImgHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\ImgHandler1.ashx.cs">
       <DependentUpon>ImgHandler1.ashx</DependentUpon>
     </Compile>
@@ -533,6 +572,9 @@
     </Compile>
     <Compile Include="Handler\RegisterHandler.ashx.cs">
       <DependentUpon>RegisterHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\SceniSpot2Handler.ashx.cs">
+      <DependentUpon>SceniSpot2Handler.ashx</DependentUpon>
     </Compile>
     <Compile Include="Handler\SceniSpotHandler.ashx.cs">
       <DependentUpon>SceniSpotHandler.ashx</DependentUpon>
@@ -549,8 +591,8 @@
     <Compile Include="Handler\SubmitImgHandler.ashx.cs">
       <DependentUpon>SubmitImgHandler.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Handler\transferpimone.ashx.cs">
-      <DependentUpon>transferpimone.ashx</DependentUpon>
+    <Compile Include="Management\NewAttractions\Attrctionsimage.ashx.cs">
+      <DependentUpon>Attrctionsimage.ashx</DependentUpon>
     </Compile>
     <Compile Include="Management\NewAttractions\NewAttractions.aspx.cs">
       <SubType>ASPXCodeBehind</SubType>
@@ -597,13 +639,21 @@
     <Content Include="Handler\IndexHandler.ashx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+    <Content Include="Handler\SceniSpot2Handler.ashx" />
     <Content Include="Handler\ImgHandler1.ashx" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Handler\SubmitImgHandler.ashx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Handler\transferpimone.ashx" />
+    <Content Include="Handler\AttractionsImgHandler.ashx" />
+    <Content Include="Management\NewAttractions\Attrctionsimage.ashx" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
