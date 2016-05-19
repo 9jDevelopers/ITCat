@@ -32,14 +32,14 @@
                  </div>
   
                         <div class="mp-description-detail">
-                            <div class="mp-description-view">
+                            <div class="mp-description-view" id="attractionsName">
                                 <span class="mp-description-name" id="txtScenicspotName  "  title="庐山">庐山</span>
                             </div>
-                            <div class="mp-description-onesentence" id="txtScenicspotIntroduction ">风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美。</div>
+                            <div class="mp-description-onesentence" id="attractionsSynopsis">风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美。</div>
                             <div class="mp-description-location">
 
                                 <span class="mp-description-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位      置：</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="mp-description-address" id="txtScenicspotAddress " title="江西省九江市庐山区">江西省九江市庐山区</span>
+                                <span class="mp-description-address" id="attractionsAddress" title="江西省九江市庐山区">江西省九江市庐山区</span>
                                 <a class="ditu">查看地图</a>
                             </div>
                             <div class="mp-description-price" style="display: block;">
@@ -254,19 +254,33 @@
 
        },
         function (data) {
-            if (data == "-1") {
+            if (data != "-1") {
+                var obj = JSON.parse(data);
+                $("#attractionsName").html(obj.browse[0].AttractionsName);
+                $("#attractionsSynopsis").html(obj.browse[0].AttractionsSynopsis);
+                $("#attractionsAddress").html(obj.browse[0].AttractionsAddress);
+                $("#dituContent").html(obj.browse[0].AttractionsContact);
+               
+                markerArr = [{ title: obj.browse[0].AttractionsSynopsis, content: obj.browse[0].AttractionsContact, point: "115.995818|29.677338", isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
+                ];
+
+               addMarker();
+
                 alert("提交成功");
             }
             else {
-                function showJson() {
-                    
-                    var obj = JSON.parse('{"data":"ScenicspotID"}');
-                    console.log(obj.data);  // 取得的值为：this-is-json
-
-                }
+                var obj = JSON.parse(data);
+              // obj.data;
+               
             }
         }
        );
+
+    }
+    function showJson() {
+
+        var obj = JSON.parse('{"data":"ScenicspotID"}');
+        console.log(obj.data);  // 取得的值为：this-is-json
 
     }
         

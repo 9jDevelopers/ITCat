@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MSSQLDAL;
 using Model.DAL;
+using System.Data;
 
 namespace BLL
 {
@@ -13,9 +14,11 @@ namespace BLL
         public ScenicDal ScenicDal { get; set; }
         ScenicDal td = new ScenicDal();
 
-        public string browse(string scenicspotID, string scenicspot_Name, string scenicspotIntroduction, string scenicspotAddress, string ticketPrice, string scenicspotPicture, string freePolicy, string favouredPolicy, string scenicspotMap, string scenicspotGrade, string scenicspotTitle, string scenicSpotContactPhone)
+        public string browse(string scenicspotID)
         {
-            return td.browse(scenicspotID,scenicspot_Name,scenicspotIntroduction,scenicspotAddress,ticketPrice, scenicspotPicture,freePolicy,favouredPolicy,scenicspotMap,scenicspotGrade,scenicspotTitle,scenicSpotContactPhone);
+            DataTable dt = td.browse(scenicspotID);
+            string json = DataTableConvertJson.DataTableToJson("browse",dt);
+            return json;
         }
     }
 }

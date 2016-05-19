@@ -56,12 +56,13 @@ $(function () {
 });
 function submitImg() {
   
-        var formData = new FormData($("#frmMain")[0]);
+    var formData = new FormData($("#frmMain")[0]);
+    alert(formData);
         $.ajax({
             action: "submitImg",
             cache: true, //缓存
             type: "POST", //提交方式post get
-            url: "../../handler/PimHandler1.ashx",
+            url: "../../handler/ImgHandler1.ashx",
             data: formData,
             async: true, //异步
             contentType: false, //避免jQuery将你的表格数据转换为字符串，导致提交失败。
@@ -69,10 +70,10 @@ function submitImg() {
             //上传文件的制定方式：multipart/form-data形式传递文件。
             processData: false, //是否转换信息//false避免数据转换成查询字符串
             error: function (request) {
-                alert("error");
+                alert(request);
             },
             success: function (data) {
-                alert("success");
+                alert(data);
             }
         });
     }
