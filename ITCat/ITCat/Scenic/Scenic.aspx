@@ -26,7 +26,7 @@
                 <div class="mp-description-slider " id="slider">
                     <div id="mp-description-content" class="mp-description-imgs" style="position: relative;">
                         <div class="mp-description-image" style="position: absolute; top: 0px; left: 0px;">
-                            <img src="images/dcb.jpg" />" 
+                            <img src="images/dcb.jpg" id="Img1" />" 
                         </div>
                     </div>
                  </div>
@@ -65,27 +65,27 @@
             <div name="home" id="home"> 
             <div>门票</div>
             <div class="table-tr">
-                <div class="table-td-1">XX成人票</div>
-                <div class="table-td-2" id="txtTicketPrice">XX元</div>
+                <div class="table-td-1" id="ticketsType">XX成人票</div>
+                <div class="table-td-2" id="price">XX元</div>
                 <div class="table-td-3">预定</div>
                 <div style="clear:both"></div>
             </div>
             <div class="table-tr">
-                <div class="table-td-1">XX优惠票</div>
+                <div class="table-td-1">XX票</div>
                 <div class="table-td-2">XX元</div>
                 <div class="table-td-3">预定</div>
                 <div style="clear:both"></div>
 
             </div>
             <div class="table-tr">
-                <div class="table-td-1">XX儿童票</div>
-                <div class="table-td-2">XX元</div>
+                <div class="table-td-1">儿童票</div>
+                <div class="table-td-2">123 元</div>
                 <div class="table-td-3">预定</div>
                 <div style="clear:both"></div>
 
             </div>
             <div class="table-tr">
-                <div class="table-td-1">XXVIP票</div>
+                <div class="table-td-1">XX票</div>
                 <div class="table-td-2">XX元</div>
                 <div class="table-td-3">预定</div>
                 <div style="clear:both"></div>
@@ -104,9 +104,9 @@
         </div>
         
         <div class="mp-description-img">
-            <img width="990px" height="390px" src="images/dcb.jpg" />
+            <img width="990px" height="390px" src="images/dcb.jpg" id="img1" />
             <div class="mp-description-onesentence" id="txtScenicspotPicture">含鄱口:对面为庐山最高峰“汉阳峰”，北面为第二高峰“大月山”，南面为庐山第三高峰 “五老峰”，湖光山色，相互比美。</div>
-            <img width="990px" height="390px" src="images/dcbb.jpg" />
+            <img width="990px" height="390px" src="images/dcbb.jpg" id="img2" />
             <div class="mp-description-onesentence">花径公园:位于牯岭街西南2公里处，相传是唐代诗人白居易咏诗《大林寺桃花》的地方。园中繁花似锦，亭台碑碣，湖光山色。</div>
             <img width="990px" height="390px" src="images/dcbbb.jpg" />
             <div class="mp-description-onesentence">如琴湖:座落西谷，峰岭围抱，森林蓊蔚，环境幽雅。湖心立岛，岛内有许多人工饲养的孔雀，所以名为 孔雀岛,曲桥连接。</div>
@@ -245,23 +245,25 @@
     initMap();//�����ͳ�ʼ����ͼ
     window.onload = function () {
         alert(1);
-        var i = 147456;
+        var i = 17536;
        
         $.post(
             "../Handler/SceniSpotHandler.ashx",
        {
-           txtScenicspotID: 147456
+           txtScenicspotID: 17536
 
        },
+
         function (data) {
             if (data != "-1") {
                 var obj = JSON.parse(data);
                 $("#attractionsName").html(obj.browse[0].AttractionsName);
                 $("#attractionsSynopsis").html(obj.browse[0].AttractionsSynopsis);
                 $("#attractionsAddress").html(obj.browse[0].AttractionsAddress);
-                $("#dituContent").html(obj.browse[0].AttractionsContact);
+
+                $("#").html(obj.browse[0].AttractionsContact);
                
-                markerArr = [{ title: obj.browse[0].AttractionsSynopsis, content: obj.browse[0].AttractionsContact, point: "115.995818|29.677338", isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
+                markerArr = [{ title: obj.browse[0].AttractionsName, content: obj.browse[0].AttractionsContact, point: "115.995818|29.677338", isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
                 ];
 
                addMarker();
