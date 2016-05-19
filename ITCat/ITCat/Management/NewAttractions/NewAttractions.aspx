@@ -6,7 +6,6 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link href="css/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
     <link href="../../Public/css/themes/default/easyui.css" rel="stylesheet" />
     <link href="../../Public/css/themes/icon.css" rel="stylesheet" />
     <link href="../../Public/css/demo.css" rel="stylesheet" />
@@ -15,7 +14,6 @@
     <script src="../../Public/js/jquery.easyui.min.js"></script>
     <script src="js/Submit.js"></script>
     <script src="js/ajaxupload.3.9.js"></script>
-    <script src="js/jquery-2.1.1.min.js"></script>
 </head>
 <body>
     <form  id="ff" method="post" >
@@ -96,35 +94,33 @@
                 <td class="images">
                     <%-- <div class="images-preview clearfix">                           
                             <%--通过JS添加显示图片的html--%>                         
-                            <div class="add-images">
-                                <a id="btn-add-images">添加图片</a> 
-                               
-                            </div>                        
-                           
                             <div id="images">
                          
-                    <div id="btnUp1" class="q" style="width:100px;height:100px  "><input type="button" id="btnimage"  value="点击添加图片" style="margin-left:20px;"/>                         
+                    <div id="btnUp1" class="q"><input type="button"   value="点击添加图片" style="margin-left:20px;"/>                         
                        <i class="tu1 w icon-googleplus" ></i> 
                        <img id="ig1"  src=""/>         
                    </div>
 
-                    <div id="btnUp2" class="q">
+                    <div id="btnUp2" class="q"><input type="button"   value="点击添加图片" style="margin-left:20px;"/>
                        <i class="tu2 w icon-googleplus"></i> 
                        <img id="ig2" src=""/>         
                    </div>
         
-                    <div id="btnUp3" class="q">
+                    <div id="btnUp3" class="q"><input type="button"  value="点击添加图片" style="margin-left:20px;"/>
                        <i class="tu3 w icon-googleplus" ></i> 
                        <img id="ig3" src=""/>         
                    </div>        
-                    <div id="btnUp4" class="q">
+                    <div id="btnUp4" class="q"><input type="button" value="点击添加图片" style="margin-left:20px;"/>
                        <i class="tu4 w icon-googleplus" ></i> 
                        <img id="ig4" src=""/>         
                    </div>   
                 </div>                  
-                    <div class="kj"><input type="button" id="FileName"  value="提交"  onclick = "" /></div>
-         
-        <div>
+                    <div class="kj"><input type="button" id="FileName"  value="提交"  onclick = "" /></div>                        
+                </td>
+              </tr>
+            </table>
+            <div>
+                       
             <table>
             <tr>
                 <td class ="The_title">*景点简介:</td>
@@ -217,10 +213,15 @@
                 }
             })
         }
+
         function submitForm() {            
             $('#ff').form('submit',
             $("#submitForm").click(
              function () {
+                     var image1 = $("#ig1").attr("src");           
+                     var image2 = $("#ig2").attr("src");        
+                     var image3 = $("ig3").attr("src");
+                     var image4 = $("ig4").attr("src");
                  alert("1");
                  $.post(
                      "../../Handler/NewAttractionsHandler.ashx",
@@ -234,7 +235,10 @@
                     Introduce: $("#IntroduceTextBox").val(),
                     Contact: $("#Contact").val(),
                     NoteAttractions: $("#NoteAttractions").val(),
-                    
+                    image1 : $("#ig1").attr("src"),          
+                    image2 : $("#ig2").attr("src"),       
+                    image3 : $("ig3").attr("src"),
+                    image4 : $("ig4").attr("src")                    
                 },
                  function (data) {
                      if (data == "1") {

@@ -12,7 +12,7 @@ namespace Model.DAL
     public class NewAttractionsDAL
     {
         //新建景点DAL代码
-        public bool ToString(string attractionsID, string attractions_name, string attractions_title, string level_RadioButton, string address, string openTime, string introduce, string contact, string noteAttractions)
+        public bool ToString(string attractionsID, string attractions_name, string attractions_title, string level_RadioButton, string address, string openTime, string introduce, string contact, string noteAttractions, string img1, string img2, string img3, string img4)
         {         
         {
             DbHelper db = new DbHelper();
@@ -26,7 +26,8 @@ namespace Model.DAL
             db.AddInParameter(cmd, "@AttractionsSynopsis", DbType.String, introduce);
             db.AddInParameter(cmd, "@AttractionsContact", DbType.String, contact);
             db.AddInParameter(cmd, "@NoteAttractions", DbType.String, noteAttractions);
-            db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
+            db.AddInParameter(cmd, "@NoteAttractions", DbType.String, noteAttractions);
+                db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
 
             db.ExecuteNonQuery(cmd);
 
