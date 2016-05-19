@@ -47,6 +47,7 @@
     <Compile Include="DAL\NewAttractionsDAL.cs" />
     <Compile Include="DAL\NewTicketClassDAL.cs" />
     <Compile Include="DAL\PimDal.cs" />
+    <Compile Include="DAL\Scenic2Dal.cs" />
     <Compile Include="DAL\ScenicDal.cs" />
     <Compile Include="DAL\TouristDal.cs" />
     <Compile Include="Journal.cs" />

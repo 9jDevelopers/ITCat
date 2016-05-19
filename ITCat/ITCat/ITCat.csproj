@@ -531,6 +531,9 @@
     <Compile Include="Handler\RegisterHandler.ashx.cs">
       <DependentUpon>RegisterHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\SceniSpot2Handler.ashx.cs">
+      <DependentUpon>SceniSpot2Handler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\SceniSpotHandler.ashx.cs">
       <DependentUpon>SceniSpotHandler.ashx</DependentUpon>
     </Compile>
@@ -592,6 +595,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
+    <Content Include="Handler\SceniSpot2Handler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
