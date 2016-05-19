@@ -80,6 +80,16 @@
         <div>
              <table>
               <tr>
+                <td class ="The_title">*景点地图坐标:</td>
+                <td class="Textbox_one">
+                    <input class="easyui-textbox" runat="server"
+                     id="txtPoint" data-options="prompt:'请填写景点的坐标',validType:'Lenght[10,30]'"/></td>
+              </tr>
+            </table>
+        </div>
+        <div>
+             <table>
+              <tr>
                 <td class ="The_title">*开放时间:</td>
                 <td  class="Textbox_one">
                     <input class="easyui-textbox" runat="server"
@@ -87,7 +97,6 @@
             </tr>
             </table>
         </div>
-        <div>
              <table>
               <tr>
                 <td class ="The_title">*景点图片:</td>
@@ -218,10 +227,10 @@
             $('#ff').form('submit',
             $("#submitForm").click(
              function () {
-                     var image1 = $("#ig1").attr("src");           
-                     var image2 = $("#ig2").attr("src");        
-                     var image3 = $("ig3").attr("src");
-                     var image4 = $("ig4").attr("src");
+                     //var image1 = $("#ig1").attr("src");           
+                     //var image2 = $("#ig2").attr("src");        
+                     //var image3 = $("ig3").attr("src");
+                     //var image4 = $("ig4").attr("src");
                  alert("1");
                  $.post(
                      "../../Handler/NewAttractionsHandler.ashx",
@@ -237,8 +246,10 @@
                     NoteAttractions: $("#NoteAttractions").val(),
                     image1 : $("#ig1").attr("src"),          
                     image2 : $("#ig2").attr("src"),       
-                    image3 : $("ig3").attr("src"),
-                    image4 : $("ig4").attr("src")                    
+                    image3 : $("#ig3").attr("src"),
+                    image4: $("#ig4").attr("src"),
+                    Point:$("#txtPoint").val()
+                    
                 },
                  function (data) {
                      if (data == "1") {
