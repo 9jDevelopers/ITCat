@@ -21,24 +21,42 @@
        
         <div id="TicketNews">
             <!--order box start-->
+            <!-- 标题 begin-->
             <div class="order_box" id="order_box" >
+               <!--将后台数据传回UI层 -->
              <h1 class="order_title">
                  后台标题
                  <span>订单编号</span>
-             </h1>
-                
-            </div> 
+             </h1> 
+           
+
+            <!--出发城市 -->
             <div class="order_form">
+                <!-- 使用百度地图API进行地位 -->
                 <div class="StartCity"><label>出发城市：</label><label id="allmap"></label></div>
             </div>
-            <div class="StartTime"><label>出发日期:</label><input id="dd" /></div>
-            <div class="BackTime"><label>归来日期:</label><label></label></div>
+            
 
+            <!--出发日期 -->
+            <div class="StartTime"><label>出发日期:</label><input id="dd" />
+
+            </div>
+            <!--归来日期 -->
+            <div class="BackTime"><label>归来日期:</label> <label class="Back_Time"></label>
+            </div>
+            <!-- 出游人数 -->
+
+            <div class="GoOutPeople">
+               <label>出游人数:</label>
+            </div>
+
+          </div>
             <!--order box end-->
         </div>
-       
-        <div><input type=button value="E-Mail Someone!" onClick="mailsome1()"></div>
-
+       <!--发送邮件测试 begin-->
+        <div><input type=button value="E-Mail Someone!" onClick="mailsome1()">
+       </div>
+       <!-- 发送邮件测试 end-->
     </div>
     </form>
     <!--begin JS引用-->
@@ -46,6 +64,7 @@
     <script src="../Public/js/jquery.min.js"></script>
     <script src="../Public/js/jquery.easyui.min.js"></script>
     <script>
+        
 		$(function(){
 		$('#dd').datebox().datebox('calendar').calendar({
 				validator: function(date){
