@@ -48,11 +48,15 @@
      }
 .imgss 
 {
-  background-image:url(../IMG/101.png);
-  margin-left:450px;
-  margin-top:-180px;
-  width:192px;
-  height:192px;
+    position: absolute;
+    top:200px;
+    left: 770px;
+    border-color:blue;
+    border-width:0.5px;
+    width:280px;
+    height:280px;
+    border-style:dashed;
+    border-bottom-color:#CDCDB4;
   
 }
 .kj 

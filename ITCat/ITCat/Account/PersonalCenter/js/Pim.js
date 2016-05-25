@@ -1,17 +1,27 @@
-﻿var count = 0;
-
-
+﻿//$(document).ready(function () {
+//    $.post("../../Handler/PimImage.ashx",
+//           {
+              
+//               UserID: 1
+//           },
+//           function (data)
+//           {
+//               //把调取的值赋值给图片框显示出来
+//               //$("#txtTel1").textbox({
+//               //    value: data.Information[0].Tel
+//               //   });
+              
+//           },
+//           "json"
+//        )
+//})
+var count = 0;
 function test() {
  
 
     $(".file-up").eq(count).click();
 
 }
-//$(function () {
-//    $(".file-up").live("change", function () {
-//        previewImages();
-//    });
-//});
 function previewImages() {
     var file = $(".file-up").eq(count)[0].files[0];
     if (typeof FileReader != undefined) {
@@ -48,14 +58,11 @@ function closeImage(obj) {
         $("#btnimage").show();
     }
 }
-
-
-
 $(function () {
    
 });
-function submitImg() {
-  
+//提交图片
+function submitImg(){
     var formData = new FormData($("#frmMain")[0]);
     alert(formData);
         $.ajax({

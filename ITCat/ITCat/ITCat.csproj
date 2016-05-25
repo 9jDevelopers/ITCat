@@ -608,7 +608,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Scenic.aspx.cs">
       <DependentUpon>Scenic.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
