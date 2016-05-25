@@ -1,10 +1,12 @@
-﻿$(function ()
+﻿/// <reference path="C:\Users\CAT\Source\Repos\ITCat\ITCat\ITCat\Index/index.html" />
+$(function ()
 {
     //给ID为btn-login的标签设置点击事件
     $("#btn-login").click(function ()
     {
         var login_Name = $("#txtLoginName").val();
         var login_Password = $("#txtLoginPassword").val();
+
         //判断用户名或密码不为空
         if (login_Name == "" || login_Name == null)
         {
@@ -31,7 +33,7 @@
                     }
                     else 
                     {
-                        window.location = "../PersonalCenter/Pim.aspx?userID="+data;
+                        window.location = "/Index/index.html";
                     }
                     
                 }
