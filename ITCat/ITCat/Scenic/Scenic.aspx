@@ -65,7 +65,7 @@
             <div name="home" id="home"> 
             <div>门票</div>
             <div class="table-tr">
-                <div class="table-td-1" id="ticketsType">XX成人票</div>
+                <div class="table-td-1" id="ticketsName">XX成人票</div>
                 <div class="table-td-2" id="price">XX元</div>
                 <div class="table-td-3">预定</div>
                 <div style="clear:both"></div>
@@ -246,20 +246,47 @@
     window.onload = function () {
         alert(1);
         var i = 17536;
-       
+
         $.post(
-            "../Handler/SceniSpotHandler.ashx",
+            "../Handler/SceniSpot2Handler.ashx",
+
        {
-           txtScenicspotID: 17536
+           txtScenicspotID: 147456,
 
        },
+          function (data) {
+              if (data != "-1") {
+                  var obj = JSON.parse(data);             
+                  $("#ticketsName").html(obj.browseq[0].TicketsName);
+                  $("#price").html(obj.browseq[0].Price);
 
+                  addMarker();
+
+                  alert("提交成功");
+              }
+              else {
+                  var obj = JSON.parse(data);                 
+
+              }
+          }
+    );
+       
+        $.post(
+            "../Handler/SceniSpotHandler.ashx",        
+
+       {
+           txtScenicspotID: 17536,  
+
+       },      
         function (data) {
             if (data != "-1") {
                 var obj = JSON.parse(data);
                 $("#attractionsName").html(obj.browse[0].AttractionsName);
                 $("#attractionsSynopsis").html(obj.browse[0].AttractionsSynopsis);
                 $("#attractionsAddress").html(obj.browse[0].AttractionsAddress);
+                $("#ticketsName").html(obj.browse[0].TicketsName);
+                $("#price").html(obj.browse[0].Price);
+
 
                 $("#").html(obj.browse[0].AttractionsContact);
                
@@ -283,9 +310,8 @@
 
         var obj = JSON.parse('{"data":"ScenicspotID"}');
         console.log(obj.data);  // 取得的值为：this-is-json
-
     }
-        
+
 </script>
 
 </html>
