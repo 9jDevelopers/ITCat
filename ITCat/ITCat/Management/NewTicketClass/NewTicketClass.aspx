@@ -12,6 +12,7 @@
     <link href="../../Public/css/themes/icon.css" rel="stylesheet" />
     <script src="../../Public/js/jquery.min.js"></script>
     <script src="../../Public/js/jquery.easyui.min.js"></script>
+    <script src="js/NewTicketClass.js"></script>
     <style type="text/css">
         .auto-style1 {
             width: 70px;
@@ -144,39 +145,6 @@
             </tr>
            </table>
         </div>
-    </form>
-    <script src="js/JavaScript.js"></script>   
-    <script>
-        function submitForm() {
-            $('#ff').form('submit');
-            $("#submitForm").click(
-             function () {
-                 alert("1");
-                 $.post(
-                     "../../Handler/NewTicketClassHandler.ashx",
-                {
-                    TicketsID: $("#ticketsID").val(),
-                   
-                    Ticket_type: $('#cc').combo('getText'),
-                    Tickets_name: $("#tickets_name").val(),
-                    TicketsPrices: $("#ticketsPrices").val(),
-                    Tickets_illustrate: $("#Tickets_illustrate").val(),
-                    OrderDateD: $("#OrderDateD").val(),
-                    SpotID: $("#SpotID_text").val(),
-                    Ticket_time: $("#Ticket_time").val()
-                },
-                 function (data) {
-                     if (data == "1") {
-                         alert("提交成功");
-                     }
-                     else {
-                         alert("提交失败");
-                     }
-                 }
-                );
-             }
-                     );
-        }
-    </script>
+    </form>     
 </body>
 </html>
