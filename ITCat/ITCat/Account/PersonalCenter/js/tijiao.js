@@ -3,7 +3,7 @@ $(document).ready(function () {
     $.post("../../Handler/transferpimone.ashx",
            {
                Action: "userInfo",
-               UserID: 1,
+               UserID: 1
            },
            function (data)
            {

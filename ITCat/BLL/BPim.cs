@@ -18,11 +18,12 @@ namespace BLL
             return a.IMG(Head_Portrait, UserID);
         }
         //转化为JOSN数组
-        public string Image(Int32 UserID)
+        public byte[] Image(Int32 UserID)
         {
-            DataTable dt = a.Image(UserID);
-            string json = DataTableConvertJson.DataTableToJson("Image", dt);
-            return json;
+            return a.Image(UserID);
+
+            //string json = DataTableConvertJson.DataTableToJson("Image", dt);
+            //return json;
         }
 
         public bool TM( string Tel, string Email, string Pname, string Name, string Gender, DateTime Birthday,  string City,Int32 UserID)

@@ -30,6 +30,23 @@ namespace Model.DAL
             else
                 return false;
          }
+        public byte[] Image(Int32 UserID)
+        {
+            DbHelper db = new DbHelper();
+            DbCommand cmd = db.GetStoredProcCommond("sp_Pimimage");
+            db.AddInParameter(cmd, "@UserID", DbType.Int32, UserID);
+            try
+            {
+                byte[] dt =(byte[]) db.ExecuteScalar(cmd);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+
+        }
         //上传文本资料
         public bool TM(string Tel, string Email, string Pname, string Name, string Gender, DateTime Birthday, string City, Int32 UserID)
         {

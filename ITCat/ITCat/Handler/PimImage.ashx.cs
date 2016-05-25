@@ -14,13 +14,15 @@ namespace iTCat.Handler
 
         public void ProcessRequest(HttpContext context)
         {
-            string result;
+           
             BPim a = new BPim();
             //调用数据
-            string userid = context.Request["UserID"];
+            string userid = "1";
             int UserID = int.Parse(userid);
-            result = a.Information(UserID);
+            
+            byte[]   result = a.Image(UserID);
             context.Response.Write(result);
+
         }
 
         public bool IsReusable

@@ -157,6 +157,7 @@
                         <h5>仅支持jpg,gif,png格式图片，且文件小于2M.</h5>
                     </div>
                 <div class="TP">   
+                    <img src="../../Handler/PimImage.ashx" />
                     <input type="button" id="btnimage"  onclick="test()" value="点击添加图片" style="margin-left:20px">
                      
                         
