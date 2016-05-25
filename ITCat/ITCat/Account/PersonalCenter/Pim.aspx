@@ -157,15 +157,16 @@
                         <h5>仅支持jpg,gif,png格式图片，且文件小于2M.</h5>
                     </div>
                 <div class="TP">   
-                    <img src="../../Handler/PimImage.ashx" />
+                    
                     <input type="button" id="btnimage"  onclick="test()" value="点击添加图片" style="margin-left:20px">
                      
-                        
+                       
                        <div id="fileups">                  
                             <input type="file" class="file-up" name="btnim1"onchange=" previewImages()" style="display:none;"/>                 
                 </div>
                     <div class="add-images"></div>
-                    <div class="imgss"></div>
+                    <div class="imgss"><img src="../../Handler/PimImage.ashx" width="280" height="280" /></div>
+
                     <div class="kj"><input type="button" id="btnSubmit"  value="提交"  onclick="submitImg()"  /></div>
                    
 

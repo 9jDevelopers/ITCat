@@ -21,9 +21,6 @@ namespace BLL
         public byte[] Image(Int32 UserID)
         {
             return a.Image(UserID);
-
-            //string json = DataTableConvertJson.DataTableToJson("Image", dt);
-            //return json;
         }
 
         public bool TM( string Tel, string Email, string Pname, string Name, string Gender, DateTime Birthday,  string City,Int32 UserID)

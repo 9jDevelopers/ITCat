@@ -37,7 +37,8 @@ namespace Model.DAL
             db.AddInParameter(cmd, "@UserID", DbType.Int32, UserID);
             try
             {
-                byte[] dt =(byte[]) db.ExecuteScalar(cmd);
+                //强制转换成byte[]
+                byte[] dt =(byte[])db.ExecuteScalar(cmd);
                 return dt;
             }
             catch (Exception ex)

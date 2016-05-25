@@ -1,20 +1,20 @@
-﻿$(document).ready(function () {
-    $.post("../../Handler/PimImage.ashx",
-           {
+﻿//$(document).ready(function () {
+//    $.post("../../Handler/PimImage.ashx",
+//           {
               
-               UserID: 1
-           },
-           function (data)
-           {
-               //把调取的值赋值给图片框显示出来
-               //$("#txtTel1").textbox({
-               //    value: data.Information[0].Tel
-               //   });
+//               UserID: 1
+//           },
+//           function (data)
+//           {
+//               //把调取的值赋值给图片框显示出来
+//               //$("#txtTel1").textbox({
+//               //    value: data.Information[0].Tel
+//               //   });
               
-           },
-           "json"
-        )
-})
+//           },
+//           "json"
+//        )
+//})
 var count = 0;
 function test() {
  

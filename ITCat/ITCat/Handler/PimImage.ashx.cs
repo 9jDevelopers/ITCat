@@ -19,9 +19,9 @@ namespace iTCat.Handler
             //调用数据
             string userid = "1";
             int UserID = int.Parse(userid);
-            
+            //二进制流
             byte[]   result = a.Image(UserID);
-            context.Response.Write(result);
+            context.Response.BinaryWrite(result);
 
         }
 
