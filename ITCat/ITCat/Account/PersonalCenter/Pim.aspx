@@ -34,7 +34,7 @@
                                 手机
                             </td>
                             <td>
-                                <input class="easyui-textbox" id="Text1" style="width:200px;height:25px" runat="server">
+                                <input  id="txtTel1" style="width:200px;height:25px" runat="server">
                             </td>
                             <td>
                                 <a href="javascript:void(0)" class="easyui-2" onclick="$('#w').window('open')"> 修改</a>
@@ -45,7 +45,7 @@
                     <div class="gf">
                         <tr>
                             <td>邮箱</td>
-                            <td><input class="easyui-textbox" id="Text2" style="width:200px;height:25px" runat="server"></td>
+                            <td><input  id="txtEmail1" style="width:200px;height:25px" runat="server"></td>
                             <td> <a href="javascript:void(0)" class="easyui-2" onclick="$('#w').window('open')"> 验证</a></td>                 
                         </tr>
                         <div id="q" class="easyui-window" title="Modal Window" data-options="modal:true,closed:true,iconCls:'icon-save'" style="width:200px;height:200px;padding:10px;">
@@ -54,31 +54,31 @@
                     <div class="gf">
                         <tr>
                             <td>昵称</td>
-                            <td><input class="easyui-textbox" id="Text3" style="width:200px;height:25px" runat="server"></td>
+                            <td><input  id="txtPname1" style="width:200px;height:25px" runat="server"></td>
                         </tr>
                     </div>
                     <div class="gf">
                         <tr>
                             <td>姓名</td>
-                            <td><input class="easyui-textbox" id="Text4" style="width:200px;height:25px" runat="server"></td>
+                            <td><input  id="txtName1" style="width:200px;height:25px" runat="server"></td>
                         </tr>
                     </div>
                     <div class="gf">
                         <tr>
                             <td>性别</td>
-                            <td><input class="easyui-textbox" id="Text5" style="width:200px;height:25px" runat="server"></td>
+                            <td><input  id="txtGender1" style="width:200px;height:25px" runat="server"></td>
                         </tr>
                     </div>
                     <div class="gf">
                         <tr>
                             <td>生日</td>
-                            <td><input class="easyui-textbox" id="Text6" style="width:200px;height:25px" runat="server"></td>
+                            <td><input  id="txtBirthday1" style="width:200px;height:25px" runat="server"></td>
                         </tr>
                     </div>
                     <div class="gg">
                         <tr>
                             <td>常用出发城市</td>
-                            <td><input class="easyui-textbox" id="Text8" style="width:200px;height:25px" runat="server"></td>
+                            <td><input  id="txtCity1" style="width:200px;height:25px" runat="server"></td>
                         </tr>
                     </div>
                     <div class="gi">

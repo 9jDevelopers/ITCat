@@ -591,6 +591,9 @@
     <Compile Include="Handler\SubmitImgHandler.ashx.cs">
       <DependentUpon>SubmitImgHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\transferpimone.ashx.cs">
+      <DependentUpon>transferpimone.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Management\NewAttractions\Attrctionsimage.ashx.cs">
       <DependentUpon>Attrctionsimage.ashx</DependentUpon>
     </Compile>
@@ -648,6 +651,7 @@
     <Content Include="Handler\SubmitImgHandler.ashx" />
     <Content Include="Handler\AttractionsImgHandler.ashx" />
     <Content Include="Management\NewAttractions\Attrctionsimage.ashx" />
+    <Content Include="Handler\transferpimone.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

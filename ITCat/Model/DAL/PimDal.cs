@@ -29,7 +29,7 @@ namespace Model.DAL
                 return true;
             else
                 return false;
-        }
+         }
         //上传文本资料
         public bool TM(string Tel, string Email, string Pname, string Name, string Gender, DateTime Birthday, string City, Int32 UserID)
         {
