@@ -12,7 +12,7 @@ namespace Model.DAL
 {
     public class PimDal
     {
-        //上传图片
+        //上传图片 
             public bool IMG(byte[] Head_Portrait, Int32 UserID)
         {
             DbHelper db = new DbHelper();
@@ -29,7 +29,7 @@ namespace Model.DAL
                 return true;
             else
                 return false;
-        }
+         }
         //上传文本资料
         public bool TM(string Tel, string Email, string Pname, string Name, string Gender, DateTime Birthday, string City, Int32 UserID)
         {
@@ -52,6 +52,23 @@ namespace Model.DAL
                 return true;
             else
                 return false;
+        }
+        public DataTable Information(Int32 UserID)
+        {
+            DbHelper db = new DbHelper();
+            DbCommand cmd = db.GetStoredProcCommond("sp_Pimxx");
+            db.AddInParameter(cmd, "@UserID", DbType.Int32, UserID);
+            try
+            {
+                DataTable dt = db.ExecuteDataTable(cmd);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+
         }
 
     }
