@@ -57,5 +57,9 @@ namespace Model
         /// 景点注释
         /// </summary>
         public String NoteAttractions { get; set; }
+        /// <summary>
+        /// 景点地图
+        /// </summary>
+        public String Point { get; set; }
     }
 }

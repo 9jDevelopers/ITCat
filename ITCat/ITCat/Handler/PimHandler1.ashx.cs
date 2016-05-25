@@ -19,6 +19,7 @@ namespace iTCat.Handler
             
             if (action == "userInfo")
             {
+                
                 BPim a = new BPim();
 
                 if (context.Request["UserID"] != null)
@@ -35,6 +36,8 @@ namespace iTCat.Handler
                     string userid = context.Request["UserID"];
                     int UserID = int.Parse(userid);
 
+        
+
                     if (a.TM(Tel, Email, Pname, Name, Gender, Birthday, City, UserID))
                     {
                         context.Response.Write(1);
@@ -47,6 +50,7 @@ namespace iTCat.Handler
 
 
             }
+           
         }
 
         public bool IsReusable

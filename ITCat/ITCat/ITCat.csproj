@@ -161,12 +161,12 @@
     <Content Include="Management\NewAttractions\img\954937.jpg" />
     <Content Include="Management\NewAttractions\img\984475.jpg" />
     <Content Include="Management\NewAttractions\img\998015.jpg" />
-    <Content Include="Management\NewAttractions\js\upload_image.js" />
-    <Content Include="Management\NewAttractions\js\JavaScript2.js" />
+    <Content Include="Management\NewAttractions\js\ajaxupload.3.9.js" />
+    <Content Include="Management\NewAttractions\js\jquery-2.1.1.min.js" />
     <Content Include="Management\NewAttractions\js\Submit.js" />
     <Content Include="Management\NewAttractions\NewAttractions.aspx" />
     <Content Include="Management\NewTicketClass\css\ticket.css" />
-    <Content Include="Management\NewTicketClass\js\JavaScript.js" />
+    <Content Include="Management\NewTicketClass\js\NewTicketClass.js" />
     <Content Include="Management\NewTicketClass\NewTicketClass.aspx" />
     <Content Include="Public\icomoon\fonts\icomoon.eot" />
     <Content Include="Public\icomoon\fonts\icomoon.ttf" />
@@ -535,7 +535,7 @@
     <Content Include="Scenic\images\e2.jpg" />
     <Content Include="Scenic\images\e3.jpg" />
     <Content Include="Scenic\scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="Scenic\Scenic.aspx" />
+    <Content Include="Scenic.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\PersonalCenter\Pim.aspx.cs">
@@ -606,9 +606,8 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scenic\Scenic.aspx.cs">
+    <Compile Include="Scenic.aspx.cs">
       <DependentUpon>Scenic.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

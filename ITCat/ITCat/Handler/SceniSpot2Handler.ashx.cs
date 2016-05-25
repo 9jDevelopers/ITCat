@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using BLL;  
+using BLL;
 
 namespace iTCat.Handler
 {
@@ -17,13 +17,13 @@ namespace iTCat.Handler
             string result;
             BScenic2 bs = new BScenic2();
 
-            string ScenicspotID = context.Request["txtScenicspotID"];
-            result = bs.browseq(ScenicspotID);
+            string Scenics2potID = context.Request["txtScenics2potID"];
+            result = bs.browse(Scenics2potID);
 
             context.Response.Write(result);
         }
 
-        public string  IsReusable
+        public string IsReusable
         {
             get
             {

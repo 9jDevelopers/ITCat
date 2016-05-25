@@ -1,15 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Web;
 using BLL;
+using System.Web.SessionState;
+
+
 
 namespace iTCat
 {
     /// <summary>
     /// LoginHandler 的摘要说明
     /// </summary>
-    public class LoginHandler : IHttpHandler
+    public class LoginHandler : IHttpHandler, IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
@@ -27,7 +27,7 @@ namespace iTCat
                 }
                 else
                 {
-                    context.Response.Write(result);
+                    context.Session["userID"]  = result;
                 }
             }
         }
