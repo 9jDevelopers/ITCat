@@ -20,11 +20,11 @@ namespace iTCat.Handler
             {
                 //新建景点数据
                 string AttractionsID = context.Request["AttractionsID"];
-               
-                string img1 = context.Request["image1"];
-                string img2 = context.Request["image2"];
-                string img3 = context.Request["image3"];
-                string img4 = context.Request["image4"];
+                string src = "../Management/NewAttractions/";
+                string img1 = src + context.Request["image1"];
+                string img2 = src + context.Request["image2"];
+                string img3 = src + context.Request["image3"];
+                string img4 = src + context.Request["image4"];
                 if (bt.Img(AttractionsID,  img1, img2, img3, img4))
                 {
                     context.Response.Write(1);

@@ -245,20 +245,20 @@
     initMap();//�����ͳ�ʼ����ͼ
     window.onload = function () {
         alert(1);
-        var i = 17536;
+        var i = 147456;
 
         $.post(
             "../Handler/SceniSpot2Handler.ashx",
 
        {
-           txtScenicspotID: 147456,
+           txtScenics2potID: 147456,
 
        },
           function (data) {
               if (data != "-1") {
                   var obj = JSON.parse(data);             
-                  $("#ticketsName").html(obj.browseq[0].TicketsName);
-                  $("#price").html(obj.browseq[0].Price);
+                  $("#ticketsName").html(obj.browse[0].TicketsName);
+                  $("#price").html(obj.browse[0].Price);
 
                   addMarker();
 
@@ -275,7 +275,7 @@
             "../Handler/SceniSpotHandler.ashx",        
 
        {
-           txtScenicspotID: 17536,  
+           txtScenicspotID: 147456,  
 
        },      
         function (data) {
