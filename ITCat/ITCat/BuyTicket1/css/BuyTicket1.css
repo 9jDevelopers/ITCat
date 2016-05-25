@@ -1,4 +1,5 @@
-﻿.order_box {
+﻿/*order-box-css结束*/
+.order_box {
 width:600px;
 height:400px;
 border:3px solid #ffd800;
@@ -7,15 +8,105 @@ border:3px solid #ffd800;
 .order_title {
   margin:20px; 
   font-family:'Microsoft YaHei';
-  font-size:2rem;
-  border-bottom:2px solid #9f9f9f; 
+  font-size:1.5rem;
+   
+}
+
+.TicketInfo {
+   border-top:2px solid #d4d4d4;
+   padding:28px 25px 30px;
 }
 .StartCity {
-   margin:20px;
+   margin-bottom:20px; 
 }
 .StartTime {
-  margin:20px;
+    margin-bottom:20px; 
 }
 .BackTime {
-  margin:20px;
+    margin-bottom:20px; 
+}
+.GoOutPeople {
+    margin-bottom:20px;
+     float:left;
+}
+#AdultTicketNum {
+    width:100px;
+     
+     float:right;
+     
+}
+#ChildTicketNum {
+   width:100px;
+   float:right;
+}
+.DelTicketNum {
+        width:30px;        
+        font-size:12px;
+        text-decoration:none; 
+                
+}
+.TicketNum {
+width:30px;
+}
+.AddTicketNum {
+width:30px;
+font-size:12px;
+text-decoration:none; 
+}
+.SurePeople {
+padding:0 19px;
+}
+/*contact-box-css开始*/
+.ContactInfo{
+    margin-top:20px;
+    width:600px;
+    height:300px;
+    border:1px solid #ddd;
+    border-top:3px solid #b9b9b9;
+}
+.Contact_Info {
+    background:#f8f8f8;
+    font-weight:bold;
+    color:#333;
+    line-height:41px;
+    padding:0 19px;
+    zoom:1;
+    position:relative;  
+    
+
+}
+.InputInfo {
+   
+   padding:30px 25px 40px 95px;
+}
+.Info_Name {
+    margin-bottom:20px; 
+    
+}
+.Info_TelPhone {
+    margin-bottom:20px; 
+}
+.Info_Email {
+    margin-bottom:20px;  
+}
+.Info_Hint {    
+ font-size:14px;
+ color:#333;
+ line-height:26px;
+}
+
+
+
+/*order-to-next-box start*/
+
+.order_to_next {
+border:1px solid #ffdbb2;
+background-color:#fffceb;
+padding:20px 25px;
+width:600px;
+height:40px;
+text-align:right;
+margin-top:20px;
+line-height:1;
+font-size:15px;
 }

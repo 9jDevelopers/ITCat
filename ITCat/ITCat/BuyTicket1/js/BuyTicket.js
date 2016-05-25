@@ -1,4 +1,7 @@
-﻿  //百度地图API功能
+﻿//easyui日历控件
+
+
+//百度地图API功能
     var map = new BMap.Map("allmap");
 	var point = new BMap.Point(116.331398,39.897445);
 	map.centerAndZoom(point,12);
@@ -13,6 +16,17 @@
 
 
     //发送邮件
+	
+	function mailsome1()
+    {
+	    who=prompt("Enter recipient's email address: ","antispammer@earthling.net");
+	    what=prompt("Enter the subject: ","none");
+	    if (confirm("Are you sure you want to mail "+who+" with the subject of "+what+"?")==true){
+	        parent.location.href='mailto:'+who+'?subject='+what+'';
+	    }
+	}
+	
+
 	var nodemailer = require('nodemailer');
 	var transporter = nodemailer.createTransport({
 	    service: 'Gmail',
