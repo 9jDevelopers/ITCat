@@ -9,15 +9,15 @@ using System.Data;
 
 namespace BLL
 {
-   public class BScenic2
+    public class BScenic2
     {
-        public Scenic2Dal ScenicDal { get; set; }
+        public Scenic2Dal Scenic2Dal { get; set; }
         Scenic2Dal td = new Scenic2Dal();
 
-        public string browseq(string AttractionsID)
+        public string browse(string scenics2potID)
         {
-            DataTable dt = td.browseq(AttractionsID);
-            string json = DataTableConvertJson.DataTableToJson("browseq", dt);
+            DataTable dt = td.browse(scenics2potID);
+            string json = DataTableConvertJson.DataTableToJson("browse", dt);
             return json;
         }
     }

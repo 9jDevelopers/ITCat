@@ -10,22 +10,22 @@ using System.Data.SqlClient;
 
 namespace Model.DAL
 {
-  public  class Scenic2Dal
+    public class Scenic2Dal
     {
-        public DataTable browseq(string ScenicspotID)
+        public DataTable browse(string Scenics2potID)
 
         {
             DbHelper db = new DbHelper();
             //数据库执行代码 待修改
 
             DbCommand cmd = db.GetStoredProcCommond("sp_Scenic2");
-            db.AddInParameter(cmd, "@AttractionsID", DbType.String, ScenicspotID);
+            db.AddInParameter(cmd, "@AttractionsID", DbType.String, Scenics2potID);
             try
             {
                 DataTable dt = db.ExecuteDataTable(cmd);
-                return dt; 
+                return dt;
             }
-            catch (Exception ex)        
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.ToString());
                 return null;
