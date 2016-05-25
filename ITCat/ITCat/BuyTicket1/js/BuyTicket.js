@@ -6,8 +6,32 @@
 	function myFun(result){
 		var cityName = result.name;
 		map.setCenter(cityName);
-		alert("当前定位城市:" + cityName);
 		document.getElementById("allmap").innerHTML = cityName;
 	}
 	var myCity = new BMap.LocalCity();
 	myCity.get(myFun);
+
+
+    //发送邮件
+	var nodemailer = require('nodemailer');
+	var transporter = nodemailer.createTransport({
+	    service: 'Gmail',
+	    auth: {
+	        user: 'sxzqcyj@gmail.com',
+	        pass: 'xxxxx'
+	    }
+	});
+	var mailOptions = {
+	    from: 'sxzqcyj', // sender address
+	    to: 'xxxxx@163.com', // list of receivers
+	    subject: 'Hello ', // Subject line
+	    text: 'Hello world ', // plaintext body
+	    html: '<b>Hello world </b>' // html body
+	};
+	transporter.sendMail(mailOptions, function (error, info) {
+	    if (error) {
+	        console.log(error);
+	    } else {
+	        console.log('Message sent: ' + info.response);
+	    }
+	});

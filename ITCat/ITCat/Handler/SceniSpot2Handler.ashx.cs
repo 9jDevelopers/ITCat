@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using BLL;  
 
 namespace iTCat.Handler
 {
@@ -13,15 +14,28 @@ namespace iTCat.Handler
 
         public void ProcessRequest(HttpContext context)
         {
-            context.Response.ContentType = "text/plain";
-            context.Response.Write("Hello World");
+            string result;
+            BScenic2 bs = new BScenic2();
+
+            string ScenicspotID = context.Request["txtScenicspotID"];
+            result = bs.browseq(ScenicspotID);
+
+            context.Response.Write(result);
         }
 
-        public bool IsReusable
+        public string  IsReusable
         {
             get
             {
-                return false;
+                return "-1";
+            }
+        }
+
+        bool IHttpHandler.IsReusable
+        {
+            get
+            {
+                throw new NotImplementedException();
             }
         }
     }
