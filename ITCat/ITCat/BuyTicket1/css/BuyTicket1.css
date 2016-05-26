@@ -1,4 +1,13 @@
-﻿/*order-box-css结束*/
+﻿#TicketNews {
+    width:1000px;
+    margin:0 auto;
+    overflow:hidden;
+}
+.left {
+float:left;
+}
+
+/*order-box-css开始*/
 .order_box {
 width:600px;
 height:400px;
@@ -75,6 +84,20 @@ padding:0 19px;
     
 
 }
+.text-contect {
+vertical-align:middle;
+font-weight:bold;
+font-size:16px;
+color:#333;
+line-height:41px;
+font-family:'Microsoft YaHei UI';
+}
+
+.icon-user {
+    font-size:16px;
+    margin-right:10px;
+}
+
 .InputInfo {
    
    padding:30px 25px 40px 95px;
@@ -103,7 +126,7 @@ padding:0 19px;
 border:1px solid #ffdbb2;
 background-color:#fffceb;
 padding:20px 25px;
-width:600px;
+width:550px;
 height:40px;
 text-align:right;
 margin-top:20px;
@@ -118,5 +141,187 @@ line-height:40px;
 float:left;
 text-decoration:none;
 cursor:pointer;
+}
+.order_sum {
+display:inline-block;
+line-height:40px;
+height:40px;
+color:#ff9419;
+}
+.vm {
+font-size:14px;
+color:#666;
+vertical-align:middle;
+}
+.sign_vm {
+font-size:18px;
+}
+.number_vm {
+font-size:30px;
+}
+.next_vm {
+margin-left:20px;
+border-radius:2px;
+font-size:18px;
+font-weight:bold;
+height:40px;
+background-color:#ff9419;
+color:#fff;
+display:inline-block;
+line-height:40px;
+padding:0 20px;
+vertical-align:middle;
+cursor:pointer;
+text-decoration:none;
 text-align:right;
+}
+
+
+
+
+/*Notice box  start*/
+.NoticeInfo{
+    margin-top:20px;
+    width:600px;
+    height:350px;
+    border:1px solid #ddd;
+    border-top:3px solid #b9b9b9;
+}
+.Notice_Info {
+    background: #f8f8f8;
+    font-weight: bold;
+    color: #333;
+    line-height: 41px;
+    padding: 0 19px;
+    zoom: 1;
+    position: relative;
+}
+.text-notice {
+vertical-align:middle;
+font-weight:bold;
+font-size:16px;
+color:#333;
+line-height:41px;
+font-family:'Microsoft YaHei UI';
+}
+.icon-info {
+font-size:16px;
+height:24px;
+width:24px;
+background-position:0-254px;
+margin-right:10px;
+}
+
+
+.panel_body {
+height:280px;
+overflow-y:scroll;
+line-height:2;
+padding:0 25px;
+font-size:14px;
+color:#666;
+
+}
+
+
+
+/*summary box start*/
+.summary {
+    float:left;
+left:0px;
+top:0px;
+position:relative;
+border:1px solid #ddd;
+z-index:0;
+overflow:hidden;
+width:196px;
+font-family:'Microsoft YaHei UI';
+line-height:1;
+font-size:14px;
+color:#666;
+margin-left:30px;
+}
+.wrapper .summary .top {
+    width:196px;
+    height:7px;
+}
+.wrapper .summary .inner {
+padding:10px;
+width:168px;
+margin:-3px -3px 0;
+border:1px solid #ddd;
+border-radius:3px;
+background-color:#fff;
+border-bottom:none;
+}
+.summary h2 {
+font-size:16px;
+font-weight:bold;
+line-height:36px;
+margin:0px;
+padding-left:5px;
+}
+.summary .cost dt {
+font-size:14px;
+color:#999;
+padding:5px;
+border-bottom:1px solid #e8e8e8;
+}
+.summary .cost dd {
+font-size:12px;
+color:#333;
+padding:0px 5px;
+line-height:22px;
+}
+.mt5 {
+margin-top:5px;
+}
+.clearfix {
+zoom:1;
+}
+.summary .cost .amount {
+color:#f60;
+float:right;
+}
+.summary .insurance.last {
+border-bottom:none;
+}
+.summary .action {
+font-size:16px;
+font-weight:bold;
+color:#666;
+background-color:#fffceb;
+border-top:1px solid #ffebce;
+margin:20px -10px -10px;
+padding:30px 0 30px 15px;
+white-space:nowrap;
+}
+.summary .action .sign {
+    font-size:12px;
+    vertical-align:text-top;
+    }
+.summary .btn_next {
+display:inline-block;
+background-color:#ff9419;
+padding:10px 30px;
+width:90px;
+color:#fff;
+margin-top:20px;
+text-align:center;
+border-radius:2px;
+cursor:pointer;
+text-decoration:none;
+}
+
+
+
+/*footer box start*/
+#footer {
+border-top:1px solid #ccc;
+clear:both;
+color:#666;
+margin:50px auto 0;
+padding:50px 0;
+text-align:center;
+width:980px;
 }
