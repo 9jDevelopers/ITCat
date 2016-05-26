@@ -21,6 +21,8 @@
   <div>
        
         <div id="TicketNews">
+            <!--左边框-->
+            <div class="left">
             <!--order box start-->
             <!-- 标题 begin-->
             <div class="order_box" id="order_box" >
@@ -128,18 +130,101 @@
                  <div class="order_sum">
                      <label class="vm">订单金额</label>
                      <span  class="sign_vm">￥</span>
-                     <span class="number_vm"></span>
+                     <span class="number_vm">value</span>
                      <input id="InputInfo" type="hidden" value=""/>
-                     <a class="next_vm">我已阅读预定须知，下一步</a>
+                     <a href="" class ="next_vm">我已阅读预定须知，下一步</a>
                  </div>
              </div>
             <!--order to next end-->
        
-        </div>
-       
+
+            <!--notice box start-->
+              <div class="NoticeInfo" id="NoticeInfoBox">
+                <!--联系人标题-->
+                <h2 class="Notice_Info">
+                    <span class="icon-info"></span>
+                    <span class="text-notice">预定须知</span>
+                </h2>
+                  <div class="panel_body">
+                      <dl>
+                          <dt>*预定须知</dt>
+                          <dd>1、正常阴雨天气不影响正常出游，如遇不可抗逆因素导致不能出游我司会提前与您联系；</dd>
+                          <dd>2、如您预订的出游日期最终不成行，我司会提前与您沟通解决方案，届时您可以选择改期出游、更改出游产品；</dd>
+                          <dd>3、病患者、孕妇及行动不便者预订提示：为了确保旅游顺利出行，防止旅途中发生人身意外伤害事故，请旅游者在出行前做一次必要的身体检查 。</dd>
+                          <dt>*出游费用包含</dt>
+                          <dd>1、交通：当地旅游巴士</dd>
+                          <dd>2、小交通：景区内用车(庐山景区交通)。</dd>
+                          <dd>3、住宿：行程所列酒店。</dd>
+                          <dd>4、用餐：行程中团队标准用餐，赠送酒店自助早餐（中式餐或自助餐或特色餐，含飞机上用餐，自由活动期间用餐请自理；如因自身原因放弃用餐，则餐费不退）。</dd>
+                          <dd>5、门票：行程中所含的景点首道大门票，具体请参考行程描述。</dd>
+                          <dd>6、导服：当地中文导游，持证导游。</dd>
+                          <dd>7、儿童价标准：身高0.8~1.2米（含），不占床，自行购买门票和庐山景交，不含餐，仅含山下车位费和导游。</dd>
+                          <dt>*出游费用不包含</dt>
+                          <dd>1、小交通：景区内用车（三叠泉缆车80元/人往返）。</dd>
+                          <dd>2、单房差：单房差（单人出游务必补交单房差）。</dd>
+                          <dd>3、补充：酒店内洗衣、理发、电话、传真、收费电视、饮品、烟酒等个人消费</dd>
+                          <dd>4、补充：当地参加的自费以及以上"费用包含"中不包含的其它项目</dd>
+                          <dd>5、旅游意外险：旅游人身意外保险</dd>
+                      </dl>
+                  </div>
+             </div>
+            <!--notice box end-->
+            </div>
+            
+            <!--summary box start-->
+            <div class="summary" style="left:0px; top:0px; position:relative;">
+                <div class="Top"></div>
+                <div class="inner">
+                    <div id="cost_summary">
+                        <h2>结算信息</h2>
+                        <dl class="cost">
+                            <dt>出游团费</dt>
+                            <dd class="mt5 clearfix">
+                                <span class ="number">x成人</span>
+                                x
+                                <span class="price">￥price</span>
+                                <span class="amount">￥amount</span>
+                            </dd>
+                            <dt class="mt20">保险费用</dt>
+                            <dd class="insurance">
+                                <p title="后台数据标题">后台数据标题</p>
+                                <span class="number">x人</span>
+                                <span class="price">￥price</span>
+                                <span class="amount">￥amount</span>
+                            </dd>
+                            <dd class="insurance_last">
+                                <p title="后台数据标题">后台数据标题</p>
+                                <span class="number">x人</span>
+                                <span class="price">￥price</span>
+                                <span class="amount">￥amount</span>
+                            </dd>
+                            </dl>
+
+                            <div class="action">
+                                <label>订单金额：</label>
+                                <sup class="sign"></sup>
+                                <span class="number">￥price</span>
+                                <i class="icon-question" style="display:none;"></i>
+                            </div>
+                            
+                             <div>
+                                 <a href="" class="btn_next">下一步</a>
+                             </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!--summary box end-->
+
+          
+       </div>
+      <!--copyright box-->
+            <div id="footer">
+                Copyright © 2016 ITCat旅游网 
+            </div>
         <!--发送邮件测试 -->
       <div><input type=button value="E-Mail Someone!" onClick="mailsome1()">
-      </div>
+    </div>
      
   </div>
     
