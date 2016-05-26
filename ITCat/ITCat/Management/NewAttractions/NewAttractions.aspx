@@ -72,7 +72,7 @@
               <tr>
                 <td class ="The_title">*景点地址:</td>
                 <td class="Textbox_one">
-                    <input class="easyui-textbox" runat="server"
+                    <input class="easyui-textbox" 
                      id="AddressTextBox" data-options="prompt:'请填写景点的省份,市，区，县（包括镇）',validType:'Lenght[10,30]'"/></td>
               </tr>
             </table>
@@ -82,8 +82,8 @@
               <tr>
                 <td class ="The_title">*景点地图坐标:</td>
                 <td class="Textbox_one">
-                    <input  class="easyui-validatebox textbox" runat="server"
-                     id="txtPoint" data-options=" missingMessage:'请输入景点坐标' ,prompt:'请填写景点的坐标',prompt:'验证完成.',invalidMessage:'请输入正确的坐标格式',required:true,validType:'String'"/></td>
+                    <input  class="easyui-validatebox textbox"
+                     id="txtPoint" data-options="missingMessage:'请输入景点坐标' ,prompt:'请填写景点的坐标',prompt:'验证完成.',invalidMessage:'请输入正确的坐标格式',required:true,validType:'StringLength[20]'"/></td>
               </tr>
             </table>
         </div>
