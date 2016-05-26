@@ -41,5 +41,17 @@ $(function ()
                 //返回类型
                 "json"
             );
+        $.post("/Handler/GetimgHandler.ashx",
+        {
+            txtGetimgID: 1
+        },
+        function (data)
+        {
+            alert(data);
+
+        },
+        "json"
+    );
+
     });
 });
