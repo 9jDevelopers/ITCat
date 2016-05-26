@@ -26,7 +26,7 @@
                 <div class="mp-description-slider " id="slider">
                     <div id="mp-description-content" class="mp-description-imgs" style="position: relative;">
                         <div class="mp-description-image" style="position: absolute; top: 0px; left: 0px;">
-                            <img src="images/dcb.jpg" id="ImagePath" />" 
+                            <img src="images/dcb.jpg" id="ImagePath5" />" 
                         </div>
                     </div>
                  </div>
@@ -268,6 +268,8 @@
 
                  $("#ImagePath4").attr('src', obj.browse[3].imagePath);
                  $("#ImgDescription4").html(obj.browse[3].imgDescription);
+
+                 $("#ImagePath5").attr('src', obj.browse[4].imagePath);
 
 
                  addMarker();
