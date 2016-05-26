@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>新建景点</title>
     <link href="../../Public/css/themes/default/easyui.css" rel="stylesheet" />
     <link href="../../Public/css/themes/icon.css" rel="stylesheet" />
     <link href="../../Public/css/demo.css" rel="stylesheet" />
@@ -14,6 +14,7 @@
     <script src="../../Public/js/jquery.easyui.min.js"></script>
     <script src="js/Submit.js"></script>
     <script src="js/ajaxupload.3.9.js"></script>
+    <script src="js/validation.js"></script>
 </head>
 <body>
     <form  id="ff" method="post" >
@@ -83,7 +84,7 @@
                 <td class ="The_title">*景点地图坐标:</td>
                 <td class="Textbox_one">
                     <input  class="easyui-validatebox textbox"
-                     id="txtPoint" data-options="missingMessage:'请输入景点坐标' ,prompt:'请填写景点的坐标',prompt:'验证完成.',invalidMessage:'请输入正确的坐标格式',required:true,validType:'StringLength[20]'"/></td>
+                     id="txtPoint" data-options="missingMessage:'请输入景点坐标,如115.995818 | 29.677338格式' ,prompt:'请填写景点的坐标',prompt:'验证完成.',invalidMessage:'请输入正确的坐标格式',required:true,validType:'StringLength[20,20]'"/></td>
               </tr>
             </table>
         </div>
@@ -105,21 +106,21 @@
                             <%--通过JS添加显示图片的html--%>                         
                             <div id="images">
                          
-                    <div id="btnUp1" class="q"><input type="button"   value="点击添加图片" style="margin-left:20px;"/>                         
+                    <div id="btnUp1" class="q"><input type="button" name="button"  value="点击添加图片" style="margin-left:20px;"/>                         
                        <i class="tu1 w icon-googleplus" ></i> 
                        <img id="ig1"  src=""/>         
                    </div>
 
-                    <div id="btnUp2" class="q"><input type="button"   value="点击添加图片" style="margin-left:20px;"/>
+                    <div id="btnUp2" class="q"><input type="button" name="button"   value="点击添加图片" style="margin-left:20px;"/>
                        <i class="tu2 w icon-googleplus"></i> 
                        <img id="ig2" src=""/>         
                    </div>
         
-                    <div id="btnUp3" class="q"><input type="button"  value="点击添加图片" style="margin-left:20px;"/>
+                    <div id="btnUp3" class="q"><input type="button" name="button"  value="点击添加图片" style="margin-left:20px;"/>
                        <i class="tu3 w icon-googleplus" ></i> 
                        <img id="ig3" src=""/>         
                    </div>        
-                    <div id="btnUp4" class="q"><input type="button" value="点击添加图片" style="margin-left:20px;"/>
+                    <div id="btnUp4" class="q"><input type="button" name="button"  value="点击添加图片" style="margin-left:20px;"/>
                        <i class="tu4 w icon-googleplus" ></i> 
                        <img id="ig4" src=""/>         
                    </div>   
@@ -181,8 +182,71 @@
 			box-sizing:content-box;
 		}
      </style>
-    <script  >  
-       
+    <script>  
+        var button1 = $('#btnUp1');
+        var image1 = $('#ig1');
+        var tu1 = $('.tu1');
+
+        var button2 = $('#btnUp2');
+        var image2 = $('#ig2');
+        var tu2 = $('.tu2');
+
+        var button3 = $('#btnUp3');
+        var image3 = $('#ig3');
+        var tu3 = $('.tu3');
+
+        var button4 = $('#btnUp4');
+        var image4 = $('#ig4');
+        var tu4 = $('.tu4');
+
+        $(function () {
+            imagedata(button1, image1, tu1);
+            imagedata(button2, image2, tu2);
+            imagedata(button3, image3, tu3);
+            imagedata(button4, image4, tu4);
+
+        });
+
+        function imagedata(button, img, tu) {
+
+            new AjaxUpload(button, {
+                action: 'Attrctionsimage.ashx',
+                name: 'myflie',
+
+                //上传结束
+                onComplete: function (file, response) {
+                    alert(response);
+                    $(function () { tu.hide(); })
+                    img.attr("src", "img/" + response);
+                    img.attr("width", "100");
+                    img.attr("height", "100");
+
+                }
+            })
+        }
+        //提交数据
+        $('#FileName').click(
+            function () {
+                $.post(
+                       "../../Handler/AttractionsImgHandler.ashx",
+                       {
+                           AttractionsID: $("#txtAttractionsID").val(),
+                           image1: $("#ig1").attr("src"),
+                           image2: $("#ig2").attr("src"),
+                           image3: $("#ig3").attr("src"),
+                           image4: $("#ig4").attr("src")
+                       },
+                       function (data) {
+                           if (data == "1") {
+                               alert("提交成功");
+                           }
+                           else {
+                               alert("提交失败");
+                           }
+                       }
+                    );
+            }
+            )
     </script>
 </body>
 </html>
