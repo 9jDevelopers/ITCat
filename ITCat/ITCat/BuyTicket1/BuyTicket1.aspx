@@ -21,6 +21,7 @@
   <div>
        
         <div id="TicketNews">
+            <!--左边框-->
             <div class="left">
             <!--order box start-->
             <!-- 标题 begin-->
@@ -169,7 +170,7 @@
              </div>
             <!--notice box end-->
             </div>
-
+            
             <!--summary box start-->
             <div class="summary" style="left:0px; top:0px; position:relative;">
                 <div class="Top"></div>
@@ -215,7 +216,12 @@
             </div>
             <!--summary box end-->
 
-      </div> 
+          
+       </div>
+      <!--copyright box-->
+            <div id="footer">
+                Copyright © 2016 ITCat旅游网 
+            </div>
         <!--发送邮件测试 -->
       <div><input type=button value="E-Mail Someone!" onClick="mailsome1()">
     </div>

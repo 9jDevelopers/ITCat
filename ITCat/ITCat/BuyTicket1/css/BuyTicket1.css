@@ -312,3 +312,16 @@ border-radius:2px;
 cursor:pointer;
 text-decoration:none;
 }
+
+
+
+/*footer box start*/
+#footer {
+border-top:1px solid #ccc;
+clear:both;
+color:#666;
+margin:50px auto 0;
+padding:50px 0;
+text-align:center;
+width:980px;
+}
