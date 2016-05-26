@@ -28,6 +28,7 @@ namespace BLL
 
             return a.TM(Tel, Email, Pname, Name, Gender, Birthday, City,UserID);
         }
+        //调用
         public string Information(Int32 UserID)
         {
             DataTable dt = a.Information(UserID);
