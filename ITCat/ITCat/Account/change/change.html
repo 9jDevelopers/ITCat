@@ -1,11 +1,44 @@
-﻿<!DOCTYPE html>
-<html>
+﻿
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
-	<meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0" />
+    <title>change your password</title>
+    <link href="../../Public/css/public.css" rel="stylesheet" />
+    <link href="../../Public/icomoon/fontIconStyle.css" rel="stylesheet" />
+    <link href="css/change.css" rel="stylesheet" />
 </head>
 <body>
+    <form id="frmMain">
+        <div class="change">
+            <div class="change-wrap">
+                <div class="return"><a class="icon-home3 " href="../../Index/index.html"></a></div>
+                <div class="hd">密码重置</div>
+                <div class="change-content">
+                    <div class="item clearfix">
+                        <i class="ico icon-lock2"></i>
+                        <input type="text" id="txtLoginName" class="fm-text" name="txtLoginName" tabindex="1" placeholder="请输入原始密码" value="" />
+                    </div>
 
+                    <div class="item clearfix">
+                        <i class="ico icon-lock2"></i>
+                        <input type="password" id="txtLoginPassword" class="fm-text" name="txtLoginPassword" tabindex="2" placeholder="请输入新密码" value="" />
+                    </div>
+                    <div class="item clearfix">
+                        <i class="ico icon-lock2"></i>
+                        <input type="text" id="txtLoginName" class="fm-text" name="txtLoginName" tabindex="1" placeholder="再次输入新密码" value="" />
+                    </div>
+                </div>
+
+                <div class="login-submit">
+                    <a class="fm-button fm-submit" id="btn-change">确认修改</a>
+                </div>
+            </div>
+            <div id="tip"></div>
+        </div>
+    </form>
+    <script src="../../Public/js/jquery-2.2.3.min.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>
