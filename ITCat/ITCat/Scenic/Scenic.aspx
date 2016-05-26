@@ -43,7 +43,7 @@
                                 <a class="ditu">查看地图</a>
                             </div>
                             <div class="mp-description-price" style="display: block;">
-                              <span class="mp-description-qunar-price"><em id="startat">$26</em>"起"</span>
+                              <span class="mp-description-qunar-price"><em id="startat1">$26</em>"起"</span>
                               <a class="mp-description-bookingbtn">立刻预定</a>
                            </div>
                         </div>                   
@@ -65,21 +65,21 @@
             <div name="home" id="home"> 
             <div>门票</div>
             <div class="table-tr">
-                <div class="table-td-1" id="ticketsName">XX成人票</div>
-                <div class="table-td-2" id="price">XX元</div>
+                <div class="table-td-1" id="ticketsName1">XX成人票</div>
+                <div class="table-td-2" id="price1">XX元</div>
                 <div class="table-td-3">预定</div>
                 <div style="clear:both"></div>
             </div>
             <div class="table-tr">
-                <div class="table-td-1">XX票</div>
-                <div class="table-td-2">XX元</div>
+                <div class="table-td-1" id="ticketsName2">XX票</div>
+                <div class="table-td-2" id="price2">XX元</div>
                 <div class="table-td-3">预定</div>
                 <div style="clear:both"></div>
 
             </div>
             <div class="table-tr">
-                <div class="table-td-1">儿童票</div>
-                <div class="table-td-2">123元</div>
+                <div class="table-td-1">XX票</div>
+                <div class="table-td-2">XX元</div>
                 <div class="table-td-3">预定</div>
                 <div style="clear:both"></div>
 
@@ -104,14 +104,14 @@
         </div>
         
         <div class="mp-description-img">
-            <img width="990px" height="390px" src="images/dcb.jpg" id="ImagePathx" />
-            <div class="mp-description-onesentence" id="ImgDescription">含鄱口:对面为庐山最高峰“汉阳峰”，北面为第二高峰“大月山”，南面为庐山第三高峰 “五老峰”，湖光山色，相互比美。</div>
-            <img width="990px" height="390px" src="images/dcbb.jpg" id="ImagePathy" />
-            <div class="mp-description-onesentence">花径公园:位于牯岭街西南2公里处，相传是唐代诗人白居易咏诗《大林寺桃花》的地方。园中繁花似锦，亭台碑碣，湖光山色。</div>
-            <img width="990px" height="390px" src="images/dcbbb.jpg" id="ImagePathz" />
-            <div class="mp-description-onesentence">如琴湖:座落西谷，峰岭围抱，森林蓊蔚，环境幽雅。湖心立岛，岛内有许多人工饲养的孔雀，所以名为 孔雀岛,曲桥连接。</div>
-            <img width="990px" height="390px" src="images/dcbbbbb.jpg" id="ImagePathv" />
-            <div class="mp-description-onesentence">三叠泉:位于五老峰下部，飞瀑流经的峭壁有三级，溪水分三叠泉飞泻而下，落差共155米，极为壮观，撼人魂魄，风景优美。</div>
+            <img width="990px" height="390px" src="<%--images/dcb.jpg--%>" id="ImagePath1" />
+            <div class="mp-description-onesentence" id="ImgDescription1"><%--含鄱口:对面为庐山最高峰“汉阳峰”，北面为第二高峰“大月山”，南面为庐山第三高峰 “五老峰”，湖光山色，相互比美。--%></div>
+            <img width="990px" height="390px" src="<%--images/dcbb.jpg--%>" id="ImagePath2" />
+            <div class="mp-description-onesentence" id="ImgDescription2"><%--花径公园:位于牯岭街西南2公里处，相传是唐代诗人白居易咏诗《大林寺桃花》的地方。园中繁花似锦，亭台碑碣，湖光山色。--%></div>
+            <img width="990px" height="390px" src="<%--images/dcbbb.jpg--%>" id="ImagePath3" />
+            <div class="mp-description-onesentence" id="ImgDescription3"><%--如琴湖:座落西谷，峰岭围抱，森林蓊蔚，环境幽雅。湖心立岛，岛内有许多人工饲养的孔雀，所以名为 孔雀岛,曲桥连接。--%></div>
+            <img width="990px" height="390px" src="<%--images/dcbbbbb.jpg--%>" id="ImagePath4" />
+            <div class="mp-description-onesentence" id="ImgDescription4"><%--三叠泉:位于五老峰下部，飞瀑流经的峭壁有三级，溪水分三叠泉飞泻而下，落差共155米，极为壮观，撼人魂魄，风景优美。--%></div>
         </div>
         <div class="mp-descr">
           <div class="mp-description-towtxt">
@@ -245,24 +245,30 @@
     initMap();//�����ͳ�ʼ����ͼ
     window.onload = function () {
        
-        var i = 147456;
+        var i = 17536;
 
         $.post(
            "../Handler/GetimgHandler.ashx",
 
       {
-          txtGetimgID: 147456
+          txtGetimgID: 17536,
 
       },
          function (data) {
              if (data != "-1") {
                  var obj = JSON.parse(data);
-                 $("#ImagePath").html(obj.browse[0].imagePath);
-                 $("#ImagePathx").html(obj.browse[0].imagePathx);
-                 $("#ImagePathy").html(obj.browse[0].imagePathy);
-                 $("#ImagePathz").html(obj.browse[0].imagePathz);
-                 $("#ImagePathv").html(obj.browse[0].imagePathv);
-                 $("#ImgDescription").html(obj.browse[0].imgDescription);
+                 $("#ImagePath1").attr( 'src' ,obj.browse[0].imagePath);
+                 $("#ImgDescription1").html(obj.browse[0].imgDescription);
+
+                 $("#ImagePath2").attr('src', obj.browse[1].imagePath);
+                 $("#ImgDescription2").html(obj.browse[1].imgDescription);
+
+                 $("#ImagePath3").attr('src', obj.browse[2].imagePath);
+                 $("#ImgDescription3").html(obj.browse[2].imgDescription);
+
+                 $("#ImagePath4").attr('src', obj.browse[3].imagePath);
+                 $("#ImgDescription4").html(obj.browse[3].imgDescription);
+
 
                  addMarker();
 
@@ -279,15 +285,19 @@
             "../Handler/SceniSpot2Handler.ashx",
 
        {
-           txtScenics2potID: 147456,
+           txtScenics2potID: 17536,
 
        },
           function (data) {
               if (data != "-1") {
                   var obj = JSON.parse(data);             
-                  $("#ticketsName").html(obj.browse[0].TicketsName);
-                  $("#price").html(obj.browse[0].Price);
-                  $("#startat").html(obj.browse[0].Startat);
+                  $("#ticketsName1").html(obj.browse[0].TicketsName);
+                  $("#price1").html(obj.browse[0].Price);
+                  $("#startat1").html(obj.browse[0].Startat);
+
+                  $("#ticketsName2").html(obj.browse[1].TicketsName);
+                  $("#price2").html(obj.browse[1].Price);
+                  $("#startat2").html(obj.browse[1].Startat);
 
                   addMarker();
 
@@ -305,7 +315,7 @@
             "../Handler/SceniSpotHandler.ashx",        
 
        {
-           txtScenicspotID: 147456,  
+           txtScenicspotID: 17536,  
 
        },      
         function (data) {
