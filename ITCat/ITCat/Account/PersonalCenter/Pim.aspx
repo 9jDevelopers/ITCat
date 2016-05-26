@@ -155,8 +155,6 @@
                     </div>
                 <div class="TP">   
                     <input type="button" id="btnimage"  onclick="test()" value="点击添加图片" style="margin-left:20px"/>
-                     
-                       
                        <div id="fileups">                  
                             <input type="file" class="file-up" name="btnim1"onchange=" previewImages()" style="display:none;"/>                 
                 </div>

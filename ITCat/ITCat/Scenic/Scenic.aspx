@@ -26,7 +26,7 @@
                 <div class="mp-description-slider " id="slider">
                     <div id="mp-description-content" class="mp-description-imgs" style="position: relative;">
                         <div class="mp-description-image" style="position: absolute; top: 0px; left: 0px;">
-                            <img src="images/dcb.jpg" id="ImagePath" />" 
+                            <img src="images/dcb.jpg" id="ImagePath5" />" 
                         </div>
                     </div>
                  </div>
@@ -269,6 +269,8 @@
                  $("#ImagePath4").attr('src', obj.browse[3].imagePath);
                  $("#ImgDescription4").html(obj.browse[3].imgDescription);
 
+                 $("#ImagePath5").attr('src', obj.browse[4].imagePath);
+
 
                  addMarker();
 
@@ -326,9 +328,8 @@
                 $("#attractionsAddress").html(obj.browse[0].AttractionsAddress);
                 $("#ticketsName").html(obj.browse[0].TicketsName);
                 $("#price").html(obj.browse[0].Price);
-
-
                 $("#").html(obj.browse[0].AttractionsContact);
+
                
                 markerArr = [{ title: obj.browse[0].AttractionsName, content: obj.browse[0].AttractionsContact, point: "115.995818|29.677338", isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
                 ];

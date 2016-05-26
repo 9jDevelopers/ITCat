@@ -34,7 +34,7 @@
             <tr>
                 <td class ="The_title">*管理员手机号:</td> 
                 <td  class="Textbox"><input class="easyui-validatebox textbox"
-                     data-options="missingMessage:'请输入用户名' ,prompt:'验证完成.',invalidMessage:'请输入手机号',required:true, validType:'length[5,10]'"
+                     data-options="missingMessage:'请输入手机号' ,prompt:'验证完成.',invalidMessage:'请输入正确格式的手机号',required:true, validType:'PhoneLength[11]'"
                      id="Manager_phone" /></td>
             </tr>
             </table>
