@@ -126,10 +126,10 @@
     <Content Include="Management\imges\piaolei.jpg" />
     <Content Include="Management\NewAttractions\css\jquery-ui-1.8.20.custom.css" />
     <Content Include="Management\NewAttractions\css\NewAttractions.css" />
-    <Content Include="Management\NewAttractions\img\384043.jpg" />
-    <Content Include="Management\NewAttractions\img\546387.jpg" />
-    <Content Include="Management\NewAttractions\img\87326.jpg" />
-    <Content Include="Management\NewAttractions\img\942375.jpg" />
+    <Content Include="Management\NewAttractions\img\115346.jpg" />
+    <Content Include="Management\NewAttractions\img\177434.jpg" />
+    <Content Include="Management\NewAttractions\img\597207.jpg" />
+    <Content Include="Management\NewAttractions\img\709608.jpg" />
     <Content Include="Management\NewAttractions\js\ajaxupload.3.9.js" />
     <Content Include="Management\NewAttractions\js\jquery-2.1.1.min.js" />
     <Content Include="Management\NewAttractions\js\Submit.js" />
