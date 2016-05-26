@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using BLL;
+using System.IO;
 
 namespace iTCat.Handler
 {
@@ -17,11 +18,15 @@ namespace iTCat.Handler
             BIndex bi = new BIndex();
             string AttractionsID= context.Request["AttractionsID"];
             string result = bi.GetImage(AttractionsID);
+            string Path = context.Server.MapPath(result);
+            FileStream fs = new FileStream(Path, FileMode.Open); 
+            byte[] byData = new byte[fs.Length];
+            fs.Read(byData, 0, byData.Length);
+            fs.Close();
 
-            if (result != null)
-            {
-                context.Response.Write(result);
-            }
+            context.Response.BinaryWrite(byData);
+
+
 
         }
 
