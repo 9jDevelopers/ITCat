@@ -26,7 +26,7 @@
                 <div class="mp-description-slider " id="slider">
                     <div id="mp-description-content" class="mp-description-imgs" style="position: relative;">
                         <div class="mp-description-image" style="position: absolute; top: 0px; left: 0px;">
-                            <img src="images/dcb.jpg" id="Img1" />" 
+                            <img src="images/dcb.jpg" id="ImagePath" />" 
                         </div>
                     </div>
                  </div>
@@ -104,13 +104,13 @@
         </div>
         
         <div class="mp-description-img">
-            <img width="990px" height="390px" src="images/dcb.jpg" id="img1" />
-            <div class="mp-description-onesentence" id="txtScenicspotPicture">含鄱口:对面为庐山最高峰“汉阳峰”，北面为第二高峰“大月山”，南面为庐山第三高峰 “五老峰”，湖光山色，相互比美。</div>
-            <img width="990px" height="390px" src="images/dcbb.jpg" id="img2" />
+            <img width="990px" height="390px" src="images/dcb.jpg" id="ImagePathx" />
+            <div class="mp-description-onesentence" id="ImgDescription">含鄱口:对面为庐山最高峰“汉阳峰”，北面为第二高峰“大月山”，南面为庐山第三高峰 “五老峰”，湖光山色，相互比美。</div>
+            <img width="990px" height="390px" src="images/dcbb.jpg" id="ImagePathy" />
             <div class="mp-description-onesentence">花径公园:位于牯岭街西南2公里处，相传是唐代诗人白居易咏诗《大林寺桃花》的地方。园中繁花似锦，亭台碑碣，湖光山色。</div>
-            <img width="990px" height="390px" src="images/dcbbb.jpg" />
+            <img width="990px" height="390px" src="images/dcbbb.jpg" id="ImagePathz" />
             <div class="mp-description-onesentence">如琴湖:座落西谷，峰岭围抱，森林蓊蔚，环境幽雅。湖心立岛，岛内有许多人工饲养的孔雀，所以名为 孔雀岛,曲桥连接。</div>
-            <img width="990px" height="390px" src="images/dcbbbbb.jpg" />
+            <img width="990px" height="390px" src="images/dcbbbbb.jpg" id="ImagePathv" />
             <div class="mp-description-onesentence">三叠泉:位于五老峰下部，飞瀑流经的峭壁有三级，溪水分三叠泉飞泻而下，落差共155米，极为壮观，撼人魂魄，风景优美。</div>
         </div>
         <div class="mp-descr">
@@ -248,6 +248,34 @@
         var i = 147456;
 
         $.post(
+           "../Handler/GetimgHandler.ashx",
+
+      {
+          txtGetimgID: 147456,
+
+      },
+         function (data) {
+             if (data != "-1") {
+                 var obj = JSON.parse(data);
+                 $("#ImagePath").html(obj.browse[0].imagePath);
+                 $("#ImagePathx").html(obj.browse[0].imagePathx);
+                 $("#ImagePathy").html(obj.browse[0].imagePathy);
+                 $("#ImagePathz").html(obj.browse[0].imagePathz);
+                 $("#ImagePathv").html(obj.browse[0].imagePathv);
+                 $("#ImgDescription").html(obj.browse[0].imgDescription);
+
+                 addMarker();
+
+                 alert("提交成功");
+             }
+             else {
+                 var obj = JSON.parse(data);
+
+             }
+         }
+   );
+
+        $.post(
             "../Handler/SceniSpot2Handler.ashx",
 
        {
@@ -272,6 +300,7 @@
           }
     );
        
+
         $.post(
             "../Handler/SceniSpotHandler.ashx",        
 
