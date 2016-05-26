@@ -534,6 +534,7 @@
     <Content Include="Scenic\images\e1.jpg" />
     <Content Include="Scenic\images\e2.jpg" />
     <Content Include="Scenic\images\e3.jpg" />
+    <Content Include="Scenic\Scenic.aspx" />
     <Content Include="Scenic\scripts\ai.0.15.0-build58334.min.js" />
   </ItemGroup>
   <ItemGroup>
@@ -569,6 +570,9 @@
     <Compile Include="Handler\LoginHandler.ashx.cs">
       <DependentUpon>LoginHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\PimImage.ashx.cs">
+      <DependentUpon>PimImage.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\RegisterHandler.ashx.cs">
       <DependentUpon>RegisterHandler.ashx</DependentUpon>
     </Compile>
@@ -587,8 +591,14 @@
     <Compile Include="Handler\PimHandler1.ashx.cs">
       <DependentUpon>PimHandler1.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\SessionHandler.ashx.cs">
+      <DependentUpon>SessionHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\SubmitImgHandler.ashx.cs">
       <DependentUpon>SubmitImgHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\transferpimone.ashx.cs">
+      <DependentUpon>transferpimone.ashx</DependentUpon>
     </Compile>
     <Compile Include="Management\NewAttractions\Attrctionsimage.ashx.cs">
       <DependentUpon>Attrctionsimage.ashx</DependentUpon>
@@ -605,6 +615,13 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scenic\Scenic.aspx.cs">
+      <DependentUpon>Scenic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Scenic\Scenic.aspx.designer.cs">
+      <DependentUpon>Scenic.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Account\Login\images\" />
@@ -643,6 +660,9 @@
     <Content Include="Handler\SubmitImgHandler.ashx" />
     <Content Include="Handler\AttractionsImgHandler.ashx" />
     <Content Include="Management\NewAttractions\Attrctionsimage.ashx" />
+    <Content Include="Handler\SessionHandler.ashx" />
+    <Content Include="Handler\transferpimone.ashx" />
+    <Content Include="Handler\PimImage.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
