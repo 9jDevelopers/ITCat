@@ -114,3 +114,50 @@ $.extend($.fn.validatebox.defaults.rules, {
         message: 'Please enter at least {0} characters.'
     }
 });
+//用户名验证，必须以字母开头
+$.extend($.fn.validatebox.defaults.rules, {
+
+    UserLength: {
+        validator: function (value, param) {
+
+            var reg = /^(?!0-9_\u4e00-\u9fa5)(?!.*?a-zA-Z$)[a-zA-Z0-9_\u4e00-\u9fa5]{6,10}$/;
+            if (reg.exec(value)) {
+                return value.length >= param[0];
+            }
+
+            else {
+
+                return false;
+            }
+
+        },
+        message: '不能以中文或数字开头，不能以英文结尾'
+    }
+});
+$.extend($.fn.validatebox.defaults.rules, {
+
+    PasswordLength: {
+        validator: function (value, param) {
+
+            var reg = /^[a-zA-Z0-9]{6,10}$/;
+            if (reg.exec(value)) {
+                return value.length >= param[0];
+            }
+
+            else {
+
+                return false;
+            }
+
+        },
+        message: '密码必须是数字或字母且长度不低于6位数'
+    }
+});
+$.extend($.fn.validatebox.defaults.rules, {
+    equals: {
+        validator: function (value, param) {
+            return value == $(param[0]).val();
+        },
+        message: '密码必须一致'
+    }
+});

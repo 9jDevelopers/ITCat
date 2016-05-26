@@ -131,9 +131,14 @@
     <Content Include="Management\NewAttractions\css\StyleSheet2.css" />
     <Content Include="Management\NewAttractions\img\115346.jpg" />
     <Content Include="Management\NewAttractions\img\177434.jpg" />
+    <Content Include="Management\NewAttractions\img\4099.jpg" />
+    <Content Include="Management\NewAttractions\img\462477.jpg" />
     <Content Include="Management\NewAttractions\img\465162.jpg" />
+    <Content Include="Management\NewAttractions\img\511314.jpg" />
+    <Content Include="Management\NewAttractions\img\515317.jpg" />
     <Content Include="Management\NewAttractions\img\597207.jpg" />
     <Content Include="Management\NewAttractions\img\709608.jpg" />
+    <Content Include="Management\NewAttractions\img\90911.jpg" />
     <Content Include="Management\NewAttractions\js\ajaxupload.3.9.js" />
     <Content Include="Management\NewAttractions\js\jquery-2.1.1.min.js" />
     <Content Include="Management\NewAttractions\js\Submit.js" />

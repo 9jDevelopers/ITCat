@@ -44,7 +44,7 @@
             <tr>
                 <td class ="The_title">*管理员用户名:</td> 
                 <td  class="Textbox"><input class="easyui-validatebox textbox"
-                     data-options="missingMessage:'请输入用户名' ,prompt:'验证完成.',invalidMessage:'请输入存在的用户名',required:true, validType:'length[5,10]'"
+                     data-options="missingMessage:'请输入用户名' ,prompt:'验证完成.',required:true, validType:'UserLength[6,10]'"
                      id="Manager_User" /></td>
             </tr>
             </table>
@@ -54,7 +54,7 @@
             <tr>
                 <td class ="The_title">*管理员密码:</td> 
                 <td  class="Textbox"><input class="easyui-validatebox textbox"
-                     data-options="missingMessage:'请输入密码' ,prompt:'验证完成.',invalidMessage:'请输入正确的密码',required:true, validType:'length[5,10]'"
+                     data-options="missingMessage:'请输入密码' ,prompt:'验证完成.',required:true, validType:'PasswordLength[5,10]'"
                      id="Manager_password" /></td>
             </tr>
             </table>
@@ -64,8 +64,8 @@
             <tr>
                 <td class ="The_title">*重复密码:</td> 
                 <td  class="Textbox"><input class="easyui-validatebox textbox"
-                     data-options="missingMessage:'请输入密码' ,prompt:'验证完成.',invalidMessage:'密码不一致',required:true, validType:'length[5,10]'"
-                     id="Repeat_password" runat="server"/></td>
+                     data-options="missingMessage:'请输入密码' ,prompt:'验证完成.',invalidMessage:'密码不一致',required:true, validType:'equals[#Manager_password]'"
+                     id="Repeat_password" /></td>
             </tr>
             </table>
             </div>
