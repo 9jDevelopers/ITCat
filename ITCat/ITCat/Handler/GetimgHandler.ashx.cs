@@ -4,11 +4,10 @@ using System.Linq;
 using System.Web;
 using BLL;
 
-
 namespace iTCat.Handler
 {
     /// <summary>
-    /// GtimgHandler 的摘要说明
+    /// GetimgHandler 的摘要说明
     /// </summary>
     public class GetimgHandler : IHttpHandler
     {
@@ -24,19 +23,11 @@ namespace iTCat.Handler
             context.Response.Write(result);
         }
 
-        public string IsReusable
+        public bool IsReusable
         {
             get
             {
-                return "-1";
-            }
-        }
-
-        bool IHttpHandler.IsReusable
-        {
-            get
-            {
-                throw new NotImplementedException();
+                return false;
             }
         }
     }
