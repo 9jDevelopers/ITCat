@@ -8,7 +8,7 @@ $(function ()
                 {},
                 function (data)
                 {
-                    if(data==-1)
+                    if (data == -1)
                     {
                         $("#Pim").hide();
                     }
@@ -27,7 +27,7 @@ $(function ()
                 //data：IndexHandler中返回的值
                 function (data)
                 {
-                    for (i = 0;i<=5;i++)
+                    for (i = 0; i <= 5; i++)
                     {
                         var name = "#AttractionsName" + i;
                         $(name).html(data.index[i].AttractionsName);
@@ -35,23 +35,21 @@ $(function ()
                         $(synopsis).html(data.index[i].AttractionsSynopsis);
                         var http = "#http" + i;
                         $(http).attr('href', '../Scenic/Scenic.aspx?AttractionsID=' + data.index[i].AttractionsID);
-                        //data.index[0].AttractionImages;
                     }
                 },
                 //返回类型
                 "json"
             );
-        $.post("/Handler/GetimgHandler.ashx",
-        {
-            txtGetimgID: 1
-        },
-        function (data)
-        {
-            alert(data);
+        //$.post("/Handler/GetimgHandler.ashx",
+        //        {
+        //            txtGetimgID: 17536,
+        //        },
+        //        function (data)
+        //        {
+        //            $("#image0").attr('src', data.browse[0].imagePath);
 
-        },
-        "json"
-    );
-
+        //        },
+        //        "json"
+        //    );
     });
 });
