@@ -28,6 +28,7 @@ namespace iTCat
                 else
                 {
                     context.Session["userID"]  = result;
+                    context.Session["userName"] = username;
                 }
             }
         }
