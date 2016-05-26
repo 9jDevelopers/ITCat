@@ -1,2 +1,138 @@
-﻿body {
+﻿.change {
+    width:100%;
+	text-align:center;
+    padding:0 10px;
+    position:relative;
+}
+.return {
+    font-size:4.4rem;
+}
+
+.change-wrap
+{
+    width:100%;
+    height:400px;
+}
+.change-wrap .hd {
+    height:60px;
+    line-height:60px;
+    font-size:2.2rem;
+}
+.change-title
+{	    
+    margin-bottom: 30px;    
+    font-size:1.4rem;
+    text-align:center;
+}
+.change-title a:hover
+{
+    text-decoration:underline;
+}
+.fm-text
+{        
+    font-size: 12px;
+    color: #595959;
+    background: #fff;
+}
+.change-content 
+{    
+        
+}
+.change-content .item 
+{
+    height:42px;
+    line-height:42px;
+    border:1px solid #ddd;    
+    margin-bottom:30px;
+    width:100%;
+}
+.change-content .item .ico
+{
+    height:40px;
+    width:10%;
+    text-align:center;
+    font-size:1.8rem;
+    background-color:#eeeeee!important;
+    border-right:1px solid #ddd;   
+    display:inline-block;    
+    float:left;
+}
+.change-content .fm-text 
+{    
+    float:left;
+    padding:10px 10px; 
+    border:none;
+    display:inline-block;    
+    font-size:1.4rem;
+    width:90%;    
+}
+.return {
+    text-align:left;
+}
+
+.change-auto .chk-login-auto
+{
+    vertical-align:middle;
+    margin-right:8px;
+}
+.change-auto .fr a
+{
+    color:#000;
+}
+.change-auto .fr a:hover
+{
+    text-decoration:underline;    
+}
+.change-submit
+{
+    margin-top:10px;
+    text-align:center;    
+}
+.fm-button 
+{
+    height: 36px;    
+    line-height:36px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: #fff!important;
+    cursor: pointer;
+    background-color:#ff0000;    
+    font-family: Microsoft YaHei,Hiragino Sans GB,\5b8b\4f53;
+    _overflow: visible;
+    width:180px;    
+    margin:0 auto;    
+    border-radius:30px;
+    display:block;
+}
+#change-error-tip
+{
+    display:none;
+    width:auto;
+    margin:0;
+    position:relative;  
+    font-size:14px;
+    min-width:inherit;
+}
+#change-error-tip p
+{
+    line-height:22px;
+    padding:6px 0;
+}
+#tip {
+    position:absolute;
+    z-index:9999;
+    top:46%;
+    text-align:center;
+    background:#7f7f7f;        
+    opacity:0.8;
+    border-radius:6px;        
+    color:#fff;
+    font-size:1.4rem;    
+    padding:6px 26px;
+    text-align:center;
+    display:none;
+}
+.change-auto {
+    font-size:1.4rem;
 }
