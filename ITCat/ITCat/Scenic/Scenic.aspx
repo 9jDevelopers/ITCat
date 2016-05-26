@@ -244,14 +244,14 @@
     
     initMap();//�����ͳ�ʼ����ͼ
     window.onload = function () {
-        alert(1);
+       
         var i = 147456;
 
         $.post(
            "../Handler/GetimgHandler.ashx",
 
       {
-          txtGetimgID: 147456,
+          txtGetimgID: 147456
 
       },
          function (data) {
