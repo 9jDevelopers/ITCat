@@ -1,5 +1,19 @@
 ﻿
-var count = 0; 
+var count = 0;
+//$(document).ready(function () {
+//    $("#btnimage").click(function () {
+//        if (count == 2) {
+//            $("#btnimage").css("display", "none") //隐藏，不能点击
+//        }
+
+//        count = count + 1;
+
+//        //执行代码
+
+//    });
+
+//});
+
 function test() {
  
 
@@ -18,13 +32,15 @@ function previewImages() {
     }
 }
 function addPreviewHtml(src) {
+    if(count<3)
+    {
+        $("#btnimage").css("display", "none");
+        $("#btnimage").before("<div class='item'>" +
+                           "<div class='im' style='background-image:url(" + src + ");'></div>" +
 
-    $("#btnimage").before("<div class='item'>" +
-                            "<div class='im' style='background-image:url(" + src + ");'></div>" +
-                             
-                         "</div>");
-    
-    
+                        "</div>");
+    }      
+    count++;
 }
 function closeImage(obj) {
 
@@ -38,9 +54,10 @@ function closeImage(obj) {
     );
     $("#fileups").append("<input type='file'  capture='camera' accept='image/*' class='file-up' onchange=' previewImages()' name='fileUp3' style='display:none;'/> ");
     var itemSize = $(".images-preview .item").size();
-    if (itemSize != 1) {
+    if (itemSize =2) {
         $("#btnimage").show();
     }
+   
 }
 $(function () {
    
@@ -67,4 +84,4 @@ function submitImg(){
                 alert(data);
             }
         });
-    }
+}
