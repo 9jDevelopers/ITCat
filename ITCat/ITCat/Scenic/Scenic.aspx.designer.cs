@@ -7,11 +7,13 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace WebApplication1 {
-    
-    
-    public partial class WebForm1 {
-        
+namespace WebApplication1
+{
+
+
+    public partial class WebForm1
+    {
+
         /// <summary>
         /// form1 控件。
         /// </summary>

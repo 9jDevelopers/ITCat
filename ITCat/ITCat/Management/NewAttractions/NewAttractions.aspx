@@ -82,8 +82,8 @@
               <tr>
                 <td class ="The_title">*景点地图坐标:</td>
                 <td class="Textbox_one">
-                    <input class="easyui-textbox" runat="server"
-                     id="txtPoint" data-options="prompt:'请填写景点的坐标',validType:'Lenght[10,30]'"/></td>
+                    <input  class="easyui-validatebox textbox" runat="server"
+                     id="txtPoint" data-options=" missingMessage:'请输入景点坐标' ,prompt:'请填写景点的坐标',prompt:'验证完成.',invalidMessage:'请输入正确的坐标格式',required:true,validType:'String'"/></td>
               </tr>
             </table>
         </div>
@@ -163,7 +163,7 @@
        
         <div>
             <table>
-           <tr>
+             <tr>
                 <td>
                     <a href="javascript:NewAttractions" class="easyui-linkbutton" id="submitForm" onclick="submitForm()">提交</a>                   
                     <input  runat="server" height="36px" style="margin-top: 0px"  value="重置" type="submit"  width="72px" />
@@ -182,105 +182,7 @@
 		}
      </style>
     <script  >  
-        var button1 = $('#btnUp1');
-        var image1 = $('#ig1');
-        var tu1 = $('.tu1');
-
-        var button2 = $('#btnUp2');
-        var image2 = $('#ig2');
-        var tu2 = $('.tu2');
-
-        var button3 = $('#btnUp3');
-        var image3 = $('#ig3');
-        var tu3 = $('.tu3');
-
-        var button4 = $('#btnUp4');
-        var image4 = $('#ig4');
-        var tu4 = $('.tu4');
-
-        $(function () {
-            imagedata(button1, image1, tu1);
-            imagedata(button2, image2, tu2);
-            imagedata(button3, image3, tu3);
-            imagedata(button4, image4, tu4);
-
-        });
-
-        function imagedata(button, img, tu) {
-
-            new AjaxUpload(button, {
-                action: 'Attrctionsimage.ashx',
-                name: 'myflie',
-
-                //上传结束
-                onComplete: function (file, response) {                   
-                    alert(response);
-                    $(function () { tu.hide(); })
-                    img.attr("src", "img/" + response);
-                    img.attr("width", "100");
-                    img.attr("height", "100");
-                    
-                }
-            })
-        }
        
-        $('#FileName').click(
-            function () {
-                $.post(
-                       "../../Handler/AttractionsImgHandler.ashx",
-                       {
-                           AttractionsID: $("#txtAttractionsID").val(),
-                           image1: $("#ig1").attr("src"),
-                           image2: $("#ig2").attr("src"),
-                           image3: $("#ig3").attr("src"),
-                           image4: $("#ig4").attr("src")
-                       },
-                       function (data) {
-                           if (data == "1") {
-                               alert("提交成功");
-                           }
-                           else {
-                               alert("提交失败");
-                           }
-                       }
-                    );
-            }
-            )
-        
-        function submitForm() {            
-            $('#ff').form('submit',
-            $("#submitForm").click(
-             function () {                    
-                 alert("1");
-                 $.post(
-                     "../../Handler/NewAttractionsHandler.ashx",
-                {                    
-                    AttractionsID: $("#txtAttractionsID").val(),
-                    Attractions_name: $("#txtAttractions_name").val(),
-                    Attractions_title: $("#txtAttractions_title").val(),
-                    Level_RadioButton: $('#cc').combo('getText'),
-                    Address: $("#AddressTextBox").val(),
-                    OpenTime: $("#OpenTimeTextBox").val(),
-                    Introduce: $("#IntroduceTextBox").val(),
-                    Contact: $("#Contact").val(),
-                    NoteAttractions: $("#NoteAttractions").val(),      
-                    Point:$("#txtPoint").val()
-                    
-                },
-                 function (data) {
-                     if (data == "1") {
-                         alert("提交成功");
-                     }
-                     else {
-                         alert("提交失败");
-                     }
-                 }
-                );
-             }
-                     )
-            );
-            
-        }
     </script>
 </body>
 </html>
