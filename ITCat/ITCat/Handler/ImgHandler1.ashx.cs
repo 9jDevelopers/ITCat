@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 
 namespace iTCat.Handler
 {
     /// <summary>
     /// ImgHandler1 的摘要说明
     /// </summary>
-    public class ImgHandler1 : IHttpHandler
+    public class ImgHandler1 : IHttpHandler, IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)
@@ -25,7 +26,8 @@ namespace iTCat.Handler
                 Head_Portrait = binaryReader.ReadBytes(file.ContentLength);
             }
 
-            int UserID = 1;
+            string userid = context.Session["userID"].ToString();
+            int UserID = int.Parse(userid);
             bool result = false;
             try
             {

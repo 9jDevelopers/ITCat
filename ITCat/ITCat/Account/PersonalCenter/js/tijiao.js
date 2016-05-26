@@ -3,7 +3,6 @@ $(document).ready(function () {
     $.post("../../Handler/transferpimone.ashx",
            {
                Action: "userInfo",
-               UserID: 1
            },
            function (data)
            {
@@ -40,7 +39,6 @@ $(document).ready(function () {
                    "../../Handler/PimHandler1.ashx",
               {
                   Action: "userInfo",
-                  UserID: 1,
                   Tel: $("#txtTel").val(),
                   Email: $("#txtEmail").val(),
                   Pname: $("#txtPname").val(),

@@ -75,10 +75,10 @@ $.extend($.fn.validatebox.defaults.rules, {
     }
 });
 $.extend($.fn.validatebox.defaults.rules, {
-    String:{
+    StringLength:{
         validator: function (value, param) {
 
-            var reg = /^[0-9]{1,3}.[0-9]{0,6}|[0-9]{0,2}.[0-9]{0,6}$/;
+            var reg =/^(-|\\+)?(180\\.0{4,6}|(\\d{1,2}|1([0-7]\\d))\\.\\d{4,6})$/;
             if (reg.exec(value)) {
                 return value.length >= param[0];
             }
@@ -134,8 +134,8 @@ function imagedata(button, img, tu) {
         }
     })
 }
-115.995818 | 29.677338
-"/^[0-9]{1,3}.[0-9]{0,6}|[0-9]{0,2}.[0-9]{0,6}$/"
+//115.995818 | 29.677338
+//"/^[0-9]{1,3}.[0-9]{0,6}|[0-9]{0,2}.[0-9]{0,6}$/"
 //提交数据
 $('#FileName').click(
     function () {
