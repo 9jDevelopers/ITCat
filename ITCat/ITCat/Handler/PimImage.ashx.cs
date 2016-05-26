@@ -21,9 +21,16 @@ namespace iTCat.Handler
             string userid = context.Session["userID"].ToString();
             int UserID = int.Parse(userid);
             //二进制流
-            byte[]   result = a.Image(UserID);
-            context.Response.BinaryWrite(result);
-
+            byte[]result = a.Image(UserID);
+            //判断是否有头像
+            if (result != null)
+            {
+                context.Response.BinaryWrite(result);
+            }
+            else
+            {
+                return;
+            }
 
         }
 

@@ -1,21 +1,5 @@
-﻿//$(document).ready(function () {
-//    $.post("../../Handler/PimImage.ashx",
-//           {
-              
-//               UserID: 1
-//           },
-//           function (data)
-//           {
-//               //把调取的值赋值给图片框显示出来
-//               //$("#txtTel1").textbox({
-//               //    value: data.Information[0].Tel
-//               //   });
-              
-//           },
-//           "json"
-//        )
-//})
-var count = 0;
+﻿
+var count = 0; 
 function test() {
  
 
