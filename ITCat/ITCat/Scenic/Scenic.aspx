@@ -328,9 +328,8 @@
                 $("#attractionsAddress").html(obj.browse[0].AttractionsAddress);
                 $("#ticketsName").html(obj.browse[0].TicketsName);
                 $("#price").html(obj.browse[0].Price);
-
-
                 $("#").html(obj.browse[0].AttractionsContact);
+
                
                 markerArr = [{ title: obj.browse[0].AttractionsName, content: obj.browse[0].AttractionsContact, point: "115.995818|29.677338", isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
                 ];

@@ -35,21 +35,13 @@ $(function ()
                         $(synopsis).html(data.index[i].AttractionsSynopsis);
                         var http = "#http" + i;
                         $(http).attr('href', '../Scenic/Scenic.aspx?AttractionsID=' + data.index[i].AttractionsID);
+                        var img = "#image" + i;
+                        $(img).attr('src', '../Handler/ShowImg.ashx?AttractionsID=' + data.index[i].AttractionsID);
                     }
                 },
                 //返回类型
                 "json"
             );
-        //$.post("/Handler/GetimgHandler.ashx",
-        //        {
-        //            txtGetimgID: 17536,
-        //        },
-        //        function (data)
-        //        {
-        //            $("#image0").attr('src', data.browse[0].imagePath);
-
-        //        },
-        //        "json"
-        //    );
+         
     });
 });

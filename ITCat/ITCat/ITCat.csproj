@@ -576,6 +576,9 @@
     <Compile Include="Handler\SessionHandler.ashx.cs">
       <DependentUpon>SessionHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\ShowImg.ashx.cs">
+      <DependentUpon>ShowImg.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\SubmitImgHandler.ashx.cs">
       <DependentUpon>SubmitImgHandler.ashx</DependentUpon>
     </Compile>
@@ -662,6 +665,7 @@
     <Content Include="Handler\transferpimone.ashx" />
     <Content Include="Handler\PimImage.ashx" />
     <Content Include="Handler\GetimgHandler.ashx" />
+    <Content Include="Handler\ShowImg.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -15,5 +15,10 @@ namespace BLL
             string json = DataTableConvertJson.DataTableToJson("index", dt);
             return json;
         }
+        public string GetImage(string AttractionsID)
+        {
+            string result = ID.Getimage(AttractionsID);
+            return result;
+        }
     }
 }
