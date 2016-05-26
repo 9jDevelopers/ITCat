@@ -109,4 +109,14 @@ text-align:right;
 margin-top:20px;
 line-height:1;
 font-size:15px;
+font-family:'Microsoft YaHei UI';
+}
+.back {
+font-size:14px;
+color:#2e9900;
+line-height:40px;
+float:left;
+text-decoration:none;
+cursor:pointer;
+text-align:right;
 }
