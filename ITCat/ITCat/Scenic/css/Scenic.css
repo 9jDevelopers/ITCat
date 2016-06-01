@@ -297,3 +297,26 @@ h3 {
             display:inline-block;
                   
 }
+ .containerqwe {
+      width:980px;
+      margin:0 auto;
+      height:auto;
+      min-height:100%;
+      position:relative;
+   }
+  #goToTop {
+      position: fixed;
+      bottom: 20px;
+      right: 10%;
+   }
+  #goToTop a {
+     background: none repeat scroll 0 0 #336699;
+     border: 1px solid #CCCCCC;
+     border-radius: 3px;
+     -webkit-border-radius: 3px;
+     color: #FF9966;
+     font-size: 14px;
+     padding: 5px;
+     text-decoration: none;
+     text-shadow: 0 1px 0 #999;        
+     }

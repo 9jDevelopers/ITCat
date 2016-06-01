@@ -34,7 +34,11 @@
                         <div class="mp-description-detail">
                             <div class="mp-description-view" id="attractionsName">
                                 <span class="mp-description-name" id="txtScenicspotName  "  title="庐山">庐山</span>
+                            </div> 
+                            <span class="mp-description-title">景点等级：</span>                      
+                            <div id="attractionsLevel">                       
                             </div>
+                            <span class="mp-description-title">简介：</span>
                             <div class="mp-description-onesentence" id="attractionsSynopsis">风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美。</div>
                             <div class="mp-description-location">
 
@@ -102,7 +106,11 @@
                     </div>
             </div>
         </div>
-        
+      
+ <div class="containerqwe">
+    <div id="goToTop"><a href="#">回到顶部</a></div>
+ </div>
+
         <div class="mp-description-img">
             <img width="990px" height="390px" src="<%--images/dcb.jpg--%>" id="ImagePath1" />
             <div class="mp-description-onesentence" id="ImgDescription1"><%--含鄱口:对面为庐山最高峰“汉阳峰”，北面为第二高峰“大月山”，南面为庐山第三高峰 “五老峰”，湖光山色，相互比美。--%></div>
@@ -241,8 +249,19 @@
         var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
         return icon;
     }
-    
     initMap();//�����ͳ�ʼ����ͼ
+
+    function GetQueryString(name) {
+
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+
+        var r = window.location.search.substr(1).match(reg);
+
+        if (r != null) return unescape(r[2]); return null;
+
+    }
+    alert(GetQueryString("AttractionsID"));
+
     window.onload = function () {
        
         var i = 17536;
@@ -251,7 +270,7 @@
            "../Handler/GetimgHandler.ashx",
 
       {
-          txtGetimgID: 17536,
+          txtGetimgID: 17536
 
       },
          function (data) {
@@ -271,10 +290,9 @@
 
                  $("#ImagePath5").attr('src', obj.browse[4].imagePath);
 
-
                  addMarker();
 
-                 alert("提交成功");
+                 
              }
              else {
                  var obj = JSON.parse(data);
@@ -287,7 +305,7 @@
             "../Handler/SceniSpot2Handler.ashx",
 
        {
-           txtScenics2potID: 17536,
+           txtScenics2potID: 17536
 
        },
           function (data) {
@@ -303,7 +321,7 @@
 
                   addMarker();
 
-                  alert("提交成功");
+                
               }
               else {
                   var obj = JSON.parse(data);                 
@@ -317,7 +335,7 @@
             "../Handler/SceniSpotHandler.ashx",        
 
        {
-           txtScenicspotID: 17536,  
+           txtScenicspotID: 17536
 
        },      
         function (data) {
@@ -327,6 +345,7 @@
                 $("#attractionsSynopsis").html(obj.browse[0].AttractionsSynopsis);
                 $("#attractionsAddress").html(obj.browse[0].AttractionsAddress);
                 $("#ticketsName").html(obj.browse[0].TicketsName);
+                $("#attractionsLevel").html(obj.browse[0].AttractionsLevel);
                 $("#price").html(obj.browse[0].Price);
                 $("#").html(obj.browse[0].AttractionsContact);
 
@@ -336,7 +355,7 @@
 
                addMarker();
 
-                alert("提交成功");
+
             }
             else {
                 var obj = JSON.parse(data);
@@ -352,6 +371,26 @@
         var obj = JSON.parse('{"data":"ScenicspotID"}');
         console.log(obj.data);  // 取得的值为：this-is-json
     }
+
+    $(document).ready(function () {
+        $("#goToTop").hide()//隐藏go to top按钮
+        $(function () {
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 1) {//当window的scrolltop距离大于1时，go to top按钮淡出，反之淡入
+                    $("#goToTop").fadeIn();
+                } else {
+                    $("#goToTop").fadeOut();
+                }
+            });
+        });
+
+
+        // 给go to top按钮一个点击事件
+        $("#goToTop a").click(function () {
+            $("html,body").animate({ scrollTop: 0 }, 800);//点击go to top按钮时，以800的速度回到顶部，这里的800可以根据你的需求修改
+            return false;
+        });
+    });
 
 </script>
 
