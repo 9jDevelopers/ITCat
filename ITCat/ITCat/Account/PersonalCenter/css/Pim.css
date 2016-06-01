@@ -1,4 +1,5 @@
-﻿.wz 
+﻿
+.wz 
 {
     font-size:1.5rem;
     font-weight:600;
@@ -76,16 +77,19 @@
     height:280px;
     border-style:dashed;
     border-bottom-color:#CDCDB4;
+     
 }
+    
 .add-images add
 {
     margin-left:200px;
    
 }
 
-.im
-{
-  margin-left:0px; 
-  width:280px; 
-  height:280px; 
+.im {
+    margin-left: 0px;
+    margin: 0 auto;
+    height:280px;
+    background-size:280px 280px;
 }
+ 
