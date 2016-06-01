@@ -120,6 +120,7 @@
     <Content Include="Index\js\jquery-1.11.2.min.js" />
     <Content Include="Management\administrator\Login\AdministratorLogin.aspx" />
     <Content Include="Management\administrator\Register\AdministrationRegister.aspx" />
+    <Content Include="Management\administrator\Register\js\ARegister.js" />
     <Content Include="Management\imges\01.jpeg" />
     <Content Include="Management\imges\939.jpg" />
     <Content Include="Management\imges\dong_zhiwu.jpg" />
@@ -537,6 +538,12 @@
     <Compile Include="BuyTicket\BuyTicket.aspx.designer.cs">
       <DependentUpon>Buyticket.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\ALoginHandler.ashx.cs">
+      <DependentUpon>ALoginHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\ARegisterHandler.ashx.cs">
+      <DependentUpon>ARegisterHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\AttractionsImgHandler.ashx.cs">
       <DependentUpon>AttractionsImgHandler.ashx</DependentUpon>
     </Compile>
@@ -625,7 +632,6 @@
   <ItemGroup>
     <Folder Include="Account\Login\images\" />
     <Folder Include="Management\administrator\Register\css\" />
-    <Folder Include="Management\administrator\Register\js\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLL\BLL.csproj">
@@ -666,6 +672,8 @@
     <Content Include="Handler\PimImage.ashx" />
     <Content Include="Handler\GetimgHandler.ashx" />
     <Content Include="Handler\ShowImg.ashx" />
+    <Content Include="Handler\ARegisterHandler.ashx" />
+    <Content Include="Handler\ALoginHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
