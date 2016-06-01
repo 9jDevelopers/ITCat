@@ -249,8 +249,19 @@
         var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
         return icon;
     }
-    
     initMap();//�����ͳ�ʼ����ͼ
+
+    function GetQueryString(name) {
+
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+
+        var r = window.location.search.substr(1).match(reg);
+
+        if (r != null) return unescape(r[2]); return null;
+
+    }
+    alert(GetQueryString("AttractionsID"));
+
     window.onload = function () {
        
         var i = 17536;
@@ -259,7 +270,7 @@
            "../Handler/GetimgHandler.ashx",
 
       {
-          txtGetimgID: 17536,
+          txtGetimgID: 17536
 
       },
          function (data) {
@@ -279,7 +290,6 @@
 
                  $("#ImagePath5").attr('src', obj.browse[4].imagePath);
 
-
                  addMarker();
 
                  
@@ -295,7 +305,7 @@
             "../Handler/SceniSpot2Handler.ashx",
 
        {
-           txtScenics2potID: 17536,
+           txtScenics2potID: 17536
 
        },
           function (data) {
@@ -325,7 +335,7 @@
             "../Handler/SceniSpotHandler.ashx",        
 
        {
-           txtScenicspotID: 17536,  
+           txtScenicspotID: 17536
 
        },      
         function (data) {
