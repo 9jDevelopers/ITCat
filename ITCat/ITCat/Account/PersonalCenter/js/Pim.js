@@ -52,7 +52,7 @@ function closeImage(obj) {
         $(this).attr("name", "fileUp" + id);
     }
     );
-    $("#fileups").append("<input type='file'  capture='camera' accept='image/*' class='file-up' onchange=' previewImages()' name='fileUp3' style='display:none;'/> ");
+    $("#fileups").append("<input type='file' width='280px' height='280px' capture='camera' accept='image/*' class='file-up' onchange=' previewImages()' name='fileUp3' style='display:none;'/> ");
     var itemSize = $(".images-preview .item").size();
     if (itemSize =2) {
         $("#btnimage").show();

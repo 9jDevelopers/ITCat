@@ -11,7 +11,7 @@ namespace Model.DAL
         {
             DbHelper db = new DbHelper();
 
-            DbCommand cmd = db.GetStoredProcCommond("sp_Index");
+            DbCommand cmd = db.GetStoredProcCommond("sp_Index");    
             DataTable dt = db.ExecuteDataTable(cmd);
 
             return dt;
