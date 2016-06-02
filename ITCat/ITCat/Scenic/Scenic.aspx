@@ -42,7 +42,7 @@
                             <div class="mp-description-onesentence" id="attractionsSynopsis">风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美。</div>
                             <div class="mp-description-location">
 
-                                <span class="mp-description-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位      置：</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="mp-description-title">&nbsp;位置：</span>&nbsp;
                                 <span class="mp-description-address" id="attractionsAddress" title="江西省九江市庐山区">江西省九江市庐山区</span>
                                 <a class="ditu">查看地图</a>
                             </div>
