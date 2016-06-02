@@ -196,7 +196,7 @@
     }
     
     //��ע������
-    var markerArr = [{title:"欢迎来到庐山",content:"联系电话：12345678900",point:"115.995818|29.677338",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+    var markerArr = [{title:"",content:"",point:"",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
 		 ];
     //����marker
     function addMarker(){
@@ -262,7 +262,7 @@
         if (r != null) return unescape(r[2]); return null;
 
     }
-    alert(GetQueryString("AttractionsID"));
+    
 
     window.onload = function () {
        
@@ -272,7 +272,7 @@
            "../Handler/GetimgHandler.ashx",
 
       {
-          txtGetimgID: 17536
+          txtGetimgID: GetQueryString("AttractionsID")
 
       },
          function (data) {
@@ -307,7 +307,7 @@
             "../Handler/SceniSpot2Handler.ashx",
 
        {
-           txtScenics2potID: 17536
+           txtScenics2potID: GetQueryString("AttractionsID")
 
        },
           function (data) {
@@ -337,7 +337,7 @@
             "../Handler/SceniSpotHandler.ashx",        
 
        {
-           txtScenicspotID: 17536
+           txtScenicspotID: GetQueryString("AttractionsID")
 
        },      
         function (data) {
@@ -350,12 +350,14 @@
                 $("#attractionsLevel").html(obj.browse[0].AttractionsLevel);
                 $("#price").html(obj.browse[0].Price);
                 $("#").html(obj.browse[0].AttractionsContact);
+                $("#").html(obj.browse[0].Point);
 
                
-                markerArr = [{ title: obj.browse[0].AttractionsName, content: obj.browse[0].AttractionsContact, point: "115.995818|29.677338", isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
+                markerArr = [{ title: obj.browse[0].AttractionsName, content: obj.browse[0].AttractionsContact, point: obj.browse[0].Point, isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
                 ];
 
-               addMarker();
+                alert(markerArr);
+                addMarker();
 
 
             }
