@@ -134,6 +134,7 @@ $.extend($.fn.validatebox.defaults.rules, {
         message: '不能以中文或数字开头，不能以英文结尾'
     }
 });
+//密码验证
 $.extend($.fn.validatebox.defaults.rules, {
 
     PasswordLength: {
@@ -153,6 +154,7 @@ $.extend($.fn.validatebox.defaults.rules, {
         message: '密码必须是数字或字母且长度不低于6位数'
     }
 });
+//重复密码验证
 $.extend($.fn.validatebox.defaults.rules, {
     equals: {
         validator: function (value, param) {

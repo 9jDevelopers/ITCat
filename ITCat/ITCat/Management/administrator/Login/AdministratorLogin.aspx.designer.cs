@@ -13,21 +13,21 @@ namespace iTCat.Management.administrator.Login {
     public partial class AdministratorLogin {
         
         /// <summary>
-        /// txtAttractionsID 控件。
+        /// txtA_ID 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText txtAttractionsID;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtA_ID;
         
         /// <summary>
-        /// Text1 控件。
+        /// txtA_password 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText Text1;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText txtA_password;
     }
 }

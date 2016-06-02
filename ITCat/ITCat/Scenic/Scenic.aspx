@@ -42,7 +42,7 @@
                             <div class="mp-description-onesentence" id="attractionsSynopsis">风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美风景秀美。</div>
                             <div class="mp-description-location">
 
-                                <span class="mp-description-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;位      置：</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="mp-description-title">&nbsp;位置：</span>&nbsp;
                                 <span class="mp-description-address" id="attractionsAddress" title="江西省九江市庐山区">江西省九江市庐山区</span>
                                 <a class="ditu">查看地图</a>
                             </div>
@@ -249,8 +249,19 @@
         var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
         return icon;
     }
-    
     initMap();//�����ͳ�ʼ����ͼ
+
+    function GetQueryString(name) {
+
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+
+        var r = window.location.search.substr(1).match(reg);
+
+        if (r != null) return unescape(r[2]); return null;
+
+    }
+    alert(GetQueryString("AttractionsID"));
+
     window.onload = function () {
        
         var i = 17536;
@@ -259,7 +270,7 @@
            "../Handler/GetimgHandler.ashx",
 
       {
-          txtGetimgID: 17536,
+          txtGetimgID: 17536
 
       },
          function (data) {
@@ -279,7 +290,6 @@
 
                  $("#ImagePath5").attr('src', obj.browse[4].imagePath);
 
-
                  addMarker();
 
                  
@@ -295,7 +305,7 @@
             "../Handler/SceniSpot2Handler.ashx",
 
        {
-           txtScenics2potID: 17536,
+           txtScenics2potID: 17536
 
        },
           function (data) {
@@ -325,7 +335,7 @@
             "../Handler/SceniSpotHandler.ashx",        
 
        {
-           txtScenicspotID: 17536,  
+           txtScenicspotID: 17536
 
        },      
         function (data) {
