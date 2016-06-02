@@ -1,5 +1,35 @@
-﻿//easyui日历控件
+﻿//票量选择器
+$('#ss').spinner({
+    required: true,
+    increment: 1,
+    width: '50%',
+    min: '0',
+});
 
+//验证姓名
+$('#Name').validatebox({
+    required: true,
+    validType: 'length[2,10]',
+    missingMessage:'请输入您的姓名',
+    invalidMessage:'输入错误，请重新输入',
+});
+   
+
+//验证手机号码
+$('#Tel').validatebox({
+    required: true,
+    validType: 'length[11,11]',
+    missingMessage: '请输入您的手机号码',
+    invalidMessage: '输入错误，请重新输入',
+});
+
+//验证邮箱
+$('#Email').validatebox({
+    required: true,
+    validType: 'email',
+    missingMessage:'请输入您的邮箱',
+    invalidMessage: '输入错误，请重新输入',
+});
 
 //百度地图API功能
     var map = new BMap.Map("allmap");
