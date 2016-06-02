@@ -44,7 +44,7 @@
 
                                 <span class="mp-description-title">&nbsp;位置：</span>&nbsp;
                                 <span class="mp-description-address" id="attractionsAddress" title="江西省九江市庐山区">江西省九江市庐山区</span>
-                                <a class="ditu">查看地图</a>
+                                <a class="ditu" href="#contact">查看地图</a>
                             </div>
                             <div class="mp-description-price" style="display: block;">
                               <span class="mp-description-qunar-price"><em id="startat1">$26</em>"起"</span>
@@ -59,7 +59,7 @@
                    <ul>
                      <li><a href="#home" name="home">门票预订</a></li>
                      <li><a href="#news" >特色看点</a></li>
-                     <li><a href="#contact">交通位置</a></li>
+                     <li><a href="#policy">优惠政策</a></li>
                      <li><a href="#about">同城推荐</a></li>
                   </ul>                    
                </div>
@@ -121,8 +121,9 @@
             <img width="990px" height="390px" src="<%--images/dcbbbbb.jpg--%>" id="ImagePath4" />
             <div class="mp-description-onesentence" id="ImgDescription4"><%--三叠泉:位于五老峰下部，飞瀑流经的峭壁有三级，溪水分三叠泉飞泻而下，落差共155米，极为壮观，撼人魂魄，风景优美。--%></div>
         </div>
+        <div class="policy" id="policy"> 
         <div class="mp-descr">
-          <div class="mp-description-towtxt">
+          <div class="mp-description-towtxt" >
             <div class="mp-descrone" id="txtFreePolicy ">
                 <p>免费政策</p>
                 <p>1.身高1.4米以下儿童免票；</p>
@@ -136,6 +137,7 @@
             </div>
          </div>
         </div>
+            </div>
         <div name="contact" id="contact"><h2>地图交通</h2></div>
         <div class="mp-descriptio" id="txtScenicspotMap "> <!--�ٶȵ�ͼ����-->
         <div style="width:1190px;height:521px;border:#ccc solid 1px;" id="dituContent"></div>
@@ -194,7 +196,7 @@
     }
     
     //��ע������
-    var markerArr = [{title:"欢迎来到庐山",content:"联系电话：12345678900",point:"115.995818|29.677338",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+    var markerArr = [{title:"",content:"",point:"",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
 		 ];
     //����marker
     function addMarker(){
@@ -260,7 +262,7 @@
         if (r != null) return unescape(r[2]); return null;
 
     }
-    alert(GetQueryString("AttractionsID"));
+    
 
     window.onload = function () {
        
@@ -270,7 +272,7 @@
            "../Handler/GetimgHandler.ashx",
 
       {
-          txtGetimgID: 17536
+          txtGetimgID: GetQueryString("AttractionsID")
 
       },
          function (data) {
@@ -305,7 +307,7 @@
             "../Handler/SceniSpot2Handler.ashx",
 
        {
-           txtScenics2potID: 17536
+           txtScenics2potID: GetQueryString("AttractionsID")
 
        },
           function (data) {
@@ -335,7 +337,7 @@
             "../Handler/SceniSpotHandler.ashx",        
 
        {
-           txtScenicspotID: 17536
+           txtScenicspotID: GetQueryString("AttractionsID")
 
        },      
         function (data) {
@@ -348,12 +350,14 @@
                 $("#attractionsLevel").html(obj.browse[0].AttractionsLevel);
                 $("#price").html(obj.browse[0].Price);
                 $("#").html(obj.browse[0].AttractionsContact);
+                $("#").html(obj.browse[0].Point);
 
                
-                markerArr = [{ title: obj.browse[0].AttractionsName, content: obj.browse[0].AttractionsContact, point: "115.995818|29.677338", isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
+                markerArr = [{ title: obj.browse[0].AttractionsName, content: obj.browse[0].AttractionsContact, point: obj.browse[0].Point, isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
                 ];
 
-               addMarker();
+                alert(markerArr);
+                addMarker();
 
 
             }

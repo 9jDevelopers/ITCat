@@ -91,6 +91,8 @@
     <Content Include="Account\Recover\Recover.html" />
     <Content Include="Account\Recover\Recover.js" />
     <Content Include="Account\Register\js\register.js" />
+    <Content Include="Appraise\Appraiseaspx.aspx" />
+    <Content Include="Appraise\cs\Appraise.css" />
     <Content Include="BuyTicket1\js\BuyTicket.js" />
     <Content Include="BuyTicket1\css\BuyTicket1.css" />
     <Content Include="BuyTicket1\BuyTicket1.aspx" />
@@ -524,6 +526,13 @@
     <Compile Include="Account\PersonalCenter\Pim.aspx.designer.cs">
       <DependentUpon>Pim.aspx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Appraise\Appraiseaspx.aspx.cs">
+      <DependentUpon>Appraiseaspx.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Appraise\Appraiseaspx.aspx.designer.cs">
+      <DependentUpon>Appraiseaspx.aspx</DependentUpon>
+    </Compile>
     <Compile Include="BuyTicket1\BuyTicket1.aspx.cs">
       <DependentUpon>BuyTicket1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -631,6 +640,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Account\Login\images\" />
+    <Folder Include="Appraise\js\" />
     <Folder Include="Management\administrator\Register\css\" />
   </ItemGroup>
   <ItemGroup>

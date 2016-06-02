@@ -1,18 +1,5 @@
 ﻿
 var count = 0;
-//$(document).ready(function () {
-//    $("#btnimage").click(function () {
-//        if (count == 2) {
-//            $("#btnimage").css("display", "none") //隐藏，不能点击
-//        }
-
-//        count = count + 1;
-
-//        //执行代码
-
-//    });
-
-//});
 
 function test() {
  
