@@ -7,7 +7,7 @@ using System.Web.SessionState;
 
 namespace iTCat.Handler
 {
-    /// <summary>
+    /// <summary>  
     /// PimImage 的摘要说明
     /// </summary>
     public class PimImage : IHttpHandler,IRequiresSessionState
