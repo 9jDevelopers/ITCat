@@ -14,6 +14,7 @@
     <script src="../../../Public/js/jquery.easyui.min.js"></script>
     <script src="../../../NewAttractions/js/jquery-2.1.1.min.js"></script>
     <script src="../../NewAttractions/js/validation.js"></script>
+    <script src="../Register/js/ARegister.js"></script>
 </head>
 <body>
     <form id="form1">

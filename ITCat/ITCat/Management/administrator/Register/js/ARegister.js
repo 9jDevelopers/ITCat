@@ -11,14 +11,14 @@
             Manager_User: $("#txtManager_User").val(),
             Manager_password: $("#txtManager_password").val(),           
         },
-         function (data) {
-             if (data == "1") {
-                 alert("提交成功");
-             }
-             else {
-                 alert("提交失败");
-             }
-         }
+          function (data) {
+              if (data == "1") {
+                  alert("注册成功");
+              }
+              else {
+                  alert("该用户已注册");
+              }
+          }
         );
      }
              )
@@ -30,19 +30,20 @@ function submitlogin() {
      function () {
          alert("1");
          $.post(
-             "../../../Handler/ARegisterHandler.ashx",
+             "../../../Handler/ALoginHandler.ashx",
         {
             A_ID: $("#txtA_ID").val(),
             A_password: $("#txtA_password").val(),
         },
-         function (data) {
-             if (data == "1") {
-                 alert("提交成功");
-             }
-             else {
-                 alert("提交失败");
-             }
-         }
+        function (data) {
+            if (data ==0) {
+                alert("登录成功");
+            }
+            else {
+                alert("登录失败");
+            }
+        }
+        
         );
      }
              )

@@ -19,7 +19,7 @@ namespace Model.DAL
             db.AddInParameter(cmd, "@ManagerPhone", DbType.String, managerPhone);
             db.AddInParameter(cmd, "@ManagerUser", DbType.String, managerUser);
             db.AddInParameter(cmd, "@ManagerPassword", DbType.String, managerPassword);
-
+            db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
             db.ExecuteNonQuery(cmd);
 
 
@@ -36,17 +36,17 @@ namespace Model.DAL
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetStoredProcCommond("sp_ALogin");
-            db.AddInParameter(cmd, "@ManagerName", DbType.String, AName);         
+            db.AddInParameter(cmd, "@ManagerUser", DbType.String, AName);         
             db.AddInParameter(cmd, "@ManagerPassword", DbType.String, APassword);
-
+            db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
             db.ExecuteNonQuery(cmd);
 
-            string result = cmd.Parameters["@retValue"].Value.ToString();
+            string re = cmd.Parameters["@retValue"].Value.ToString();
 
-            if (result == "-1")
+            if (re == "-1")
                 return "-1";
             else
-                return result;
+                return re;
             
                 //管理员登录成功        
         }
