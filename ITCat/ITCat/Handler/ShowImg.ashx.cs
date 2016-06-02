@@ -19,10 +19,19 @@ namespace iTCat.Handler
             string AttractionsID= context.Request["AttractionsID"];
             string result = bi.GetImage(AttractionsID);
             string Path = context.Server.MapPath(result);
-            FileStream fs = new FileStream(Path, FileMode.Open); 
+            FileStream fs = new FileStream(Path, FileMode.Open);
             byte[] byData = new byte[fs.Length];
-            fs.Read(byData, 0, byData.Length);
-            fs.Close();
+            try
+            {
+                fs.Read(byData, 0, byData.Length);
+            }
+            catch(Exception ex)
+            {
+            }
+            finally
+            {
+                fs.Close();
+            }
 
             context.Response.BinaryWrite(byData);
 

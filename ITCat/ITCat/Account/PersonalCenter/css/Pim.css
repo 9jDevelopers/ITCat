@@ -73,8 +73,8 @@
     border-width:0.5px;
     margin-top:50px;
     margin-left:100px;
-    width:280px;
-    height:280px;
+     height:280px;
+     width:280px;
     border-style:dashed;
     border-bottom-color:#CDCDB4;
      
@@ -89,6 +89,7 @@
 .im {
     margin-left: 0px;
     margin: 0 auto;
+    width:280px;
     height:280px;
     background-size:280px 280px;
 }

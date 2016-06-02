@@ -54,7 +54,7 @@
          <table>
             <tr>
                 <td class ="The_title">*管理员密码:</td> 
-                <td  class="Textbox"><input class="easyui-validatebox textbox"
+                <td  class="Textbox"><input class="easyui-validatebox " type="password"
                      data-options="missingMessage:'请输入密码' ,prompt:'验证完成.',required:true, validType:'PasswordLength[5,10]'"
                      id="txtManager_password" /></td>
             </tr>
@@ -64,8 +64,8 @@
          <table>
             <tr>
                 <td class ="The_title">*重复密码:</td> 
-                <td  class="Textbox"><input class="easyui-validatebox textbox"
-                     data-options="missingMessage:'请输入密码' ,prompt:'验证完成.',invalidMessage:'密码不一致',required:true, validType:'equals[#Manager_password]'"
+                <td  class="Textbox"><input type="password" class="easyui-validatebox"  required="required" 
+                    missingMessage="请重复输入密码"  prompt="验证完成" validtype="equalss['#txtManager_password']"
                      id="txtRepeat_password" /></td>
             </tr>
             </table>

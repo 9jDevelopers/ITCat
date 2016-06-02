@@ -25,7 +25,7 @@ namespace iTCat.Handler
                 if (bt.ARegister(ManagerName, ManagerPhone, ManagerUser, ManagerPassword))
                 {
                     context.Response.Write(1);
-                }
+                }                                          
                 else
                 {
                     context.Response.Write(0);

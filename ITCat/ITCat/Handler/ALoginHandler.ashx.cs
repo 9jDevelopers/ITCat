@@ -25,13 +25,14 @@ namespace iTCat.Handler
                     {
                         context.Response.Write(-1);
                     }
-                    else
-                    {
-                        context.Session["userID"] = result;
-                        context.Session["userName"] = AName;
-                    }
-                
-                
+                else
+                {
+                    context.Response.Write(0);
+                    //context.Session["ManagerID"] = result;
+                    //context.Session["ManagerUser"] = AName;
+                }
+
+
             }
         }
 

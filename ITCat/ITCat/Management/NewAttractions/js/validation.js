@@ -156,7 +156,7 @@ $.extend($.fn.validatebox.defaults.rules, {
 });
 //重复密码验证
 $.extend($.fn.validatebox.defaults.rules, {
-    equals: {
+    equalss: {
         validator: function (value, param) {
             return value == $(param[0]).val();
         },
