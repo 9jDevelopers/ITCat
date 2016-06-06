@@ -1,10 +1,39 @@
-﻿//票量选择器
-$('#ss').spinner({
+﻿//出发时间选择
+$(function () {
+    $('#dd').datebox().datebox('calendar').calendar({
+        validator: function (date) {
+            var now = new Date();
+            var d1 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            var d2 = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 10);
+            return d1 <= date && date <= d2;
+        }
+    });
+});
+
+//票量选择器
+$('#AdultNumSpin').numberspinner({
+    required: true,
+    increment: 1,
+    min: 0,
+});
+
+$('#ChildNumSpin').numberspinner({
+    required: true,
+    increment: 1,
+    min: 0,
+});
+
+
+
+/* $('#ss').spinner({
+    editable: false,
     required: true,
     increment: 1,
     width: '50%',
     min: '0',
+    missingMessage:'请输入您需要购买的票数',
 });
+*/
 
 //验证姓名
 $('#Name').validatebox({

@@ -54,12 +54,12 @@
                <label>出游人数:</label>
                 <!--按钮增删票数-->
                <div id="AdultTicketNum">              
-                     <input id="ss" value="0" />              
+                     <input class="easyui-numberspinner"  id="AdultNumSpin"  style="width:50%;" />              
                    <label>成人票</label>
                 </div>
                 
                 <div id="ChildTicketNum">
-                     <input class="easyui-numberspinner" style="width:50%"> 
+                     <input class="easyui-numberspinner"  id="ChildNumSpin"  style="width:50%"> 
                    <label>儿童票</label>
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -233,21 +233,5 @@
     <script src="../Public/js/jquery.easyui.min.js"></script>
     <script src="js/BuyTicket.js"></script>
 
-    <script type="text/javascript">
-    $(function () {
-    $('#dd').datebox().datebox('calendar').calendar({
-        validator: function (date) {
-            var now = new Date();
-            var d1 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-            var d2 = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 10);
-            return d1 <= date && date <= d2;
-        }
-    });
-    });
-
- 
-
-
-   </script>
 </body>
 </html>
