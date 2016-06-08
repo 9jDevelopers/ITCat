@@ -28,8 +28,7 @@ namespace iTCat.Handler
                 else
                 {
                     context.Response.Write(0);
-                    //context.Session["ManagerID"] = result;
-                    //context.Session["ManagerUser"] = AName;
+                   
                 }
 
 
