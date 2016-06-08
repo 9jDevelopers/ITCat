@@ -292,7 +292,6 @@
 
                  $("#ImagePath5").attr('src', obj.browse[4].imagePath);
 
-                 addMarker();
 
                  
              }
@@ -320,8 +319,6 @@
                   $("#ticketsName2").html(obj.browse[1].TicketsName);
                   $("#price2").html(obj.browse[1].Price);
                   $("#startat2").html(obj.browse[1].Startat);
-
-                  addMarker();
 
                 
               }
@@ -356,8 +353,6 @@
                 markerArr = [{ title: obj.browse[0].AttractionsName, content: obj.browse[0].AttractionsContact, point: obj.browse[0].Point, isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
                 ];
 
-                alert(markerArr);
-                addMarker();
 
 
             }

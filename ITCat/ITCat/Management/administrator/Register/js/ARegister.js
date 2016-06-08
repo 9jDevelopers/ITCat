@@ -27,8 +27,7 @@
 function submitlogin() {
     $('#ff').form('submit',
     $("#submitlogin").click(
-     function () {
-         alert("1");
+     function () {      
          $.post(
              "../../../Handler/ALoginHandler.ashx",
         {
