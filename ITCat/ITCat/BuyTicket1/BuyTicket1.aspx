@@ -107,7 +107,7 @@
                     <!--手机号-->
                     <div class="Info_TelPhone">
                         <label class="LabelTel">手机号：&nbsp;&nbsp;&nbsp;</label>
-                       <input id="Tel"  data-options="validType:'minLength[11]'" />
+                       <input id="Tel"  />
                     </div>
                     <!--电子邮件-->
                     <div class="Info_Email">

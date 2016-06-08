@@ -54,8 +54,9 @@ $('#Name').validatebox({
 //验证手机号码
 $('#Tel').validatebox({
     required: true,
+    validType:'minLength[11]',
     missingMessage: '请输入您的手机号码',
-    invalidMessage: '输入错误，请重新输入',  
+    invalidMessage: '输入错误，请重新输入',
 });
 
 //验证邮箱
@@ -65,13 +66,12 @@ $('#Email').validatebox({
     missingMessage:'请输入您的邮箱',
     invalidMessage: '输入错误，请重新输入',
 });
-//设定最少输入字符，用于验证
+//定义最少输入字符，用于验证
 $.extend($.fn.validatebox.defaults.rules, {
     minLength: {
         validator: function (value, param) {
             return value.length >= param[0];
         },
-        missingMessage:'输入错误，请重新输入',
     }
 
 });
