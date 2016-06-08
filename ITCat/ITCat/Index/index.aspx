@@ -11,7 +11,6 @@
 
     <!-- Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="../Nav/nav.js"></script>
 </head>
 <body>
     <!--#include virtual="../Nav/nav.html" -->
@@ -235,6 +234,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="../Public/js/jquery-2.2.3.js"></script>
     <script src="js/Index.js"></script>
+    <script src="../Nav/nav.js"></script>
+
 
 </body>
 </html>
