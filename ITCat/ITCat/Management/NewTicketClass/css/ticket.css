@@ -1,11 +1,40 @@
-﻿body
-{
+﻿body {
+}
+.center {
+    margin-left:550px; 
    
 }
+h1 {font-size: 200%}
 .easyui-textbox {
-    Height: 8%;
     Width: 40%;
     margin: 0;
     padding: 0 2px;
     box-sizing: content-box;
+}
+
+.The_title {
+    float: left;
+    height: 50px;
+    width: 505px;
+    margin-right: 10px;
+    color: #4f4f4f;
+    text-align: right;
+    font-size: 14px;
+}
+.Textbox {
+        float: left;
+    height: 50px;
+    width: 255px;
+}
+.Textbox input{
+    height: 20px;
+    width: 255px;
+}
+.textbox{
+    width: 239px;
+    height: 20px;
+    padding: 5px 3px;
+}
+.linkbutton {   
+  margin-left:550px;      
 }
