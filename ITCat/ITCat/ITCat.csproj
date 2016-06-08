@@ -93,6 +93,8 @@
     <Content Include="Account\Register\js\register.js" />
     <Content Include="Appraise\Appraiseaspx.aspx" />
     <Content Include="Appraise\cs\Appraise.css" />
+    <Content Include="Appraise\img\1.png" />
+    <Content Include="Appraise\img\16fdd1448b3164f7.jpg_r_390x260x90_f9a01e23.jpg" />
     <Content Include="BuyTicket1\js\BuyTicket.js" />
     <Content Include="BuyTicket1\css\BuyTicket1.css" />
     <Content Include="BuyTicket1\BuyTicket1.aspx" />
@@ -116,7 +118,7 @@
     <Content Include="Index\img\1920x500.gif" />
     <Content Include="Index\img\400X200.gif" />
     <Content Include="Index\img\40X40.gif" />
-    <Content Include="Index\index.html" />
+    <Content Include="Index\index.aspx" />
     <Content Include="Index\js\bootstrap.min.js" />
     <Content Include="Index\js\Index.js" />
     <Content Include="Index\js\jquery-1.11.2.min.js" />
@@ -150,6 +152,9 @@
     <Content Include="Management\NewTicketClass\css\ticket.css" />
     <Content Include="Management\NewTicketClass\js\NewTicketClass.js" />
     <Content Include="Management\NewTicketClass\NewTicketClass.aspx" />
+    <Content Include="Nav\nav.css" />
+    <Content Include="Nav\nav.html" />
+    <Content Include="Nav\nav.js" />
     <Content Include="Public\icomoon\fonts\icomoon.eot" />
     <Content Include="Public\icomoon\fonts\icomoon.ttf" />
     <Content Include="Public\icomoon\fonts\icomoon.woff" />
@@ -600,6 +605,13 @@
     </Compile>
     <Compile Include="Handler\transferpimone.ashx.cs">
       <DependentUpon>transferpimone.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Management\administrator\Login\AdministratorLogin.aspx.cs">
       <DependentUpon>AdministratorLogin.aspx</DependentUpon>

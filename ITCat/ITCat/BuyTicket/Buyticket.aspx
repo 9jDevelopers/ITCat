@@ -32,7 +32,7 @@
         <div class="navigate" style="clear:both">
             <ul class="navigation">
                 <li class="item">
-                    <a href="../Index/index.html" target="_blank" rel="nofollow" class="a-tag">
+                    <a href="../Index/index.aspx" target="_blank" rel="nofollow" class="a-tag">
                         <div class="name">首页</div>
                     </a>
                 </li>

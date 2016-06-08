@@ -14,11 +14,13 @@
     <script src="../../Public/js/jquery.easyui.min.js"></script> 
     <script src="js/Pim.js"></script>
     <script src="js/tijiao.js"></script>
+    <link href="../../Nav/nav.css" rel="stylesheet" />
    <%-- <script src="js/ajaxupload.3.9.js"></script>--%>
+    <script src="../../Nav/nav.js"></script>
    
 </head>
 <body>
-  
+   <!--#include virtual="../../Nav/nav.html" -->
     <div class="wz ">个人资料设置</div>
     <form id="frmMain">
 
