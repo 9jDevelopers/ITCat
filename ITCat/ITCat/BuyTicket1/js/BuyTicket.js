@@ -15,13 +15,19 @@ $('#AdultNumSpin').numberspinner({
     required: true,
     increment: 1,
     min: 0,
+    max:100,
+    missingMessage:'请选择票的数量',
 });
 
 $('#ChildNumSpin').numberspinner({
     required: true,
     increment: 1,
     min: 0,
+    max: 100,
+    missingMessage: '请选择票的数量',
 });
+
+
 
 
 
@@ -40,14 +46,15 @@ $('#Name').validatebox({
     required: true,
     validType: 'length[2,10]',
     missingMessage:'请输入您的姓名',
-    invalidMessage:'输入错误，请重新输入',
+    invalidMessage: '输入错误，请重新输入',
+   
 });
    
 
 //验证手机号码
 $('#Tel').validatebox({
     required: true,
-    validType: 'length[11,11]',
+    validType:'minLength[11]',
     missingMessage: '请输入您的手机号码',
     invalidMessage: '输入错误，请重新输入',
 });
@@ -59,6 +66,17 @@ $('#Email').validatebox({
     missingMessage:'请输入您的邮箱',
     invalidMessage: '输入错误，请重新输入',
 });
+//定义最少输入字符，用于验证
+$.extend($.fn.validatebox.defaults.rules, {
+    minLength: {
+        validator: function (value, param) {
+            return value.length >= param[0];
+        },
+    }
+
+});
+
+
 
 //百度地图API功能
     var map = new BMap.Map("allmap");

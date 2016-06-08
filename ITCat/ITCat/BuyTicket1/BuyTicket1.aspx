@@ -6,7 +6,6 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=L6XIsG1aAA4RE4doBEGEIt2s230iN1b9"></script>
-    <script async src="http://c.cnzz.com/core.php"></script>
     <title>购票</title>
     <!--引用css begin-->
     <link href="../Public/icomoon/fontIconStyle.css" rel="stylesheet" />
@@ -54,12 +53,12 @@
                <label>出游人数:</label>
                 <!--按钮增删票数-->
                <div id="AdultTicketNum">              
-                     <input class="easyui-numberspinner"  id="AdultNumSpin"  style="width:50%;" />              
+                     <input class="easyui-numberspinner"  id="AdultNumSpin"  style="width:50%;"  />              
                    <label>成人票</label>
                 </div>
                 
                 <div id="ChildTicketNum">
-                     <input class="easyui-numberspinner"  id="ChildNumSpin"  style="width:50%"> 
+                     <input class="easyui-numberspinner"  id="ChildNumSpin"  style="width:50%"   /> 
                    <label>儿童票</label>
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -108,7 +107,7 @@
                     <!--手机号-->
                     <div class="Info_TelPhone">
                         <label class="LabelTel">手机号：&nbsp;&nbsp;&nbsp;</label>
-                       <input id="Tel"/>
+                       <input id="Tel"  />
                     </div>
                     <!--电子邮件-->
                     <div class="Info_Email">
