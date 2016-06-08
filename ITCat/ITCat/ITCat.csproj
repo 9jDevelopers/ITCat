@@ -93,6 +93,8 @@
     <Content Include="Account\Register\js\register.js" />
     <Content Include="Appraise\Appraiseaspx.aspx" />
     <Content Include="Appraise\cs\Appraise.css" />
+    <Content Include="Appraise\img\1.png" />
+    <Content Include="Appraise\img\16fdd1448b3164f7.jpg_r_390x260x90_f9a01e23.jpg" />
     <Content Include="BuyTicket1\js\BuyTicket.js" />
     <Content Include="BuyTicket1\css\BuyTicket1.css" />
     <Content Include="BuyTicket1\BuyTicket1.aspx" />
