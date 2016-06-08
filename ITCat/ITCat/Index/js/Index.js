@@ -2,8 +2,8 @@
 $(function ()
 {
     //页面加载完成执行
-    
-
+    $(document).ready(function ()
+    {
         $.post("/Handler/IndexHandler.ashx",
                 //参数
                 {},
