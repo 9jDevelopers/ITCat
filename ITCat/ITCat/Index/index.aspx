@@ -1,6 +1,9 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="iTCat.Index.index" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,39 +11,9 @@
 
     <!-- Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.css">
-
 </head>
 <body>
-    <nav>
-        <div class="container">
-
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                <a class="navbar-brand" href="#">LOGO</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li id="Login" class="active"><a href="../Account/Login/Login.html">登陆<span class="sr-only">(current)</span></a> </li>
-                    <li id="Register"><a href="../Account/Register/Register.html">注册</a> </li>
-                </ul>
-                <form class="navbar-form navbar-right" role="search" action="http://www.baidu.com/baidu" target="_blank">
-                    <div class="form-group">
-                        <input type="text" name=word class="form-control" placeholder="请输入要搜索的内容">
-                    </div>
-                    <button type="submit" class="btn btn-default">百度搜索</button>
-                </form>
-                <ul class="nav navbar-nav navbar-right hidden-sm">
-                    <li id="Pim"><a href="../Account/PersonalCenter/Pim.aspx">个人中心</a></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
+    <!--#include virtual="../Nav/nav.html" -->
 
     <div class="container">
         <div class="row">
@@ -261,6 +234,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="../Public/js/jquery-2.2.3.js"></script>
     <script src="js/Index.js"></script>
+    <script src="../Nav/nav.js"></script>
+
 
 </body>
 </html>

@@ -4,23 +4,6 @@ $(function ()
     //页面加载完成执行
     $(document).ready(function ()
     {
-        $.post("/Handler/SessionHandler.ashx",
-                {},
-                function (data)
-                {
-                    if (data == -1)
-                    {
-                        $("#Pim").hide();
-                    }
-                    else
-                    {
-                        $("#Login").hide();
-                        $("#Register").hide();
-                    }
-
-                }
-                );
-
         $.post("/Handler/IndexHandler.ashx",
                 //参数
                 {},

@@ -18,7 +18,7 @@
 </head>
 <body>
     <form  id="ff" method="post" >
-       
+       <div class="within">
     <div class="Main_title"><h1>新建景点</h1></div>
         <div>
          <table>
@@ -40,7 +40,8 @@
         </div>
         <div>
              <table>
-               <tr> <td class ="The_title">*景点标题:</td><td class="Textbox">
+               <tr> <td class ="The_title">*景点标题:</td>
+                   <td class="Textbox">
                    <input class="easyui-validatebox textbox"
                      data-options=" missingMessage:'请输入景点标题' ,prompt:'验证完成.',invalidMessage:'请输入8个以上中文字',required:true,validType:'ChineseLength[8]'"
                         id="txtAttractions_title" /></td> </tr> 
@@ -51,7 +52,7 @@
            <table>
             <tr>
                 <td class ="The_title">*景点级别:</td>
-               <td>
+               <td class ="Level">
                     <select id="cc" style="width:150px"></select>
                    <div id="sp">
                     <div style="color:#99BBE8;background:#fafafa;padding:5px;">以下是选择景点的级别</div>
@@ -73,7 +74,7 @@
               <tr>
                 <td class ="The_title">*景点地址:</td>
                 <td class="Textbox_one">
-                    <input class="easyui-textbox" 
+                    <input class="easyui-textbox  textbox" 
                      id="AddressTextBox" data-options="prompt:'请填写景点的省份,市，区，县（包括镇）',validType:'Lenght[10,30]'"/></td>
               </tr>
             </table>
@@ -84,7 +85,8 @@
                 <td class ="The_title">*景点地图坐标:</td>
                 <td class="Textbox_one">
                     <input  class="easyui-validatebox textbox"
-                     id="txtPoint" data-options="missingMessage:'请输入景点坐标,如115.995818 | 29.677338格式' ,prompt:'请填写景点的坐标',prompt:'验证完成.',invalidMessage:'请输入正确的坐标格式',required:true,validType:'StringLength[20,20]'"/></td>
+                     id="txtPoint" data-options="missingMessage:'请输入景点坐标,如115.995818 | 29.677338格式' ,prompt:'请填写景点的坐标',prompt:'验证完成.',invalidMessage:'请输入正确的坐标格式',required:true,validType:'StringLength[20,20]'"/>
+                </td>
               </tr>
             </table>
         </div>
@@ -93,7 +95,7 @@
               <tr>
                 <td class ="The_title">*开放时间:</td>
                 <td  class="Textbox_one">
-                    <input class="easyui-textbox" runat="server"
+                    <input class="easyui-textbox textbox" runat="server"
                      id="OpenTimeTextBox" data-options="prompt:'请填写景点的开放时间，包括年月日都必填',validType:'Lenght[10,30]'" /></td>
             </tr>
             </table>
@@ -135,7 +137,7 @@
             <tr>
                 <td class ="The_title">*景点简介:</td>
                 <td  class="Textbox_one">
-                    <input class="easyui-textbox" data-options="prompt:'请填写景点的介绍内容和概括描述',validType:'Lenght[20,40]'"
+                    <input class="easyui-textbox textbox" data-options="prompt:'请填写景点的介绍内容和概括描述',validType:'Lenght[20,40]'"
                     id="IntroduceTextBox" runat="server" />
 
                 </td>
@@ -146,7 +148,7 @@
              <table>
             <tr>
                 <td class ="The_title">*联系方式:</td>
-                <td class="Textbox_one"><input class="easyui-textbox" runat="server"
+                <td class="Textbox_one"><input class="easyui-textbox textbox" runat="server"
                     id="Contact" data-options="prompt:'请填写景点客服的联系方式',validType:'Lenght[11]'" /></td>
             </tr>
             </table>
@@ -157,31 +159,23 @@
                 <td class ="The_title">*注释:      
                 </td>
                 <td class="Textbox_one">&nbsp;&nbsp;<input  id="NoteAttractions" runat="server"
-                    class="easyui-textbox" data-options="prompt:'请填写景点注意事项和说明',validType:'Lenght[20,30]'" /></td>
+                    class="easyui-textbox textbox" data-options="prompt:'请填写景点注意事项和说明',validType:'Lenght[20,30]'" /></td>
             </tr>
             </table>
         </div>
        
-        <div>
+        <div class="linkbutton">
             <table>
              <tr>
-                <td>
-                    <a href="javascript:NewAttractions" class="easyui-linkbutton" id="submitForm" onclick="submitForm()">提交</a>                   
+                <td >
+                    <a href="javascript:NewAttractions" class="easyui-linkbutton btn-yellow" id="submitForm" onclick="submitForm()">提交</a>                   
                     <input  runat="server" height="36px" style="margin-top: 0px"  value="重置" type="submit"  width="72px" />
                 </td>
              </tr> 
             </table> 
-        </div>          
+        </div> 
+        </div>         
     </form>
-    <style scoped="scoped">
-		.easyui-textbox{
-			Height:8%;
-           Width:40%;
-			margin:0;
-			padding:0 2px;
-			box-sizing:content-box;
-		}
-     </style>
     <script>  
         var button1 = $('#btnUp1');
         var image1 = $('#ig1');

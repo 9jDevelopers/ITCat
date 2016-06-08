@@ -1,4 +1,4 @@
-﻿/// <reference path="C:\Users\CAT\Source\Repos\ITCat\ITCat\ITCat\Index/index.html" />
+﻿/// <reference path="C:\Users\CAT\Source\Repos\ITCat\ITCat\ITCat\Index/index.aspx" />
 $(function ()
 {
     //给ID为btn-login的标签设置点击事件
@@ -33,7 +33,7 @@ $(function ()
                     }
                     else 
                     {
-                        window.location = "/Index/index.html";
+                        window.location = "/Index/index.aspx";
                     }
                     
                 }
