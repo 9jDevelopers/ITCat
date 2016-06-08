@@ -6,6 +6,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>景点</title>
+    <link href="../Nav/nav.css" rel="stylesheet" />
+    <script type="../Nav/nav.js"></script>
     <link href="css/Scenic.css" rel="stylesheet" />  
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 <meta name="keywords" content="�ٶȵ�ͼ,�ٶȵ�ͼAPI���ٶȵ�ͼ�Զ��幤�ߣ��ٶȵ�ͼ���������ù���" />
@@ -20,6 +22,7 @@
 <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
 <body onload="javascript:Scenic"id="submitForm">
+    <a href="../Nav/nav.html">../Nav/nav.html</a> 
     <form id="form1" runat="server">
         <div>
             <div class="mp-description pngfix ">
@@ -196,7 +199,7 @@
     }
     
     //��ע������
-    var markerArr = [{title:"",content:"",point:"",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+    var markerArr = [{ title: "欢迎来到黄山", content: "15279213214", point: "118.144226|30.187870", isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
 		 ];
     //����marker
     function addMarker(){
@@ -350,9 +353,9 @@
                 $("#").html(obj.browse[0].Point);
 
                
-                markerArr = [{ title: obj.browse[0].AttractionsName, content: obj.browse[0].AttractionsContact, point: obj.browse[0].Point, isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
+                markerArr = [{ title: "111", content:"2222222222222", point: obj.browse[0].Point, isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
                 ];
-
+                addMarker();
 
 
             }
