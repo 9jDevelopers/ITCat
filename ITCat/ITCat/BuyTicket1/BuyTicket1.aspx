@@ -54,12 +54,12 @@
                <label>出游人数:</label>
                 <!--按钮增删票数-->
                <div id="AdultTicketNum">              
-                     <input class="easyui-numberspinner" style="width:50%">                
+                     <input class="easyui-numberspinner"  id="AdultNumSpin"  style="width:50%;" />              
                    <label>成人票</label>
                 </div>
                 
                 <div id="ChildTicketNum">
-                     <input class="easyui-numberspinner" style="width:50%"> 
+                     <input class="easyui-numberspinner"  id="ChildNumSpin"  style="width:50%"> 
                    <label>儿童票</label>
                 </div>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -102,18 +102,18 @@
                     <div class="InputInfo">
                     <!--姓名-->
                     <div class="Info_Name">
-                        <label class="LabelName">姓名：</label>
-                        <input class="easyui-validatebox textbox" data-options="prompt:'请输入姓名.',required:true,validType:'length[2,10]'">
+                        <label class="LabelName">姓名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input id="Name"  />
                     </div>
                     <!--手机号-->
                     <div class="Info_TelPhone">
-                        <label class="LabelTel">手机号：</label>
-                        <input class="easyui-validatebox textbox" data-options="prompt:'请输入你的手机号.',required:true,validType:'length[11]'">
+                        <label class="LabelTel">手机号：&nbsp;&nbsp;&nbsp;</label>
+                       <input id="Tel"/>
                     </div>
                     <!--电子邮件-->
                     <div class="Info_Email">
-                          <label class="LabelEmail">电子邮箱</label>
-                        <input class="easyui-validatebox textbox" data-options="prompt:'输入你的邮箱地址.',required:true,validType:'email'">
+                          <label class="LabelEmail">电子邮箱：</label>
+                        <input id="Email"/>
                     </div>
                     <div class="Info_Hint">
                        <p>您的邮箱将收到加盖公章的合同,您也可以在个人中心查看和下载您的合同。</p>
@@ -229,20 +229,9 @@
   </div>
     
     <!--begin JS引用-->
-    <script src="js/BuyTicket.js"></script>
     <script src="../Public/js/jquery.min.js"></script>
     <script src="../Public/js/jquery.easyui.min.js"></script>
-    <script type="text/javascript">
-    $(function () {
-    $('#dd').datebox().datebox('calendar').calendar({
-        validator: function (date) {
-            var now = new Date();
-            var d1 = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-            var d2 = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 10);
-            return d1 <= date && date <= d2;
-        }
-    });
-});
-   </script>
+    <script src="js/BuyTicket.js"></script>
+
 </body>
 </html>
