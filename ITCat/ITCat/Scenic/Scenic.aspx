@@ -196,7 +196,7 @@
     }
     
     //��ע������
-    var markerArr = [{title:"",content:"",point:"",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+    var markerArr = [{ title: "欢迎来到黄山", content: "15279213214", point: "118.144226|30.187870", isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
 		 ];
     //����marker
     function addMarker(){
@@ -350,9 +350,9 @@
                 $("#").html(obj.browse[0].Point);
 
                
-                markerArr = [{ title: obj.browse[0].AttractionsName, content: obj.browse[0].AttractionsContact, point: obj.browse[0].Point, isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
+                markerArr = [{ title: "111", content:"2222222222222", point: obj.browse[0].Point, isOpen: 0, icon: { w: 21, h: 21, l: 0, t: 0, x: 6, lb: 5 } }
                 ];
-
+                addMarker();
 
 
             }
