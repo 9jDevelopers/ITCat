@@ -6,6 +6,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>景点</title>
+    <link href="../Nav/nav.css" rel="stylesheet" />
+    <script src="../Nav/nav.js"></script>
     <link href="css/Scenic.css" rel="stylesheet" />  
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 <meta name="keywords" content="�ٶȵ�ͼ,�ٶȵ�ͼAPI���ٶȵ�ͼ�Զ��幤�ߣ��ٶȵ�ͼ���������ù���" />
@@ -20,6 +22,7 @@
 <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
 <body onload="javascript:Scenic"id="submitForm">
+    <a href="../Nav/nav.html">../Nav/nav.html</a> 
     <form id="form1" runat="server">
         <div>
             <div class="mp-description pngfix ">
