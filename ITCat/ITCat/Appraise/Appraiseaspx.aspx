@@ -51,7 +51,7 @@
                     <img src="img/1.png"/>
                     <img src="img/1.png"/>
                     <img src="img/1.png"/>
-                    <img src="img/1.png"/>
+                    <img src="img/1.png"/>  
                  </div>
                 </div>
                 <div class ="pa">
@@ -62,8 +62,11 @@
                     <img src="img/1.png"/>
                     <img src="img/1.png"/>
                     <img src="img/1.png"/>
-                 </div>
-                </div>
+               </div>
+              </div>
+              <div class="box">
+                    <button type="submit" class="box1">发表评论</button>
+              </div>
            </div>
      </div>
     </form>

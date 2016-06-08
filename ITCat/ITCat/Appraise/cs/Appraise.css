@@ -77,3 +77,11 @@
     margin-top:-17px;
     margin-left:63px;
 }
+.box 
+{
+    width:130px;
+    height:40px;
+    color: #fff;
+    background-color: #5dade2;
+    border-color: #5dade2;
+}
