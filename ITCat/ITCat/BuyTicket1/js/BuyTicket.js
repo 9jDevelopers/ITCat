@@ -41,40 +41,53 @@ $('#ChildNumSpin').numberspinner({
 });
 */
 
-//验证姓名
-$('#Name').validatebox({
-    required: true,
-    validType: 'length[2,10]',
-    missingMessage:'请输入您的姓名',
-    invalidMessage: '输入错误，请重新输入',
-   
-});
-   
 
-//验证手机号码
-$('#Tel').validatebox({
-    required: true,
-    validType:'minLength[11]',
-    missingMessage: '请输入您的手机号码',
-    invalidMessage: '输入错误，请重新输入',
-});
 
-//验证邮箱
-$('#Email').validatebox({
-    required: true,
-    validType: 'email',
-    missingMessage:'请输入您的邮箱',
-    invalidMessage: '输入错误，请重新输入',
-});
-//定义最少输入字符，用于验证
+
+
+//easyui自定义验证规则
+
+//验证手机格式
 $.extend($.fn.validatebox.defaults.rules, {
-    minLength: {
-        validator: function (value, param) {
-            return value.length >= param[0];
-        },
-    }
 
+    PhoneLength: {
+        validator: function (value, param) {
+
+            var reg = /^[1][358][0-9]{9}$/;
+            if (reg.exec(value)) {
+                return value.length >= param[0];
+            }
+
+            else {
+
+                return false;
+            }
+
+        },
+        message: 'Please enter at least {0} characters.'
+    }
 });
+
+//验证中文姓名格式
+$.extend($.fn.validatebox.defaults.rules, {
+    ChineseLength: {
+        validator: function (value, param) {
+
+            var reg = /^[\u4e00-\u9fa5]{0,}$/;
+            if (reg.exec(value)) {
+                return value.length >= param[0];
+            }
+
+            else {
+
+                return false;
+            }
+
+        },
+        message: 'Please enter at least {0} characters.'
+    }
+});
+
 
 
 

@@ -37,7 +37,7 @@
             <!--出发城市 -->
             <div class="order_form">
                 <!-- 使用百度地图API进行地位 -->
-                <div class="StartCity"><label>出发城市</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label id="allmap"></label></div>
+                <div class="StartCity"><label>出发城市:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label id="allmap"></label></div>
             </div>
             
 
@@ -101,18 +101,18 @@
                     <div class="InputInfo">
                     <!--姓名-->
                     <div class="Info_Name">
-                        <label class="LabelName">姓名：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
-                        <input id="Name"  />
+                        <label class="LabelName">中文姓名：</label>
+                        <input id="Name" class="easyui-validatebox" data-options="missingMessage:'请输入中文名' ,prompt:'验证完成.',invalidMessage:'请输入正确格式的姓名',required:true, validType:'ChineseLength[2,10]'" />
                     </div>
                     <!--手机号-->
                     <div class="Info_TelPhone">
                         <label class="LabelTel">手机号：&nbsp;&nbsp;&nbsp;</label>
-                       <input id="Tel"  />
+                       <input id="Tel"  class="easyui-validatebox" data-options="missingMessage:'请输入手机号' ,prompt:'验证完成.',invalidMessage:'请输入正确格式的手机号',required:true, validType:'PhoneLength[11]'"/>
                     </div>
                     <!--电子邮件-->
                     <div class="Info_Email">
                           <label class="LabelEmail">电子邮箱：</label>
-                        <input id="Email"/>
+                        <input id="Email" class="easyui-validatebox"data-options="missingMessage:'请输入邮箱地址' ,prompt:'验证完成.',invalidMessage:'请输入正确格式的地址',required:true, validType:'email'" />
                     </div>
                     <div class="Info_Hint">
                        <p>您的邮箱将收到加盖公章的合同,您也可以在个人中心查看和下载您的合同。</p>
@@ -231,6 +231,7 @@
     <script src="../Public/js/jquery.min.js"></script>
     <script src="../Public/js/jquery.easyui.min.js"></script>
     <script src="js/BuyTicket.js"></script>
-
+    
+           
 </body>
 </html>
