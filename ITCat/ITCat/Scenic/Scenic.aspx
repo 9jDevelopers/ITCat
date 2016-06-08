@@ -22,7 +22,7 @@
 <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
 </head>
 <body onload="javascript:Scenic"id="submitForm">
-    <a href="../Nav/nav.html">../Nav/nav.html</a> 
+    <!--#include virtual="../Nav/nav.html" --> 
     <form id="form1" runat="server">
         <div>
             <div class="mp-description pngfix ">

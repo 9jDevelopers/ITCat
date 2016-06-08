@@ -13,7 +13,6 @@
                     $("#Login").hide();
                     $("#Register").hide();
                 }
-
             }
             );
 })

@@ -1,26 +1,61 @@
 ﻿body {
+        background-color: #F3DEB6;
 }
+.Main_title {
+    margin-left:380px; 
+   
+}
+.within {
+    margin-left:220px; 
+    width:860px;
+    background-color: #fff;
+}
+h1 {font-size: 200%}
 .easyui-textbox {
-    Height: 8%;
     Width: 40%;
     margin: 0;
     padding: 0 2px;
     box-sizing: content-box;
 }
-.item
-{
-    float:left;
-    width:20%;
-    border-bottom:1px solid #ccc;
-    font-size:1.4rem;
-    margin:0px 2%;
-    position: relative;
-    }
-.content
-{
-    padding-top:100%;
-    width:100%;
-    background-position:center center;
-    background-size:cover;
-    overflow:hidden;
-    }
+
+.The_title {
+    float: left;
+    height: 50px;
+    width: 325px;
+    margin-right: 10px;
+    color: #4f4f4f;
+    text-align: right;
+    font-size: 14px;
+}
+.Textbox {
+        float: left;
+    height: 50px;
+    width: 255px;
+}
+ .easyui-textbox{
+    height: 20px;
+    width: 255px;
+}
+.Textbox_one {
+      float: left;
+    height: 50px;
+    width: 355px;
+}
+.textbox{
+    width: 239px;
+    height: 20px;
+    /*padding: 5px 3px;*/
+}
+.linkbutton {   
+  margin-left:350px;      
+}
+.Level span{
+    margin-bottom :30px;
+}
+
+.btn-yellow{
+    color: #fff;
+    background-image: none;
+    background-color: #f8b002;
+    border-color: #f7a300;
+}

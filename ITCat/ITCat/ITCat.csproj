@@ -118,7 +118,7 @@
     <Content Include="Index\img\1920x500.gif" />
     <Content Include="Index\img\400X200.gif" />
     <Content Include="Index\img\40X40.gif" />
-    <Content Include="Index\index.html" />
+    <Content Include="Index\index.aspx" />
     <Content Include="Index\js\bootstrap.min.js" />
     <Content Include="Index\js\Index.js" />
     <Content Include="Index\js\jquery-1.11.2.min.js" />
@@ -605,6 +605,13 @@
     </Compile>
     <Compile Include="Handler\transferpimone.ashx.cs">
       <DependentUpon>transferpimone.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Index\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Management\administrator\Login\AdministratorLogin.aspx.cs">
       <DependentUpon>AdministratorLogin.aspx</DependentUpon>

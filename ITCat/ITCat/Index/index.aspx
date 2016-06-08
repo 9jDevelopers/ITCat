@@ -1,6 +1,9 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="iTCat.Index.index" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,11 +11,9 @@
 
     <!-- Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.css">
-    <script src="../Nav/nav.js"></script>
 </head>
 <body>
     <!--#include virtual="../Nav/nav.html" -->
-
 
     <div class="container">
         <div class="row">
@@ -233,6 +234,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="../Public/js/jquery-2.2.3.js"></script>
     <script src="js/Index.js"></script>
+    <script src="../Nav/nav.js"></script>
+
 
 </body>
 </html>
