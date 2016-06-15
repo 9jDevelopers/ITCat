@@ -16,15 +16,9 @@
 </head>
 <body>
     <form id="ff" method="post" runat="server">
-
-        <div class="center">
-            <table>
-            <tr>
-                <td>
-                    <h1>新建门票</h1>
-                </td>
-            </tr>
-           </table>
+        <div  class="within">
+        <div class="center">           
+                    <h1>新建门票</h1>       
         </div>
         <div>
            <table>
@@ -137,6 +131,7 @@
             </tr>
            </table>
         </div>
+      </div>
     </form>     
 </body>
 </html>
