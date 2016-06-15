@@ -51,7 +51,7 @@
                             </div>
                             <div class="mp-description-price" style="display: block;">
                               <span class="mp-description-qunar-price"><em id="startat1">$26</em>"起"</span>
-                              <a class="mp-description-bookingbtn">立刻预定</a>
+                              <a class="bookingbtn">立刻预定</a>
                            </div>
                         </div>                   
              </div>
@@ -60,10 +60,10 @@
            <div class="mp-navbar-wrap" id="mp-navbar-wrap">
                <div class="mp-navbar" id="mp-navbar">                 
                    <ul>
-                     <li><a href="#home" name="home">门票预订</a></li>
-                     <li><a href="#news" >特色看点</a></li>
-                     <li><a href="#policy">优惠政策</a></li>
-                     <li><a href="#about">同城推荐</a></li>
+                     <li><a class="lin" href="#home" name="home">门票预订</a></li>
+                     <li><a class="lin" href="#news" >特色看点</a></li>
+                     <li><a class="lin" href="#policy">优惠政策</a></li>
+                     <li><a class="lin" href="#about">同城推荐</a></li>
                   </ul>                    
                </div>
            </div>
