@@ -1,8 +1,15 @@
 ﻿body {
+     background-color: #F3DEB6;
 }
 .center {
-    margin-left:550px; 
+    margin-left:380px; 
    
+}
+.within {
+     margin-top:40px;
+    margin-left:220px; 
+    width:860px;
+    background-color: #fff;
 }
 h1 {font-size: 200%}
 .easyui-textbox {
@@ -15,7 +22,7 @@ h1 {font-size: 200%}
 .The_title {
     float: left;
     height: 50px;
-    width: 505px;
+    width: 325px;
     margin-right: 10px;
     color: #4f4f4f;
     text-align: right;
@@ -36,5 +43,5 @@ h1 {font-size: 200%}
     padding: 5px 3px;
 }
 .linkbutton {   
-  margin-left:550px;      
+  margin-left:380px;      
 }
