@@ -49,6 +49,7 @@
     <Compile Include="BPim.cs" />
     <Compile Include="BScenic.cs" />
     <Compile Include="BScenic2.cs" />
+    <Compile Include="BTickets.cs" />
     <Compile Include="BTourist.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
