@@ -45,3 +45,9 @@ h1 {font-size: 200%}
 .linkbutton {   
   margin-left:380px;      
 }
+.l-btn-left{
+    color: #fff;
+    background-image: none;
+    background-color: #f8b002;
+    border-color: #f7a300;
+}

@@ -16,25 +16,36 @@ namespace iTCat.Handler
         {
             BAttractionsImg bt = new BAttractionsImg();
 
-            if (context.Request["AttractionsID"] != null)
-            {
+            //if (context.Request["AttractionsID"] != null)
+            //{
                 //新建景点数据
                 string AttractionsID = context.Request["AttractionsID"];
-                string src = "../Management/NewAttractions/";
-                string img1 = src + context.Request["image1"];
-                string img2 = src + context.Request["image2"];
-                string img3 = src + context.Request["image3"];
-                string img4 = src + context.Request["image4"];
-                if (bt.Img(AttractionsID,  img1, img2, img3, img4))
+                string imgs = context.Request["images"];            
+                string[] sArray = imgs.Split('g');
+                string img_src="";
+            string src = "../Management/NewAttractions/img/";
+            foreach (string i in sArray)
+            {
+                img_src = src + i.ToString() + "g";
+                if (i != "")
                 {
-                    context.Response.Write(1);
-                }
+                    if (bt.Img(AttractionsID, img_src))
+                    {
+
+                        context.Response.Write(1);
+                        img_src = "";
+                    }
+                
                 else
                 {
                     context.Response.Write(0);
                 }
-
-            }
+                }
+              else
+                {
+                  context.Response.Write(1);
+                 }
+        }               
         }
 
         public bool IsReusable

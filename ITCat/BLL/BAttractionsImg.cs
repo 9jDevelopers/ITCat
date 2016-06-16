@@ -12,9 +12,9 @@ namespace BLL
     {
         public AttractionsImgDAL AttractionsImgDAL { get; set; }
         AttractionsImgDAL td = new AttractionsImgDAL();
-        public bool Img(string AttractionsID,  string img1, string img2, string img3, string img4  )
+        public bool Img(string AttractionsID,  string img_src  )
         {
-            return td.Img(AttractionsID,  img1, img2, img3, img4);
+            return td.Img(AttractionsID,  img_src);
         }
     }
 
