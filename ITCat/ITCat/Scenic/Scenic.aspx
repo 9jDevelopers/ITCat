@@ -346,8 +346,7 @@
        },      
         function (data) {
             if (data != "-1") {
-                var obj = JSON.parse(data);
-                alert(obj.browse[0].AttractionsName);
+                var obj = JSON.parse(data);              
                 $("#attractionsName").html(obj.browse[0].AttractionsName);
                 $("#attractionsSynopsis").html(obj.browse[0].AttractionsSynopsis);
                 $("#attractionsAddress").html(obj.browse[0].AttractionsAddress);
