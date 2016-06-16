@@ -103,10 +103,11 @@
         <div class="mp-descriptio">
             <div class="mp-description-onesentence">   
                 <div class="news" id="news"> 
-                <div>特色看点:</div>             
-                    <p>庐山，又称匡山或匡庐，隶属于江西省九江市。传说殷周时期有匡氏兄弟七人结庐隐居于此，后成仙而去，其所居之庐幻化为山，故而得名。位于九江市南36公里处，北靠长江，南傍鄱阳湖。南北长约25公里，东西宽约20公里。大部分山峰在海拔1000米以上，主峰汉阳峰海拔1474米，云中山城牯岭镇海拔约1167米。自古以“雄、险、奇、秀”而闻名于世，是我国的一座千古文化名山，世界遗产地、世界地质公园、首批国家AAAAA级旅游景区，爱国主义教育基地。</p>
-                    <p>庐山旅游资源极其丰富，素以风景名山、文化名山、教育名山、宗教名山、政治名山著称于世。风景区内有16大自然奇观，474处景点，庐山的历史文化源远流长，是中国田园诗的诞生地、中国山水诗的策源地、中国山水画的发祥地。</p>
-                <p>庐山雄奇秀拔，云雾缭绕，山中多飞泉瀑布和奇洞怪石，名胜古迹遍布，夏天气候凉爽宜人，是我国著名的旅游风景区和避暑疗养胜地，于1996年被列入“世界自然与文化遗产名录”。古人云“匡庐奇秀甲天下”，自司马迁将庐山载入《史记》后，历代诗人墨客相继慕名而来，陶渊明、谢灵运、李白、白居易、苏轼、王安石、陆游、徐志摩 、郭沫若等1500余位诗人相继登山，留下了许多珍贵的名篇佳作。苏轼所写的“横看成岭侧成峰，远近高低各不同。不识庐山真面目，只缘身在此山中”形象描绘了庐山的景色，成为千百年来脍炙人口的名篇。</p>
+                <div>特色看点:</div>
+                    <div id="characteristicAspect"></div>             
+                  <%--  <p>庐山，又称匡山或匡庐，隶属于江西省九江市。传说殷周时期有匡氏兄弟七人结庐隐居于此，后成仙而去，其所居之庐幻化为山，故而得名。位于九江市南36公里处，北靠长江，南傍鄱阳湖。南北长约25公里，东西宽约20公里。大部分山峰在海拔1000米以上，主峰汉阳峰海拔1474米，云中山城牯岭镇海拔约1167米。自古以“雄、险、奇、秀”而闻名于世，是我国的一座千古文化名山，世界遗产地、世界地质公园、首批国家AAAAA级旅游景区，爱国主义教育基地。</p>--%>
+                   <%-- <p>庐山旅游资源极其丰富，素以风景名山、文化名山、教育名山、宗教名山、政治名山著称于世。风景区内有16大自然奇观，474处景点，庐山的历史文化源远流长，是中国田园诗的诞生地、中国山水诗的策源地、中国山水画的发祥地。</p>
+                　　<p>庐山雄奇秀拔，云雾缭绕，山中多飞泉瀑布和奇洞怪石，名胜古迹遍布，夏天气候凉爽宜人，是我国著名的旅游风景区和避暑疗养胜地，于1996年被列入“世界自然与文化遗产名录”。古人云“匡庐奇秀甲天下”，自司马迁将庐山载入《史记》后，历代诗人墨客相继慕名而来，陶渊明、谢灵运、李白、白居易、苏轼、王安石、陆游、徐志摩 、郭沫若等1500余位诗人相继登山，留下了许多珍贵的名篇佳作。苏轼所写的“横看成岭侧成峰，远近高低各不同。不识庐山真面目，只缘身在此山中”形象描绘了庐山的景色，成为千百年来脍炙人口的名篇。</p>--%>
                     </div>
             </div>
         </div>
@@ -130,14 +131,16 @@
           <div class="mp-description-towtxt" >
             <div class="mp-descrone" id="txtFreePolicy ">
                 <p>免费政策</p>
-                <p>1.身高1.4米以下儿童免票；</p>
+                <div id="scenicSpotPolicy"></div>  
+                <%--<p>1.身高1.4米以下儿童免票；</p>
                 <p>2. 70周岁以上（含70周岁）老年人凭有效证件免票；</p>
                 <p> 3. 残疾人、现役军人、全国人大代表、全国政协委员、先进模范群体、省级以上媒体记者、省内市级以上媒体记者、九江本地居民凭有效证件免票。</p>
-                <p> Tips庐山景区在特殊节假日对相应群体有特色的优惠、免票活动，具体参见景区公告。</p></div>
+                <p> Tips庐山景区在特殊节假日对相应群体有特色的优惠、免票活动，具体参见景区公告。</p>--%></div>
             <div class="mp-descrtwo" id="txtFavouredPolicy ">
                 <p>优惠政策</p>
-                <p>1、大学生凭有效证件，门票7.5折优惠；</p>
-                <p>2、中学生及中等专业学校学生凭有效证件，门票半价优惠。</p>
+                <div id="scenicSpotPolicyTwo"></div>  
+                <%--<p>1、大学生凭有效证件，门票7.5折优惠；</p>
+                <p>2、中学生及中等专业学校学生凭有效证件，门票半价优惠。</p>--%>
             </div>
          </div>
         </div>
@@ -343,12 +346,15 @@
        },      
         function (data) {
             if (data != "-1") {
-                var obj = JSON.parse(data);
+                var obj = JSON.parse(data);              
                 $("#attractionsName").html(obj.browse[0].AttractionsName);
                 $("#attractionsSynopsis").html(obj.browse[0].AttractionsSynopsis);
                 $("#attractionsAddress").html(obj.browse[0].AttractionsAddress);
                 $("#ticketsName").html(obj.browse[0].TicketsName);
                 $("#attractionsLevel").html(obj.browse[0].AttractionsLevel);
+                $("#characteristicAspect").html(obj.browse[0].CharacteristicAspect);
+                $("#scenicSpotPolicy").html(obj.browse[0].ScenicSpotPolicy);
+                $("#scenicSpotPolicyTwo").html(obj.browse[0].ScenicSpotPolicyTwo);
                 $("#price").html(obj.browse[0].Price);
                 $("#").html(obj.browse[0].AttractionsContact);
                 $("#").html(obj.browse[0].Point);

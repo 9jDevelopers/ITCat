@@ -11,15 +11,12 @@ namespace Model.DAL
     public class AttractionsImgDAL
     {       
 
-        public bool Img(string attractionsID, string img1, string img2, string img3, string img4)
+        public bool Img(string attractionsID, string img_src)
         {
             DbHelper db = new DbHelper();
             DbCommand cmd = db.GetStoredProcCommond("sp_AttractionsImg");
             db.AddInParameter(cmd, "@AttractionsID", DbType.String, attractionsID);
-            db.AddInParameter(cmd, "@imagePath1", DbType.String, img1);
-            db.AddInParameter(cmd, "@imagePath2", DbType.String, img2);
-            db.AddInParameter(cmd, "@imagePath3", DbType.String, img3);
-            db.AddInParameter(cmd, "@imagePath4", DbType.String, img4);
+            db.AddInParameter(cmd, "@imagePath1", DbType.String, img_src);           
             db.AddReturnParameter(cmd, "@retValue", DbType.Int32);
 
             db.ExecuteNonQuery(cmd);
