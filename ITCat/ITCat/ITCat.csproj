@@ -144,6 +144,10 @@
     <Content Include="Management\NewAttractions\img\597207.jpg" />
     <Content Include="Management\NewAttractions\img\709608.jpg" />
     <Content Include="Management\NewAttractions\img\90911.jpg" />
+    <Content Include="Management\NewAttractions\img\90912.jpg" />
+    <Content Include="Management\NewAttractions\img\90913.jpg" />
+    <Content Include="Management\NewAttractions\img\90914.jpg" />
+    <Content Include="Management\NewAttractions\img\90915.jpg" />
     <Content Include="Management\NewAttractions\js\ajaxupload.3.9.js" />
     <Content Include="Management\NewAttractions\js\jquery-2.1.1.min.js" />
     <Content Include="Management\NewAttractions\js\Submit.js" />
