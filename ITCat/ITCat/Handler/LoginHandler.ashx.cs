@@ -21,7 +21,7 @@ namespace iTCat
                 string username = context.Request["UserName"];
                 string password = context.Request["UserPassword"];
                 result = bt.Login(username, password);
-                if (result=="-1")
+                if (result=="-1")   
                 {
                     context.Response.Write(-1);
                 }

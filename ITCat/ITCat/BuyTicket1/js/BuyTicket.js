@@ -1,5 +1,6 @@
-﻿//出发时间选择
+﻿
 $(function () {
+    //出发时间选择
     $('#dd').datebox().datebox('calendar').calendar({
         validator: function (date) {
             var now = new Date();
@@ -8,6 +9,17 @@ $(function () {
             return d1 <= date && date <= d2;
         }
     });
+    //AJAX通过景点ID获取景点标题以及票类，票价
+    $(document).ready(function () {
+        $.post(/*URL*/"Handler/BuyTicketHandler.ashx",
+               /*参数*/{ AttractionsID:  2  },
+               function(data)
+               {
+                   data 
+               }
+               )
+
+    })
 });
 
 //票量选择器
@@ -139,3 +151,8 @@ $.extend($.fn.validatebox.defaults.rules, {
 	        console.log('Message sent: ' + info.response);
 	    }
 	});
+
+
+
+
+

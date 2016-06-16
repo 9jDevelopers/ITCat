@@ -127,6 +127,10 @@
   margin-left: 10px;
   cursor:pointer;
 }
+.ditu:hover,.ditu:active
+{
+background-color:#e5e5e5;
+}
 .mp-description-price{
   width: 418px;
   height: 42px;
@@ -156,7 +160,7 @@
   font-size: 40px;
   color: #f60;
 }
-.mp-description-bookingbtn{
+.bookingbtn{
     width: 130px;
     height: 42px;
     cursor: pointer;
@@ -168,6 +172,10 @@
     font-size: 18px;
     position: absolute;
     right: 0;
+}
+.bookingbtn:hover,.bookingbtn:active
+{
+background-color:#fc521b;
 }
 .mp-navbar-takeplace {
       height: 38px;
@@ -252,7 +260,7 @@ li
 {
 float:left;
 }
-a:link,a:visited
+.lin
 {
 display:block;
 width:120px;
@@ -263,7 +271,7 @@ text-align:center;
 text-decoration:none;
 text-transform:uppercase;
 }
-a:hover,a:active
+.lin:hover,.lin:active
 {
 background-color:#1295ad;
 }
