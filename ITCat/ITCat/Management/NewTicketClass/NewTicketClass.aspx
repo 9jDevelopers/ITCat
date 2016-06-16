@@ -125,7 +125,7 @@
             <table>
             <tr>
                 <td>
-                     <a href="javascript:NewTicketClass" class="easyui-linkbutton" id="submitForm" onclick="submitForm()">提交</a>
+                     <a href="javascript:NewTicketClass" class="easyui-linkbutton btn-yellow1" id="submitForm" onclick="submitForm()">提交</a>
                       <input  runat="server" height="36px" style="margin-top: 0px"  value="重置" type="submit"  width="72px" />
                 </td>              
             </tr>

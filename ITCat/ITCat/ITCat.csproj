@@ -145,6 +145,7 @@
     <Content Include="Management\NewAttractions\img\709608.jpg" />
     <Content Include="Management\NewAttractions\img\90911.jpg" />
     <Content Include="Management\NewAttractions\js\ajaxupload.3.9.js" />
+    <Content Include="Management\NewAttractions\js\JavaScript.js" />
     <Content Include="Management\NewAttractions\js\jquery-2.1.1.min.js" />
     <Content Include="Management\NewAttractions\js\Submit.js" />
     <Content Include="Management\NewAttractions\js\validation.js" />

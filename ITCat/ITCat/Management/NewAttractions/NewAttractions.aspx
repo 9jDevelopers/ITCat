@@ -11,10 +11,10 @@
     <link href="../../Public/css/demo.css" rel="stylesheet" />
     <link href="css/NewAttractions.css" rel="stylesheet" />
     <script src="../../Public/js/jquery.min.js"></script>
-    <script src="../../Public/js/jquery.easyui.min.js"></script>
-    <script src="js/Submit.js"></script>
+     <script src="../../Public/js/jquery.easyui.min.js"></script> 
+     <script src="js/Submit.js"></script> 
     <script src="js/ajaxupload.3.9.js"></script>
-    <script src="js/validation.js"></script>
+     <script src="js/validation.js"></script>
 </head>
 <body>
     <form  id="ff" method="post" >
@@ -26,7 +26,7 @@
                 <td class ="The_title">*景点编号:</td> 
                 <td  class="Textbox"><input class="easyui-validatebox textbox"
                      data-options="missingMessage:'请输入景点编号' ,prompt:'验证完成.',invalidMessage:'请输入5个以上数字',required:true, validType:'length[5,10]'"
-                     id="txtAttractionsID" runat="server"/></td>
+                     id="txtAttractionsID" /></td>
             </tr>
             </table>
             </div>
@@ -35,7 +35,7 @@
                <tr> <td class ="The_title">*景点名称:</td>
                     <td class="Textbox"><input class="easyui-validatebox textbox"
                     data-options=" missingMessage:'请输入景点名称' ,prompt:'验证完成.',invalidMessage:'请输入5个以上中文字',required:true,validType:'ChineseLength[5]' "
-                        id="txtAttractions_name" runat="server" /></td> </tr>
+                        id="txtAttractions_name" /></td> </tr>
          </table>
         </div>
         <div>
@@ -95,7 +95,7 @@
               <tr>
                 <td class ="The_title">*开放时间:</td>
                 <td  class="Textbox_one">
-                    <input class="easyui-textbox textbox" runat="server"
+                    <input class="easyui-textbox textbox" 
                      id="OpenTimeTextBox" data-options="prompt:'请填写景点的开放时间，包括年月日都必填',validType:'Lenght[10,30]'" /></td>
             </tr>
             </table>
@@ -106,14 +106,14 @@
                 <td class="images">
                     <%-- <div class="images-preview clearfix">                           
                             <%--通过JS添加显示图片的html--%>                         
-                            <div id="images">
+                    <div id="images">
                          
-                    <div id="btnUp1" class="q"><input type="button" name="button"  value="点击添加图片" style="margin-left:20px;"/>                         
-                       <i class="tu1 w icon-googleplus" ></i> 
-                       <img id="ig1"  src=""/>         
+                    <div id="btnUp" class="q"><input type="button"  class="button"name="button"  value="点击添加图片"/>                         
+                       <i class="tu w icon-googleplus" ></i> 
+                       <img id="ig" class="imgs" src=""/>         
                    </div>
 
-                    <div id="btnUp2" class="q"><input type="button" name="button"   value="点击添加图片" style="margin-left:20px;"/>
+                   <%-- <div id="btnUp2" class="q"><input type="button" name="button"   value="点击添加图片" style="margin-left:20px;"/>
                        <i class="tu2 w icon-googleplus"></i> 
                        <img id="ig2" src=""/>         
                    </div>
@@ -125,7 +125,7 @@
                     <div id="btnUp4" class="q"><input type="button" name="button"  value="点击添加图片" style="margin-left:20px;"/>
                        <i class="tu4 w icon-googleplus" ></i> 
                        <img id="ig4" src=""/>         
-                   </div>   
+                   </div>   --%>
                 </div>                  
                     <div class="kj"><input type="button" id="FileName"  value="提交"  onclick = "" /></div>                        
                 </td>
@@ -176,59 +176,40 @@
         </div> 
         </div>         
     </form>
-    <script>  
-        var button1 = $('#btnUp1');
-        var image1 = $('#ig1');
-        var tu1 = $('.tu1');
-
-        var button2 = $('#btnUp2');
-        var image2 = $('#ig2');
-        var tu2 = $('.tu2');
-
-        var button3 = $('#btnUp3');
-        var image3 = $('#ig3');
-        var tu3 = $('.tu3');
-
-        var button4 = $('#btnUp4');
-        var image4 = $('#ig4');
-        var tu4 = $('.tu4');
-
-        $(function () {
-            imagedata(button1, image1, tu1);
-            imagedata(button2, image2, tu2);
-            imagedata(button3, image3, tu3);
-            imagedata(button4, image4, tu4);
-
-        });
-
-        function imagedata(button, img, tu) {
-
+    <script> 
+        var button = $('#btnUp');
+        var image = $('#ig');
+        var tu = $('.tu');
+        var i = 1;
+        var str = "";  
+               
             new AjaxUpload(button, {
                 action: 'Attrctionsimage.ashx',
                 name: 'myflie',
-
                 //上传结束
                 onComplete: function (file, response) {
                     alert(response);
-                    $(function () { tu.hide(); })
-                    img.attr("src", "img/" + response);
-                    img.attr("width", "100");
-                    img.attr("height", "100");
-
+                    $("#btnUp").append
+                    ("<i class='tu w icon-googleplus'>" + "</i>" +
+                      "<img id='ig" + i + "'class='imgs'" + " src='img/" + response + "'width='100'height='100'/>"
+                     );
+                    i++;
+                    str = str + response;
                 }
-            })
-        }
+            }
+         )
+        
         //提交数据
         $('#FileName').click(
             function () {
                 $.post(
                        "../../Handler/AttractionsImgHandler.ashx",
                        {
-                           AttractionsID: $("#txtAttractionsID").val(),
-                           image1: $("#ig1").attr("src"),
-                           image2: $("#ig2").attr("src"),
-                           image3: $("#ig3").attr("src"),
-                           image4: $("#ig4").attr("src")
+                               
+                                   AttractionsID: $("#txtAttractionsID").val(),
+                                            
+                                   images:str
+                 
                        },
                        function (data) {
                            if (data == "1") {
