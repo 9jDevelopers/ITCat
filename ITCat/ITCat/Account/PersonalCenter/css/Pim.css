@@ -11,31 +11,29 @@
     margin-left:220px;
 }
 .ge 
-{
-    
-   
+{ 
     width:900px;
 }
 .gf
  {
-    margin-top:25px;
-    margin-left:150px;
+    margin-top:32px;
+    margin-left:270px;
 }
 
 .gg 
 {
     margin-top:25px;
-    margin-left:103px;
+    margin-left:222px;
 }
 .gh
  {
      margin-top:25px;
-    margin-left:126px;
+     margin-left:126px;
 }
 .gi 
 {
     display:block;
-    margin-left:300px;
+    margin-left:350px;
     margin-top:20px;
     height:20px;
     width:40px;
@@ -50,7 +48,7 @@
 .imgss 
 {
     position: absolute;
-    top:200px;
+    top:246px;
     left: 770px;
     border-color:blue;
     border-width:0.5px;
@@ -93,4 +91,40 @@
     height:280px;
     background-size:280px 280px;
 }
- 
+.font 
+{
+    margin-left:45px;
+    margin-top:20px;
+    width:800px;
+    height:50px;
+    border:1px solid #ececec;
+    
+    background-color :#E6E6FA;
+}
+    .time 
+    {
+        position:absolute; top:224px; left:300px;
+        width:100px;
+        height:30px;
+        border:1px solid blue;
+    }
+.txt
+{
+     position:absolute; top:224px; left:450px;
+     font-size:2rem;
+}
+    .oreadid 
+    {
+       
+            position:absolute; top:224px; left:520px;
+            width:180px;
+            height:30px;
+            border:1px solid blue;
+    }
+.down2
+ {
+    position:absolute; top:262px; left:286px;
+    width:800px;
+    height:150px;
+    border:1px solid #ececec;
+}
