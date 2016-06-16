@@ -79,17 +79,24 @@ namespace MSSQLDAL
                     Json.Append("{");
                     for (int j = 0; j < dt.Columns.Count; j++)
                     {
-                        Json.Append("\"" + dt.Columns[j].ColumnName.ToString() + "\":\"" + dt.Rows[i][j].ToString() + "\"");
                         if (j < dt.Columns.Count - 1)
                         {
-                            Json.Append(",");
+                            Json.Append("\"" + dt.Columns[j].ColumnName.ToString() + "\":" + "\"" + dt.Rows[i][j].ToString().Replace("\\", "\\\\").Replace("\'", "\\\'").Replace("\t", " ").Replace("\r", " ").Replace("\n", "<br/>").Replace("\"", "'") + "\",");
+                        }
+                        else if (j == dt.Columns.Count - 1)
+                        {
+                            Json.Append("\"" + dt.Columns[j].ColumnName.ToString() + "\":" + "\"" + dt.Rows[i][j].ToString().Replace("\\", "\\\\").Replace("\'", "\\\'").Replace("\t", " ").Replace("\r", " ").Replace("\n", "<br/>").Replace("\"", "'") + "\"");
                         }
                     }
-                    Json.Append("}");
-                    if (i < dt.Rows.Count - 1)
+                    if (i == dt.Rows.Count - 1)
                     {
-                        Json.Append(",");
+                        Json.Append("} ");
                     }
+                    else
+                    {
+                        Json.Append("}, ");
+                    }
+
                 }
             }
             Json.Append("]}");
