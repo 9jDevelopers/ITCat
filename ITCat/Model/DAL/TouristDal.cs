@@ -25,7 +25,7 @@ namespace Model.DAL
 
             string result = cmd.Parameters["@retValue"].Value.ToString();
 
-            if (result == "-1")
+            if (result == "0")
                 return "-1";
             else
                 return result;
