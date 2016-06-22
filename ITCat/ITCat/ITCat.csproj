@@ -722,6 +722,7 @@
     <Content Include="Handler\ARegisterHandler.ashx" />
     <Content Include="Handler\ALoginHandler.ashx" />
     <Content Include="Handler\BuyTicketHandler.ashx" />
+    <Content Include="Index\json.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

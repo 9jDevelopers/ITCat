@@ -15,9 +15,8 @@ namespace MSSQLDAL
         public static string DataTable2Json(DataTable dt)
         {
             StringBuilder jsonBuilder = new StringBuilder();
-            jsonBuilder.Append("{\"");
-            jsonBuilder.Append(dt.TableName);
-            jsonBuilder.Append("\":[");
+            jsonBuilder.Append("{");
+            jsonBuilder.Append("\"rows\":");
             jsonBuilder.Append("[");
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -40,6 +39,7 @@ namespace MSSQLDAL
         }
 
         #endregion dataTable转换成Json格式
+
         #region DataSet转换成Json格式
         /// <summary>  
         /// DataSet转换成Json格式  
