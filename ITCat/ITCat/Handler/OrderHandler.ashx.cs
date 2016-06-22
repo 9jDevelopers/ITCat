@@ -3,13 +3,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.SessionState;
 
 namespace iTCat.Handler
 {
     /// <summary>
     /// OrderHandler 的摘要说明
     /// </summary>
-    public class OrderHandler : IHttpHandler
+    public class OrderHandler : IHttpHandler ,IRequiresSessionState
     {
 
         public void ProcessRequest(HttpContext context)

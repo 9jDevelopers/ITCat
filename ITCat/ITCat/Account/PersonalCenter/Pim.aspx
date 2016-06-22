@@ -15,6 +15,7 @@
     <script src="../../Public/js/jquery.easyui.min.js"></script> 
     <script src="js/Pim.js"></script>
     <script src="js/tijiao.js"></script>
+    <script src="js/order.js"></script>
     
    <%-- <script src="js/ajaxupload.3.9.js"></script>--%>
     <script src="../../Nav/nav.js"></script>

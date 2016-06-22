@@ -72,6 +72,7 @@
     <Content Include="Account\Login\css\login.css" />
     <Content Include="Account\PersonalCenter\IMG\83664ffe63e8749a.jpg_r_390x260x90_ccd59acc.jpg" />
     <Content Include="Account\PersonalCenter\js\ajaxupload.3.9.js" />
+    <Content Include="Account\PersonalCenter\js\order.js" />
     <Content Include="Account\PersonalCenter\js\Pim.js" />
     <Content Include="Account\PersonalCenter\js\tijiao.js" />
     <Content Include="Account\PersonalCenter\Pim.aspx" />
