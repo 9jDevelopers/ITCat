@@ -5,11 +5,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>景点</title>
-    <link href="../Nav/nav.css" rel="stylesheet" />
     <script src="../Public/js/jquery-2.2.3.min.js"></script>
     <script src="../Nav/nav.js"></script>
-    <link href="css/Scenic.css" rel="stylesheet" />  
+    <link href="css/Scenic.css" rel="stylesheet" /> 
+    <link href="../Nav/nav.css" rel="stylesheet" />
     <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
 <meta name="keywords" content="�ٶȵ�ͼ,�ٶȵ�ͼAPI���ٶȵ�ͼ�Զ��幤�ߣ��ٶȵ�ͼ���������ù���" />
 <meta name="description" content="�ٶȵ�ͼAPI�Զ����ͼ�������û��ڿ��ӻ����������ɰٶȵ�ͼ" />
@@ -150,18 +152,19 @@
         <div style="width:1190px;height:521px;border:#ccc solid 1px;" id="dituContent"></div>
    </div>
         <div id="mp-nearsight" class="mp-nearsight">
-             <div name="about" id="about">
-            <h2>同城推荐</h2>
-            <h3>附近景点</h3>           
-            <div class="dian1"><img src="images/1.jpg" /></div>
-            <div class="dian2"><img src="images/2.jpg" /><div>
-            <div class="dian3"><img src="images/3.jpg" /></div>         
-            <h3>附近酒店</h3>
-            <div class="dian4"><img src="images/e1.jpg" /></div> 
-            <div class="dian5"><img src="images/e2.jpg" /></div> 
-                </div>
+            <div name="about" id="about">
+                <h2>同城推荐</h2>
+                <h3>附近景点</h3>           
+                <div class="dian1"><img src="images/1.jpg" /></div>
+                <div class="dian2"><img src="images/2.jpg" /></div>
+                <div class="dian3"><img src="images/3.jpg" /></div>         
+                <h3>附近酒店</h3>
+                <div class="dian4"><img src="images/e1.jpg" /></div> 
+                <div class="dian5"><img src="images/e2.jpg" /></div> 
+            </div>
         </div>
-
+           <hr/>
+    <!--#include virtual="../Nav/bottom.html" -->
     </form>
 </body>
     <script type="text/javascript">
@@ -400,6 +403,7 @@
             return false;
         });
     });
+
 
 </script>
 
