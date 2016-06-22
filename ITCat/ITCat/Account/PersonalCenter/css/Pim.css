@@ -91,40 +91,158 @@
     height:280px;
     background-size:280px 280px;
 }
-.font 
+.HD 
 {
     margin-left:45px;
     margin-top:20px;
     width:800px;
     height:50px;
-    border:1px solid #ececec;
-    
+    border:1px solid #ececec;  
+    background-color :#E6E6FA;
+}
+.HD1
+{
+    margin-top:16px;
+    width:700px;
+    margin-left:50px;
+    height:30px;
+ 
+}
+.HD2 
+{
+    margin-top:14px;
+    width:70px;
+    margin-left:640px;
+    height:30px;
+    font-size:1.5rem;
+    color:#778899;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+}
+.HD3 
+{
+    margin-top:-30px;
+    width:70px;
+    margin-left:725px;
+    height:30px;
+    font-size:1.5rem;
+    color:#778899;
+    text-align:center;
+    vertical-align:middle;
+    line-height:25px;
+}
+.font 
+{
+    margin-left:45px;
+    margin-top:50px;
+    width:800px;
+    height:50px;
+    border:1px solid #ececec;  
     background-color :#E6E6FA;
 }
     .time 
     {
-        position:absolute; top:224px; left:300px;
+        position:absolute; top:324px; left:300px;
         width:100px;
         height:30px;
         border:1px solid blue;
+        vertical-align:middle;
+        line-height:25px;
+        text-align:center;
     }
 .txt
 {
-     position:absolute; top:224px; left:450px;
+     position:absolute; top:324px; left:450px;
      font-size:2rem;
+     
 }
     .oreadid 
     {
        
-            position:absolute; top:224px; left:520px;
+            position:absolute; top:324px; left:520px;
             width:180px;
             height:30px;
             border:1px solid blue;
+            vertical-align:middle;
+           line-height:25px;
+           text-align:center;
     }
+   .kf
+   {
+            position:absolute; top:324px; left:760px;
+            width:70px;
+            height:30px;
+            background-color :#ffd700;
+            vertical-align:middle;
+            line-height:25px;
+            text-align:center;
+   }
 .down2
  {
-    position:absolute; top:262px; left:286px;
+    position:absolute; top:362px; left:286px;
     width:800px;
     height:150px;
     border:1px solid #ececec;
+}
+.dn 
+{ 
+        margin-left:20px;
+        margin-top:12px;
+        width:250px;
+        height:120px;
+        border-right:1px solid #E6E6FA;
+}
+.dn2 
+{
+        margin-left:270px;
+        margin-top:-160px;
+        width:338px;
+        height:120px;
+        border-right :1px solid #E6E6FA;
+        vertical-align:middle;
+        line-height:120px;
+            
+}
+.up 
+{
+    margin-left:50px;
+ margin-top:40px;
+ border :1px solid blue;
+ width:50px;
+ height:50px;
+}
+.nr 
+{
+   margin-top:-48px;
+   margin-left :163px;
+   border :1px solid blue;
+   width:50px;
+   height:50px;
+}
+.Rp 
+{
+ margin-left :288px;
+ margin-top:-48px;
+ border :1px solid blue;
+ width:50px;
+ height:50px;
+}
+
+.tt 
+{
+    margin-top:-118px;
+    margin-left:123px;
+}
+
+.dn3 
+{
+        margin-left:599px;
+        margin-top:-150px;
+        width:199px;
+        height:120px;
+        border-right:1px solid #E6E6FA;
+        vertical-align:middle;
+        line-height:120px;
+        text-align:center;
 }

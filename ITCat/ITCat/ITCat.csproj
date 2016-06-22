@@ -70,6 +70,7 @@
     <Content Include="Account\change\css\change.css" />
     <Content Include="Account\change\js\change.js" />
     <Content Include="Account\Login\css\login.css" />
+    <Content Include="Account\PersonalCenter\IMG\83664ffe63e8749a.jpg_r_390x260x90_ccd59acc.jpg" />
     <Content Include="Account\PersonalCenter\js\ajaxupload.3.9.js" />
     <Content Include="Account\PersonalCenter\js\Pim.js" />
     <Content Include="Account\PersonalCenter\js\tijiao.js" />
@@ -599,6 +600,9 @@
     <Compile Include="Handler\LoginHandler.ashx.cs">
       <DependentUpon>LoginHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\OrderHandler.ashx.cs">
+      <DependentUpon>OrderHandler.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\PimImage.ashx.cs">
       <DependentUpon>PimImage.ashx</DependentUpon>
     </Compile>
@@ -724,6 +728,7 @@
     <Content Include="Handler\ALoginHandler.ashx" />
     <Content Include="Handler\BuyTicketHandler.ashx" />
     <Content Include="Index\json.json" />
+    <Content Include="Handler\OrderHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
