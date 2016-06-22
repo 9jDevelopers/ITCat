@@ -175,6 +175,7 @@
     <Content Include="Management\NewTicketClass\css\ticket.css" />
     <Content Include="Management\NewTicketClass\js\NewTicketClass.js" />
     <Content Include="Management\NewTicketClass\NewTicketClass.aspx" />
+    <Content Include="Nav\bottom.html" />
     <Content Include="Nav\nav.css" />
     <Content Include="Nav\nav.html" />
     <Content Include="Nav\nav.js" />
