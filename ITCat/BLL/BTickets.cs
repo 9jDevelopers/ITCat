@@ -13,5 +13,13 @@ namespace BLL
     {
         public BuyTicketDal BuyTicketDal { get; set; }
         BuyTicketDal Ticket =new BuyTicketDal();
+
+
+        public string  BuyTickets(string AttractionsID)
+        {
+            return "a";
+        }
+
+
     }
 }
