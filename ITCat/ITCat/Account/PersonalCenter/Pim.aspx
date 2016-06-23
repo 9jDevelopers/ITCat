@@ -15,6 +15,7 @@
     <script src="../../Public/js/jquery.easyui.min.js"></script> 
     <script src="js/Pim.js"></script>
     <script src="js/tijiao.js"></script>
+    <script src="js/order.js"></script>
     
    <%-- <script src="js/ajaxupload.3.9.js"></script>--%>
     <script src="../../Nav/nav.js"></script>
@@ -169,17 +170,46 @@
             </div>
         </div>
             <div title="订单中心">
+                <div class="HD">
+                    <div class="HD1">
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;景区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单价（元）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实付款
+                    </div>
+                    
+                    <div class="HD2"> <input type="button" id="ggg"   value="上一页"/></div>
+                   
+                     <div class="HD3"><input type="button" id="ggg"   value="下一页"/></div>
+                        
+                </div>
                 <div class="font">
+                    
                 <tr>
-                  <div class ="time"></div>
+                  <div class ="time" id="datetime"></div>
                 </tr>
                     <tr>
                      <div class="txt">订单号:</div>
-                     <div class ="oreadid"></div>
+                     <div class ="oreadid" id="order"> </div>
                     </tr>
+                    <div class="kf">客服</div>
                 </div>
                 <div class="down2">
-
+                    <div class="dn">
+                        <div class="imc">
+                          <img src="IMG/83664ffe63e8749a.jpg_r_390x260x90_ccd59acc.jpg"  width="120" height="120"/>
+                        </div>
+                        <div class="tt" id="txt6">
+                         【自由行】完美@厦一站！4日机票含税+2晚厦门五星酒店+1晚鼓浪屿琴笙酒店+酒店早餐
+                        </div>
+                    </div>
+                    <div class="dn2">
+                        <div class="ta">
+                          <div class="up" id="UnitPrice"></div>
+                          <div class="nr" id="number"></div>
+                          <div class="Rp"id="Realpayment"></div>
+                        </div>
+                    </div>
+                    <div class="dn3" id="JY">
+                        交易成功
+                    </div>
                 </div>
                
             </div>
