@@ -34,7 +34,7 @@
              <table>
                <tr> <td class ="The_title">*景点名称:</td>
                     <td class="Textbox"><input class="easyui-validatebox textbox"
-                    data-options=" missingMessage:'请输入景点名称' ,prompt:'验证完成.',invalidMessage:'请输入5个以上中文字',required:true,validType:'ChineseLength[5]' "
+                    data-options=" missingMessage:'请输入景点名称' ,prompt:'验证完成.',invalidMessage:'请输入2个以上中文字',required:true,validType:'ChineseLength[2]' "
                         id="txtAttractions_name" /></td> </tr>
          </table>
         </div>
@@ -43,7 +43,7 @@
                <tr> <td class ="The_title">*景点标题:</td>
                    <td class="Textbox">
                    <input class="easyui-validatebox textbox"
-                     data-options=" missingMessage:'请输入景点标题' ,prompt:'验证完成.',invalidMessage:'请输入8个以上中文字',required:true,validType:'ChineseLength[8]'"
+                     data-options=" missingMessage:'请输入景点标题' ,prompt:'验证完成.',invalidMessage:'请输入5个以上中文字',required:true,validType:'ChineseLength[5]'"
                         id="txtAttractions_title" /></td> </tr> 
              </table>
         </div>            
@@ -112,20 +112,7 @@
                        <i class="tu w icon-googleplus" ></i> 
                        <img id="ig" class="imgs" src=""/>         
                    </div>
-
-                   <%-- <div id="btnUp2" class="q"><input type="button" name="button"   value="点击添加图片" style="margin-left:20px;"/>
-                       <i class="tu2 w icon-googleplus"></i> 
-                       <img id="ig2" src=""/>         
-                   </div>
-        
-                    <div id="btnUp3" class="q"><input type="button" name="button"  value="点击添加图片" style="margin-left:20px;"/>
-                       <i class="tu3 w icon-googleplus" ></i> 
-                       <img id="ig3" src=""/>         
-                   </div>        
-                    <div id="btnUp4" class="q"><input type="button" name="button"  value="点击添加图片" style="margin-left:20px;"/>
-                       <i class="tu4 w icon-googleplus" ></i> 
-                       <img id="ig4" src=""/>         
-                   </div>   --%>
+           
                 </div>                  
                     <div class="kj"><input type="button" id="FileName"  value="提交"  onclick = "" /></div>                        
                 </td>
@@ -137,8 +124,8 @@
             <tr>
                 <td class ="The_title">*景点简介:</td>
                 <td  class="Textbox_one">
-                    <input class="easyui-textbox textbox" data-options="prompt:'请填写景点的介绍内容和概括描述',validType:'Lenght[20,40]'"
-                    id="IntroduceTextBox" runat="server" />
+                    <input class="easyui-textbox textbox" <%--data-options="prompt:'请填写景点的介绍内容和概括描述',validType:'Lenght[20,40]'"--%>
+                    id="IntroduceTextBox"  />
 
                 </td>
             </tr>
@@ -148,7 +135,7 @@
              <table>
             <tr>
                 <td class ="The_title">*联系方式:</td>
-                <td class="Textbox_one"><input class="easyui-textbox textbox" runat="server"
+                <td class="Textbox_one"><input class="easyui-textbox textbox" 
                     id="Contact" data-options="prompt:'请填写景点客服的联系方式',validType:'Lenght[11]'" /></td>
             </tr>
             </table>
@@ -158,7 +145,7 @@
             <tr>
                 <td class ="The_title">*注释:      
                 </td>
-                <td class="Textbox_one">&nbsp;&nbsp;<input  id="NoteAttractions" runat="server"
+                <td class="Textbox_one">&nbsp;&nbsp;<input  id="NoteAttractions"
                     class="easyui-textbox textbox" data-options="prompt:'请填写景点注意事项和说明',validType:'Lenght[20,30]'" /></td>
             </tr>
             </table>
