@@ -17,9 +17,21 @@ namespace BLL
 
         public string  BuyTickets(string AttractionsID)
         {
-            return "a";
+            DataTable dt = Ticket.BuyTicket();
+            string json = DataTableConvertJson.DataTableToJson("buyticket", dt);
+            return json;
         }
-
-
+        //返回景点标题
+        public string GetAttractionsTitle(string AttractionsID)
+        {
+            string result = Ticket.GetAttractionsTitle(AttractionsID);
+            return result;
+        }
+        //返回票的信息
+        public string GetTicketPro(string AttractionsID)
+        {
+            string result = Ticket.GetTicketPro(AttractionsID);
+            return result;
+        }
     }
 }

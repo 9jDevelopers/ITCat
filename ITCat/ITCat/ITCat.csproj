@@ -589,6 +589,9 @@
     <Compile Include="Handler\GetimgHandler.ashx.cs">
       <DependentUpon>GetimgHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Handler\GetTicketPro.ashx.cs">
+      <DependentUpon>GetTicketPro.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Handler\ImgHandler1.ashx.cs">
       <DependentUpon>ImgHandler1.ashx</DependentUpon>
     </Compile>
@@ -723,6 +726,7 @@
     <Content Include="Handler\ALoginHandler.ashx" />
     <Content Include="Handler\BuyTicketHandler.ashx" />
     <Content Include="Index\json.json" />
+    <Content Include="Handler\GetTicketPro.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

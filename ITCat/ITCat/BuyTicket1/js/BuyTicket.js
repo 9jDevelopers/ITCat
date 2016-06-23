@@ -9,15 +9,35 @@ $(function () {
             return d1 <= date && date <= d2;
         }
     });
+
+
     //AJAX通过景点ID获取景点标题以及票类，票价
     $(document).ready(function () {
-        $.post(/*URL*/"Handler/BuyTicketHandler.ashx",
-               /*参数*/{ AttractionsID:  2  },
+        
+        $.post(/*URL*/"../Handler/BuyTicketHandler.ashx",
+               /*参数*/{ AttractionsID:17536  },
                function(data)
                {
-                   data 
+                   if (data != "")
+                   {
+                       alert(data);
+                       $('#ATT').html(data)  ;
+                   }
                }
                )
+        $.post(
+                /*URL*/"../Handler/GetTicketPro.ashx",
+               /*参数*/ {AttractionsID:17536},
+               function(data)
+               {
+                   if (data != "")
+                   {
+                      
+                       
+                       alert(data);
+                   }
+               }
+              )
 
     })
 });
@@ -116,6 +136,16 @@ $.extend($.fn.validatebox.defaults.rules, {
 	var myCity = new BMap.LocalCity();
 	myCity.get(myFun);
 
+	//点击事件
+	function BtnBuy() {
+	    if ($('#Name').value != null && $('#Name').value != "" && $('#Tel').value != null && $('#Tel').value != "" && $('#Email').value != null && $('#Email').value != "")
+	    {
+	        alert("购买成功")
+	    }
+	    else {
+	        alert("请输入信息")
+	    }
+	}
 
     //发送邮件
 	

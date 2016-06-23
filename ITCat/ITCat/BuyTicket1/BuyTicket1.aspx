@@ -26,8 +26,8 @@
             <!-- 标题 begin-->
             <div class="order_box" id="order_box" >
                <!--将后台数据传回UI层 -->
-             <h1 class="order_title">
-                 后台标题
+             <h1 class="order_title" id="ATT">
+                 
                  <span>订单编号</span>
              </h1> 
           
@@ -101,17 +101,17 @@
                     <div class="InputInfo">
                     <!--姓名-->
                     <div class="Info_Name">
-                        <label class="LabelName">中文姓名：</label>
+                        <label class="LabelName" id="LName">中文姓名：</label>
                         <input id="Name" class="easyui-validatebox" data-options="missingMessage:'请输入中文名' ,prompt:'验证完成.',invalidMessage:'请输入正确格式的姓名',required:true, validType:'ChineseLength[2,10]'" />
                     </div>
                     <!--手机号-->
                     <div class="Info_TelPhone">
-                        <label class="LabelTel">手机号：&nbsp;&nbsp;&nbsp;</label>
+                        <label class="LabelTel" id="LTel">手机号：&nbsp;&nbsp;&nbsp;</label>
                        <input id="Tel"  class="easyui-validatebox" data-options="missingMessage:'请输入手机号' ,prompt:'验证完成.',invalidMessage:'请输入正确格式的手机号',required:true, validType:'PhoneLength[11]'"/>
                     </div>
                     <!--电子邮件-->
                     <div class="Info_Email">
-                          <label class="LabelEmail">电子邮箱：</label>
+                          <label class="LabelEmail" id="LEmail">电子邮箱：</label>
                         <input id="Email" class="easyui-validatebox"data-options="missingMessage:'请输入邮箱地址' ,prompt:'验证完成.',invalidMessage:'请输入正确格式的地址',required:true, validType:'email'" />
                     </div>
                     <div class="Info_Hint">
@@ -131,7 +131,7 @@
                      <span  class="sign_vm">￥</span>
                      <span class="number_vm">value</span>
                      <input id="InputInfo" type="hidden" value=""/>
-                     <a href="" class ="next_vm">我已阅读预定须知，下一步</a>
+                     <a href="" class ="next_vm" id="Buy" onClick="BtnBuy()">我已阅读预定须知，预定</a>
                  </div>
              </div>
             <!--order to next end-->
@@ -207,7 +207,7 @@
                             </div>
                             
                              <div>
-                                 <a href="" class="btn_next">下一步</a>
+                                 <a href="" class="btn_next" id="Pay" onClick="BtnBuy()">预定</a>
                              </div>
                         
                     </div>

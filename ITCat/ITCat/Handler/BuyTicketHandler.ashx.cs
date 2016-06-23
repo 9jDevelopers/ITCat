@@ -15,10 +15,15 @@ namespace iTCat.Handler
 
         public void ProcessRequest(HttpContext context)
         {
+            string AID=context.Request.Form["AttractionsID"];
             BTickets Ticket = new BTickets();
-            string id= context.Request["AttractionsID"];
-            string outStr = "AttractionsTitle,TicketsType,Price"; 
-            context.Response.Write(outStr);
+            string json = Ticket.GetAttractionsTitle(AID);
+            context.Response.Write(json);
+            
+            //BTickets Ticket = new BTickets();
+            //string id= context.Request["AttractionsID"];
+            //string outStr = "AttractionsTitle,TicketsType,Price"; 
+            //context.Response.Write(outStr);
            
         }
 
