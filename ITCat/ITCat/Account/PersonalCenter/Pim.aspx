@@ -6,6 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
    <title></title>
+    <link href="../../Nav/nav.css" rel="stylesheet" />
     <link href="../../Public/css/themes/default/easyui.css" rel="stylesheet" />
     <link href="../../Public/css/themes/icon.css" rel="stylesheet" /> 
     <link href="../../Public/css/demo.css" rel="stylesheet" /> 
@@ -14,7 +15,8 @@
     <script src="../../Public/js/jquery.easyui.min.js"></script> 
     <script src="js/Pim.js"></script>
     <script src="js/tijiao.js"></script>
-    <link href="../../Nav/nav.css" rel="stylesheet" />
+    <script src="js/order.js"></script>
+    
    <%-- <script src="js/ajaxupload.3.9.js"></script>--%>
     <script src="../../Nav/nav.js"></script>
    
@@ -24,11 +26,13 @@
     <div class="wz ">个人资料设置</div>
     <form id="frmMain">
 
-        <div class="easyui-accordion" style="width:900px;height:500px;">
-            <div title="个人信息"  style="overflow:auto;padding:10px;">
+        <div class="easyui-accordion" style="width:900px;height:520px;">
+            <%--<div  class="panel">--%>
+            
+            <div title="个人信息"  style="overflow:hidden;">
 
-                <div class="ge" style="height: 399px">
-
+                <div class="ge" style="height: 390px">
+                  
                     <div class="gf">
 
                         <tr>
@@ -149,8 +153,7 @@
                     </div>
                 </div> 
             </div>
-            <div title="头像" style="padding:10px;">
-
+            <div title="头像">
                 <div class="down">
                     <div class="ft">
                         <h5>仅支持jpg,gif,png格式图片，且文件小于2M.</h5>
@@ -162,14 +165,55 @@
                 </div>
                     <div class="add-images"></div>
                     <div class="imgss"><img src="../../Handler/PimImage.ashx" width="280" height="280" /></div>
-
                     <div class="kj"><input type="button" id="btnSubmit"  value="提交"  onclick="submitImg()"  /></div>
-                   
-
                 </div>
             </div>
         </div>
-        
+            <div title="订单中心">
+                <div class="HD">
+                    <div class="HD1">
+                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;景区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;单价（元）&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;数量&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;实付款
+                    </div>
+                    
+                    <div class="HD2"> <input type="button" id="ggg"   value="上一页"/></div>
+                   
+                     <div class="HD3"><input type="button" id="ggg"   value="下一页"/></div>
+                        
+                </div>
+                <div class="font">
+                    
+                <tr>
+                  <div class ="time" id="datetime"></div>
+                </tr>
+                    <tr>
+                     <div class="txt">订单号:</div>
+                     <div class ="oreadid" id="order"> </div>
+                    </tr>
+                    <div class="kf">客服</div>
+                </div>
+                <div class="down2">
+                    <div class="dn">
+                        <div class="imc">
+                          <img src="IMG/83664ffe63e8749a.jpg_r_390x260x90_ccd59acc.jpg"  width="120" height="120"/>
+                        </div>
+                        <div class="tt" id="txt6">
+                         【自由行】完美@厦一站！4日机票含税+2晚厦门五星酒店+1晚鼓浪屿琴笙酒店+酒店早餐
+                        </div>
+                    </div>
+                    <div class="dn2">
+                        <div class="ta">
+                          <div class="up" id="UnitPrice"></div>
+                          <div class="nr" id="number"></div>
+                          <div class="Rp"id="Realpayment"></div>
+                        </div>
+                    </div>
+                    <div class="dn3" id="JY">
+                        交易成功
+                    </div>
+                </div>
+               
+            </div>
+    </div> 
     </form>
     <script >
         
@@ -177,7 +221,7 @@
 
 
 
-       
+         //邮箱验证，正则表达式
          $.extend($.fn.validatebox.defaults.rules, {
             email: {
                 

@@ -8,6 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>XXX旅游网</title>
+    <link href="../Public/css/themes/default/easyui.css" rel="stylesheet" />
+    <link href="../Public/css/themes/icon.css" rel="stylesheet" /> 
+    <link href="../Public/css/demo.css" rel="stylesheet" /> 
 
     <!-- Bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -72,10 +75,12 @@
             </div>
         </div>
     </div>
-    <hr>
+    <hr/>
     <h2 class="text-center">景点展示</h2>
-    <hr>
-    <div class="container">
+    <hr/>
+<%--        <table id="datagrid"></table>--%>
+
+            <div class="container">
         <div class="row text-center">
             <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
                 <div class="thumbnail">
@@ -165,74 +170,14 @@
             </ul>
         </nav>
     </div>
-    <hr>
-    <hr>
-    <div class="container well">
-        <div class="row">
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-7">
-                <div class="row">
-                    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
-                        <div>
-                            <ul class="list-unstyled">
-                                <li> <a>友情链接</a> </li>
-                                <li> <a>友情链接</a> </li>
-                                <li> <a>友情链接</a> </li>
-                                <li> <a>友情链接</a> </li>
-                                <li> <a>友情链接</a> </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-4 col-lg-4  col-xs-6">
-                        <div>
-                            <ul class="list-unstyled">
-                                <li> <a>友情链接</a> </li>
-                                <li> <a>友情链接</a> </li>
-                                <li> <a>友情链接</a> </li>
-                                <li> <a>友情链接</a> </li>
-                                <li> <a>友情链接</a> </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-md-4 col-lg-4 col-xs-6">
-                        <div>
-                            <ul class="list-unstyled">
-                                <li> <a>友情链接</a> </li>
-                                <li> <a>友情链接</a> </li>
-                                <li> <a>友情链接</a> </li>
-                                <li> <a>友情链接</a> </li>
-                                <li> <a>友情链接</a> </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-5">
-                <address>
-                    <strong>公司地址</strong><br>
-                    XX市XX区XXX大楼<br>
-                    <br>
-                    <abbr title="Phone">电话号码:</abbr> 152-xxxx-xxxx
-                </address>
-                <address>
-                    <strong>邮箱地址:</strong><br>
-                    <a href="mailto:#">XXXXX@hotmail.com</a>
-                </address>
-            </div>
-        </div>
-    </div>
+    <hr/>
+    <hr/>
+        <!--#include virtual="../Nav/bottom.html" -->
 
-    <footer class="text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <p>Copyright © 2015-2016 ITCAT. All rights reserved.</p>
-                </div>
-            </div>
-        </div>
-    </footer>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="../Public/js/jquery-2.2.3.js"></script>
+    <script src="../Public/js/jquery.easyui.min.js"></script> 
     <script src="js/Index.js"></script>
     <script src="../Nav/nav.js"></script>
 

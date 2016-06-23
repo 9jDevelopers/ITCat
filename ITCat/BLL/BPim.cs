@@ -35,6 +35,12 @@ namespace BLL
             string json = DataTableConvertJson.DataTableToJson("Information", dt);
             return json;
         }
+        public string order(Int32 UserID)
+        {
+            DataTable dt = a.order(UserID);
+            string json = DataTableConvertJson.DataTableToJson("order", dt);
+            return json;
+        }
 
     }
 }

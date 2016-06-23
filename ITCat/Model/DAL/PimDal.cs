@@ -88,6 +88,24 @@ namespace Model.DAL
             }
 
         }
+        public DataTable order(Int32 UserID)
+        {
+            DbHelper db = new DbHelper();
+            DbCommand cmd = db.GetStoredProcCommond("sp_order");
+            db.AddInParameter(cmd, "@UserID", DbType.Int32, UserID);
+            try
+            {
+                DataTable dt = db.ExecuteDataTable(cmd);
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                return null;
+            }
+
+        }
+
 
     }
 
