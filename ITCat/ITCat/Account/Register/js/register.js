@@ -27,8 +27,8 @@
                 {
                     if (data == 1)
                     {
-                        ShowTip("注册成功,5秒后跳转到首页");
-                        setTimeout(function () { window.location = "/Index/index.aspx"; }, 5000);
+                        alert("注册成功,3秒后跳转到首页");
+                        setTimeout(function () { window.location = "/Index/index.aspx"; }, 3000);
                     }
                     else if (data == 0)
                     {

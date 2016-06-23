@@ -70,7 +70,9 @@
     <Content Include="Account\change\css\change.css" />
     <Content Include="Account\change\js\change.js" />
     <Content Include="Account\Login\css\login.css" />
+    <Content Include="Account\PersonalCenter\IMG\83664ffe63e8749a.jpg_r_390x260x90_ccd59acc.jpg" />
     <Content Include="Account\PersonalCenter\js\ajaxupload.3.9.js" />
+    <Content Include="Account\PersonalCenter\js\order.js" />
     <Content Include="Account\PersonalCenter\js\Pim.js" />
     <Content Include="Account\PersonalCenter\js\tijiao.js" />
     <Content Include="Account\PersonalCenter\Pim.aspx" />
@@ -174,6 +176,7 @@
     <Content Include="Management\NewTicketClass\css\ticket.css" />
     <Content Include="Management\NewTicketClass\js\NewTicketClass.js" />
     <Content Include="Management\NewTicketClass\NewTicketClass.aspx" />
+    <Content Include="Nav\bottom.html" />
     <Content Include="Nav\nav.css" />
     <Content Include="Nav\nav.html" />
     <Content Include="Nav\nav.js" />
@@ -589,9 +592,6 @@
     <Compile Include="Handler\GetimgHandler.ashx.cs">
       <DependentUpon>GetimgHandler.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Handler\GetTicketPro.ashx.cs">
-      <DependentUpon>GetTicketPro.ashx</DependentUpon>
-    </Compile>
     <Compile Include="Handler\ImgHandler1.ashx.cs">
       <DependentUpon>ImgHandler1.ashx</DependentUpon>
     </Compile>
@@ -600,6 +600,9 @@
     </Compile>
     <Compile Include="Handler\LoginHandler.ashx.cs">
       <DependentUpon>LoginHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handler\OrderHandler.ashx.cs">
+      <DependentUpon>OrderHandler.ashx</DependentUpon>
     </Compile>
     <Compile Include="Handler\PimImage.ashx.cs">
       <DependentUpon>PimImage.ashx</DependentUpon>
@@ -726,7 +729,7 @@
     <Content Include="Handler\ALoginHandler.ashx" />
     <Content Include="Handler\BuyTicketHandler.ashx" />
     <Content Include="Index\json.json" />
-    <Content Include="Handler\GetTicketPro.ashx" />
+    <Content Include="Handler\OrderHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

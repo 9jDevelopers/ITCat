@@ -18,6 +18,7 @@
 </head>
 <body>
     <form id="form1">
+        <div  class="within">
       <div class="Main_title"><h1>管理员登录</h1>
         <div>
          <table>
@@ -42,6 +43,7 @@
           <a href="javascript:ARegister" class="easyui-linkbutton" id="submitlogin" onclick="submitlogin()">登录</a>                   
                     <input  runat="server" height="36px" style="margin-top: 0px"  value="注册" type="submit"  width="72px" />
       </div>
+            </div>
     </form>
 </body>
 </html>
